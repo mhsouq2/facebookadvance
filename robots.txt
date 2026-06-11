@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://challengehomeschool.com/sitemap.xml
+Sitemap: https://challengehomeschool.com/sitemap-pages.xml
+Sitemap: https://challengehomeschool.com/sitemap-images.xml
+
+# Disallow admin and private paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+# Allow important crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+Host: https://challengehomeschool.com
