@@ -3,808 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-gumroad-field="name">Product</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-    theme: {
-      extend: {
-        colors: {
-          slate: { 950: '#0A0F1E' },
-          saffron: { DEFAULT: '#F59E0B', light: '#FCD34D', dark: '#B45309' },
-          periwinkle: { DEFAULT: '#818CF8', light: '#C7D2FE', dark: '#4F46E5' },
-        },
-        fontFamily: {
-          display: ['Georgia', 'Cambria', 'serif'],
-          body: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
-          mono: ['ui-monospace', 'SFMono-Regular', 'monospace'],
-        },
-      }
-    }
-  }
-</script>
+
+<title>Free Digital Marketing Tracking Guide</title>
+
+<meta name="description" content="Learn Facebook Pixel, Google Analytics 4, Google Tag Manager, Conversion API and Conversion Tracking.">
+
 <style>
-  /* ── Base ───────────────────────────────────────── */
-  :root {
-    --bg:       #0F172A;
-    --bg2:      #1E293B;
-    --bg3:      #334155;
-    --fg:       #F1F5F9;
-    --fg2:      #94A3B8;
-    --gold:     #F59E0B;
-    --gold-lt:  #FCD34D;
-    --violet:   #818CF8;
-    --border:   rgba(148,163,184,0.12);
-    --card-bg:  rgba(30,41,59,0.7);
-  }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg:      #F8FAFC;
-      --bg2:     #FFFFFF;
-      --bg3:     #E2E8F0;
-      --fg:      #0F172A;
-      --fg2:     #475569;
-      --border:  rgba(15,23,42,0.1);
-      --card-bg: rgba(255,255,255,0.9);
-    }
-  }
-  html.dark {
-    --bg:      #0F172A;
-    --bg2:     #1E293B;
-    --bg3:     #334155;
-    --fg:      #F1F5F9;
-    --fg2:     #94A3B8;
-    --border:  rgba(148,163,184,0.12);
-    --card-bg: rgba(30,41,59,0.7);
-  }
-  html.light {
-    --bg:      #F8FAFC;
-    --bg2:     #FFFFFF;
-    --bg3:     #E2E8F0;
-    --fg:      #0F172A;
-    --fg2:     #475569;
-    --border:  rgba(15,23,42,0.1);
-    --card-bg: rgba(255,255,255,0.9);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    transition: background 0.3s, color 0.3s;
-    overflow-x: hidden;
-  }
-
-  /* ── Shimmer keyframe (signature element) ───── */
-  @keyframes shimmer {
-    0%   { transform: translateX(-100%) skewX(-12deg); opacity: 0; }
-    10%  { opacity: 1; }
-    90%  { opacity: 1; }
-    100% { transform: translateX(200%) skewX(-12deg); opacity: 0; }
-  }
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes pulse-ring {
-    0%   { transform: scale(1);   opacity: 0.6; }
-    100% { transform: scale(1.6); opacity: 0; }
-  }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-8px); }
-  }
-  @keyframes gradientShift {
-    0%, 100% { background-position: 0% 50%; }
-    50%       { background-position: 100% 50%; }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation: none !important; transition: none !important; }
-  }
-
-  /* ── Typography ──────────────────────────────── */
-  .label {
-    font-size: 0.6875rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: var(--gold);
-  }
-  .display {
-    font-family: Georgia, Cambria, serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 400;
-    line-height: 1.15;
-    color: var(--fg);
-    letter-spacing: -0.01em;
-  }
-  .display em {
-    font-style: italic;
-    color: var(--gold);
-  }
-  .body-lg {
-    font-size: 1.0625rem;
-    line-height: 1.7;
-    color: var(--fg2);
-  }
-
-  /* ── Cover card with shimmer ─────────────────── */
-  .cover-wrap {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.45), 0 0 0 1px var(--border);
-    animation: float 6s ease-in-out infinite;
-  }
-  .cover-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.18) 50%, transparent 70%);
-    animation: shimmer 3.2s ease-out 0.8s both;
-    pointer-events: none;
-  }
-  .cover-img {
-    display: block;
-    width: 100%;
-    max-width: 320px;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-    border-radius: 16px;
-  }
-  /* Fallback cover when no image URL is available */
-  .cover-placeholder {
-    width: 260px;
-    aspect-ratio: 3/4;
-    border-radius: 16px;
-    background: linear-gradient(135deg, var(--bg2) 0%, #1e293b 50%, var(--bg3) 100%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 32px 24px;
-    text-align: center;
-  }
-  .cover-placeholder .cp-title {
-    font-family: Georgia, serif;
-    font-size: 1.1rem;
-    color: var(--fg);
-    font-style: italic;
-  }
-  .cover-placeholder .cp-icon {
-    font-size: 3rem;
-    margin-bottom: 8px;
-  }
-  .cover-placeholder .cp-stripe {
-    width: 40px;
-    height: 3px;
-    background: var(--gold);
-    border-radius: 2px;
-  }
-
-  /* ── Gradient text ────────────────────────────── */
-  .grad-text {
-    background: linear-gradient(90deg, var(--gold), #F97316, var(--violet));
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: gradientShift 4s ease infinite;
-  }
-
-  /* ── Buy button ──────────────────────────────── */
-  .btn-buy {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--gold);
-    color: #0F172A;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 14px 32px;
-    border-radius: 9999px;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 0 0 0 rgba(245,158,11,0.4);
-  }
-  .btn-buy:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(245,158,11,0.35);
-  }
-  .btn-buy:active { transform: translateY(0); }
-  .btn-buy .pulse {
-    position: absolute;
-    inset: 0;
-    border-radius: 9999px;
-    border: 2px solid var(--gold);
-    animation: pulse-ring 1.8s cubic-bezier(0.215,0.61,0.355,1) infinite;
-    pointer-events: none;
-  }
-
-  .btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: transparent;
-    color: var(--fg);
-    font-weight: 600;
-    font-size: 0.9375rem;
-    padding: 13px 28px;
-    border-radius: 9999px;
-    border: 1.5px solid var(--border);
-    cursor: pointer;
-    text-decoration: none;
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .btn-secondary:hover {
-    border-color: var(--violet);
-    background: rgba(129,140,248,0.08);
-  }
-
-  /* ── Card ─────────────────────────────────────── */
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 28px;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .card:hover {
-    border-color: rgba(245,158,11,0.25);
-    transform: translateY(-2px);
-  }
-
-  /* ── Feature check ──────────────────────────── */
-  .check-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 6px 0;
-  }
-  .check-icon {
-    flex-shrink: 0;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: rgba(245,158,11,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2px;
-    color: var(--gold);
-    font-size: 11px;
-  }
-
-  /* ── Price display ───────────────────────────── */
-  .price-badge {
-    display: inline-flex;
-    align-items: baseline;
-    gap: 4px;
-    background: rgba(245,158,11,0.1);
-    border: 1px solid rgba(245,158,11,0.25);
-    border-radius: 12px;
-    padding: 8px 20px;
-  }
-  .price-value {
-    font-family: Georgia, serif;
-    font-size: 2.25rem;
-    font-weight: 400;
-    color: var(--gold);
-    line-height: 1;
-  }
-
-  /* ── Scroll reveal ───────────────────────────── */
-  .reveal {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ── Sticky CTA bar ──────────────────────────── */
-  #sticky-bar {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    padding: 14px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    z-index: 100;
-    transform: translateY(100%);
-    transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
-    backdrop-filter: blur(12px);
-  }
-  #sticky-bar.visible { transform: translateY(0); }
-
-  /* ── Noise overlay ───────────────────────────── */
-  .noise::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-    pointer-events: none;
-    border-radius: inherit;
-  }
-
-  /* ── Section spacing ─────────────────────────── */
-  section { padding: 80px 24px; position: relative; }
-  .container { max-width: 1080px; margin: 0 auto; }
-  .container-sm { max-width: 720px; margin: 0 auto; }
-
-  /* ── Nav ─────────────────────────────────────── */
-  nav {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(15,23,42,0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 24px;
-    display: flex; align-items: center; justify-content: space-between;
-  }
-  @media (prefers-color-scheme: light) {
-    nav { background: rgba(248,250,252,0.85); }
-  }
-  html.light nav { background: rgba(248,250,252,0.85); }
-  html.dark  nav { background: rgba(15,23,42,0.8); }
-
-  .nav-logo {
-    font-family: Georgia, serif;
-    font-size: 1rem;
-    font-style: italic;
-    color: var(--fg);
-    opacity: 0.8;
-  }
-
-  /* ── Theme toggle ────────────────────────────── */
-  #theme-btn {
-    background: var(--bg3);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 6px 12px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    color: var(--fg2);
-    display: flex; align-items: center; gap: 6px;
-    transition: background 0.2s;
-  }
-  #theme-btn:hover { background: var(--bg2); }
-
-  /* ── Divider ─────────────────────────────────── */
-  .divider {
-    width: 48px; height: 3px;
-    background: linear-gradient(90deg, var(--gold), var(--violet));
-    border-radius: 2px;
-    margin: 16px 0 24px;
-  }
-
-  /* ── Testimonial ─────────────────────────────── */
-  .testimonial-quote {
-    font-family: Georgia, serif;
-    font-size: 1.125rem;
-    font-style: italic;
-    line-height: 1.7;
-    color: var(--fg);
-    margin: 0 0 16px;
-  }
-
-  /* ── Grid helpers ────────────────────────────── */
-  .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
-  .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  @media (max-width: 768px) {
-    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
-    .hero-grid .cover-col { order: -1; display: flex; justify-content: center; }
-    section { padding: 56px 20px; }
-  }
-
-  /* ── Highlight strip ─────────────────────────── */
-  .highlight-strip {
-    background: linear-gradient(90deg, rgba(245,158,11,0.08), rgba(129,140,248,0.08));
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px 24px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  /* ── FAQ ─────────────────────────────────────── */
-  details {
-    border-bottom: 1px solid var(--border);
-    padding: 20px 0;
-  }
-  details:last-child { border-bottom: none; }
-  summary {
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    color: var(--fg);
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
-    user-select: none;
-  }
-  summary::-webkit-details-marker { display: none; }
-  summary::after {
-    content: '+';
-    font-size: 1.25rem;
-    color: var(--gold);
-    font-weight: 300;
-    flex-shrink: 0;
-    transition: transform 0.2s;
-  }
-  details[open] summary::after { transform: rotate(45deg); }
-  details p {
-    margin: 12px 0 0;
-    font-size: 0.9375rem;
-    color: var(--fg2);
-    line-height: 1.7;
-  }
+body{
+font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+background:#f4f6f9;
+color:#333;
+}
+.hero{
+background:#1e3a8a;
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+.container{
+max-width:900px;
+margin:auto;
+padding:20px;
+}
+.btn{
+display:inline-block;
+background:#2563eb;
+color:white;
+padding:15px 30px;
+text-decoration:none;
+border-radius:5px;
+margin:10px;
+}
+.email-box{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.1);
+margin:30px 0;
+}
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+}
+button{
+background:#16a34a;
+color:white;
+padding:15px;
+border:none;
+width:100%;
+cursor:pointer;
+}
+.feature{
+background:white;
+padding:20px;
+margin:15px 0;
+border-radius:10px;
+}
+footer{
+background:#111827;
+color:white;
+text-align:center;
+padding:20px;
+}
 </style>
 </head>
+
 <body>
 
-<!-- ═══════════════ NAV ═══════════════ -->
-<nav aria-label="Product navigation">
-  <span class="nav-logo" data-gumroad-field="name">Product</span>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <button id="theme-btn" aria-label="Toggle colour scheme">
-      <span id="theme-icon">☀️</span>
-      <span id="theme-label">Light</span>
-    </button>
-    <a data-gumroad-action="buy" class="btn-buy" style="padding:9px 20px;font-size:0.875rem;" aria-label="Buy now">
-      Get it — <span data-gumroad-field="price">Buy</span>
-    </a>
-  </div>
-</nav>
+<section class="hero">
+<h1>Free Digital Marketing Tracking Guide</h1>
+<p>Master Facebook Pixel, GA4, GTM, Conversion API & Conversion Tracking</p>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section style="padding-top:100px;padding-bottom:100px;overflow:hidden;">
-  <!-- Background glow blobs -->
-  <div aria-hidden="true" style="pointer-events:none;position:absolute;inset:0;overflow:hidden;">
-    <div style="position:absolute;top:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(245,158,11,0.07) 0%,transparent 70%);border-radius:50%;"></div>
-    <div style="position:absolute;bottom:-10%;right:-5%;width:500px;height:500px;background:radial-gradient(circle,rgba(129,140,248,0.07) 0%,transparent 70%);border-radius:50%;"></div>
-  </div>
-
-  <div class="container">
-    <div class="hero-grid">
-      <!-- Text column -->
-      <div style="animation: fadeUp 0.7s ease both;">
-        <p class="label" style="margin-bottom:16px;">New release</p>
-        <h1 class="display" style="margin-bottom:20px;">
-          <span data-gumroad-field="name"><em>Everything</em> you need,<br>in one place.</span>
-        </h1>
-        <div class="divider"></div>
-        <p class="body-lg" style="margin-bottom:28px;" data-gumroad-field="description">
-          A carefully crafted resource that delivers exactly what it promises — no filler, no fluff.
-        </p>
-
-        <div class="highlight-strip" style="margin-bottom:28px;">
-          <span style="font-size:1.25rem;">⚡</span>
-          <span style="font-size:0.875rem;color:var(--fg2);">Instant digital delivery &nbsp;·&nbsp; Yours forever &nbsp;·&nbsp; 30-day guarantee</span>
-        </div>
-
-        <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
-          <div style="position:relative;display:inline-block;">
-            <div class="pulse" aria-hidden="true" style="position:absolute;inset:0;border-radius:9999px;border:2px solid var(--gold);animation:pulse-ring 1.8s cubic-bezier(0.215,0.61,0.355,1) infinite;"></div>
-            <a data-gumroad-action="buy" class="btn-buy" aria-label="Buy this product">
-              Get instant access &nbsp;→
-            </a>
-          </div>
-          <div class="price-badge">
-            <span style="font-size:0.875rem;color:var(--fg2);margin-right:2px;"></span>
-            <span class="price-value" data-gumroad-field="price">—</span>
-          </div>
-        </div>
-
-        <p style="margin-top:16px;font-size:0.8125rem;color:var(--fg2);">
-          🔒 Secure checkout &nbsp;·&nbsp; All major cards &amp; PayPal accepted
-        </p>
-      </div>
-
-      <!-- Cover column -->
-      <div class="cover-col" style="display:flex;justify-content:center;animation:fadeUp 0.7s ease 0.2s both;">
-        <div class="cover-wrap">
-          <!-- Gumroad fills cover_url; if blank the placeholder shows via onerror -->
-          <img
-            class="cover-img"
-            src=""
-            alt="Product cover"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
-            style="display:none;"
-          />
-          <div class="cover-placeholder" style="display:flex;">
-            <div class="cp-icon">📦</div>
-            <div class="cp-stripe"></div>
-            <div class="cp-title" data-gumroad-field="name">Digital Product</div>
-            <div style="font-size:0.75rem;color:var(--fg2);margin-top:8px;">by the creator</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
+<a href="https://sooqster.gumroad.com/l/rkkubc" class="btn" target="_blank">
+Buy Premium Guide
+</a>
 </section>
 
-<!-- ═══════════════ SOCIAL PROOF BAR ═══════════════ -->
-<div style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 24px;overflow:hidden;">
-  <div class="container" style="display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <span style="color:var(--gold);font-size:1rem;">★★★★★</span>
-      <span style="font-size:0.875rem;color:var(--fg2);">5.0 · Loved by buyers</span>
-    </div>
-    <div style="width:1px;height:20px;background:var(--border);"></div>
-    <div style="font-size:0.875rem;color:var(--fg2);">✓ Instant download</div>
-    <div style="width:1px;height:20px;background:var(--border);"></div>
-    <div style="font-size:0.875rem;color:var(--fg2);">✓ 30-day guarantee</div>
-    <div style="width:1px;height:20px;background:var(--border);"></div>
-    <div style="font-size:0.875rem;color:var(--fg2);">✓ Lifetime access</div>
-  </div>
+<div class="container">
+
+<div class="email-box">
+<h2>Get Free Updates & Marketing Resources</h2>
+
+<form action="https://formsubmit.co/mhsooq9@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<input type="hidden" name="_subject" value="New Subscriber">
+
+<button type="submit">
+Subscribe Free
+</button>
+
+</form>
 </div>
 
-<!-- ═══════════════ WHAT YOU GET ═══════════════ -->
-<section>
-  <div class="container">
-    <div class="reveal" style="margin-bottom:56px;max-width:560px;">
-      <p class="label" style="margin-bottom:12px;">What's inside</p>
-      <h2 class="display" style="font-size:clamp(1.6rem,3.5vw,2.5rem);margin-bottom:0;">
-        Built for results,<br><em>not</em> just reading.
-      </h2>
-    </div>
+<div class="feature">
+<h3>What You'll Learn</h3>
+<ul>
+<li>Facebook Pixel Setup</li>
+<li>Google Analytics 4 (GA4)</li>
+<li>Google Tag Manager (GTM)</li>
+<li>Facebook Conversion API (CAPI)</li>
+<li>WhatsApp Tracking</li>
+<li>Phone Call Tracking</li>
+<li>Google Ads Conversion Tracking</li>
+</ul>
+</div>
 
-    <div class="features-grid">
-      <div class="card reveal noise" style="position:relative;">
-        <div style="font-size:2rem;margin-bottom:16px;">🎯</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Clarity from the first page</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">No preamble. You'll know exactly what to do and in what order before you're halfway through the introduction.</p>
-      </div>
-      <div class="card reveal noise" style="position:relative;--delay:0.1s;">
-        <div style="font-size:2rem;margin-bottom:16px;">⚙️</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Practical, not theoretical</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">Real examples, real workflows. Every concept is anchored to something you can test and verify immediately.</p>
-      </div>
-      <div class="card reveal noise" style="position:relative;--delay:0.2s;">
-        <div style="font-size:2rem;margin-bottom:16px;">🔄</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Reusable forever</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">Reference it today, in a year, whenever you need it. The structure is designed so you can always find what you're looking for.</p>
-      </div>
-      <div class="card reveal noise" style="position:relative;--delay:0.3s;">
-        <div style="font-size:2rem;margin-bottom:16px;">📐</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Thoughtfully structured</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">Each section builds on the last. You move from understanding to application to mastery in a single reading session.</p>
-      </div>
-      <div class="card reveal noise" style="position:relative;--delay:0.15s;">
-        <div style="font-size:2rem;margin-bottom:16px;">🚀</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Immediate value</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">Within the first session, you'll have something tangible to show for it — a decision made, a tool configured, a system started.</p>
-      </div>
-      <div class="card reveal noise" style="position:relative;--delay:0.25s;">
-        <div style="font-size:2rem;margin-bottom:16px;">🛡️</div>
-        <h3 style="font-size:1rem;font-weight:700;margin:0 0 10px;color:var(--fg);">Risk-free purchase</h3>
-        <p style="font-size:0.875rem;color:var(--fg2);line-height:1.65;margin:0;">30-day money-back guarantee, no questions asked. If it doesn't deliver for you, you pay nothing.</p>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="feature">
+<h3>Who Is This For?</h3>
+<ul>
+<li>Business Owners</li>
+<li>Shopify Stores</li>
+<li>Dropshippers</li>
+<li>Digital Marketers</li>
+<li>Agencies</li>
+<li>Beginners</li>
+</ul>
+</div>
 
-<!-- ═══════════════ INCLUDES CHECKLIST ═══════════════ -->
-<section style="background:var(--bg2);padding-top:80px;padding-bottom:80px;">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+<div class="feature" style="text-align:center;">
+<h2>Ready To Improve Your Tracking?</h2>
 
-      <div class="reveal">
-        <p class="label" style="margin-bottom:12px;">Everything included</p>
-        <h2 class="display" style="font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:24px;">
-          One purchase.<br><em>Complete</em> access.
-        </h2>
-        <p class="body-lg" style="margin-bottom:32px;">
-          Nothing gated behind an upgrade. Nothing reserved for a future version. Everything you see here is what you get, the moment you buy.
-        </p>
-        <a data-gumroad-action="buy" class="btn-buy" aria-label="Buy now">
-          Buy now — <span data-gumroad-field="price">—</span>
-        </a>
-      </div>
+<a href="https://sooqster.gumroad.com/l/rkkubc" class="btn" target="_blank">
+Get Instant Access
+</a>
+</div>
 
-      <div class="reveal">
-        <div style="display:flex;flex-direction:column;gap:4px;">
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">Complete core content — no chapters held back</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">Instant digital download upon purchase</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">Lifetime access — yours to keep forever</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">All future updates included at no extra cost</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">Works on any device — no special software needed</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">30-day money-back guarantee, no hassle</span></div>
-          <div class="check-item"><div class="check-icon">✓</div><span style="font-size:0.9375rem;color:var(--fg);">Secure Gumroad checkout — trusted by millions</span></div>
-        </div>
-      </div>
+</div>
 
-    </div>
-  </div>
-</section>
+<a href="https://wa.me/97154389066"
+style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+text-decoration:none;">
+💬
+</a>
 
-<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
-<section>
-  <div class="container">
-    <div class="reveal" style="margin-bottom:48px;text-align:center;">
-      <p class="label" style="margin-bottom:12px;">From buyers</p>
-      <h2 class="display" style="font-size:clamp(1.5rem,3vw,2.2rem);">People who got it,<br><em>got it</em>.</h2>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
-      <div class="card reveal">
-        <div style="color:var(--gold);margin-bottom:14px;font-size:0.875rem;">★★★★★</div>
-        <p class="testimonial-quote">"Exactly what I needed. Clear, concise, and immediately useful. No fluff, just substance."</p>
-        <div style="font-size:0.8125rem;color:var(--fg2);">— Verified buyer</div>
-      </div>
-      <div class="card reveal" style="--delay:0.1s;">
-        <div style="color:var(--gold);margin-bottom:14px;font-size:0.875rem;">★★★★★</div>
-        <p class="testimonial-quote">"Worth every cent. I came back to it three times in the first week — that's rare for any digital product."</p>
-        <div style="font-size:0.8125rem;color:var(--fg2);">— Verified buyer</div>
-      </div>
-      <div class="card reveal" style="--delay:0.2s;">
-        <div style="color:var(--gold);margin-bottom:14px;font-size:0.875rem;">★★★★★</div>
-        <p class="testimonial-quote">"Bought it on a Saturday, applied it by Monday. That turnaround from 'interesting' to 'in use' says everything."</p>
-        <div style="font-size:0.8125rem;color:var(--fg2);">— Verified buyer</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ FAQ ═══════════════ -->
-<section style="background:var(--bg2);">
-  <div class="container-sm">
-    <div class="reveal" style="margin-bottom:48px;text-align:center;">
-      <p class="label" style="margin-bottom:12px;">Questions</p>
-      <h2 class="display" style="font-size:clamp(1.5rem,3vw,2.2rem);">Straight answers.</h2>
-    </div>
-    <div class="reveal">
-      <details>
-        <summary>How do I receive the product after buying?</summary>
-        <p>Instantly. Gumroad sends a download link to your email address the moment payment clears. You can also access everything from your Gumroad library indefinitely.</p>
-      </details>
-      <details>
-        <summary>What if it's not right for me?</summary>
-        <p>Email the creator within 30 days for a full refund — no explanation needed. The guarantee is there so you buy with confidence, not obligation.</p>
-      </details>
-      <details>
-        <summary>Do I need any special software?</summary>
-        <p>No. The product is delivered in a widely-supported format you can open on any modern device — phone, tablet, or computer.</p>
-      </details>
-      <details>
-        <summary>Can I share it with a colleague or team?</summary>
-        <p>The purchase is for personal use. If your team needs access, please purchase additional copies — it directly supports the creator's continued work.</p>
-      </details>
-      <details>
-        <summary>Will there be updates?</summary>
-        <p>Yes. All future updates are included with your purchase and delivered automatically through Gumroad. Buy once, stay current.</p>
-      </details>
-      <details>
-        <summary>Is the checkout secure?</summary>
-        <p>Yes. All payments are processed by Gumroad, which uses industry-standard SSL encryption and is trusted by millions of buyers worldwide.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ FINAL CTA ═══════════════ -->
-<section style="text-align:center;overflow:hidden;">
-  <div aria-hidden="true" style="pointer-events:none;position:absolute;inset:0;overflow:hidden;">
-    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(245,158,11,0.06) 0%,transparent 65%);border-radius:50%;"></div>
-  </div>
-  <div class="container-sm reveal">
-    <p class="label" style="margin-bottom:16px;">Ready?</p>
-    <h2 class="display" style="margin-bottom:20px;">
-      Stop putting it off.<br><em>Get it today.</em>
-    </h2>
-    <div class="divider" style="margin:20px auto 28px;"></div>
-    <p class="body-lg" style="margin-bottom:40px;">
-      One purchase. Instant access. No subscription, no upsell, no catch.<br>Just the thing you came here for.
-    </p>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
-      <div style="position:relative;display:inline-block;">
-        <div class="pulse" aria-hidden="true" style="position:absolute;inset:0;border-radius:9999px;border:2px solid var(--gold);animation:pulse-ring 1.8s cubic-bezier(0.215,0.61,0.355,1) infinite;"></div>
-        <a data-gumroad-action="buy" class="btn-buy" style="font-size:1.125rem;padding:16px 40px;" aria-label="Buy this product">
-          Get instant access &nbsp;→
-        </a>
-      </div>
-      <div class="price-badge">
-        <span class="price-value" data-gumroad-field="price">—</span>
-      </div>
-      <p style="font-size:0.8125rem;color:var(--fg2);">🔒 Secure checkout &nbsp;·&nbsp; 30-day guarantee &nbsp;·&nbsp; Instant delivery</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
-<footer style="border-top:1px solid var(--border);padding:32px 24px;text-align:center;">
-  <p style="font-size:0.8125rem;color:var(--fg2);margin:0;">
-    Sold securely via <a href="https://gumroad.com" style="color:var(--gold);text-decoration:none;">Gumroad</a> &nbsp;·&nbsp;
-    <span data-gumroad-field="name">Product</span>
-  </p>
+<footer>
+<p>ChallengeHomeschool.com</p>
+<p>Email: mhsooq9@gmail.com</p>
 </footer>
 
-<!-- ═══════════════ STICKY BAR ═══════════════ -->
-<div id="sticky-bar" role="complementary" aria-label="Purchase bar">
-  <div>
-    <div style="font-size:0.9375rem;font-weight:700;color:var(--fg);" data-gumroad-field="name">Product</div>
-    <div style="font-size:0.8125rem;color:var(--fg2);">Instant access &nbsp;·&nbsp; 30-day guarantee</div>
-  </div>
-  <a data-gumroad-action="buy" class="btn-buy" style="white-space:nowrap;" aria-label="Buy now">
-    Get it — <span data-gumroad-field="price">Buy</span>
-  </a>
-</div>
-
-<!-- ═══════════════ SCRIPTS ═══════════════ -->
-<script>
-  // ── Theme toggle ──────────────────────────────
-  (function () {
-    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    var stored = localStorage.getItem('theme');
-    var isDark = stored ? stored === 'dark' : prefersDark;
-
-    function apply(dark) {
-      document.documentElement.classList.toggle('dark', dark);
-      document.documentElement.classList.toggle('light', !dark);
-      document.getElementById('theme-icon').textContent  = dark ? '☀️' : '🌙';
-      document.getElementById('theme-label').textContent = dark ? 'Light' : 'Dark';
-    }
-
-    apply(isDark);
-
-    document.getElementById('theme-btn').addEventListener('click', function () {
-      isDark = !isDark;
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-      apply(isDark);
-    });
-  })();
-
-  // ── Scroll reveal ─────────────────────────────
-  (function () {
-    var els = document.querySelectorAll('.reveal');
-    if (!('IntersectionObserver' in window)) {
-      els.forEach(function(el){ el.classList.add('visible'); });
-      return;
-    }
-    var io = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          var delay = e.target.style.getPropertyValue('--delay') || '0s';
-          e.target.style.transitionDelay = delay;
-          e.target.classList.add('visible');
-          io.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    els.forEach(function(el){ io.observe(el); });
-  })();
-
-  // ── Sticky bar ────────────────────────────────
-  (function () {
-    var bar = document.getElementById('sticky-bar');
-    var hero = document.querySelector('section');
-    var io2 = new IntersectionObserver(function(entries) {
-      bar.classList.toggle('visible', !entries[0].isIntersecting);
-    }, { threshold: 0.1 });
-    if (hero) io2.observe(hero);
-  })();
-</script>
 </body>
 </html>
