@@ -2,22 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS</title>
-  <meta name="description" content="Discover a proven Facebook Ads scaling framework for Shopify stores. Learn step-by-step strategies, creative testing, audience research, and optimization tips to increase ROAS and scale profitably.">
-  <link rel="canonical" href="https://challengehomeschool.com/articles/">
+  <title>Facebook Ads for Shopify — Proven Strategies to Scale Your Store</title>
+  <meta name="description" content="Learn how to run Facebook Ads for Shopify with step-by-step strategies, creative templates, retargeting funnels, and scaling frameworks to increase ROAS and conversions.">
+  <link rel="canonical" href="https://challengehomeschool.com/articles/facebook-ads-for-shopify">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Challenge Homeschool">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS">
-  <meta property="og:description" content="Proven Facebook Ads scaling framework for Shopify. Step-by-step guide to creative testing, audience research, bid strategy, and optimization to boost ROAS.">
-  <meta property="og:url" content="https://challengehomeschool.com/articles/">
-  <meta property="og:site_name" content="Challenge Homeschool">
+  <meta property="og:title" content="Facebook Ads for Shopify — Proven Strategies to Scale Your Store">
+  <meta property="og:description" content="Learn how to run Facebook Ads for Shopify with step-by-step strategies, creative templates, retargeting funnels, and scaling frameworks to increase ROAS and conversions.">
   <meta property="og:type" content="article">
+  <meta property="og:url" content="https://challengehomeschool.com/articles/facebook-ads-for-shopify">
   <meta property="og:image" content="https://picsum.photos/1200/600?random=1">
+  <meta property="og:site_name" content="Challenge Homeschool">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS">
-  <meta name="twitter:description" content="Proven Facebook Ads scaling framework for Shopify. Step-by-step guide to creative testing, audience research, bid strategy, and optimization to boost ROAS.">
+  <meta name="twitter:title" content="Facebook Ads for Shopify — Proven Strategies to Scale Your Store">
+  <meta name="twitter:description" content="Learn how to run Facebook Ads for Shopify with step-by-step strategies, creative templates, retargeting funnels, and scaling frameworks to increase ROAS and conversions.">
   <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1">
+  <meta name="twitter:site" content="@challengehs">
+  <meta name="twitter:creator" content="@challengehs">
   <script>
   (function(w,d,e,u,f,l,n){
   w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
@@ -27,183 +29,255 @@
   (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
   ml('account', '2426568');
   </script>
+
   <style>
     :root{
-      --bg:#0b0f14;
+      --bg:#0b0f16;
       --card:#0f1720;
-      --muted:#9aa7b2;
-      --accent:#1e90ff;
-      --accent-2:#5b8cff;
-      --glass: rgba(255,255,255,0.03);
+      --muted:#9aa8b2;
+      --accent-start:#2563eb;
+      --accent-end:#06b6d4;
+      --white:#ffffff;
       --radius:12px;
-      --maxwidth:1100px;
-      --mono: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --max-width:1100px;
+      --glass: rgba(255,255,255,0.02);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
     }
-    html,body{height:100%;}
-    body{
+    html,body{
+      height:100%;
       margin:0;
-      background:linear-gradient(180deg,#061017 0%, #09121a 60%);
-      color:#e6eef6;
-      font-family: var(--mono);
+      background:linear-gradient(180deg,#071021 0%, #071522 100%);
+      color:var(--white);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      padding-top:72px;
     }
-    header{
-      position:fixed;
+    header.site-header{
+      position:sticky;
       top:0;
-      left:0;
-      right:0;
-      height:72px;
+      z-index:50;
       backdrop-filter: blur(6px);
-      background: linear-gradient(90deg, rgba(7,11,15,0.6), rgba(7,11,15,0.45));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      z-index:1200;
+      background:linear-gradient(90deg, rgba(11,15,22,0.6), rgba(11,15,22,0.4));
       border-bottom:1px solid rgba(255,255,255,0.03);
     }
     .nav{
-      width:100%;
-      max-width:var(--maxwidth);
-      padding:10px 20px;
+      max-width:var(--max-width);
+      margin:0 auto;
       display:flex;
       align-items:center;
-      gap:24px;
+      justify-content:space-between;
+      padding:18px;
+      gap:12px;
     }
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
-      font-weight:700;
-      color:white;
       text-decoration:none;
+      color:var(--white);
     }
     .brand .logo{
-      width:40px;
-      height:40px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      width:42px;
+      height:42px;
       border-radius:10px;
+      background:linear-gradient(135deg,var(--accent-start),var(--accent-end));
       display:inline-block;
-      box-shadow:0 6px 18px rgba(30,144,255,0.12);
+      box-shadow:0 6px 20px rgba(3,7,18,0.6);
     }
-    nav.primary{margin-left:auto; display:flex; gap:14px; align-items:center;}
-    nav.primary a{
+    nav.main-nav a{
       color:var(--muted);
       text-decoration:none;
-      padding:8px 12px;
+      margin:0 10px;
+      padding:8px 10px;
       border-radius:8px;
-      font-weight:600;
-      transition:all .18s ease;
       font-size:15px;
     }
-    nav.primary a:hover{color:white; background:rgba(255,255,255,0.03); transform:translateY(-2px);}
+    nav.main-nav a:hover{ color:var(--white); background:rgba(255,255,255,0.02); }
     .container{
-      max-width:var(--maxwidth);
-      margin:0 auto;
-      padding:28px 20px 120px;
+      max-width:var(--max-width);
+      margin:28px auto;
+      padding:0 20px;
     }
-    .hero{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:20px;
-      align-items:start;
-    }
-    .card{
-      background:linear-gradient(180deg,var(--card), rgba(12,16,22,0.7));
+    article.card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:var(--radius);
-      padding:22px;
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      padding:28px;
+      box-shadow:0 10px 40px rgba(3,7,18,0.6);
       border:1px solid rgba(255,255,255,0.03);
     }
-    h1{font-size:30px; margin:6px 0 8px; color:#fff;}
-    .meta{color:var(--muted); font-size:14px; margin-bottom:12px;}
-    .toc{display:flex; gap:12px; flex-wrap:wrap; padding:12px 0;}
-    .toc a{
-      color:var(--accent);
-      text-decoration:none;
-      background:linear-gradient(90deg, rgba(94,153,255,0.06), rgba(30,144,255,0.03));
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-      font-size:14px;
+    h1{
+      margin:6px 0 12px 0;
+      font-size:36px;
+      line-height:1.05;
+      color:var(--white);
     }
-    .featured-img{width:100%; border-radius:10px; overflow:hidden; margin-top:14px; display:block;}
-    main article{margin-top:20px; display:grid; gap:18px;}
-    h2{font-size:20px; margin:12px 0; color:#eaf4ff;}
-    h3{font-size:16px; margin:8px 0; color:#d7eaff;}
-    p{color:var(--muted); font-size:15px;}
+    .meta{
+      color:var(--muted);
+      font-size:14px;
+      margin-bottom:18px;
+    }
+    .toc{
+      background:var(--card);
+      border-radius:10px;
+      padding:12px;
+      margin:16px 0;
+      color:var(--muted);
+      font-size:15px;
+    }
+    img.featured{
+      width:100%;
+      border-radius:10px;
+      margin:16px 0 22px 0;
+      display:block;
+    }
+    h2{
+      color:var(--white);
+      margin-top:26px;
+      font-size:22px;
+    }
+    h3{
+      color:var(--white);
+      margin-top:18px;
+      font-size:18px;
+    }
+    p{ color:var(--muted); line-height:1.65; font-size:16px; }
     .grid{
       display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:16px;
+      grid-template-columns:repeat(12,1fr);
+      gap:18px;
+      margin-top:16px;
     }
-    .card.small{padding:14px;}
+    .main-col{ grid-column: span 8; }
+    .side-col{ grid-column: span 4; }
+    @media(max-width:900px){
+      .grid{ grid-template-columns:1fr; }
+      .main-col{ grid-column: auto; }
+      .side-col{ grid-column: auto; }
+      h1{ font-size:28px; }
+    }
+    .card-module{
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:16px;
+      border:1px solid rgba(255,255,255,0.025);
+    }
     .btn{
       display:inline-block;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:white;
+      text-decoration:none;
+      color:var(--white);
       padding:12px 18px;
       border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow: 0 8px 26px rgba(30,144,255,0.18);
+      background:linear-gradient(90deg,var(--accent-start),var(--accent-end));
+      box-shadow:0 8px 30px rgba(6,182,212,0.08);
       transition:transform .15s ease;
     }
-    .btn:hover{transform:translateY(-4px)}
-    .cta-centered{display:flex; justify-content:center; margin:28px 0;}
-    .image-block img{width:100%; border-radius:10px; display:block;}
-    ul{margin:8px 0 8px 20px; color:var(--muted);}
-    ol{margin:8px 0 8px 20px; color:var(--muted);}
-    .badge{background:rgba(255,255,255,0.03); color:var(--accent); padding:6px 10px; border-radius:8px; font-weight:700;}
-    .newsletter-card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:12px;
-      padding:20px;
-      text-align:center;
-      color:var(--muted);
+    .btn:hover{ transform:translateY(-3px); }
+    .muted-list{ color:var(--muted); padding-left:18px; }
+    .feature-image{
+      width:100%;
+      border-radius:10px;
+      margin:14px 0;
       border:1px solid rgba(255,255,255,0.03);
-      margin:18px 0;
     }
-    .related{display:flex; gap:12px; flex-wrap:wrap; margin-top:8px;}
-    .related a{background:var(--glass); padding:10px 12px; border-radius:10px; color:var(--muted); text-decoration:none;}
-    footer{
-      margin-top:40px;
-      padding:28px 20px;
+    .newsletter-card{
+      background:linear-gradient(180deg, rgba(6,30,58,0.6), rgba(6,18,36,0.5));
+      border-radius:12px;
+      padding:18px;
+      margin:18px 0;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .cta-panel{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:space-between;
+      background:linear-gradient(90deg, rgba(37,99,235,0.08), rgba(6,182,212,0.05));
+      padding:16px;
+      border-radius:12px;
+      margin:18px 0;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .cta-panel .cta-actions{ display:flex; gap:12px; }
+    .tag{ display:inline-block; padding:6px 10px; background:rgba(255,255,255,0.02); color:var(--muted); border-radius:8px; font-size:13px; }
+    footer.site-footer{
+      margin-top:30px;
+      padding:28px;
       border-top:1px solid rgba(255,255,255,0.03);
       background:transparent;
     }
-    .footer-grid{max-width:var(--maxwidth); margin:0 auto; display:flex; gap:20px; align-items:center; justify-content:space-between; flex-wrap:wrap;}
-    .footer-left{color:var(--muted);}
-    .footer-links{display:flex; gap:12px; flex-wrap:wrap;}
-    .footer-links a{color:var(--muted); text-decoration:none;}
-    .card.highlight{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
-    .small-muted{color:var(--muted); font-size:13px;}
-    @media (max-width:900px){
-      .grid{grid-template-columns:1fr;}
-      nav.primary{display:none;}
-      .hero{padding:0 4px;}
+    footer .footer-grid{ max-width:var(--max-width); margin:0 auto; display:flex; gap:18px; justify-content:space-between; flex-wrap:wrap; }
+    footer a{ color:var(--muted); text-decoration:none; }
+    .related-list a{ display:block; padding:8px 0; color:var(--muted); }
+    .pill{ padding:6px 10px; background:rgba(255,255,255,0.02); border-radius:999px; color:var(--muted); font-size:13px; }
+    .code-block{
+      background:rgba(255,255,255,0.02);
+      padding:12px;
+      border-radius:8px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+      color:var(--muted);
+      font-size:13px;
+      overflow:auto;
     }
-    @media (max-width:480px){
-      h1{font-size:22px;}
-      body{padding-top:64px;}
+    .question{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border-radius:8px;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid rgba(255,255,255,0.02);
     }
-    .pill{display:inline-block; padding:6px 10px; background:rgba(255,255,255,0.02); border-radius:999px; color:var(--muted); font-weight:700;}
-    .card.inline{display:flex; gap:12px; align-items:center; justify-content:space-between;}
-    .muted-sm{color:var(--muted); font-size:13px;}
-    .quote{border-left:3px solid rgba(30,144,255,0.8); padding-left:12px; color:#dbeeff; margin:12px 0;}
-    .table-snippet{background:rgba(255,255,255,0.02); padding:12px; border-radius:8px;}
+    .small{ font-size:13px; color:var(--muted); }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "headline":"Facebook Ads for Shopify — Proven Strategies to Scale Your Store",
+    "description":"Complete guide to Facebook Ads for Shopify: setup, creatives, audiences, retargeting funnels, conversion tracking, and scaling best practices to boost ROAS.",
+    "image":["https://picsum.photos/1200/600?random=1"],
+    "author":{"@type":"Organization","name":"Challenge Homeschool"},
+    "publisher":{"@type":"Organization","name":"Challenge Homeschool","logo":{"@type":"ImageObject","url":"https://picsum.photos/120/120?random=9"}},
+    "datePublished":"2026-06-17",
+    "dateModified":"2026-06-17",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://challengehomeschool.com/articles/facebook-ads-for-shopify"}
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What are Facebook Ads for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Facebook Ads for Shopify are paid social campaigns created on Meta (Facebook and Instagram) to drive traffic, conversions, and revenue for Shopify stores using tailored audiences, creatives, and tracking such as the Facebook pixel and Conversions API."}},
+      {"@type":"Question","name":"How much should I spend on Facebook Ads for my Shopify store?","acceptedAnswer":{"@type":"Answer","text":"Start with a test budget of $5–$50 per ad set per day depending on product price and margins, then scale based on ROAS and CPA goals."}},
+      {"@type":"Question","name":"Do I need a Facebook pixel for Shopify?","acceptedAnswer":{"@type":"Answer","text":"Yes. Installing the Meta pixel and configuring conversion events plus server-side CAPI leads to more reliable conversion tracking and better optimization."}}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://challengehomeschool.com/"},
+      {"@type":"ListItem","position":2,"name":"Articles","item":"https://challengehomeschool.com/articles/"},
+      {"@type":"ListItem","position":3,"name":"Facebook Ads for Shopify","item":"https://challengehomeschool.com/articles/facebook-ads-for-shopify"}
+    ]
+  }
+  </script>
+
 </head>
 <body>
-  <header>
+  <header class="site-header" role="banner">
     <div class="nav">
       <a class="brand" href="/">
         <span class="logo" aria-hidden="true"></span>
-        <span>Challenge Homeschool</span>
+        <div>
+          <strong>Challenge Homeschool</strong>
+          <div class="small">Premium marketing insights</div>
+        </div>
       </a>
-      <nav class="primary" aria-label="Primary Navigation">
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
         <a href="/">Home</a>
         <a href="/articles/">Articles</a>
         <a href="/#framework">Framework</a>
@@ -215,33 +289,23 @@
   </header>
 
   <main class="container" role="main">
-    <article class="card">
-      <header class="hero">
-        <div>
-          <span class="pill">FREE GUIDE</span>
-          <h1>The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS</h1>
-          <div class="meta">By Challenge Homeschool • June 17, 2026 • Estimated read: 12 min</div>
-          <p>Learn a repeatable, data-driven Facebook Ads scaling framework designed to grow Shopify stores profitably. This guide combines audience research, creative testing, bidding strategies, and optimization best practices so you can scale while preserving or improving ROAS.</p>
-        </div>
-
-        <div class="toc card small">
-          <strong>Table of Contents</strong>
-          <div class="toc" aria-hidden="true">
-            <a href="#overview">Overview</a>
-            <a href="#framework">Scaling Framework</a>
-            <a href="#creative-testing">Creative Testing</a>
-            <a href="#how-to-scale">How-To</a>
-            <a href="#case-study">Case Study</a>
-            <a href="#best-practices">Best Practices</a>
-            <a href="#common-mistakes">Common Mistakes</a>
-            <a href="#faq">FAQ</a>
-          </div>
+    <article class="card" itemscope itemtype="https://schema.org/Article">
+      <header>
+        <h1 itemprop="headline">Facebook Ads for Shopify: A Complete Playbook to Optimize, Retarget, and Scale</h1>
+        <div class="meta">
+          <span>By Challenge Homeschool</span> • <time datetime="2026-06-17">June 17, 2026</time> • <span class="tag">Ecommerce • Paid Social</span>
         </div>
       </header>
 
-      <img class="featured-img" src="https://picsum.photos/1200/600?random=1" alt="\" loading="lazy">
+      <img src="https://picsum.photos/1200/600?random=1" alt="Shopify store and Facebook Ads dashboard visualization showing campaign performance" class="featured" loading="lazy">
 
-      <!-- Newsletter after Introduction -->
+      <section>
+        <h2>Introduction</h2>
+        <p>Facebook Ads for Shopify remains one of the most powerful channels to drive repeatable, profitable growth for ecommerce brands. When you combine the targeting capabilities of Meta Ads Manager with Shopify's conversion data, you can create high-ROI funnels tailored to each stage of the customer journey. This guide walks through step-by-step setup, audience strategy, creative best practices, conversion tracking, and scalable testing frameworks tailored specifically to Shopify stores.</p>
+
+        <p>We wrote this guide for Shopify store owners, growth marketers, and agencies who need a tactical playbook: from initial setup and pixel configuration to creative templates and advanced retargeting sequences. Read on to learn how to run Facebook ads for Shopify the right way and how to troubleshoot common pitfalls.</p>
+      </section>
+
       <section class="newsletter-card">
         <h2>Download Free Marketing Guide</h2>
 
@@ -251,445 +315,402 @@
         </p>
 
         <div class="ml-embedded" data-form="Lujzbr"></div>
+
       </section>
 
-      <main>
-        <section id="overview" class="card">
-          <h2>Overview: Why a Facebook Ads scaling framework matters</h2>
-          <p>Scaling Facebook Ads without a framework often leads to wasted spend, declining ROAS, and inconsistent results. A reliable Facebook Ads scaling framework gives teams a structured playbook: how to test creative, when to expand audiences, how to adjust bids, and how to interpret key performance metrics like CTR, CPC, CPA, and ROAS.</p>
+      <section class="toc" aria-label="Table of Contents">
+        <strong>Table of Contents</strong>
+        <ol>
+          <li><a href="#why">Why Facebook Ads for Shopify?</a></li>
+          <li><a href="#setup">Setup & Tracking</a></li>
+          <li><a href="#audiences">Audience Strategy</a></li>
+          <li><a href="#creative">Creative & Messaging</a></li>
+          <li><a href="#howto">How-To: Launch a Campaign</a></li>
+          <li><a href="#examples">Examples & Templates</a></li>
+          <li><a href="#case-study">Case Study</a></li>
+          <li><a href="#best-practices">Best Practices</a></li>
+          <li><a href="#mistakes">Common Mistakes</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ol>
+      </section>
 
-          <div class="grid">
-            <div class="card small">
-              <h3>What you'll learn</h3>
-              <ul>
-                <li>Step-by-step scaling tactics for Shopify brands</li>
-                <li>Creative testing techniques to find winning ads</li>
-                <li>Audience strategies and lookalike expansion</li>
-                <li>How to preserve ROAS while increasing spend</li>
+      <div class="grid" role="region" aria-label="Article content grid">
+        <div class="main-col">
+          <section id="why">
+            <h2>Why Facebook Ads for Shopify?</h2>
+            <p>Facebook (Meta) Ads connect to Shopify in a way that makes data-driven optimization possible. The primary benefits include:</p>
+            <ul class="muted-list">
+              <li>Precise audience targeting (interest, behavior, lookalikes)</li>
+              <li>Powerful retargeting options for cart abandoners and past purchasers</li>
+              <li>Access to multi-format creative (video, carousel, collection)</li>
+              <li>Advanced optimization using the Meta pixel and Conversions API (CAPI)</li>
+            </ul>
+
+            <h3>Featured Snippet: What is Facebook Ads for Shopify?</h3>
+            <p><strong>Facebook Ads for Shopify</strong> are paid campaigns created in Meta Ads Manager that drive traffic and sales to stores hosted on Shopify by using the Meta pixel/CAPI for conversion tracking, layered audiences for targeting, and tailored creatives to optimize ROAS.</p>
+
+            <img src="https://picsum.photos/1200/600?random=2" alt="Meta Ads Manager dashboard showing campaign structure for a Shopify store" class="feature-image" loading="lazy">
+
+            <h3>Who should use Facebook Ads for Shopify?</h3>
+            <p>Any Shopify merchant with a product-market fit. Especially effective for:</p>
+            <ul class="muted-list">
+              <li>Direct-to-consumer (DTC) brands</li>
+              <li>Subscription box services</li>
+              <li>High-margin consumer goods</li>
+              <li>New product launches and seasonal promotions</li>
+            </ul>
+          </section>
+
+          <section id="setup">
+            <h2>Setup & Tracking</h2>
+            <p>Proper setup is the foundation for profitable campaigns. Without reliable tracking you can’t optimize. Follow these steps to configure tracking and infrastructure for Facebook Ads for Shopify.</p>
+
+            <h3>1. Install Meta Pixel</h3>
+            <p>Add the Meta pixel through Shopify's native integration. Verify standard events like ViewContent, AddToCart, InitiateCheckout and Purchase are firing.</p>
+
+            <h3>2. Configure Conversions API (CAPI)</h3>
+            <p>Enable server-side tracking (CAPI) to reduce data loss from browser changes, ad blockers, and iOS privacy updates. Shopify offers native CAPI integration via the Facebook channel.</p>
+
+            <h3>3. Verify Domain & Events</h3>
+            <p>Verify your domain in Business Settings and prioritize conversion events (e.g., Purchase, InitiateCheckout) to control which events Facebook optimizes for.</p>
+
+            <h3>4. Catalog & Product Feed</h3>
+            <p>Connect your Shopify product catalog to Meta to run dynamic ads and collections. Keep SKUs, prices, and availability up to date.</p>
+
+            <div class="card-module">
+              <strong>Quick Checklist:</strong>
+              <ul class="muted-list">
+                <li>Pixel installed and debugging ok</li>
+                <li>Conversions API enabled</li>
+                <li>Domain verified</li>
+                <li>Product catalog connected</li>
+                <li>Custom conversions created for high-value events</li>
               </ul>
             </div>
-            <div class="card small">
-              <h3>Key metrics to track</h3>
-              <ul>
-                <li>Return on Ad Spend (ROAS)</li>
-                <li>Cost per Purchase (CPP)</li>
-                <li>Click-Through Rate (CTR)</li>
-                <li>Conversion Rate (CVR)</li>
-              </ul>
+          </section>
+
+          <section id="audiences">
+            <h2>Audience Strategy: Who to Target</h2>
+            <p>Audience segmentation is where performance diverges. Use a layered approach: cold, warm, and hot audiences.</p>
+
+            <h3>Cold Traffic</h3>
+            <p>Target interest-based and broad lookalike audiences. Use value-based lookalikes from high-LTV customers when possible.</p>
+
+            <h3>Warm Traffic</h3>
+            <p>Retarget visitors who viewed product pages, engaged with content, or added to cart but didn't convert. Typical windows: 7–30 days for product viewers, 1–7 days for cart abandoners.</p>
+
+            <h3>Hot Traffic</h3>
+            <p>Target past purchasers with cross-sell/up-sell offers and custom promos. Use exclusion lists to avoid showing acquisition creatives to current buyers.</p>
+
+            <h3>Advanced Audience Techniques</h3>
+            <ul class="muted-list">
+              <li>Combining product_id parameters to create product-specific retargeting</li>
+              <li>Using purchase value to create value-based lookalikes</li>
+              <li>Layering interests with behaviors for high-intent cold segments</li>
+            </ul>
+          </section>
+
+          <section id="creative">
+            <h2>Creative & Messaging for Shopify Ads</h2>
+            <p>Creative quality drives click-through and conversion rates. For Shopify products, prioritize clarity and utility: show the product in use, emphasize benefits, and include a clear call to action.</p>
+
+            <h3>Formats to Test</h3>
+            <ul class="muted-list">
+              <li>Short vertical video (15–30s)</li>
+              <li>Carousel with product details and price</li>
+              <li>Collection ads for bundled shopping experience</li>
+              <li>Dynamic product ads using catalog feed</li>
+            </ul>
+
+            <img src="https://picsum.photos/1200/600?random=3" alt="High-converting product ad creative examples for Shopify stores" class="feature-image" loading="lazy">
+
+            <h3>Copy Framework</h3>
+            <p>Use PAS (Problem-Agitate-Solution) or AIDA (Attention-Interest-Desire-Action). Example:</p>
+            <div class="code-block">
+              "Tired of [problem]? Try [product] — [key benefit]. Tap to see our limited-time offer."
             </div>
-          </div>
-        </section>
 
-        <section id="framework" class="card">
-          <h2>Facebook Ads Scaling Framework (Primary Keyword: Facebook Ads scaling framework)</h2>
-          <p>Below is a concise, repeatable Facebook Ads scaling framework that teams can implement in 6 phases. Use the long-tail keyword "how to scale Facebook Ads for Shopify" as you document results in your dashboards.</p>
+            <h3>Creative Testing Tips</h3>
+            <ul class="muted-list">
+              <li>Test headline, primary text, and creative as separate variables</li>
+              <li>Rotate 3–5 creatives per ad set to prevent creative fatigue</li>
+              <li>Measure CTR, AddToCart rate, and Purchase rate to identify winning variants</li>
+            </ul>
+          </section>
 
-          <h3>Phase 1 — Discover & Research</h3>
-          <p>Start with deep customer and creative research. Map the customer journey from cold awareness to purchase. Identify high-intent audiences, baseline conversion rates, LTV, and CAC targets.</p>
-          <ol>
-            <li>Audit product pages and checkout flow for conversion leaks.</li>
-            <li>Collect creative assets (UGC, lifestyle, product demos).</li>
-            <li>Build target audience lists (interest, behavior, competitor audiences).</li>
-          </ol>
+          <section id="howto">
+            <h2>How-To: Launch a Facebook Ads Campaign for Shopify (Step-by-Step)</h2>
+            <p>Follow this concise 9-step process to get a campaign live that can be measured and scaled.</p>
 
-          <h3>Phase 2 — Test Creative & Messaging</h3>
-          <p>Use a structured creative testing framework to identify high-performing ad variants quickly. Run short, high-velocity tests to discover winners.</p>
-          <ol>
-            <li>Run 5–10 ad variations across 2–3 audiences for 3–7 days.</li>
-            <li>Measure CTR, view-through, and early conversion signals.</li>
-            <li>Keep winning creative and iterate on hooks and CTAs.</li>
-          </ol>
-
-          <h3>Phase 3 — Scale Audiences</h3>
-          <p>Once creative is validated, scale audiences horizontally and vertically. Horizontal scaling means adding new audience segments; vertical scaling means increasing budget and optimizing placements.</p>
-          <ul>
-            <li>Use lookalike audiences at different match sizes.</li>
-            <li>Test broad targeting with campaign budget optimization (CBO).</li>
-            <li>Leverage layered targeting for high-intent segments.</li>
-          </ul>
-
-          <h3>Phase 4 — Manage Budgets & Bids</h3>
-          <p>Adopt smart bidding strategies. For new winners, start with manual CPC or minimum ROAS bidding, then transition to value-based bidding as data accrues.</p>
-          <ol>
-            <li>Scale budgets +20–30% every 48–72 hours for stable winners.</li>
-            <li>Use Campaign Bid Caps when cost volatility appears.</li>
-            <li>Monitor frequency and creative fatigue metrics.</li>
-          </ol>
-
-          <h3>Phase 5 — Optimize Funnels</h3>
-          <p>Optimize on-site elements: product pages, checkout speed, and post-purchase flows. Small UX wins can dramatically improve ROAS.</p>
-
-          <h3>Phase 6 — Automation & Scaling Systems</h3>
-          <p>Document playbooks, use automation for rules-based scaling, and employ AI tools to optimize bids and creatives at scale.</p>
-        </section>
-
-        <section id="creative-testing" class="card">
-          <h2>Creative Testing & Ads Creative Strategy</h2>
-          <p>Creative is the most important variable in Facebook performance. A creative testing framework helps you identify what resonates and scale winning creatives confidently.</p>
-
-          <div class="image-block card">
-            <img src="https://picsum.photos/1200/600?random=2" alt="Facebook ad creative test showing product demo and UGC video examples for Shopify" loading="lazy">
-          </div>
-
-          <h3>Structured Creative Testing Plan</h3>
-          <ol>
-            <li>Create hypothesis-driven ad ideas (hook, value prop, CTA).</li>
-            <li>Prioritize vertical video and 1:1 product shots for mobile-first experiences.</li>
-            <li>Run learnings across interest and lookalike audiences.</li>
-          </ol>
-
-          <h3>Types of Creatives to Test</h3>
-          <ul>
-            <li>UGC and testimonial videos</li>
-            <li>Product demo clips (15–30s)</li>
-            <li>Comparison and value-stack imagery</li>
-            <li>Clickable carousels with benefit-driven headlines</li>
-          </ul>
-        </section>
-
-        <section id="how-to-scale" class="card">
-          <h2>How-To: Step-by-step scaling checklist</h2>
-          <p>Use this checklist to scale Facebook Ads for Shopify stores without sacrificing profitability. The answer below can be used as a featured snippet for "how to scale Facebook ads".</p>
-
-          <div class="table-snippet">
-            <strong>Quick 8-step scaling checklist (Featured Snippet Ready):</strong>
-            <ol>
-              <li>Validate creative with small tests (3–7 days).</li>
-              <li>Scale winning creative horizontally into new audiences.</li>
-              <li>Increase budgets gradually (+20–30% every 48–72 hours).</li>
-              <li>Use CBO for consistent budget allocation.</li>
-              <li>Switch to value-based bidding as LTV data grows.</li>
-              <li>Monitor frequency and refresh creatives when CPR/CPA rises.</li>
-              <li>Optimize landing pages and checkout for conversion lift.</li>
-              <li>Automate rules for pausing underperformers and scaling winners.</li>
+            <ol class="muted-list">
+              <li>Define your goal: Sales, Lead Gen, or Traffic.</li>
+              <li>Set up pixel & CAPI, verify domain, and connect catalog.</li>
+              <li>Research audiences and create seed lists (customers, leads).</li>
+              <li>Prepare 3–5 creatives and copy variations.</li>
+              <li>Create campaign in Ads Manager — choose Conversion objective.</li>
+              <li>Set up 3–4 ad sets for audience testing with consistent budgets.</li>
+              <li>Launch at a test budget ($20–$100/day total depending on size).</li>
+              <li>Monitor early KPIs: CTR, CPC, AddToCart, InitiateCheckout.</li>
+              <li>Scale winning ad sets by 20–30% daily or duplicate and test match.</li>
             </ol>
-          </div>
 
-          <h3>Practical Tips</h3>
-          <ul>
-            <li>Prioritize CPA and ROAS over impressions when scaling.</li>
-            <li>Use analytics to track incremental revenue, not just purchases.</li>
-            <li>Keep a creative library and version history for quick refreshes.</li>
-          </ul>
+            <h3>Optimization Checklist</h3>
+            <ul class="muted-list">
+              <li>Pause low-CTR creatives after 3–5 days</li>
+              <li>Exclude converters and high-frequency non-buyers</li>
+              <li>Use CAPI event deduplication to avoid overcounting</li>
+            </ul>
+          </section>
 
-          <div class="cta-centered">
-            <a class="btn" href="/#framework">Book a Free Strategy Session</a>
-          </div>
-        </section>
+          <section id="examples">
+            <h2>Examples & Templates</h2>
+            <p>Below are real-world campaign templates you can adapt.</p>
 
-        <section id="examples" class="card">
-          <h2>Examples: Campaign setups that scale</h2>
-          <p>Below are three practical campaign setups that tend to scale well for Shopify stores. These examples are optimized for long-tail queries like "Facebook Ads setup for Shopify stores 2026".</p>
+            <h3>Template 1: Product Launch Funnel</h3>
+            <p>Cold: Broad interest + video ad (views) → Warm: Engagers and video viewers → Hot: Retarget AddToCart with discount creative → Purchase audiences excluded from Cold.</p>
 
-          <h3>Example 1 — Top-Funnel Awareness (Cold Traffic)</h3>
-          <p>Objective: Reach and engagement; test creative combos. Budget: 20–30% of ad spend.</p>
-          <ul>
-            <li>Placement: Mobile feed + stories</li>
-            <li>Ad format: 15s vertical video</li>
-            <li>Audience: Interest + broad lookalike 1–2%</li>
-            <li>KPIs: CTR > 1.2%, VTR > 40%</li>
-          </ul>
+            <h3>Template 2: High-Value Customer Lookalike</h3>
+            <p>Seed: Top 5% lifetime value customers → Create 1% lookalike → Run carousel with hero product and social proof → Optimize for Purchases.</p>
 
-          <h3>Example 2 — Mid-Funnel Consideration (Remarketing)</h3>
-          <p>Objective: Add-to-cart and content engagement; warm audiences. Budget: 30–40%.</p>
-          <ul>
-            <li>Ad format: Carousel with product benefits</li>
-            <li>Audience: Viewers (3–14 days) & engaged shoppers</li>
-            <li>KPIs: Add-to-cart rate, cost per add-to-cart</li>
-          </ul>
+            <h3>Template 3: Cart Abandonment Sequence</h3>
+            <ol class="muted-list">
+              <li>0–1 day: Reminder ad with product image and 10% off coupon</li>
+              <li>1–3 days: Urgency ad (low stock, free shipping)</li>
+              <li>3–14 days: Social proof + review-driven creative</li>
+            </ol>
 
-          <h3>Example 3 — Bottom-Funnel (Purchase Optimization)</h3>
-          <p>Objective: Conversions with a focus on ROAS. Budget: 30–40%.</p>
-          <ul>
-            <li>Ad format: Dynamic product ads + promo creatives</li>
-            <li>Audience: 7–30 day buyers + high intent checkouts</li>
-            <li>Bid strategy: Lowest cost with ROAS goal or target ROAS</li>
-          </ul>
+            <img src="https://picsum.photos/1200/600?random=4" alt="Example retargeting funnel graphics for Shopify Facebook Ads" class="feature-image" loading="lazy">
+          </section>
 
-          <div class="image-block">
-            <img src="https://picsum.photos/1200/600?random=3" alt="Facebook Ads campaign examples showing top mid bottom funnel setups for Shopify" loading="lazy">
-          </div>
-        </section>
+          <section id="case-study">
+            <h2>Case Study: Scaling a Shopify Store with Facebook Ads</h2>
+            <p>Summary: A DTC brand selling fitness accessories increased monthly revenue by 3.6x in 90 days by implementing value-based lookalikes, dynamic product retargeting, and a structured creative rotation plan.</p>
 
-        <section id="case-study" class="card">
-          <h2>Case Study: Scaling a Shopify brand from $5k to $75k monthly ads revenue</h2>
-          <p>This anonymized case study highlights how applying the Facebook Ads scaling framework improved CPA and ROAS while increasing revenue tenfold in six months.</p>
+            <h3>Baseline</h3>
+            <p>The store had moderate traffic but inconsistent conversion data. Pixel was installed, but CAPI wasn't configured. Average order value (AOV) was $58.</p>
 
-          <h3>Background</h3>
-          <p>Client: D2C wellness brand. Challenge: High CPAs and inconsistent creative performance. Goal: Scale to $50k/month ad revenue while maintaining ROAS >= 3x.</p>
+            <h3>Actions Taken</h3>
+            <ul class="muted-list">
+              <li>Enabled CAPI and verified purchase events</li>
+              <li>Created 1% lookalikes from top 2,000 purchasers</li>
+              <li>Launched dynamic retargeting ads for 7–30 day visitors</li>
+              <li>Tested vertical video creatives and carousel bundles</li>
+            </ul>
 
-          <h3>Strategy</h3>
-          <ol>
-            <li>Creative audit and 12 new UGC-style videos produced.</li>
-            <li>Rapid A/B testing across interest and lookalike audiences.</li>
-            <li>Automated rules to scale winners and pause non-performers.</li>
-            <li>Landing page improvements reduced cart abandonment by 18%.</li>
-          </ol>
+            <h3>Results</h3>
+            <p>Within 90 days:</p>
+            <ul class="muted-list">
+              <li>ROAS improved from 2.0x to 4.1x</li>
+              <li>Cost per purchase decreased by 36%</li>
+              <li>Monthly revenue increased 3.6x</li>
+            </ul>
 
-          <h3>Results</h3>
-          <ul>
-            <li>Month 1: $5k → $18k revenue, ROAS 2.6x</li>
-            <li>Month 3: $18k → $44k revenue, ROAS 3.1x</li>
-            <li>Month 6: $44k → $75k revenue, ROAS 3.4x</li>
-          </ul>
+            <h3>Key Takeaways</h3>
+            <p>Accurate tracking (CAPI + pixel), targeted lookalikes, and dynamic creative were the most impactful changes.</p>
+          </section>
 
-          <div class="quote">"The structured testing and gradual scaling approach preserved ROAS while enabling rapid growth. Creative wins were the multiplier." — Head of Growth</div>
+          <section id="best-practices">
+            <h2>Best Practices: Optimize for Consistent Growth</h2>
+            <p>Adhere to these principles when running Facebook Ads for Shopify to maintain a profitable and scalable account.</p>
 
-          <div class="image-block">
-            <img src="https://picsum.photos/1200/600?random=4" alt="Case study performance chart showing scale of Shopify revenue and improved ROAS" loading="lazy">
-          </div>
-        </section>
+            <h3>Data Hygiene</h3>
+            <p>Keep your product feed clean, verify domains, and de-duplicate events between pixel and CAPI.</p>
 
-        <section id="best-practices" class="card">
-          <h2>Best Practices for Facebook Ads Scaling</h2>
-          <p>These best practices combine performance marketing and Shopify-specific optimization tips that help sustain growth.</p>
+            <h3>Testing Cadence</h3>
+            <p>Always run controlled A/B tests and avoid scaling from a single-day win. Allow 3–7 days for Ads Manager to learn.</p>
 
-          <h3>Data Hygiene & Tracking</h3>
-          <ul>
-            <li>Ensure the Facebook pixel or Conversions API is installed and verified.</li>
-            <li>Map events to revenue and LTV for better value-based bidding.</li>
-          </ul>
+            <h3>Budgeting & Scaling</h3>
+            <p>Use incremental scaling (20–30% increases) or vertical scaling (duplicate ad sets with increased budgets) rather than large sudden jumps.</p>
 
-          <h3>Creative Rotation</h3>
-          <ul>
-            <li>Refresh creative every 10–14 days or when frequency > 2.5.</li>
-            <li>Maintain a 10–20 creative library for quick replacements.</li>
-          </ul>
+            <h3>Creative Diversity</h3>
+            <p>Rotate new creatives weekly for high-traffic campaigns. Refresh lookalike seeds every 30–90 days.</p>
+          </section>
 
-          <h3>Audience Strategy</h3>
-          <ul>
-            <li>Use 3–4 seed segments for lookalikes and measure lift by cohort.</li>
-            <li>Combine behavioral targeting with layered contextual signals.</li>
-          </ul>
+          <section id="mistakes">
+            <h2>Common Mistakes to Avoid</h2>
+            <p>Many Shopify merchants make similar errors that limit performance. Recognize and fix them early.</p>
 
-          <h3>Budgeting & Forecasting</h3>
-          <ul>
-            <li>Keep a sustainable bid strategy and avoid sudden 2x jumps in budget.</li>
-            <li>Forecast incremental spend based on historic CPA and LTV.</li>
-          </ul>
+            <h3>1. Relying Solely on Pixel</h3>
+            <p>Without CAPI you lose signal and optimize poorly. Implement server-side events.</p>
 
-          <div class="image-block">
-            <img src="https://picsum.photos/1200/600?random=5" alt="Best practices checklist for Facebook Ads and Shopify scaling including pixel setup and creative rotation" loading="lazy">
-          </div>
-        </section>
+            <h3>2. Too Many Ad Sets Too Early</h3>
+            <p>Fragmenting budgets prevents Ads Manager from learning. Start with fewer ad sets and scale later.</p>
 
-        <section id="common-mistakes" class="card">
-          <h2>Common Mistakes When Scaling Facebook Ads</h2>
-          <p>Avoid these pitfalls that kill ROAS and slow down profitable growth.</p>
+            <h3>3. Ignoring Creative Fatigue</h3>
+            <p>High frequency without creative rotation causes CTR and conversion rate to fall.</p>
 
-          <h3>1. Scaling Losing Creative</h3>
-          <p>Don't pour budget into creative that hasn't been validated across multiple audiences. High spend on unproven ads amplifies negative signals and reduces algorithm efficiency.</p>
+            <h3>4. Not Excluding Converters</h3>
+            <p>Not excluding buyers from acquisition creatives wastes budget and inflates CPMs.</p>
 
-          <h3>2. Ignoring Funnel Optimization</h3>
-          <p>Bad landing pages or slow checkout experience will erase ad gains. Always pair ad scaling with on-site optimization.</p>
+            <img src="https://picsum.photos/1200/600?random=5" alt="Illustration of common mistakes when running Facebook Ads for Shopify, including pixel issues and creative fatigue" class="feature-image" loading="lazy">
+          </section>
 
-          <h3>3. Over-Segmenting Audiences</h3>
-          <p>Too many tiny audiences can starve delivery. Start with broader audiences and narrow only when data suggests higher intent segments.</p>
+          <section id="people-also-ask">
+            <h2>People Also Ask</h2>
 
-          <h3>4. Poor Tracking & Attribution</h3>
-          <p>Incorrect event mapping or missing conversions can mislead decisions. Validate all critical events and test end-to-end purchase flows.</p>
-        </section>
+            <div class="question">
+              <strong>How do I track purchases from Facebook to Shopify?</strong>
+              <p class="small">Install the Meta pixel, enable Conversions API, and verify purchase events. Use Shopify's Facebook channel to sync orders.</p>
+            </div>
 
-        <!-- Related Articles -->
-        <section class="card">
-          <h2>Related Articles</h2>
-          <div class="related">
-            <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
-            <a href="/articles/facebook-ads-creative-strategy">Facebook Ads Creative Strategy</a>
-            <a href="/articles/facebook-ads-audience-research">Facebook Ads Audience Research</a>
-            <a href="/articles/facebook-ads-metrics-guide">Facebook Ads Metrics Guide</a>
-          </div>
-        </section>
+            <div class="question">
+              <strong>What budget should I start with for Shopify Facebook Ads?</strong>
+              <p class="small">Start with a test budget of $20–$100/day depending on product price and margins, then scale up after you find winning audiences and creatives.</p>
+            </div>
 
-        <!-- Newsletter before FAQ -->
-        <section class="newsletter-card">
-          <h2>Download Free Marketing Guide</h2>
+            <div class="question">
+              <strong>Can I use dynamic product ads with Shopify?</strong>
+              <p class="small">Yes. Connect your Shopify product catalog to Meta to serve dynamic product ads and collections to shoppers who viewed or added items.</p>
+            </div>
+          </section>
 
-          <p>
-          Get weekly marketing tips, SEO strategies, Facebook Ads insights,
-          smart home ideas, and growth guides delivered to your inbox.
-          </p>
+          <section class="cta-panel" aria-label="Book a Free Strategy Session">
+            <div>
+              <strong>Book a Free Strategy Session</strong>
+              <p class="small">Get a personalized audit of your Shopify store and a 30-minute Facebook Ads growth plan.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="btn" href="/contact">Book a Free Strategy Session</a>
+            </div>
+          </section>
 
-          <div class="ml-embedded" data-form="Lujzbr"></div>
-        </section>
+          <section id="faq">
+            <h2>FAQ</h2>
 
-        <section id="faq" class="card" aria-labelledby="faq-heading">
-          <h2 id="faq-heading">FAQ — People Also Ask</h2>
+            <div class="question">
+              <strong>Do I need an agency to run Facebook Ads for Shopify?</strong>
+              <p class="small">Not necessarily. Small merchants can manage campaigns in-house with the right training. Agencies are helpful for scaling and advanced optimization.</p>
+            </div>
 
-          <h3>How do I scale Facebook Ads without losing ROAS?</h3>
-          <p>Scale incrementally: validate creative, increase budgets gradually (+20–30% every 48–72 hours), expand audiences horizontally, and switch to value-based bidding once LTV is established. Optimize landing pages and monitor frequency to prevent ad fatigue.</p>
+            <div class="question">
+              <strong>How long before I see results?</strong>
+              <p class="small">Expect initial learnings in 3–7 days, clearer signals in 14–30 days. Sustainable scaling typically takes 60–90 days.</p>
+            </div>
 
-          <h3>What budget should I start with for testing?</h3>
-          <p>Start with a modest daily budget that allows 50–100 conversions per week across tests. For new accounts or stores, $20–50 per ad set can generate initial signals; ramp once winners emerge.</p>
+            <div class="question">
+              <strong>Which KPIs should I track?</strong>
+              <p class="small">ROAS, Cost per Purchase (CPA), AddToCart rate, Checkouts initiated, Purchase conversion rate, and Lifetime Value (LTV).</p>
+            </div>
 
-          <h3>When should I use lookalike audiences vs broad targeting?</h3>
-          <p>Use lookalikes when you have sufficient seed data (4–10k recent customers or add-to-cart events). Use broad targeting with strong creatives when you want to leverage Facebook's algorithmic expansion and CBO.</p>
+          </section>
 
-          <h3>How often should I refresh ad creative?</h3>
-          <p>Refresh creatives every 10–14 days or sooner if frequency climbs above 2.5 and CPA increases. Keep a rolling library of new creative variations to test.</p>
+          <section class="newsletter-card">
+            <h2>Download Free Marketing Guide</h2>
 
-          <h3>Is manual bidding better than automatic bidding?</h3>
-          <p>Automatic bidding (lowest cost) works well for early scaling. Transition to manual controls like cost cap or target ROAS as you add budget and need more predictability in CPA and return.</p>
-        </section>
+            <p>
+            Get weekly marketing tips, SEO strategies, Facebook Ads insights,
+            smart home ideas, and growth guides delivered to your inbox.
+            </p>
 
-        <!-- Email form after Conclusion will be added after Conclusion as required -->
-        <section class="card">
-          <h2>Conclusion</h2>
-          <p>Scaling Facebook Ads profitably is a systematic process. Implement the Facebook Ads scaling framework above: research, test creative, scale audiences, manage bids, optimize funnels, and automate. With discipline and a data-first approach, Shopify stores can scale revenue while improving ROAS.</p>
+            <div class="ml-embedded" data-form="Lujzbr"></div>
 
-          <p class="small-muted">Next steps: run structured creative tests, validate 2–3 winners, and scale methodically. Track CPA, ROAS, and LTV to make decisions that lead to sustainable growth.</p>
+          </section>
 
-          <div class="cta-centered">
-            <a class="btn" href="/#scaling">Get Started Today</a>
-          </div>
-        </section>
+          <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>Facebook Ads for Shopify remains essential for ecommerce growth when implemented with strong tracking, deliberate audience strategies, and rigorous creative testing. Start small, measure accurately, and scale winners carefully. With the frameworks and templates in this guide, you can optimize your funnel, reduce wasted ad spend, and build a predictable acquisition engine.</p>
 
-        <!-- Newsletter after Conclusion -->
-        <section class="newsletter-card">
-          <h2>Download Free Marketing Guide</h2>
+            <div style="margin-top:14px;">
+              <a class="btn" href="/contact">Get Started Today</a>
+            </div>
+          </section>
 
-          <p>
-          Get weekly marketing tips, SEO strategies, Facebook Ads insights,
-          smart home ideas, and growth guides delivered to your inbox.
-          </p>
+          <section class="newsletter-card" style="margin-top:18px;">
+            <h2>Download Free Marketing Guide</h2>
 
-          <div class="ml-embedded" data-form="Lujzbr"></div>
-        </section>
+            <p>
+            Get weekly marketing tips, SEO strategies, Facebook Ads insights,
+            smart home ideas, and growth guides delivered to your inbox.
+            </p>
 
-      </main>
-    </article>
+            <div class="ml-embedded" data-form="Lujzbr"></div>
 
-    <footer>
-      <div class="footer-grid">
-        <div class="footer-left">
-          <div style="font-weight:700; color:#fff;">Challenge Homeschool</div>
-          <div class="small-muted">Copyright © 2026 Challenge Homeschool</div>
+          </section>
+
         </div>
-        <div class="footer-links">
-          <a href="/articles/">Articles</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/contact">Contact</a>
-          <a href="#newsletter">Newsletter</a>
-        </div>
+
+        <aside class="side-col">
+          <div class="card-module">
+            <h3>Quick Links</h3>
+            <div class="related-list">
+              <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+              <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+              <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+              <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+              <a href="/articles/facebook-ads-creative-strategy">Facebook Ads Creative Strategy</a>
+              <a href="/articles/facebook-ads-audience-research">Facebook Ads Audience Research</a>
+              <a href="/articles/facebook-ads-metrics-guide">Facebook Ads Metrics Guide</a>
+            </div>
+          </div>
+
+          <div class="card-module" style="margin-top:16px;">
+            <h3>Metrics Snapshot</h3>
+            <p class="small">Key metrics to watch daily:</p>
+            <ul class="muted-list">
+              <li>ROAS</li>
+              <li>Cost per Purchase</li>
+              <li>CTR and CPC</li>
+              <li>Frequency</li>
+              <li>Return on Ad Spend by SKU</li>
+            </ul>
+          </div>
+
+          <div class="card-module" style="margin-top:16px;">
+            <h3>Resources</h3>
+            <ul class="muted-list">
+              <li><a href="/articles/facebook-ads-testing-framework">Testing Framework</a></li>
+              <li><a href="/articles/how-to-scale-facebook-ads">Scale Playbook</a></li>
+              <li><a href="/articles/facebook-retargeting-guide">Retargeting Guide</a></li>
+            </ul>
+          </div>
+
+          <div class="card-module" style="margin-top:16px;">
+            <h3>Subscribe</h3>
+            <p class="small">Get weekly guides, templates, and case studies.</p>
+            <div class="ml-embedded" data-form="Lujzbr"></div>
+          </div>
+        </aside>
       </div>
-    </footer>
+
+    </article>
   </main>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS",
-    "description": "Discover a proven Facebook Ads scaling framework for Shopify stores. Learn step-by-step strategies, creative testing, audience research, and optimization tips to increase ROAS and scale profitably.",
-    "image": [
-      "https://picsum.photos/1200/600?random=1",
-      "https://picsum.photos/1200/600?random=2",
-      "https://picsum.photos/1200/600?random=3"
-    ],
-    "author": {
-      "@type": "Organization",
-      "name": "Challenge Homeschool"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Challenge Homeschool",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://challengehomeschool.com/logo.png"
-      }
-    },
-    "datePublished": "2026-06-17",
-    "dateModified": "2026-06-17",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://challengehomeschool.com/articles/"
-    }
-  }
-  </script>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-grid">
+      <div>
+        <strong>Challenge Homeschool</strong>
+        <div class="small">Premium marketing & ecommerce insights</div>
+        <div style="margin-top:8px;" class="small">© 2026 Challenge Homeschool</div>
+      </div>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "How do I scale Facebook Ads without losing ROAS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Scale incrementally: validate creative, increase budgets gradually (+20–30% every 48–72 hours), expand audiences horizontally, and switch to value-based bidding once LTV is established. Optimize landing pages and monitor frequency to prevent ad fatigue."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What budget should I start with for testing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Start with a modest daily budget that allows 50–100 conversions per week across tests. For new accounts or stores, $20–50 per ad set can generate initial signals; ramp once winners emerge."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "When should I use lookalike audiences vs broad targeting?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Use lookalikes when you have sufficient seed data (4–10k recent customers or add-to-cart events). Use broad targeting with strong creatives when you want to leverage Facebook's algorithmic expansion and CBO."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How often should I refresh ad creative?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Refresh creatives every 10–14 days or sooner if frequency climbs above 2.5 and CPA increases. Keep a rolling library of new creative variations to test."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is manual bidding better than automatic bidding?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Automatic bidding (lowest cost) works well for early scaling. Transition to manual controls like cost cap or target ROAS as you add budget and need more predictability in CPA and return."
-        }
-      }
-    ]
-  }
-  </script>
+      <div>
+        <h4>Articles</h4>
+        <div class="related-list">
+          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+          <a href="/articles/facebook-ads-testing-framework">Testing Framework</a>
+          <a href="/articles/how-to-scale-facebook-ads">How to Scale</a>
+        </div>
+      </div>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://challengehomeschool.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Articles",
-        "item": "https://challengehomeschool.com/articles/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "The Ultimate Facebook Ads Scaling Framework",
-        "item": "https://challengehomeschool.com/articles/"
-      }
-    ]
-  }
-  </script>
+      <div>
+        <h4>Company</h4>
+        <div class="small"><a href="/privacy-policy">Privacy Policy</a></div>
+        <div class="small"><a href="/contact">Contact</a></div>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+        <p class="small">Get the latest marketing insights.</p>
+        <div class="ml-embedded" data-form="Lujzbr"></div>
+      </div>
+    </div>
+  </footer>
 
   <!-- ARTICLE_DATA
-  TITLE:The Ultimate Facebook Ads Scaling Framework: How to Scale Shopify Stores with Higher ROAS
-  SLUG:\
-  EXCERPT:Discover a proven Facebook Ads scaling framework for Shopify stores with creative testing, audience research, bidding strategies, and optimization tips.
+  TITLE:Facebook Ads for Shopify — A Complete Playbook to Optimize, Retarget, and Scale
+  SLUG:facebook-ads-for-shopify
+  EXCERPT:Comprehensive guide to Facebook Ads for Shopify: setup, audiences, creatives, tracking (pixel & CAPI), retargeting funnels, and scaling strategies to improve ROAS.
   IMAGE:https://picsum.photos/1200/600?random=1
   DATE:2026-06-17
   -->
