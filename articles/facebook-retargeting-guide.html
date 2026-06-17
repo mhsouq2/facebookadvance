@@ -1,222 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Facebook Retargeting Guide — Advanced Strategies & How-To | Example</title>
-  <meta name="description" content="Comprehensive Facebook Retargeting Guide: setup, strategies, examples, common mistakes and optimization tips for Facebook custom audiences, dynamic retargeting and e-commerce growth.">
-  <link rel="canonical" href="https://example.com/articles/facebook-retargeting-guide">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Facebook Ads for Shopify — Complete Guide to Scale Your Store</title>
+  <meta name="description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <link rel="canonical" href="https://www.example.com/articles/facebook-ads-for-shopify" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To">
-  <meta property="og:description" content="Learn how to set up Facebook retargeting campaigns, build custom audiences, launch dynamic retargeting, and boost ROAS. Step-by-step examples and mistakes to avoid.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://example.com/articles/facebook-retargeting-guide">
-  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
-  <meta property="og:site_name" content="Marketing Academy">
+  <meta property="og:title" content="Facebook Ads for Shopify — Complete Guide to Scale Your Store" />
+  <meta property="og:description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.example.com/articles/facebook-ads-for-shopify" />
+  <meta property="og:image" content="https://picsum.photos/1200/600?random=1" />
+  <meta property="og:image:alt" content="Facebook Ads for Shopify Strategy Visual" />
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To">
-  <meta name="twitter:description" content="Step-by-step Facebook retargeting for higher conversions: pixel setup, audiences, creative, and scaling tips for e-commerce.">
-  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
-  <meta name="author" content="Marketing Academy">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Facebook Ads for Shopify — Complete Guide to Scale Your Store" />
+  <meta name="twitter:description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1" />
+  <meta name="theme-color" content="#0b1221" />
   <style>
     :root{
-      --bg:#071125;
-      --card:#0e1724;
-      --muted:#9aa7bf;
-      --text:#e7eefc;
+      --bg:#071025;
+      --panel:#0f1724;
+      --muted:#98a0b3;
       --accent:#1877f2;
-      --glass: rgba(255,255,255,0.03);
+      --accent-2:#00d4ff;
+      --glass:rgba(255,255,255,0.03);
+      --card:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       --radius:12px;
-      --max-width:1100px;
+      --maxwidth:1100px;
+      color-scheme: dark;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#061026 0%, #071125 100%);
-      color:var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#061223 0%, #071025 35%, #04101a 100%);
+      color:#e7eefb;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
       padding-bottom:80px;
     }
     header{
-      background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(24,119,242,0.03));
-      backdrop-filter: blur(6px);
-      border-bottom:1px solid rgba(255,255,255,0.03);
-      position:sticky;
-      top:0;
-      z-index:100;
+      position:sticky;top:0;z-index:40;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(6,18,35,0.65), rgba(6,18,35,0.45));
+      border-bottom:1px solid rgba(255,255,255,0.04);
     }
     .nav{
-      max-width:var(--max-width);
+      max-width:var(--maxwidth);
       margin:0 auto;
       display:flex;
       align-items:center;
-      justify-content:space-between;
-      gap:20px;
-      padding:18px;
+      gap:16px;
+      padding:12px 20px;
     }
     .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:700;
-      font-size:18px;
+      display:flex;align-items:center;gap:12px;
     }
-    .brand .logo{
-      width:38px;
-      height:38px;
-      background:var(--accent);
-      border-radius:8px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-weight:700;
+    .logo{
+      width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0aa3ff);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:white;
       box-shadow:0 6px 20px rgba(24,119,242,0.12);
     }
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px}
-    nav a:hover{color:var(--text);background:var(--glass)}
-    .cta-btn{
-      background:linear-gradient(90deg,var(--accent), #3aa0ff);
-      color:#fff;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 8px 30px rgba(24,119,242,0.12);
-    }
-    main{max-width:var(--max-width);margin:28px auto;padding:20px;display:grid;grid-template-columns:1fr 320px;gap:26px}
-    @media (max-width:980px){
-      main{grid-template-columns:1fr;padding:18px}
-      .nav{padding:12px}
-    }
-    .content{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:var(--radius);
-      padding:26px;
-      box-shadow: 0 8px 40px rgba(2,6,23,0.6);
-    }
-    .sidebar{
-      position:relative;
-      top:0;
-      align-self:start;
-      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
-      border-radius:12px;
-      padding:18px;
-      height:fit-content;
-    }
-    .hero{
-      display:flex;
-      gap:18px;
-      align-items:flex-start;
-      margin-bottom:16px;
-    }
-    h1{
-      margin:0;
-      font-size:28px;
-      color:var(--text);
-      line-height:1.1;
-    }
-    .meta{
-      color:var(--muted);
-      font-size:13px;
-      margin-top:6px;
-    }
-    .featured{
-      margin-top:16px;
-      border-radius:10px;
-      overflow:hidden;
-      box-shadow: 0 20px 60px rgba(2,6,23,0.6);
-    }
-    .toc{
-      margin:18px 0 22px;
-      padding:14px;
-      background:rgba(255,255,255,0.02);
-      border-radius:10px;
-      color:var(--muted);
-    }
-    .toc a{display:block;color:var(--muted);text-decoration:none;padding:6px 0}
-    .toc a:hover{color:var(--text)}
-    article h2{
-      color:var(--text);
-      margin-top:24px;
-      margin-bottom:8px;
-      font-size:20px;
-    }
-    article h3{
-      color:#cfe4ff;
-      margin-top:14px;
-      margin-bottom:8px;
-      font-size:16px;
-    }
-    p{margin:0 0 12px}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
-      border-radius:10px;
-      padding:16px;
-      margin:12px 0;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .small-muted{color:var(--muted);font-size:13px}
-    .image{
-      margin:14px 0;border-radius:10px;overflow:hidden;
-      box-shadow: 0 12px 36px rgba(2,6,23,0.55);
-    }
-    /* Forms */
-    form{display:flex;flex-direction:column;gap:10px}
-    label{font-size:13px;color:var(--muted)}
-    input[type="text"], input[type="email"]{
-      background:transparent;border:1px solid rgba(255,255,255,0.04);
-      padding:12px;border-radius:10px;color:var(--text);
-      outline:none;
-    }
-    input::placeholder{color:rgba(255,255,255,0.35)}
+    .navlinks{margin-left:28px;display:flex;gap:14px;align-items:center}
+    .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 10px;border-radius:8px}
+    .navlinks a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+    .cta-top{margin-left:auto;display:flex;gap:10px}
     .btn{
-      background:var(--accent);color:#fff;padding:12px;border-radius:10px;border:none;font-weight:700;
-      cursor:pointer;
+      background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+      box-shadow:0 8px 30px rgba(24,119,242,0.14);
     }
-    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
-    .features{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
-    .feature{background:rgba(255,255,255,0.02);padding:10px;border-radius:10px;font-size:13px;color:var(--muted)}
-    .related a{display:block;color:var(--muted);text-decoration:none;padding:8px 0}
-    footer{
-      margin-top:30px;padding:28px 20px;background:transparent;border-top:1px solid rgba(255,255,255,0.02);
-      color:var(--muted);
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+    main{max-width:var(--maxwidth);margin:28px auto;padding:18px}
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;
+      background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
     }
-    .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
-    .socials{display:flex;gap:12px}
-    .badge{font-size:12px;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:8px;color:var(--muted)}
-    .center{text-align:center}
-    .cta-block{
-      margin:20px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(58,160,255,0.03));
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
+    .hero h1{margin:0;font-size:28px;line-height:1.05}
+    .meta{color:var(--muted);font-size:14px;margin-top:8px}
+    .featured{margin-top:18px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .card{
+      background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)
     }
-    @media (max-width:680px){
-      .hero{flex-direction:column}
-      .cta-block{flex-direction:column;align-items:stretch}
-      .cta-block .btn{width:100%}
-      nav ul{display:none}
+    .toc{background:transparent;padding:12px;border-radius:10px;border:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
+    .content{margin-top:18px;display:block;gap:18px}
+    h2{color:#fff;margin:22px 0 12px;font-size:20px}
+    h3{color: #dbe9ff;margin:12px 0;font-size:16px}
+    p{color:var(--muted);margin:12px 0}
+    ul{color:var(--muted);margin:8px 0 16px 18px}
+    .lead-form{display:flex;flex-direction:column;gap:10px}
+    .lead-form input{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:var(--muted)}
+    .lead-form .download{display:flex;gap:8px}
+    .download .btn{flex:1}
+    .newsletter{display:flex;gap:12px;align-items:center;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(24,119,242,0.06),rgba(0,212,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+    .cta-block{margin:18px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(0,212,255,0.03));display:flex;justify-content:space-between;align-items:center}
+    .cta-block .cta-left{max-width:70%}
+    .related{display:flex;flex-direction:column;gap:8px;padding:12px}
+    .related a{color:var(--accent);text-decoration:none;font-weight:600}
+    .examples-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .example-card{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    footer{max-width:var(--maxwidth);margin:20px auto;padding:18px;color:var(--muted)}
+    .foot-grid{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+    .faq{padding:12px;border-radius:10px;background:rgba(0,0,0,0.15);border:1px solid rgba(255,255,255,0.02)}
+    .pill{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px;color:var(--muted);font-weight:700;font-size:13px}
+    img.responsive{width:100%;height:auto;display:block;border-radius:10px;object-fit:cover}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding:18px}
+      .examples-grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .cta-top{margin-left:auto}
+    }
+    @media (max-width:480px){
+      .nav{padding:10px}
+      h1{font-size:20px}
+      .hero h1{font-size:20px}
     }
   </style>
-  <!-- Structured Data: Article, FAQ, Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"Facebook Retargeting Guide — Advanced Strategies & How-To",
-    "description":"Comprehensive Facebook Retargeting Guide: setup, strategies, examples, common mistakes and optimization tips for Facebook custom audiences, dynamic retargeting and e-commerce growth.",
-    "image":["https://picsum.photos/1200/630?random=1"],
-    "author":{"@type":"Organization","name":"Marketing Academy"},
-    "publisher":{"@type":"Organization","name":"Marketing Academy","logo":{"@type":"ImageObject","url":"https://picsum.photos/200/60?random=2"}},
-    "datePublished":"2026-06-17",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://example.com/articles/facebook-retargeting-guide"}
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://www.example.com/articles/facebook-ads-for-shopify"
+    },
+    "headline":"Facebook Ads for Shopify — Complete Guide to Scale Your Store",
+    "description":"Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores.",
+    "image":["https://picsum.photos/1200/600?random=1"],
+    "author":{"@type":"Person","name":"Marketing Expert"},
+    "publisher":{"@type":"Organization","name":"Marketing Studio","logo":{"@type":"ImageObject","url":"https://picsum.photos/200/60?random=2"}},
+    "datePublished":"2026-06-01",
+    "dateModified":"2026-06-01"
   }
   </script>
   <script type="application/ld+json">
@@ -226,18 +146,27 @@
     "mainEntity":[
       {
         "@type":"Question",
-        "name":"What is Facebook retargeting and why is it important?",
-        "acceptedAnswer":{"@type":"Answer","text":"Facebook retargeting is the practice of showing ads to users who previously interacted with your website, app, or content. It is important because it increases conversion rates, reduces wasted ad spend, and helps recover abandoned carts and interested prospects."}
+        "name":"How do I set up Facebook Ads for my Shopify store?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Install the Facebook channel in Shopify, connect your Business Manager, add your Facebook Pixel or Conversions API, map events, and create ad campaigns in Ads Manager with catalog and dynamic product ads."
+        }
       },
       {
         "@type":"Question",
-        "name":"How do I set up a Facebook retargeting audience?",
-        "acceptedAnswer":{"@type":"Answer","text":"Install the Facebook pixel, configure events (ViewContent, AddToCart, Purchase), create custom audiences based on URL visits or events in Ads Manager, then build retargeting campaigns with tailored creative and offers."}
+        "name":"What is the best budget to start Facebook Ads on Shopify?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Start with a testing budget of $10–$50 per day for a few ad sets to collect data. Scale winning creatives and audiences gradually while monitoring ROAS and conversion rate."
+        }
       },
       {
         "@type":"Question",
-        "name":"What are common mistakes with retargeting campaigns?",
-        "acceptedAnswer":{"@type":"Answer","text":"Common mistakes include overexposing audiences, not segmenting intent, using the wrong creatives, ignoring frequency caps, and failing to measure ROAS and attribution windows."}
+        "name":"Should I use catalog ads or single-image ads for Shopify products?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Use catalog dynamic ads for product retargeting and single-image or video ads for prospecting. A mixed approach often yields the best conversion funnel for Shopify stores."
+        }
       }
     ]
   }
@@ -247,306 +176,288 @@
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},
-      {"@type":"ListItem","position":2,"name":"Articles","item":"https://example.com/articles"},
-      {"@type":"ListItem","position":3,"name":"Facebook Retargeting Guide","item":"https://example.com/articles/facebook-retargeting-guide"}
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+      {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles/"},
+      {"@type":"ListItem","position":3,"name":"Facebook Ads for Shopify","item":"https://www.example.com/articles/facebook-ads-for-shopify"}
     ]
   }
   </script>
 </head>
 <body>
   <header>
-    <div class="nav">
-      <a href="/" class="brand" aria-label="Marketing Academy Home">
-        <span class="logo">MA</span>
-        <span>Marketing Academy</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/courses">Courses</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/login" class="cta-btn">Login</a></li>
-        </ul>
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo">FM</div>
+        <div>
+          <div style="font-weight:800">Facebook Ads Mastery</div>
+          <div style="font-size:12px;color:var(--muted)">Shopify Growth & Ads</div>
+        </div>
+      </div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/articles/facebook-ads-for-shopify">Guide</a>
+        <a href="/articles/facebook-ads-testing-framework">Testing</a>
+        <a href="/articles/how-to-scale-facebook-ads">Scale</a>
+        <a href="/articles/facebook-retargeting-guide">Retargeting</a>
       </nav>
+      <div class="cta-top">
+        <button class="btn secondary" onclick="location.href='/contact'">Contact</button>
+        <button class="btn" onclick="location.href='#newsletter'">Get Guide</button>
+      </div>
     </div>
   </header>
 
   <main>
-    <section class="content" aria-labelledby="article-title">
-      <div class="hero">
-        <div style="flex:1">
-          <h1 id="article-title">Facebook Retargeting Guide: Build High-Converting Retargeting Campaigns</h1>
-          <div class="meta">Updated June 17, 2026 • Read time: 12–16 min • Advanced Facebook retargeting strategies & how-to</div>
-          <div class="small-muted" style="margin-top:8px">Topics: Facebook retargeting, custom audiences, dynamic retargeting, CRO, e-commerce retargeting</div>
+    <article itemscope itemtype="https://schema.org/Article">
+      <header class="hero" role="banner">
+        <div>
+          <span class="pill">Ultimate Shopify Playbook</span>
+          <h1 itemprop="headline">Facebook Ads for Shopify — How to Build, Test, and Scale Winning Campaigns</h1>
+          <div class="meta">A practical, step-by-step guide for ecommerce founders and Shopify marketers — targeting, creative, pixel setup, catalog ads, and scaling strategies.</div>
+
+          <div class="featured" style="margin-top:14px">
+            <img class="responsive" src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Creative Strategy Example for Shopify product pages" loading="lazy">
+          </div>
+
+          <div class="content">
+            <p itemprop="description">This in-depth article covers Facebook Ads for Shopify stores with proven tactics to increase conversions, lower cost-per-acquisition (CPA), and scale campaigns profitably. You'll find best practices, long-tail keyword strategies, semantic SEO terms, and examples from real Shopify ad funnels.</p>
+
+            <!-- Lead generation form after introduction -->
+            <section aria-label="Download Free Guide" style="margin-top:14px">
+              <div class="card lead-form" style="gap:12px">
+                <label style="font-weight:700;color:#fff">Download the Free Shopify Facebook Ads Checklist</label>
+                <form action="#" method="post" onsubmit="alert('Thank you! Your free guide will be emailed to you.'); return false;">
+                  <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
+                  <input type="email" name="email" placeholder="Your email" aria-label="Email" required>
+                  <div class="download">
+                    <button class="btn" type="submit">Download Free Guide</button>
+                    <button class="btn secondary" type="button" onclick="location.href='#newsletter'">Subscribe</button>
+                  </div>
+                </form>
+                <div style="font-size:13px;color:var(--muted)">By downloading you agree to receive occasional marketing emails. Unsubscribe anytime.</div>
+              </div>
+            </section>
+
+            <!-- Table of Contents -->
+            <aside class="toc" aria-label="Table of contents" style="margin-top:14px">
+              <strong>Table of Contents</strong>
+              <ul style="margin-top:8px">
+                <li><a href="#why-facebook-ads">Why Facebook Ads for Shopify</a></li>
+                <li><a href="#setup">Pixel & Setup: Connect Shopify to Facebook</a></li>
+                <li><a href="#strategy">Strategy: Audiences, Creatives, Funnels</a></li>
+                <li><a href="#how-to">How-to: Step-by-step campaign build</a></li>
+                <li><a href="#examples">Examples & Case Studies</a></li>
+                <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                <li><a href="#newsletter">Newsletter & Resources</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#conclusion">Conclusion & Next Steps</a></li>
+              </ul>
+            </aside>
+          </div>
         </div>
-        <div style="min-width:140px;text-align:right">
-          <div class="badge">Ultimate Guide</div>
-        </div>
-      </div>
 
-      <figure class="featured" aria-hidden="false">
-        <img src="https://picsum.photos/1200/600?random=11" alt="Facebook retargeting campaign strategy visual showing funnel, pixel and audiences" style="width:100%;height:auto;display:block" loading="lazy">
-      </figure>
+        <aside class="card" aria-label="Quick actions">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:13px;color:var(--muted)">Quick Actions</div>
+            <button class="btn" onclick="location.href='#how-to'">Start Campaign Builder</button>
+            <button class="btn secondary" onclick="location.href='/articles/facebook-ads-testing-framework'">Testing Framework</button>
+            <div style="margin-top:6px" class="related">
+              <div style="font-size:13px;color:var(--muted)">Related Articles</div>
+              <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+              <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+              <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+              <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+            </div>
+          </div>
+        </aside>
+      </header>
 
-      <p class="small-muted" style="margin-top:14px">This guide walks marketing teams and growth-focused founders through every step of building, testing, and scaling Facebook retargeting campaigns that increase conversion rate, lower CPA, and improve ROAS.</p>
+      <section id="why-facebook-ads">
+        <h2>Why Facebook Ads for Shopify Matter in 2026</h2>
+        <p>Facebook Ads remain one of the highest ROI channels for Shopify stores when used with a data-driven approach. With dynamic product ads, catalog integration, and advancements like Conversions API, Facebook provides robust tools for ecommerce marketers. Whether you're optimizing for traffic, purchases, or lifetime value, mastering Facebook Ads for Shopify is a growth multiplier.</p>
 
-      <div class="card" id="intro">
-        <h2 style="margin-top:0">Introduction</h2>
-        <p>Facebook retargeting is one of the fastest ways to turn warm interest into revenue. By reconnecting with users who have already shown intent — viewed a product, started checkout, or engaged with content — you reduce friction and boost conversion rates. In this guide you’ll learn the tactical setup (pixel events, custom audiences, event-based segmentation), creative approaches (dynamic retargeting, video, carousel), and advanced optimization techniques (attribution, lookalike expansion, and frequency management).</p>
-        <p>This article includes step-by-step how-to instructions, real examples, common mistakes, and FAQs that help you apply the best Facebook retargeting strategies for e-commerce, SaaS, and lead-gen funnels.</p>
-      </div>
+        <h3>The ecosystem: Ads Manager, Business Manager, and Shopify</h3>
+        <p>Shopify's native Facebook channel simplifies the connection between your store and Facebook Business Manager. This integration allows catalog syncing, pixel installation, and server-side events to improve tracking accuracy — especially after privacy updates and iOS changes.</p>
 
-      <!-- Email Collection Form -->
-      <section class="card" aria-labelledby="download-guide">
-        <h3 id="download-guide">Get the Free Facebook Retargeting Checklist</h3>
-        <p class="small-muted">Download a printable checklist to implement the pixel, audiences, and creative tests in this guide.</p>
-        <form action="#" method="post" aria-label="Download free guide form">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your full name" required>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="you@company.com" required>
-          <button class="btn" type="submit">Download Free Guide</button>
-        </form>
+        <h3>Top benefits for Shopify merchants</h3>
+        <ul>
+          <li>Dynamic retargeting using product catalogs</li>
+          <li>Lookalike audience scaling with high-value customers</li>
+          <li>Efficient creative testing and optimization</li>
+          <li>Advanced conversion tracking with Facebook Pixel and CAPI</li>
+        </ul>
       </section>
 
-      <nav class="toc" aria-label="Table of contents">
-        <strong>Table of Contents</strong>
-        <a href="#what-is-retargeting">What is Facebook Retargeting?</a>
-        <a href="#why-it-works">Why Retargeting Works</a>
-        <a href="#setup">How to Set Up Facebook Retargeting (Step-by-Step)</a>
-        <a href="#strategies">Top Retargeting Strategies</a>
-        <a href="#examples">Examples & Use Cases</a>
-        <a href="#common-mistakes">Common Mistakes to Avoid</a>
-        <a href="#measurement">Measurement & Optimization</a>
-        <a href="#newsletter">Newsletter & Updates</a>
-        <a href="#faq">FAQ</a>
-        <a href="#conclusion">Conclusion</a>
-      </nav>
+      <section id="setup">
+        <h2>Pixel & Setup: How to Connect Shopify to Facebook (Step-by-Step)</h2>
+        <p>Accurate data collection is the foundation of profitable Facebook Ads for Shopify. Follow these setup steps to ensure reliable conversion events and improved optimization.</p>
 
-      <article>
-        <h2 id="what-is-retargeting">What is Facebook Retargeting?</h2>
-        <p>Facebook retargeting (also called remarketing) is the practice of showing targeted ads to users who previously interacted with your brand — through a website visit, app event, Facebook engagement, or video view. Retargeting reduces friction by focusing marketing spend on warm audiences who already demonstrated interest, which typically results in higher conversion rates and lower CPAs than cold prospecting campaigns.</p>
+        <h3>1. Install the Facebook channel in Shopify</h3>
+        <p>Open Shopify admin, add the Facebook channel, and follow the prompts to connect your Facebook account and Business Manager. This enables catalog syncing and pixel installation without custom code.</p>
 
-        <h3>Key terms and semantic SEO concepts</h3>
-        <p>Pixel, custom audiences, dynamic product ads (DPA), lookalike audiences, funnel segmentation, conversion tracking, attribution window, ROAS, CPA, conversion rate optimization (CRO) — these terms are central to effective retargeting and will appear throughout this guide.</p>
+        <h3>2. Add Facebook Pixel and Conversions API</h3>
+        <p>Install the Facebook Pixel via the Shopify Facebook channel. Then enable the Conversions API (CAPI) to send server-side events for more reliable purchase and add-to-cart tracking — vital for optimizing campaigns after tracking changes.</p>
 
-        <h2 id="why-it-works">Why Retargeting Works</h2>
-        <h3>Behavioral intent</h3>
-        <p>Users who view product pages or add items to cart have already indicated purchase intent. Retargeting capitalizes on that intent by delivering a tailored message at the right point in the funnel.</p>
+        <h3>3. Map events and test with Event Manager</h3>
+        <p>Use Facebook Event Manager to verify purchase, add_to_cart, view_content, and initiate_checkout events. Test with the Pixel Helper and the Test Events tool.</p>
 
-        <h3>Higher relevance = better ROI</h3>
-        <p>Retargeted ads are more relevant, so engagement and conversion rates improve. This increases Facebook's ad relevance score (and similar metrics) which often lowers CPMs and improves ad delivery.</p>
+        <img class="responsive" src="https://picsum.photos/1000/600?random=2" alt="Shopify Facebook Pixel Setup Tutorial screenshot" loading="lazy">
+      </section>
 
-        <h2 id="setup">How to Set Up Facebook Retargeting (Step-by-Step)</h2>
-        <p>Below is a practical, implementation-focused setup checklist for marketers and developers.</p>
+      <section id="strategy">
+        <h2>Strategy: Audiences, Creatives, and Funnels for Shopify</h2>
+        <p>Successful Facebook Ads for Shopify are built on strong audience segmentation, compelling creatives, and a layered funnel. Below are the core components.</p>
 
-        <h3>1. Install the Facebook Pixel (or Conversions API)</h3>
-        <ol>
-          <li>Install the Facebook pixel on every page. Use a tag manager or platform integration for Shopify, Magento, BigCommerce, or custom sites.</li>
-          <li>Verify pixel events: PageView, ViewContent, AddToCart, InitiateCheckout, Purchase. Send accurate values and currency for purchase events.</li>
-          <li>For improved reliability, implement the Conversions API alongside the pixel to capture server-side events and reduce attribution loss.</li>
-        </ol>
+        <h3>Audience strategy — prospecting and retargeting</h3>
+        <p>Start with prospecting using interest-based and lookalike audiences. Use 1% or 2% lookalikes of purchasers for cold traffic. For retargeting, build custom audiences by website visitors, product viewers, add-to-cart abandoners, and past purchasers.</p>
 
-        <h3>2. Create custom audiences</h3>
-        <p>Use Ads Manager > Audiences and build custom audiences based on events:</p>
+        <h3>Creative strategy — video, UGC, and catalog ads</h3>
+        <p>Rotate short-form video creative, user-generated content (UGC), and single-image ads. Use dynamic product ads and catalog-driven creatives for retargeting to show the exact product a visitor viewed.</p>
+
+        <h3>Funnel blueprint for Shopify stores</h3>
         <ul>
-          <li>All website visitors (last 30/90 days)</li>
-          <li>Product viewers (ViewContent by product URL)</li>
-          <li>Cart abandoners (AddToCart not Purchase in X days)</li>
-          <li>Checkout abandoners (InitiateCheckout not Purchase)</li>
-          <li>Engagement audiences (video views, lead form interactions)</li>
+          <li>Top of funnel (TOF): Engagement and view ads with broad audiences.</li>
+          <li>Middle of funnel (MOF): Traffic and add-to-cart focused ads with offers and social proof.</li>
+          <li>Bottom of funnel (BOF): Dynamic retargeting, discount codes, and abandonment recovery.</li>
         </ul>
 
-        <h3>3. Segment by intent & time window</h3>
-        <p>Use different retention windows for different intents. Example: 0–7 days for cart abandoners, 7–30 days for product viewers, 30–180 days for low-intent site visitors. Tailor messages accordingly.</p>
+        <img class="responsive" src="https://picsum.photos/1000/500?random=3" alt="Facebook Ads funnel for Shopify stores visual diagram" loading="lazy">
+      </section>
 
-        <h3>4. Build retargeting campaigns</h3>
-        <p>Create campaigns that reflect the segment’s intent: purchase offers for cart abandoners, benefit-driven creatives for product viewers, brand engagement for older audiences. Use dynamic retargeting where possible to show exact products a user viewed.</p>
+      <section id="how-to">
+        <h2>How-to: Step-by-Step Campaign Build for Shopify</h2>
+        <p>This section walks through a practical build: from campaign objective to creative testing and scaling. These are the exact steps we use when launching Facebook Ads for Shopify brands.</p>
 
-        <h3>5. Configure measurement</h3>
-        <p>Set up conversions and custom events in Ads Manager, map events to standard events, and verify purchase value and currency. Use UTM parameters and server-side tracking for consistent analytics and attribution.</p>
+        <h3>Step 1 — Choose the right campaign objective</h3>
+        <p>For most Shopify stores, start with conversions (purchase) as the campaign objective. If you lack data, begin with traffic or add-to-cart events to gather signals.</p>
 
-        <figure class="image">
-          <img src="https://picsum.photos/1000/520?random=12" alt="Step-by-step Facebook retargeting setup showing pixel implementation and custom audiences" style="width:100%;height:auto;display:block" loading="lazy">
-        </figure>
+        <h3>Step 2 — Structure ad sets for clarity</h3>
+        <p>Create separate ad sets for each audience: 1% lookalikes, interest-based prospecting, and layered retargeting segments. Use uniform naming conventions to track performance.</p>
 
-        <h2 id="strategies">Top Retargeting Strategies</h2>
-        <p>These strategies reflect long-tail keywords and user intent: "best Facebook retargeting strategies for e-commerce," "how to set up Facebook retargeting for Shopify," and "Facebook dynamic retargeting examples."</p>
+        <h3>Step 3 — Ad creative and A/B testing</h3>
+        <p>Test multiple creatives per ad set (video, carousel, single image). Keep copy concise and include clear CTAs like "Shop Now" or "Get 20% Off". Run A/B tests for headline, CTA, and creative type.</p>
 
-        <h3>Strategy 1: Dynamic Retargeting (Product-Specific)</h3>
-        <p>Dynamic retargeting pulls product data from your catalogue and serves the exact items a user viewed. Best for e-commerce and high-consideration purchases. Use DPA with catalog feed and templates to scale creative personalization.</p>
+        <h3>Step 4 — Optimize and scale</h3>
+        <p>After 5–14 days of data, pause underperforming assets and expand budgets on winners. Use horizontal scaling by replicating winning ad sets across different audiences and vertical scaling with gradual budget increases (20–30% every 48–72 hours).</p>
 
-        <h3>Strategy 2: Sequential Messaging</h3>
-        <p>Show a sequence of ads that match customer intent: reminder ads → social proof (reviews) → discount offer. Sequential messaging reduces ad fatigue and improves conversion velocity.</p>
+        <h3>Step 5 — Use catalog sales and dynamic creative</h3>
+        <p>Activate Catalog Sales campaigns to dynamically show the right product to the right user. Combine dynamic creative with product feeds for personalized retargeting experiences.</p>
 
-        <h3>Strategy 3: Exclusion and Frequency Control</h3>
-        <p>Exclude purchasers from mid-funnel campaigns, cap frequency to avoid ad fatigue, and use lookback windows for re-engagement. Avoid oversaturating audiences with the same creative.</p>
-
-        <h3>Strategy 4: Upsell & Cross-sell Retargeting</h3>
-        <p>Target post-purchase audiences with complementary product recommendations using dynamic creative. This increases lifetime value (LTV) and average order value (AOV).</p>
-
-        <!-- Mid-article CTA -->
-        <div class="cta-block" role="region" aria-label="Mid-article call to action">
-          <div>
-            <strong>Ready to scale your retargeting?</strong>
-            <div class="small-muted">Get our advanced retargeting templates and ad copy swipe file to accelerate testing.</div>
+        <div class="cta-block" aria-label="Mid-article CTA">
+          <div class="cta-left">
+            <div style="font-weight:800">Need a Campaign Audit?</div>
+            <div style="color:var(--muted);margin-top:6px">Get a free 15-minute audit of your Shopify store's Facebook Ads setup and a prioritized optimization checklist.</div>
           </div>
-          <div style="display:flex;gap:10px">
-            <a href="#download-guide" class="btn">Get Templates</a>
-            <a href="/courses" class="btn secondary">Explore Courses</a>
+          <div style="text-align:right">
+            <button class="btn" onclick="location.href='/contact'">Request Free Audit</button>
           </div>
         </div>
+      </section>
 
-        <h2 id="examples">Examples & Use Cases</h2>
-        <p>Real-world examples show how to combine tactics for measurable outcomes.</p>
+      <section id="examples">
+        <h2>Examples: Real Facebook Ads for Shopify Stores</h2>
+        <p>Below are example scenarios showing how different Shopify stores apply Facebook Ads strategies for unique goals like high-volume low-ticket offers, high AOV products, and subscription models.</p>
 
-        <h3>Example 1: Shopify Store — Recover Abandoned Carts</h3>
-        <p>Segment cart abandoners from the last 48 hours with AddToCart events and target with a 1–2 day discount ad. Creative: product carousel + urgency message. Expect improved conversion rate vs. non-retargeted traffic.</p>
+        <div class="examples-grid">
+          <div class="example-card">
+            <h3>Example 1 — Low-ticket consumer goods</h3>
+            <p>Goal: Drive high purchase volume at low CPA. Strategy: Use TOF video ads with product demonstration, MOF collection ads, BOF dynamic retargeting with a small discount. Results: CPA reduced by 28% after optimizing creatives.</p>
+            <img class="responsive" src="https://picsum.photos/600/400?random=4" alt="Low-ticket Shopify product Facebook ad example demonstrating the product" loading="lazy">
+          </div>
+          <div class="example-card">
+            <h3>Example 2 — High AOV niche product</h3>
+            <p>Goal: Increase ROAS and reduce cost-per-lead. Strategy: Lead ads for TOF, email nurture, then retarget with product-focused carousel. Use lookalikes of purchasers for scale. Results: 3x ROAS within 60 days.</p>
+            <img class="responsive" src="https://picsum.photos/600/400?random=5" alt="High AOV Shopify product carousel Facebook ad example" loading="lazy">
+          </div>
+          <div class="example-card" style="grid-column:1/-1">
+            <h3>Example 3 — Subscription box (recurring revenue)</h3>
+            <p>Goal: Maximize lifetime value. Strategy: Use TOF educational video ads to drive trial offers, MOF testimonial creatives, BOF retention ads and subscription upsell sequences. Use value-based lookalikes built from lifetime customer value.</p>
+          </div>
+        </div>
+      </section>
 
-        <h3>Example 2: SaaS Trial Sign-Ups</h3>
-        <p>Target trial users who didn’t upgrade after 7 days with ads demonstrating key features and a limited-time incentive. Use video testimonials and case studies to build trust and nudge upgrades.</p>
+      <section id="mistakes">
+        <h2>Common Mistakes to Avoid with Facebook Ads for Shopify</h2>
+        <p>Many Shopify merchants make avoidable errors when running Facebook Ads. Addressing these common mistakes will improve campaign performance quickly.</p>
 
-        <figure class="image">
-          <img src="https://picsum.photos/1000/520?random=13" alt="Facebook retargeting examples for Shopify and SaaS showing carousel and video creatives" style="width:100%;height:auto;display:block" loading="lazy">
-        </figure>
+        <h3>Ignoring proper pixel and CAPI setup</h3>
+        <p>Without server-side events via Conversions API and a correctly installed pixel, your conversion reporting can be inaccurate. This leads to poor optimization decisions and wasted ad spend.</p>
 
-        <h3>Example 3: Lead Gen — Content Retargeting</h3>
-        <p>Retarget people who engaged with top-of-funnel content (blog post or webinar) and show a tailored lead magnet ad — e-book or checklist — to move them into the nurture sequence.</p>
+        <h3>Over-segmenting audiences too early</h3>
+        <p>Creating too many small ad sets fragments data. Start broader to collect signals, then narrow audiences once you have stable performance metrics.</p>
 
-        <h2 id="common-mistakes">Common Mistakes to Avoid</h2>
-        <p>Many advertisers derail retargeting campaigns with avoidable errors. Address these early to keep performance predictable.</p>
+        <h3>Not testing creative variations</h3>
+        <p>Ads fatigue quickly. Failing to rotate creative and test new hooks results in increasing CPA and dropping ROAS. Make creative iteration a weekly habit.</p>
 
-        <h3>Mistake 1: Not Segmenting by Intent</h3>
-        <p>Mixing high-intent cart abandoners with low-intent site visitors dilutes messaging. Segment by event and tailor creatives to intent.</p>
+        <h3>Scaling too quickly</h3>
+        <p>Rapid budget increases often destabilize delivery and raise costs. Use measured scaling strategies and monitor frequency, CAC, and ROAS.</p>
+      </section>
 
-        <h3>Mistake 2: Ignoring Frequency Caps</h3>
-        <p>High frequency increases annoyance and negative feedback. Set caps and rotate creatives.</p>
-
-        <h3>Mistake 3: Forgetting Attribution Windows</h3>
-        <p>Misaligned attribution windows can hide or overstate performance. Test different windows (1-day click, 7-day click, 7-day click + 1-day view) for realistic ROAS calculations.</p>
-
-        <h3>Mistake 4: Static Creative for Dynamic Audiences</h3>
-        <p>Using one-size-fits-all creative hurts conversion. Use dynamic product ads, personalized copy, and creative that aligns to the user’s last action.</p>
-
-        <figure class="image">
-          <img src="https://picsum.photos/1000/520?random=14" alt="Common mistakes in Facebook retargeting such as frequency, creative and wrong audiences" style="width:100%;height:auto;display:block" loading="lazy">
-        </figure>
-
-        <h2 id="measurement">Measurement & Optimization</h2>
-        <h3>KPIs to track</h3>
-        <ul>
-          <li>ROAS (Return on Ad Spend)</li>
-          <li>CPA (Cost per Acquisition)</li>
-          <li>Conversion Rate (on retargeted traffic)</li>
-          <li>Frequency and relevance diagnostics</li>
-        </ul>
-
-        <h3>Optimization process</h3>
-        <p>Run structured A/B tests: creative, CTA, audience window, and offer. Use holdout tests to measure true lift from retargeting. Document and iterate with statistical significance in mind.</p>
-
-        <h3>Scaling safely</h3>
-        <p>Scale by increasing budget gradually and using Lookalike audiences built from high-value converters. Maintain exclusions for converters and use blended strategies (prospecting + retargeting) to protect performance.</p>
-
-        <h2 id="newsletter">Newsletter Signup</h2>
-        <div class="card">
-          <form action="#" aria-label="Newsletter signup form">
-            <label for="newsletter-email">Subscribe for retargeting tips & weekly case studies</label>
-            <input id="newsletter-email" name="newsletter-email" type="email" placeholder="your@company.com" required>
-            <div style="display:flex;gap:8px">
-              <button class="btn" type="submit">Subscribe</button>
-              <button class="btn secondary" type="button">View Archive</button>
-            </div>
-            <div class="small-muted" style="margin-top:8px">No spam. Unsubscribe anytime. Includes exclusive templates and testing frameworks.</div>
+      <section id="newsletter" style="margin-top:18px">
+        <div class="newsletter">
+          <div style="flex:1">
+            <strong>Join our Shopify Ads Newsletter</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Weekly case studies, creative templates, and scaling tactics delivered to your inbox.</div>
+          </div>
+          <form action="#" onsubmit="alert('Subscribed! Check your inbox for the welcome email.'); return false;" style="display:flex;gap:8px;align-items:center">
+            <input type="email" name="newsletter-email" placeholder="Your email address" required style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">
+            <button class="btn" type="submit">Subscribe</button>
           </form>
         </div>
+      </section>
 
-        <h2 id="faq">FAQ — Frequently Asked Questions</h2>
-        <div class="card">
-          <h3>What should I retarget first?</h3>
-          <p>Start with high-intent audiences like cart abandoners and checkout initiators. These segments often yield the highest ROI and fastest wins.</p>
-          <h3>How long should my retargeting window be?</h3>
-          <p>Use short windows (0–7 days) for cart abandoners and longer windows (30–180 days) for upper funnel visitors. Adjust by product cycle and purchasing behavior.</p>
-          <h3>Can I retarget users who engaged on Instagram?</h3>
-          <p>Yes. Use the same Facebook pixel and engagement audiences to retarget Instagram engagers or people who interacted with your Facebook or Instagram content.</p>
+      <section id="faq" style="margin-top:18px">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <h3>How much should I spend on Facebook Ads for my Shopify store?</h3>
+          <p>Start with a modest testing budget: $10–$50/day per ad set depending on your margins. Monitor performance and scale winners gradually while preserving ROAS.</p>
+
+          <h3>Do I need a Facebook Shop or catalog to advertise?</h3>
+          <p>While not strictly required, using a catalog is essential for dynamic retargeting and product campaigns. A Facebook Shop makes product discovery and checkout smoother.</p>
+
+          <h3>What KPIs should Shopify merchants track?</h3>
+          <p>Track CPA, ROAS, conversion rate, average order value (AOV), lifetime value (LTV), and purchase frequency. Monitor add-to-cart and initiate_checkout events for early funnel performance signals.</p>
         </div>
+      </section>
 
-        <h2 id="conclusion">Conclusion</h2>
-        <p>Facebook retargeting is a high-leverage channel when implemented with intent-based segmentation, dynamic creative, and solid measurement. From pixel setup to scaling with lookalikes, this guide gives you the framework to recover lost conversions and drive sustainable ROAS. Focus on high-intent audiences first, avoid common mistakes like overexposure and poor segmentation, and iterate with rigorous testing.</p>
-
-        <!-- Post-article CTA -->
-        <div class="card center" style="margin-top:18px">
-          <strong style="display:block;font-size:18px">Start converting more traffic today</strong>
-          <p class="small-muted">Download the full retargeting checklist and ad templates to implement the strategies in this guide.</p>
-          <a href="#download-guide" class="btn">Download the Checklist</a>
+      <section id="related-resources" style="margin-top:18px">
+        <h2>Related Articles & Resources</h2>
+        <div class="related">
+          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify (This Guide)</a>
+          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+          <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
         </div>
+      </section>
 
-        <section style="margin-top:18px" class="related">
-          <h3>Related Articles</h3>
-          <div class="card">
-            <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify — Optimizing Store Performance</a>
-            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework — How to Run Meaningful Tests</a>
-            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads — Strategies and Pitfalls</a>
-            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide — This Article</a>
-          </div>
-        </section>
+      <section id="conclusion" style="margin-top:18px">
+        <h2>Conclusion — Your Next Steps with Facebook Ads for Shopify</h2>
+        <p>Facebook Ads for Shopify offers a powerful, measurable channel when you combine accurate tracking, a layered funnel, and constant creative testing. Begin with pixel and CAPI setup, implement a clear audience strategy, and iterate creatives using A/B testing. Use catalog sales for dynamic retargeting and scale methodically. With the right approach, Facebook can drive efficient acquisition and predictable growth for your Shopify store.</p>
 
-      </article>
-    </section>
-
-    <aside class="sidebar" aria-labelledby="sidebar-heading">
-      <h3 id="sidebar-heading">Quick Links</h3>
-      <div class="feature">Pixel Installation Checklist</div>
-      <div class="feature">Dynamic Product Ads Template</div>
-      <div class="feature">Retargeting Ad Copy Swipe File</div>
-
-      <div style="margin-top:16px">
-        <h4 style="margin:0 0 8px 0">Top Resources</h4>
-        <a href="/articles/facebook-ads-for-shopify" class="small-muted">Facebook Ads for Shopify</a><br>
-        <a href="/articles/facebook-ads-testing-framework" class="small-muted">Testing Framework</a><br>
-        <a href="/articles/how-to-scale-facebook-ads" class="small-muted">How to Scale</a>
-      </div>
-
-      <div style="margin-top:16px">
-        <h4 style="margin:0 0 8px 0">Quick Tips</h4>
-        <ul style="padding-left:18px;color:var(--muted)">
-          <li>Use dynamic creative</li>
-          <li>Set frequency caps</li>
-          <li>Exclude recent purchasers</li>
-        </ul>
-      </div>
-
-      <div style="margin-top:18px">
-        <h4 style="margin:0 0 8px 0">Case Study</h4>
-        <div class="card">
-          <strong>Shopify DTC</strong>
-          <div class="small-muted">+38% recovery rate with 48-hour cart window and 10% discount creative.</div>
+        <div style="margin-top:12px; display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn" onclick="location.href='/contact'">Get a Free Store Audit</button>
+          <button class="btn secondary" onclick="location.href='#how-to'">Start Campaign Builder</button>
         </div>
-      </div>
-    </aside>
+      </section>
+    </article>
   </main>
 
   <footer>
-    <div class="footer-inner">
+    <div class="foot-grid">
       <div>
-        <div style="display:flex;gap:12px;align-items:center">
-          <div class="logo" style="width:44px;height:44px;border-radius:10px;background:var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700">MA</div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="logo" style="width:44px;height:44px;border-radius:8px">FM</div>
           <div>
-            <div style="font-weight:700;color:var(--text)">Marketing Academy</div>
-            <div class="small-muted">Premium marketing playbooks & courses</div>
+            <div style="font-weight:800">Facebook Ads Mastery</div>
+            <div class="small">Shopify growth resources & premium guides</div>
           </div>
         </div>
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">© 2026 Marketing Studio. All rights reserved.</div>
       </div>
-      <div class="center" style="flex:1">
-        <div class="small-muted">© 2026 Marketing Academy. All rights reserved.</div>
-      </div>
+
       <div style="text-align:right">
-        <div class="socials">
-          <a href="#" class="small-muted">Twitter</a>
-          <a href="#" class="small-muted">LinkedIn</a>
-          <a href="#" class="small-muted">YouTube</a>
-        </div>
+        <div style="margin-bottom:8px"><a href="/privacy" style="color:var(--muted);text-decoration:none">Privacy</a> · <a href="/terms" style="color:var(--muted);text-decoration:none">Terms</a></div>
+        <div class="small">Built for ecommerce, optimized for performance.</div>
       </div>
     </div>
   </footer>
