@@ -3,24 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facebook Ads Audience Research — Deep Guide & Step-by-Step Strategies</title>
-<meta name="description" content="Learn Facebook Ads audience research strategies: step-by-step methods, tools, examples, case studies, and best practices to find high-converting audiences for your campaigns.">
-<link rel="canonical" href="https://challengehomeschool.com/articles/facebook-ads-audience-research">
+<title>Facebook Ads Testing Framework — Systematic A/B Testing for Higher ROAS</title>
+<meta name="description" content="Learn a complete Facebook Ads Testing Framework to run systematic A/B tests, optimize creative, audiences, and bidding, and scale campaigns with a clear methodology for higher ROAS.">
+<link rel="canonical" href="https://challengehomeschool.com/articles/facebook-ads-testing-framework">
 <meta name="robots" content="index,follow">
 <meta name="author" content="Challenge Homeschool">
 <!-- Open Graph -->
-<meta property="og:title" content="Facebook Ads Audience Research — Deep Guide & Step-by-Step Strategies">
-<meta property="og:description" content="Learn Facebook Ads audience research strategies: step-by-step methods, tools, examples, case studies, and best practices to find high-converting audiences for your campaigns.">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://challengehomeschool.com/articles/facebook-ads-audience-research">
-<meta property="og:image" content="https://picsum.photos/1200/600?random=1">
+<meta property="og:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Higher ROAS">
+<meta property="og:description" content="Learn a complete Facebook Ads Testing Framework to run systematic A/B tests, optimize creative, audiences, and bidding, and scale campaigns with a clear methodology for higher ROAS.">
+<meta property="og:url" content="https://challengehomeschool.com/articles/facebook-ads-testing-framework">
 <meta property="og:site_name" content="Challenge Homeschool">
-<!-- Twitter Card -->
+<meta property="og:image" content="https://picsum.photos/1200/600?random=1">
+<meta property="article:published_time" content="2026-06-17">
+<meta property="article:author" content="Challenge Homeschool">
+<!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Facebook Ads Audience Research — Deep Guide & Step-by-Step Strategies">
-<meta name="twitter:description" content="Learn Facebook Ads audience research strategies: step-by-step methods, tools, examples, case studies, and best practices to find high-converting audiences for your campaigns.">
+<meta name="twitter:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Higher ROAS">
+<meta name="twitter:description" content="Learn a complete Facebook Ads Testing Framework to run systematic A/B tests, optimize creative, audiences, and bidding, and scale campaigns with a clear methodology for higher ROAS.">
 <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1">
-<!-- MailerLite Universal Script -->
+<link rel="icon" href="/favicon.ico">
+<!-- MailerLite Universal -->
 <script>
 (function(w,d,e,u,f,l,n){
 w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
@@ -35,300 +39,510 @@ ml('account', '2426568');
   --bg:#0b0f14;
   --card:#0f1720;
   --muted:#9aa6b2;
-  --accent:#2b9fff;
-  --accent-2:#5b6cff;
+  --accent1:#2b8cff;
+  --accent2:#6a5cff;
   --glass:rgba(255,255,255,0.03);
   --radius:12px;
-  --max-w:1100px;
-  --text:#e6eef6;
-  --accent-grad:linear-gradient(90deg,var(--accent),var(--accent-2));
-  --shadow:0 6px 18px rgba(2,6,23,0.6);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --max-width:1100px;
+  --grad:linear-gradient(90deg,var(--accent1),var(--accent2));
+  --transition:200ms ease;
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color-scheme:dark;
 }
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  background:linear-gradient(180deg,#071019 0%,var(--bg) 100%);
-  color:var(--text);
+  background:var(--bg);
+  color:#fff;
+  line-height:1.6;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
-  line-height:1.65;
   font-size:16px;
 }
-.container{max-width:var(--max-w);margin:0 auto;padding:24px}
-.header{
-  position:sticky;top:0;background:linear-gradient(180deg,rgba(10,14,20,0.6),rgba(11,15,20,0.85));
-  backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:1000;
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:32px;
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--max-w);margin:0 auto;padding:14px 24px}
-.logo{display:flex;align-items:center;gap:12px;font-weight:700}
-.logo-mark{width:40px;height:40px;border-radius:10px;background:var(--accent-grad);display:inline-block;box-shadow:var(--shadow)}
-.nav{display:flex;gap:18px;align-items:center}
-.nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-.nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
-.cta-btn{background:var(--accent-grad);padding:10px 16px;border-radius:10px;color:#fff;font-weight:700;text-decoration:none;box-shadow:0 6px 18px rgba(43,159,255,0.12)}
-.hero{padding:36px 24px 18px}
-.article-card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.03)}
-.h1{font-size:2rem;margin:0 0 12px}
-.meta{color:var(--muted);font-size:14px;margin-bottom:18px}
-.toc{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
-.toc a{color:var(--accent);text-decoration:none;background:rgba(91,108,255,0.06);padding:8px 12px;border-radius:999px;font-weight:600}
-.featured-img{width:100%;height:auto;border-radius:10px;display:block;margin:18px 0}
-.content{display:grid;grid-template-columns:1fr 320px;gap:22px}
-@media (max-width:980px){.content{grid-template-columns:1fr}}
-.article-body{padding-right:8px}
-.card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.h2{font-size:1.25rem;color:#fff;margin-top:20px;margin-bottom:10px}
-.h3{font-size:1.05rem;color:var(--text);margin-top:12px;margin-bottom:8px}
-p{color:var(--muted);margin:10px 0}
-ul{margin:8px 0 16px 20px;color:var(--muted)}
-li{margin:6px 0}
-.img-figure{margin:16px 0;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-.gradient-btn{display:inline-block;padding:12px 18px;border-radius:12px;color:#fff;background:var(--accent-grad);text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(43,159,255,0.12)}
-.cta-center{display:flex;justify-content:center;margin:24px 0}
-.side-card{position:sticky;top:90px}
-.small{font-size:13px;color:var(--muted)}
-.newsletter-card{background:linear-gradient(180deg,rgba(91,108,255,0.06),rgba(43,159,255,0.02));padding:18px;border-radius:12px;color:var(--text);margin:18px 0}
-.related-list a{display:block;color:var(--accent);text-decoration:none;margin:8px 0}
-.footer{margin-top:40px;padding:28px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
-.footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}
-.footer .links a{color:var(--muted);text-decoration:none;margin-right:18px}
-.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:700}
-.kv{display:flex;gap:12px;align-items:center}
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-@media (max-width:760px){.card-grid{grid-template-columns:1fr}}
-blockquote{border-left:4px solid rgba(91,108,255,0.18);padding-left:12px;color:var(--muted);margin:12px 0;background:rgba(255,255,255,0.01);border-radius:8px;padding:12px}
-.footer-links a{display:block;color:var(--muted);text-decoration:none;margin:6px 0}
-small{color:var(--muted)}
-.footer-cta .gradient-btn{padding:10px 14px}
-.footer-bottom{margin-top:18px;border-top:1px solid rgba(255,255,255,0.03);padding-top:16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.header{
+  position:sticky;
+  top:0;
+  z-index:50;
+  backdrop-filter:blur(6px);
+  background:linear-gradient(180deg,rgba(11,15,20,0.6),rgba(11,15,20,0.35));
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:12px 32px;
+}
+.brand{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{
+  width:40px;
+  height:40px;
+  border-radius:10px;
+  background:var(--grad);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  color:#fff;
+  box-shadow:0 6px 20px rgba(43,140,255,0.12);
+}
+.menu{
+  display:flex;
+  gap:18px;
+  align-items:center;
+}
+.menu a{
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 10px;
+  border-radius:8px;
+  transition:all var(--transition);
+  font-weight:600;
+}
+.menu a:hover{ color:#fff; background:rgba(255,255,255,0.02); transform:translateY(-2px)}
+.cta-btn{
+  background:var(--grad);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 8px 30px rgba(106,92,255,0.12);
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+.cta-btn:hover{ transform:translateY(-3px); box-shadow:0 14px 40px rgba(106,92,255,0.18) }
+
+.hero{
+  padding:36px 0 12px;
+}
+.article-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow:0 6px 30px rgba(2,6,23,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+h1{margin:0 0 16px; font-size:32px; letter-spacing:-0.4px}
+.lead{color:var(--muted); margin:0 0 18px; font-size:16px}
+.toc{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:12px 0 20px;
+}
+.toc a{
+  background:var(--glass);
+  color:var(--muted);
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:10px;
+  font-size:14px;
+}
+.featured-image{width:100%; border-radius:10px; margin:18px 0}
+.content{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:20px;
+  margin-top:8px;
+}
+.section{padding:18px 0; border-top:1px dashed rgba(255,255,255,0.03)}
+h2{font-size:22px; margin:0 0 12px}
+h3{font-size:18px; margin:8px 0}
+p{margin:8px 0}
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  padding:18px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.row{display:flex; gap:18px; flex-wrap:wrap}
+.col{flex:1; min-width:260px}
+.img-card{width:100%; border-radius:10px; overflow:hidden}
+.kpi{
+  display:flex; gap:12px; align-items:center; justify-content:space-between;
+  background:linear-gradient(90deg, rgba(43,140,255,0.06), rgba(106,92,255,0.04));
+  padding:14px; border-radius:10px; margin:10px 0;
+}
+.badge{background:var(--grad); padding:6px 10px; border-radius:8px; font-weight:700; color:#fff}
+.small{font-size:14px; color:var(--muted)}
+.cta-ghost{
+  display:inline-block;
+  padding:12px 16px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.06);
+  color:#fff;
+  text-decoration:none;
+  background:transparent;
+}
+.newsletter-card{
+  margin:18px 0;
+  padding:18px;
+  border-radius:12px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.03);
+}
+.cta-mid{
+  display:block;
+  text-align:center;
+  padding:18px;
+  margin:18px 0;
+  border-radius:14px;
+  background:linear-gradient(90deg,#0f1720 0%, rgba(43,140,255,0.06) 50%);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.cta-mid a{display:inline-block; padding:12px 18px; border-radius:10px; background:var(--grad); text-decoration:none; color:#fff; font-weight:700}
+.related{display:flex; flex-direction:column; gap:8px}
+.related a{color:var(--accent1); text-decoration:none}
+.footer{
+  margin-top:36px;
+  padding:28px 32px;
+  border-top:1px solid rgba(255,255,255,0.03);
+  display:flex;
+  gap:24px;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.foot-links{display:flex; gap:12px; align-items:center}
+.small-muted{color:var(--muted); font-size:14px}
+@media (min-width:900px){
+  .content{grid-template-columns: 1fr 350px; gap:28px}
+  .article-main{min-width:0}
+  .sidebar{position:relative; top:0}
+}
+@media (max-width:899px){
+  .menu{display:none}
+  .nav{padding:12px 18px}
+  .container{padding:18px}
+  h1{font-size:26px}
+}
+a:focus{outline:2px dashed rgba(43,140,255,0.4); outline-offset:3px}
 </style>
 </head>
 <body>
-<header class="header" role="banner">
-  <div class="header-inner">
-    <div class="logo"><span class="logo-mark" aria-hidden="true"></span><span class="small">Challenge Homeschool</span></div>
-    <nav class="nav" role="navigation" aria-label="Main Navigation">
+<header class="header">
+  <div class="container nav" role="navigation" aria-label="Main navigation">
+    <a class="brand" href="/">
+      <div class="logo">CH</div>
+      <div>
+        <div style="font-weight:700">Challenge Homeschool</div>
+        <div style="font-size:12px; color:var(--muted)">Marketing & Growth</div>
+      </div>
+    </a>
+    <nav class="menu" aria-label="Primary">
       <a href="/">Home</a>
-      <a href="/">Articles</a>
       <a href="/articles/">Articles</a>
       <a href="/#framework">Framework</a>
       <a href="/#creative">Creative</a>
       <a href="/#scaling">Scaling</a>
       <a href="/#faq">FAQ</a>
     </nav>
-    <a class="cta-btn" href="/contact">Contact</a>
+    <a class="cta-btn" href="#get-started">Book a Free Strategy Session</a>
   </div>
 </header>
 
-<main class="container" role="main">
+<main class="container">
   <article class="article-card" itemscope itemtype="http://schema.org/Article">
     <header class="hero">
-      <h1 class="h1" itemprop="headline">Facebook Ads Audience Research</h1>
-      <div class="meta">
-        <span>Challenge Homeschool — </span><time datetime="2026-06-17" itemprop="datePublished">June 17, 2026</time>
-        <span> • </span><span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Challenge Homeschool</span></span>
-      </div>
-
-      <p class="small">This comprehensive guide will show you how to research Facebook Ads audiences, build high-converting segments, and improve ROAS using data-driven audience targeting research.</p>
-
-      <div class="toc" aria-label="Table of Contents">
-        <a href="#introduction">Introduction</a>
+      <h1 itemprop="headline">Facebook Ads Testing Framework — A Step-by-Step System to Improve ROAS</h1>
+      <p class="lead" itemprop="description">A practical, data-driven Facebook Ads Testing Framework you can use to accelerate learning, validate creative, refine audiences, and scale profitable campaigns without guesswork.</p>
+      <div class="toc" aria-label="Table of contents">
+        <a href="#intro">Introduction</a>
         <a href="#how-it-works">How It Works</a>
-        <a href="#audience-research-steps">Research Steps</a>
-        <a href="#tools">Tools & Data Sources</a>
-        <a href="#how-to">How-To: Create Audience</a>
+        <a href="#how-to">How-To Guide</a>
         <a href="#examples">Examples</a>
         <a href="#case-study">Case Study</a>
         <a href="#best-practices">Best Practices</a>
         <a href="#common-mistakes">Common Mistakes</a>
         <a href="#faq">FAQ</a>
+        <a href="#conclusion">Conclusion</a>
       </div>
-
-      <img class="featured-img" src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Audience Research overview with targeting diagram" loading="lazy" itemprop="image">
-
     </header>
 
-    <section id="introduction" class="article-body">
-      <h2 class="h2">Introduction</h2>
-      <p>Facebook Ads Audience Research is the foundation of profitable campaigns. Without precise audience targeting research and segmentation, even the most creative ad will underperform. In this guide you'll learn long-tail strategies like "how to research Facebook Ads audience for ecommerce", "Facebook audience targeting research for local businesses", and "lookalike audience research for scaling"—all explained with step-by-step examples, tools, and real case study data.</p>
-
-      <p>We focus on practical, repeatable steps: mapping customer intent, extracting interest and behavior clusters, building layered custom audiences, and validating with small-batch testing. The goal: reduce CAC and improve ROAS using audience research instead of guesswork.</p>
-
-      <section class="newsletter-card">
-        <h2>Download Free Marketing Guide</h2>
-        <p>
-        Get weekly marketing tips, SEO strategies, Facebook Ads insights,
-        smart home ideas, and growth guides delivered to your inbox.
-        </p>
-        <div class="ml-embedded" data-form="Lujzbr"></div>
-      </section>
-
-      <h3 class="h3">Why audience research matters</h3>
-      <p>Audience research helps you find edges: underserved micro-audiences, high-intent interest clusters, and behavior patterns that correlate with conversions. It turns broad targeting into a systemized pipeline for testing, widening winners into lookalikes, and expanding reach without diluting performance.</p>
-
-      <div class="img-figure card">
-        <img src="https://picsum.photos/1200/600?random=2" alt="Researching interests and behaviors for Facebook Ads audience targeting" loading="lazy" style="width:100%;height:auto;display:block">
-      </div>
-
-      <h3 class="h3">Who should use this guide</h3>
-      <ul>
-        <li>eCommerce teams wanting high-converting audience segments</li>
-        <li>Agencies building repeatable targeting frameworks</li>
-        <li>Founders testing audience signals for product-market fit</li>
-        <li>Local businesses seeking better ROAS from Facebook Ads</li>
-      </ul>
-    </section>
+    <figure>
+      <img class="featured-image" src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Testing Framework dashboard showing tests, metrics and creatives" loading="lazy">
+    </figure>
 
     <div class="content">
-      <section class="article-body">
-        <h2 class="h2" id="how-it-works">How Facebook Ads Audience Research Works</h2>
-        <p>At a high level, audience research combines first-party data, platform signals, and third-party insights. The process transforms customer profiles into testing-ready audience sets. Key phases:</p>
-        <ul>
-          <li>Discovery: collect customer demographics, behaviors, and purchase paths.</li>
-          <li>Hypothesis: create audience hypotheses using interest and behavior overlaps.</li>
-          <li>Segmentation: build layered saved audiences, custom audiences, and lookalikes.</li>
-          <li>Validation: run controlled tests with clear KPIs (CPA, ROAS, LTV).</li>
-        </ul>
+      <section class="article-main" id="article-main">
+        <div class="section" id="intro">
+          <h2>Introduction</h2>
+          <p>The Facebook Ads Testing Framework is a repeatable methodology to test hypotheses, measure lift, and confidently commit budget to winners. Whether you're running campaigns for Shopify, lead generation, or subscription SaaS, this framework helps you reduce wasted ad spend and increase conversion rate, click-through-rate (CTR), and return on ad spend (ROAS).</p>
 
-        <h3 class="h3">Semantic and related keywords to use</h3>
-        <p>When documenting or naming audiences, use search-focused and semantic phrases like "customer intent clusters", "high intent Facebook audiences", "interest intersection strategy", "behavioral targeting for Facebook Ads", and "Facebook Ads audience research checklist". These are both useful internally and help surface your content in related search results.</p>
-
-        <h2 class="h2" id="audience-research-steps">Audience Research Steps (Step-by-Step)</h2>
-        <h3 class="h3">1. Collect first-party signals</h3>
-        <p>Export your customer list, CRM tags, purchase history, and on-site behavior data. Segment by most recent purchase, purchase frequency, average order value, and lifetime value. These fields will later guide custom audience creation and lookalike seeding.</p>
-
-        <h3 class="h3">2. Map customer persona attributes</h3>
-        <p>Create a persona canvas: demographics, interests, hobbies, related brands they follow, common search queries, mobile vs desktop usage, and typical purchase objections. This mapping will generate interest and behavior keywords for the Ads Manager audience builder.</p>
-
-        <h3 class="h3">3. Use platform discovery tools</h3>
-        <p>Use Facebook's Audience Insights (or Ads Manager breakdowns), Google Trends, and social listening to validate interest clusters and seasonality. Look for high-reach, low-competition interests that align with intent signals.</p>
-
-        <div class="img-figure card">
-          <img src="https://picsum.photos/1200/600?random=3" alt="Using Facebook Audience Insights and analytics for audience research" loading="lazy" style="width:100%;height:auto;display:block">
+          <p>In this guide you'll get a full playbook: definitions, experiment templates, real examples, a case study, best practices, common mistakes, and a FAQ answering People Also Ask style questions like "How do you test Facebook ads?" and "What should I A/B test in Facebook Ads?"</p>
         </div>
 
-        <h3 class="h3">4. Build layered audiences</h3>
-        <p>Start with a 3-layer approach: Seed audiences (custom lists and converters), Interest + Behavior intersections, and Exclusions (non-buyers or low-intent groups). For example, include "Fitness equipment buyers" AND "Home gym interest" while excluding "bargain shoppers" if your price point is premium.</p>
+        <section class="newsletter-card" aria-labelledby="newsletter-intro">
+          <h2 id="newsletter-intro">Download Free Marketing Guide</h2>
+          <p>
+            Get weekly marketing tips, SEO strategies, Facebook Ads insights,
+            smart home ideas, and growth guides delivered to your inbox.
+          </p>
+          <div class="ml-embedded" data-form="Lujzbr"></div>
+        </section>
 
-        <h3 class="h3">5. Create test matrix</h3>
-        <p>Design a testing matrix with small budgets, clear primary metrics (CPA, ROAS), and single-variable changes. Test each audience against the same creative and bid strategy to isolate audience performance.</p>
+        <section class="section" id="how-it-works">
+          <h2>What is the Facebook Ads Testing Framework?</h2>
+          <p>This framework is a structured testing process built around four pillars: Hypotheses, Variable Isolation, Sample Size & Statistical Significance, and Ramp & Scale. It standardizes how teams run A/B tests and multivariate tests across creative, audiences, placements, and bidding strategies.</p>
 
-        <h2 class="h2" id="tools">Tools & Data Sources for Audience Research</h2>
-        <p>Use a mixture of tools to reduce bias and broaden insight:</p>
-        <ul>
-          <li>Ads Manager & Audience Insights — native signals and interest suggestions</li>
-          <li>Facebook Pixel & Conversion API — first-party behavior tracking</li>
-          <li>Google Analytics — on-site behavior, landing pages, referral data</li>
-          <li>Google Trends — seasonality and broad search intent</li>
-          <li>Social listening (Brandwatch, Mention) — sentiment and topics</li>
-          <li>Keyword research (Ahrefs, SEMrush) — demand and related search phrases</li>
-        </ul>
-
-        <h2 class="h2" id="how-to">How-To: Create a High-Converting Audience</h2>
-        <p>Follow this step-by-step to build an audience in Ads Manager optimized for conversions:</p>
-        <ol>
-          <li>Upload a seed list of top 1,000 highest LTV customers (Customer List Custom Audience).</li>
-          <li>Create a 1% lookalike based on that seed for prospecting.</li>
-          <li>Build layered saved audiences: Interests intersected with behaviors (e.g., "purchase behavior" + "interest in premium running shoes").</li>
-          <li>Exclude converters from prospecting and exclude broad interest audiences from retargeting campaigns.</li>
-          <li>Create exclusion lists: add visitors who bounced or had low session durations to exclude from targeted conversion ads.</li>
-          <li>Set up conversion windows and attribution consistent with your sales cycle (7/28 days).</li>
-        </ol>
-
-        <h3 class="h3">How to optimize for featured snippets</h3>
-        <p>Use clear, concise answers for common questions, short lists, and step-by-step numbered sequences. Examples and metrics help Google surface content as featured snippets. For instance, answer "How to research Facebook Ads audience?" with a short 3–5 step list near the top of the section.</p>
-
-        <div class="cta-center" style="margin-top:16px">
-          <a class="gradient-btn" href="/contact">Book a Free Strategy Session</a>
-        </div>
-
-        <h2 class="h2" id="examples">Examples: Audience Research by Vertical</h2>
-
-        <h3 class="h3">eCommerce (Apparel)</h3>
-        <p>Use purchase behavior: customers who bought full-price products in the last 180 days as seed. Interests: sustainable fashion, eco fabrics, certain influencers. Exclusions: coupon users, bargain shoppers. Combine with dynamic creative to test fabric-focused messaging.</p>
-
-        <h3 class="h3">Local Service Business</h3>
-        <p>Seed audiences from appointment bookings and 10-mile radius website visitors. Use interest targeting including "home improvement", "DIY", and local community pages. Run lead-gen forms optimized for phone appointments and retarget engaged users with testimonials.</p>
-
-        <div class="img-figure card">
-          <img src="https://picsum.photos/1200/600?random=4" alt="Audience research example for ecommerce and local businesses" loading="lazy" style="width:100%;height:auto;display:block">
-        </div>
-
-        <h3 class="h3">SaaS Product</h3>
-        <p>Target job titles, company sizes, and software categories. Seed with trial signups and product users. Create lookalikes for users with over 10 logins in the trial period and intersect with "marketing software" interests.</p>
-
-        <h2 class="h2" id="case-study">Case Study: Scaling with Audience Research</h2>
-        <p>Client: Direct-to-consumer fitness brand. Challenge: plateaued ROAS at scale. Approach: conducted deep audience research combining CRM tags with interest analysis. Built 8 micro-audiences (premium buyers, home workout, outdoor fitness enthusiasts, nutrition buyers, seasonal shoppers, fitness influencers followers, retargeting engagers, and cart abandoners).</p>
-
-        <p>Result: Within 8 weeks, the brand increased their top-performing audience ROAS by 42% and decreased CPA by 28% through layered exclusions, creative personalization, and lookalike expansion on the 3 best-performing seeds. The key win was isolating "home gym" + "premium supplement buyers" intersection which doubled conversion rate vs broad interests.</p>
-
-        <h3 class="h3">Key takeaways from the case study</h3>
-        <ul>
-          <li>Targeting niches with clear purchase signals outperformed broad placements.</li>
-          <li>Exclusion lists preserved ad efficiency while scaling budgets.</li>
-          <li>Continuous micro-tests and creative matching accelerated learning.</li>
-        </ul>
-
-        <h2 class="h2">Best Practices</h2>
-        <h3 class="h3">Testing & Validation</h3>
-        <ul>
-          <li>Run 1–2 week tests with consistent budgets and identical creatives across audiences to isolate audience performance.</li>
-          <li>Prioritize metrics: CPA and ROAS for direct response; CAC and LTV for longer funnels.</li>
-          <li>Use A/B testing for creative and copy that speak to audience-specific pain points.</li>
-        </ul>
-
-        <h3 class="h3">Segmentation & Scaling</h3>
-        <ul>
-          <li>Seed lookalikes with high LTV customers before adding lower-value segments.</li>
-          <li>Scale by increasing budgets on winning audiences and duplicating campaigns with 5–10% daily budget increments.</li>
-          <li>Use broad audiences only when you have strong creative signals or active conversion optimization from Meta.</li>
-        </ul>
-
-        <h3 class="h3">Privacy & Data</h3>
-        <p>Respect user privacy: anonymize and hash customer data, follow consent requirements, and implement Conversion API for reliable first-party signals in a post-cookie world.</p>
-
-        <h2 class="h2">Common Mistakes to Avoid</h2>
-        <h3 class="h3">1. Overlapping audiences</h3>
-        <p>Audience overlap causes internal bid competition and inflated metrics. Use audience overlap tools and exclusions to reduce cannibalization.</p>
-
-        <h3 class="h3">2. Testing too many variables</h3>
-        <p>Change only one element at a time—audience or creative—to identify causal impact. If you change both, you won't know what moved the needle.</p>
-
-        <h3 class="h3">3. Ignoring audience decay</h3>
-        <p>Audiences age: retargeting windows and lookalike seeds must be refreshed to keep signals relevant. Re-seed with recent converters and use time-bound custom audiences.</p>
-
-        <div class="img-figure card">
-          <img src="https://picsum.photos/1200/600?random=5" alt="Avoid common mistakes like overlapping audiences and stale data" loading="lazy" style="width:100%;height:auto;display:block">
-        </div>
-
-      </section>
-
-      <aside class="side-card">
-        <div class="card">
-          <h4 class="small">Quick Checklist</h4>
+          <h3>Core elements</h3>
           <ul>
-            <li>Seed top LTV customers</li>
-            <li>Create layered saved audiences</li>
-            <li>Exclude low-intent groups</li>
-            <li>Test 1 variable at a time</li>
-            <li>Refresh seeds regularly</li>
+            <li><strong>Hypothesis-first testing:</strong> Every test starts with a clear hypothesis (e.g., "Short copy will increase CTR by 10%").</li>
+            <li><strong>Isolate one variable:</strong> Test single changes when possible to attribute lift.</li>
+            <li><strong>Minimum sample size:</strong> Ensure the ad set reaches enough impressions and conversions.</li>
+            <li><strong>Measure proper metrics:</strong> Use CPA, ROAS, CTR, CVR depending on campaign objective.</li>
+            <li><strong>Document results:</strong> Log outcomes for future reference and scaling rules.</li>
+          </ul>
+
+          <div class="kpi">
+            <div>
+              <div class="badge">Framework</div>
+              <div class="small">Hypothesis • Test • Measure • Scale</div>
+            </div>
+            <div>
+              <div class="small">Use for: e-commerce, lead gen, SaaS trials</div>
+            </div>
+          </div>
+
+          <figure class="img-card">
+            <img src="https://picsum.photos/1200/600?random=2" alt="Graph showing A/B test comparison of Facebook ad creatives for improved conversion rate" loading="lazy">
+          </figure>
+        </section>
+
+        <section class="section" id="how-to">
+          <h2>How to Use This Framework — Step-by-Step</h2>
+          <h3>Step 1: Define a clear hypothesis</h3>
+          <p>Write a specific, measurable hypothesis. Example: "Changing the CTA from 'Shop Now' to 'Get 20% Off' will reduce CPA by 15% for cold audiences over a 14-day period."</p>
+
+          <h3>Step 2: Choose the right variable</h3>
+          <p>Decide whether you're testing creative, audience, copy, offer, or bidding. Only change one type of variable per test to ensure you can attribute results. For multivariate tests, use a controlled design and larger sample sizes.</p>
+
+          <h3>Step 3: Set sample size and duration</h3>
+          <p>Estimate required impressions and conversions to reach statistical confidence. For conversion-focused tests, aim for at least 50-100 conversions per variant where possible. Use statistical calculators or rules of thumb to set test length (commonly 7–21 days depending on traffic).</p>
+
+          <h3>Step 4: Run the test and monitor metrics</h3>
+          <p>Monitor primary and secondary KPIs: CPA (cost per acquisition), ROAS, CTR, conversion rate (CVR), frequency, and relevance metrics. Avoid making early decisions before the confidence threshold is reached.</p>
+
+          <h3>Step 5: Analyze and codify winners</h3>
+          <p>Apply pre-defined criteria to declare winners. If the winner meets your KPI lift (e.g., >10% improvement in ROAS), implement the change and scale budget. Document the outcome in your testing log.</p>
+
+          <h3>Step 6: Ramp & Scale</h3>
+          <p>When scaling a winner, increase budget gradually (20–30% increments) and monitor for performance degradation. Consider duplicating ad sets vs. budget scaling based on learning and audience overlap.</p>
+
+          <figure class="img-card">
+            <img src="https://picsum.photos/1200/600?random=3" alt="Marketing professional analyzing Facebook Ads testing framework results on a laptop" loading="lazy">
+          </figure>
+        </section>
+
+        <section class="section" id="examples">
+          <h2>Examples: Tests to Run Today</h2>
+          <p>Here are concrete tests you can run using the Facebook Ads Testing Framework, tailored for different business goals.</p>
+
+          <h3>Creative tests</h3>
+          <ul>
+            <li>Static image vs. short video (<15s) for product awareness.</li>
+            <li>Lifestyle imagery vs. product-only photos for product pages.</li>
+            <li>Multiple CTAs in the same copy to identify action language that converts.</li>
+          </ul>
+
+          <h3>Audience tests</h3>
+          <ul>
+            <li>Interest-based cold audiences vs. lookalike audiences (1% vs 3%).</li>
+            <li>Exclude converters to measure incremental reach.</li>
+            <li>Prospecting with retargeting overlays vs. prospecting alone.</li>
+          </ul>
+
+          <h3>Bidding & placement tests</h3>
+          <ul>
+            <li>Automatic placements vs. manual placements (feed-only vs. feeds+stories).</li>
+            <li>Lowest cost vs. cost cap bidding to control CPA.</li>
+            <li>Daily budget split tests vs. lifetime budget with schedule.</li>
+          </ul>
+
+          <div class="card">
+            <h3>Quick A/B test template</h3>
+            <p>Hypothesis: [What you expect]. Variant A: [Control]. Variant B: [Change]. KPI: [Primary metric]. Minimum duration: [7–21 days]. Sample size: [X conversions]. Decision rule: [e.g., 95% statistical confidence or +10% KPI lift].</p>
+          </div>
+        </section>
+
+        <section class="section" id="case-study">
+          <h2>Case Study: Doubling ROAS in 8 Weeks</h2>
+          <p>Client: Mid-size Shopify brand selling home accessories.</p>
+          <p>Objective: Increase ROAS from 2.1 to 3.5 while maintaining CPA targets.</p>
+          <h3>Approach</h3>
+          <ol>
+            <li>Baseline audit to identify top-performing creatives and audiences.</li>
+            <li>Hypothesis development: Short product demo videos will drive higher CTR and conversion on mobile.</li>
+            <li>Testing: Run creative-only A/B tests across 3 cold lookalike audiences and 2 retargeting pools.</li>
+            <li>Scale winners: Increase budget in 25% increments and duplicate ad sets to avoid audience overlap.</li>
+          </ol>
+
+          <h3>Results</h3>
+          <p>Within 8 weeks, the team identified two winning video creatives and a 1% lookalike audience that produced a 72% increase in ROAS. CPA decreased by 18% and conversion rate improved by 22% on landing pages with optimized UTM-tagged traffic.</p>
+
+          <h3>Key takeaways</h3>
+          <ul>
+            <li>Isolating creative changes revealed a 35% improvement in CTR that translated to real revenue lift.</li>
+            <li>Documenting test outcomes reduced repeated mistakes and sped up decision-making.</li>
+            <li>Gradual scaling preserved performance while expanding reach.</li>
+          </ul>
+
+          <figure class="img-card">
+            <img src="https://picsum.photos/1200/600?random=4" alt="Case study showing improvement in Facebook Ads ROAS and CPA metrics on a dashboard" loading="lazy">
+          </figure>
+        </section>
+
+        <section class="section" id="best-practices">
+          <h2>Best Practices for Facebook Ads Testing</h2>
+          <h3>1. Always start with a hypothesis</h3>
+          <p>Testing without a hypothesis increases the chance of spurious findings. Tie each test to a business question.</p>
+
+          <h3>2. Track primary and secondary metrics</h3>
+          <p>Primary metric = KPI (ROAS/CPA). Secondary metrics = CTR, frequency, landing page bounce to diagnose problems.</p>
+
+          <h3>3. Avoid audience overlap</h3>
+  <p>Use exclusions and Facebook's audience overlap tools. Overlap can cause cross-pollination of learning and unstable test results.</p>
+
+          <h3>4. Use consistent naming conventions and a test log</h3>
+          <p>Keep a spreadsheet or internal tracking system to record hypotheses, variants, durations, sample sizes, and outcomes.</p>
+
+          <h3>5. Consider multi-armed bandit approaches for high-traffic accounts</h3>
+          <p>When you have high volume, adaptive algorithms can optimize faster than fixed A/B tests, but still follow hypothesis-driven rationale.</p>
+        </section>
+
+        <section class="section" id="common-mistakes">
+          <h2>Common Mistakes & How to Avoid Them</h2>
+          <h3>Mistake 1: Changing multiple variables at once</h3>
+          <p>Problem: You can't identify which change caused the lift. Solution: Isolate variables, or use factorial tests with a large sample size.</p>
+
+          <h3>Mistake 2: Ending tests too early</h3>
+          <p>Problem: Stopping early may capture random variance. Solution: Predefine minimum sample size and test duration; wait for statistical confidence.</p>
+
+          <h3>Mistake 3: Ignoring frequency and creative fatigue</h3>
+          <p>Problem: Ads with high frequency will underperform over time. Solution: Refresh creatives regularly and monitor frequency & ad relevance diagnostics.</p>
+
+          <h3>Mistake 4: Misreading vanity metrics</h3>
+          <p>Problem: Higher CTR doesn't always mean higher conversions. Solution: Focus on conversion metrics and unit economics (CPA, LTV:CAC, ROAS).</p>
+        </section>
+
+        <section class="section" id="how-to-section">
+          <h2>How-To: Running a Facebook Ads A/B Test (Checklist)</h2>
+          <ol>
+            <li>Define business objective (sales, leads, trial signups).</li>
+            <li>Pick the KPI and minimum detectable effect.</li>
+            <li>Formulate hypothesis and test variants.</li>
+            <li>Set ad account, campaign structure, and tracking (UTM, pixels, conversion API).</li>
+            <li>Choose audience targeting and segment size.</li>
+            <li>Run test for pre-defined duration (7–21 days or until sample size reached).</li>
+            <li>Analyze with statistical significance and business impact lens.</li>
+            <li>Implement winner and scale with a ramp plan.</li>
+            <li>Document and repeat.</li>
+          </ol>
+        </section>
+
+        <section class="section" id="examples-section">
+          <h2>Examples Section: Templates & Scripts</h2>
+          <h3>Ad copy templates to test</h3>
+          <p>Short-form: "Shop the X that simplifies your morning — 20% off today." Long-form: "We made X for busy people. See why thousands switched — free shipping."</p>
+
+          <h3>Audience blueprint</h3>
+          <p>Cold lookalike test: 1% lookalike from 1,000 purchasers vs. interest-based audience (top 5 interests). Retargeting: 7-day viewers vs. 30-day add-to-cart audiences.</p>
+
+          <h3>Automated testing scripts</h3>
+          <p>For advanced teams, use the Marketing API to automate split tests and pull results into BI tools. Maintain a mapping of variant IDs and UTM parameters for accurate attribution.</p>
+        </section>
+
+        <section class="section" id="case-study-2">
+          <h2>Mini Case: Testing for Shopify Stores</h2>
+          <p>Many Shopify brands struggle to scale due to poor creative testing. A simple split test of a 10-second product usage video vs. static image often identifies scalable creative quickly. Pair with checkout conversion optimization and pixel validation to ensure lift translates to revenue.</p>
+        </section>
+
+        <section class="cta-mid" aria-labelledby="cta-book">
+          <h3 id="cta-book">Book a Free Strategy Session</h3>
+          <p style="color:var(--muted); margin-bottom:12px;">Get a tailored testing roadmap and a 30-minute audit of your account.</p>
+          <a href="#get-started" class="cta-btn">Book a Free Strategy Session</a>
+        </section>
+
+        <section class="section" id="faq">
+          <h2>FAQ — People Also Ask</h2>
+          <div class="card">
+            <h3>How do you test Facebook ads?</h3>
+            <p>Start with a hypothesis, isolate one variable, choose the right audience, set a minimum sample size and duration, run the variants simultaneously, and analyze primary KPIs like CPA or ROAS to determine the winner.</p>
+
+            <h3>What should I A/B test in Facebook Ads?</h3>
+            <p>Test creatives (image vs video), ad copy variations, different calls-to-action, offer messaging, audience segments (lookalike vs interests), and bidding strategies. Prioritize tests that can materially affect conversions and revenue.</p>
+
+            <h3>How long should an A/B test run on Facebook?</h3>
+            <p>Typically 7–21 days depending on traffic volume. Ensure enough impressions and conversions to reach statistical significance or your pre-defined decision rule.</p>
+
+            <h3>How many conversions do I need to stop a Facebook ad test?</h3>
+            <p>There’s no universal number, but aim for at least 50–100 conversions per variant for conversion-based tests. Use statistical significance calculators for more precise thresholds.</p>
+
+            <h3>Can I test multiple variables at once?</h3>
+            <p>Yes, with factorial or multivariate designs if you have high volume. Otherwise, isolate variables to maintain clear learnings.</p>
+          </div>
+        </section>
+
+        <section class="newsletter-card" aria-labelledby="newsletter-before-faq">
+          <h2 id="newsletter-before-faq">Download Free Marketing Guide</h2>
+          <p>
+            Get weekly marketing tips, SEO strategies, Facebook Ads insights,
+            smart home ideas, and growth guides delivered to your inbox.
+          </p>
+          <div class="ml-embedded" data-form="Lujzbr"></div>
+        </section>
+
+        <section class="section" id="conclusion">
+          <h2>Conclusion</h2>
+          <p>Adopting a Facebook Ads Testing Framework turns ad account management from guesswork into a repeatable, learnable science. Set measurable hypotheses, isolate variables, ensure sufficient sample size, document outcomes, and scale responsibly. Continuous testing is the engine of sustained growth—those who test routinely improve performance faster and more predictably than those who don’t.</p>
+
+          <p>Ready to put the framework into practice? Start with one small test this week and build a testing cadence. Over time, the compounding effect of lessons learned will deliver materially better ROAS and lower CPAs.</p>
+
+          <div style="margin-top:14px;">
+            <a id="get-started" class="cta-btn" href="#get-started">Get Started Today</a>
+          </div>
+
+        </section>
+
+        <section class="newsletter-card" aria-labelledby="newsletter-after-conclusion">
+          <h2 id="newsletter-after-conclusion">Download Free Marketing Guide</h2>
+          <p>
+            Get weekly marketing tips, SEO strategies, Facebook Ads insights,
+            smart home ideas, and growth guides delivered to your inbox.
+          </p>
+          <div class="ml-embedded" data-form="Lujzbr"></div>
+        </section>
+
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Quick Links</h3>
+          <div class="small-muted">Jump to sections</div>
+          <ul style="padding-left:18px">
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#how-to">How-to guide</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#case-study">Case study</a></li>
+            <li><a href="#best-practices">Best practices</a></li>
           </ul>
         </div>
 
         <div class="card" style="margin-top:14px">
-          <h4 class="small">Metrics to watch</h4>
-          <div class="kv">
-            <div><strong>CPA</strong><div class="small">Cost per Acquisition</div></div>
-            <div style="margin-left:12px"><strong>ROAS</strong><div class="small">Return on Ad Spend</div></div>
-          </div>
-          <p class="small" style="margin-top:8px">Also monitor LTV:CAC and creative engagement metrics for early signals.</p>
-        </div>
-
-        <div class="card" style="margin-top:14px">
-          <h4 class="small">Related Articles</h4>
-          <div class="related-list">
+          <h3>Related Articles</h3>
+          <div class="related">
             <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
             <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
             <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
@@ -338,85 +552,24 @@ small{color:var(--muted)}
             <a href="/articles/facebook-ads-metrics-guide">Facebook Ads Metrics Guide</a>
           </div>
         </div>
+
+        <div class="card" style="margin-top:14px">
+          <h3>Pro Tip</h3>
+          <p class="small-muted">Keep a living test log. Archive test notes, UTM parameters, and audience details so your team can replicate winners quickly.</p>
+        </div>
       </aside>
     </div>
 
-    <section class="newsletter-card" style="margin-top:18px">
-      <h2>Download Free Marketing Guide</h2>
-      <p>
-      Get weekly marketing tips, SEO strategies, Facebook Ads insights,
-      smart home ideas, and growth guides delivered to your inbox.
-      </p>
-      <div class="ml-embedded" data-form="Lujzbr"></div>
-    </section>
-
-    <section id="faq" class="article-body">
-      <h2 class="h2">FAQ — People Also Ask</h2>
-
-      <h3 class="h3">How do I research Facebook Ads audience?</h3>
-      <p>Start with first-party data (customer lists and pixel events), use Facebook Audience Insights, validate with Google Trends and social listening, build layered audiences, and run small tests. Prioritize lookalike seeds from high-LTV customers.</p>
-
-      <h3 class="h3">What is the best way to find high-converting audiences on Facebook?</h3>
-      <p>Identify high intent signals like recent purchases, add-to-cart actions, and engaged site behaviors. Seed lookalikes with these converters and intersect with niche interests to raise intent and conversion probability.</p>
-
-      <h3 class="h3">Should I use interest targeting or lookalikes?</h3>
-      <p>Use both. Interest targeting helps you discover potential niches; lookalikes based on converters generally scale better. Combine them by testing interests on lookalike audiences to narrow intent further.</p>
-
-      <h3 class="h3">How often should I refresh my audience seeds?</h3>
-      <p>Refresh seeds every 14–30 days for active campaigns; for slower funnels, refresh every 60–90 days. Use recent high-LTV customers as top priority.</p>
-
-      <h3 class="h3">What budget is required to test audiences effectively?</h3>
-      <p>Start with a modest daily budget per audience (e.g., $20–$50) for 7–14 days depending on your conversion volume. Scale winners by 20–30% daily with duplicated campaigns to avoid learning reset.</p>
-
-      <h3 class="h3">How do I measure audience research success?</h3>
-      <p>Measure by CPA, ROAS, and how test audiences impact conversion rates versus baseline. Track long-term metrics like LTV uplift when scaling lookalikes seeded from high-value segments.</p>
-    </section>
-
-    <section class="card" style="margin-top:18px">
-      <h2 class="h2">Conclusion</h2>
-      <p>Facebook Ads Audience Research is a continuous cycle: collect data, hypothesize, test, learn, and scale. By combining first-party signals with platform insights, layered targeting, and rigorous testing, you can consistently find and scale audiences that deliver predictable ROAS. Use the checklists, tools, and best practices in this guide to reduce guesswork and build a strategic audience playbook for your brand.</p>
-
-      <div class="cta-center" style="margin-top:12px">
-        <a class="gradient-btn" href="/contact">Get Started Today</a>
-      </div>
-    </section>
-
-    <section class="newsletter-card" style="margin-top:18px">
-      <h2>Download Free Marketing Guide</h2>
-      <p>
-      Get weekly marketing tips, SEO strategies, Facebook Ads insights,
-      smart home ideas, and growth guides delivered to your inbox.
-      </p>
-      <div class="ml-embedded" data-form="Lujzbr"></div>
-    </section>
-
     <footer class="footer" role="contentinfo">
-      <div class="footer-grid">
-        <div>
-          <div class="badge">Challenge Homeschool</div>
-          <div style="margin-top:12px">
-            <small>Premium marketing frameworks, ads playbooks, and growth resources.</small>
-          </div>
-        </div>
-        <div class="links">
-          <a href="/articles/">Articles</a>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div class="footer-cta">
-          <a class="gradient-btn" href="/#newsletter">Newsletter</a>
-        </div>
+      <div>
+        <div style="font-weight:700">Challenge Homeschool</div>
+        <div class="small-muted">Copyright © 2026 Challenge Homeschool</div>
       </div>
-
-      <div class="footer-bottom">
-        <div class="footer-links">
-          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-        </div>
-        <div>
-          <small>© 2026 Challenge Homeschool. All rights reserved.</small>
-        </div>
+      <div class="foot-links">
+        <a class="small-muted" href="/articles/">Articles</a>
+        <a class="small-muted" href="/privacy">Privacy Policy</a>
+        <a class="small-muted" href="/contact">Contact</a>
+        <a class="cta-ghost" href="#newsletter-after-conclusion">Subscribe</a>
       </div>
     </footer>
   </article>
@@ -429,11 +582,16 @@ small{color:var(--muted)}
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://challengehomeschool.com/articles/facebook-ads-audience-research",
-      "headline": "Facebook Ads Audience Research — Deep Guide & Step-by-Step Strategies",
-      "name": "Facebook Ads Audience Research",
+      "@id": "https://challengehomeschool.com/articles/facebook-ads-testing-framework#article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://challengehomeschool.com/articles/facebook-ads-testing-framework"
+      },
+      "headline": "Facebook Ads Testing Framework — A Step-by-Step System to Improve ROAS",
+      "description": "A practical, data-driven Facebook Ads Testing Framework you can use to accelerate learning, validate creative, refine audiences, and scale profitable campaigns without guesswork.",
+      "image": "https://picsum.photos/1200/600?random=1",
       "author": {
-        "@type": "Person",
+        "@type": "Organization",
         "name": "Challenge Homeschool"
       },
       "publisher": {
@@ -441,71 +599,61 @@ small{color:var(--muted)}
         "name": "Challenge Homeschool",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://challengehomeschool.com/logo.png"
+          "url": "https://challengehomeschool.com/favicon.ico"
         }
       },
       "datePublished": "2026-06-17",
-      "dateModified": "2026-06-17",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://challengehomeschool.com/articles/facebook-ads-audience-research"
-      },
-      "image": [
-        "https://picsum.photos/1200/600?random=1",
-        "https://picsum.photos/1200/600?random=2",
-        "https://picsum.photos/1200/600?random=3",
-        "https://picsum.photos/1200/600?random=4",
-        "https://picsum.photos/1200/600?random=5"
-      ],
-      "description": "Learn Facebook Ads audience research strategies: step-by-step methods, tools, examples, case studies, and best practices to find high-converting audiences for your campaigns."
+      "dateModified": "2026-06-17"
     },
     {
       "@type": "FAQPage",
+      "@id": "https://challengehomeschool.com/articles/facebook-ads-testing-framework#faq",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I research Facebook Ads audience?",
+          "name": "How do you test Facebook ads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Start with first-party data (customer lists and pixel events), use Facebook Audience Insights, validate with Google Trends and social listening, build layered audiences, and run small tests. Prioritize lookalike seeds from high-LTV customers."
+            "text": "Start with a hypothesis, isolate one variable, choose the right audience, set a minimum sample size and duration, run the variants simultaneously, and analyze primary KPIs like CPA or ROAS to determine the winner."
           }
         },
         {
           "@type": "Question",
-          "name": "What is the best way to find high-converting audiences on Facebook?",
+          "name": "What should I A/B test in Facebook Ads?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Identify high intent signals like recent purchases, add-to-cart actions, and engaged site behaviors. Seed lookalikes with these converters and intersect with niche interests to raise intent and conversion probability."
+            "text": "Test creatives (image vs video), ad copy variations, different calls-to-action, offer messaging, audience segments (lookalike vs interests), and bidding strategies. Prioritize tests that can materially affect conversions and revenue."
           }
         },
         {
           "@type": "Question",
-          "name": "Should I use interest targeting or lookalikes?",
+          "name": "How long should an A/B test run on Facebook?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Use both. Interest targeting helps you discover potential niches; lookalikes based on converters generally scale better. Combine them by testing interests on lookalike audiences to narrow intent further."
+            "text": "Typically 7–21 days depending on traffic volume. Ensure enough impressions and conversions to reach statistical significance or your pre-defined decision rule."
           }
         },
         {
           "@type": "Question",
-          "name": "How often should I refresh my audience seeds?",
+          "name": "How many conversions do I need to stop a Facebook ad test?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Refresh seeds every 14–30 days for active campaigns; for slower funnels, refresh every 60–90 days. Use recent high-LTV customers as top priority."
+            "text": "There’s no universal number, but aim for at least 50–100 conversions per variant for conversion-based tests. Use statistical significance calculators for more precise thresholds."
           }
         },
         {
           "@type": "Question",
-          "name": "What budget is required to test audiences effectively?",
+          "name": "Can I test multiple variables at once?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Start with a modest daily budget per audience (e.g., $20–$50) for 7–14 days depending on your conversion volume. Scale winners by 20–30% daily with duplicated campaigns to avoid learning reset."
+            "text": "Yes, with factorial or multivariate designs if you have high volume. Otherwise, isolate variables to maintain clear learnings."
           }
         }
       ]
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://challengehomeschool.com/articles/facebook-ads-testing-framework#breadcrumblist",
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -522,8 +670,8 @@ small{color:var(--muted)}
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Facebook Ads Audience Research",
-          "item": "https://challengehomeschool.com/articles/facebook-ads-audience-research"
+          "name": "Facebook Ads Testing Framework",
+          "item": "https://challengehomeschool.com/articles/facebook-ads-testing-framework"
         }
       ]
     }
@@ -532,9 +680,9 @@ small{color:var(--muted)}
 </script>
 
 <!-- ARTICLE_DATA
-TITLE:Facebook Ads Audience Research — Deep Guide & Step-by-Step Strategies
-SLUG:facebook-ads-audience-research
-EXCERPT:Learn step-by-step Facebook Ads audience research strategies, tools, examples, and best practices to find high-converting audiences and scale campaigns.
+TITLE:Facebook Ads Testing Framework — A Step-by-Step System to Improve ROAS
+SLUG:facebook-ads-testing-framework
+EXCERPT:A practical, data-driven testing framework for Facebook Ads to validate creative, refine audiences, and scale campaigns with better ROAS.
 IMAGE:https://picsum.photos/1200/600?random=1
 DATE:2026-06-17
 -->
