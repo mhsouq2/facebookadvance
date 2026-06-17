@@ -3,631 +3,516 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>SM — Ultimate Social Media Marketing Guide | SM Strategy & Best Practices</title>
-  <meta name="description" content="SM (Social Media) guide: strategy, ads, organic growth, content calendar, and best practices to boost engagement and conversions. Learn step-by-step SM tactics and examples.">
-  <link rel="canonical" href="https://example.com/sm">
-  <meta name="robots" content="index, follow">
-
+  <title>Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers</title>
+  <meta name="description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
+  <link rel="canonical" href="https://www.example.com/articles/facebook-retargeting-guide">
   <!-- Open Graph -->
-  <meta property="og:title" content="SM — Ultimate Social Media Marketing Guide | SM Strategy & Best Practices">
-  <meta property="og:description" content="SM (Social Media) guide: strategy, ads, organic growth, content calendar, and best practices to boost engagement and conversions. Learn step-by-step SM tactics and examples.">
+  <meta property="og:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers">
+  <meta property="og:description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
+  <meta property="og:url" content="https://www.example.com/articles/facebook-retargeting-guide">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://example.com/sm">
-  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
-  <meta property="og:site_name" content="SM Marketing Hub">
-
+  <meta property="og:image" content="https://picsum.photos/1200/600?random=1">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SM — Ultimate Social Media Marketing Guide">
-  <meta name="twitter:description" content="SM (Social Media) guide: strategy, ads, organic growth, content calendar, and best practices to boost engagement and conversions.">
-  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
-
-  <!-- Theme & favicon -->
-  <meta name="theme-color" content="#0b1220">
+  <meta name="twitter:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers">
+  <meta name="twitter:description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1">
+  <meta name="author" content="Facebook Ads Mastery (Replicated Style)">
+  <meta name="theme-color" content="#0b74ff">
   <style>
     :root{
-      --bg:#071022;
-      --card:#0d1726;
-      --muted:#9aa7bb;
-      --text:#e6eef8;
-      --accent:#1877f2; /* Facebook-blue */
-      --glass: rgba(255,255,255,0.03);
-      --radius:14px;
+      --bg:#0b1220;
+      --card:#0f1724;
+      --muted:#9aa6b2;
+      --accent:#1877f2;
+      --accent-2:#00d1b2;
+      --glass: rgba(255,255,255,0.04);
       --max-width:1100px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family:Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,var(--bg),#051025 120%);
-      color:var(--text);
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071022 0%, #071726 50%, #041021 100%);
+      color:#e6eef6;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
+      padding-bottom:80px;
     }
-    a{color:var(--accent); text-decoration:none}
-    header{
-      position:sticky;
-      top:0;
-      z-index:40;
-      backdrop-filter: blur(6px);
-      background:linear-gradient(180deg, rgba(7,18,34,0.6), rgba(7,18,34,0.35));
-      border-bottom:1px solid rgba(255,255,255,0.03);
-    }
-    .nav{
-      max-width:var(--max-width);
-      margin:0 auto;
-      display:flex;
-      align-items:center;
-      gap:20px;
-      padding:18px;
-    }
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+    a{color:var(--accent);text-decoration:none}
+    header{position:sticky;top:0;background:linear-gradient(180deg, rgba(7,15,28,0.85), rgba(7,15,28,0.6));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:1000}
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
     .logo{
-      width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#2aa0ff);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px;
-      box-shadow: 0 6px 20px rgba(24,119,242,0.12);
+      width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0ea5e9);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(8,60,120,0.2)
     }
-    nav.primary{margin-left:18px; display:flex; gap:14px; align-items:center; flex-wrap:wrap}
-    nav.primary a{padding:10px 12px;border-radius:8px;color:var(--muted);font-weight:600}
-    nav.primary a:hover{background:var(--glass); color:var(--text)}
-    .spacer{flex:1}
-    .cta-btn{
-      background:var(--accent);
-      color:white;
-      padding:10px 14px;border-radius:10px;font-weight:700;
-      box-shadow: 0 8px 28px rgba(24,119,242,0.18);
-    }
-    main{max-width:var(--max-width);margin:28px auto;padding:24px}
-    .hero{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:18px;
-      align-items:start;
-    }
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.03);
-      padding:22px;
-      border-radius:var(--radius);
-      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-    }
-    h1{font-size:28px;margin:6px 0 12px}
-    .lead{color:var(--muted); font-size:15px}
-    .featured{
-      width:100%;
-      border-radius:12px;
-      overflow:hidden;
-      margin-top:12px;
-      border:1px solid rgba(255,255,255,0.03);
-    }
-    img.responsive{width:100%; height:auto; display:block}
-    .toc{
-      background:linear-gradient(90deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
-      padding:12px;border-radius:10px;margin-top:12px;border:1px solid rgba(255,255,255,0.02);
-      color:var(--muted);
-    }
-    .cols{
-      display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:22px;
-      margin-top:20px;
-    }
-    @media (max-width:980px){
-      .cols{grid-template-columns:1fr}
-      nav.primary{display:none}
-    }
-    article{
-      font-size:16px;
-    }
-    h2{
-      color:var(--text);
-      margin-top:18px;
-      margin-bottom:10px;
-      font-size:20px;
-    }
-    h3{margin-top:12px;margin-bottom:8px;color:var(--muted);font-size:16px}
-    p{margin:8px 0;color:var(--muted)}
-    ul{margin:8px 0 12px 20px;color:var(--muted)}
-    .guide-card{padding:14px;background:linear-gradient(180deg, rgba(255,255,255,0.014), transparent); border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
-    .email-form{display:flex;flex-direction:column; gap:10px; margin-top:12px}
-    .form-row{display:flex;gap:8px}
-    .form-row input[type="text"], .form-row input[type="email"], .newsletter input{
-      flex:1;padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)
-    }
-    .btn{
-      background:var(--accent); color:white;padding:12px 14px;border-radius:10px;border:0;font-weight:700;cursor:pointer;
-      box-shadow: 0 8px 20px rgba(24,119,242,0.16);
-    }
-    .muted-block{background:rgba(255,255,255,0.02); padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-    .cta{
-      margin:18px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.12), rgba(24,119,242,0.04));
-      display:flex;align-items:center;justify-content:space-between;gap:12px;
-      border:1px solid rgba(24,119,242,0.08);
-    }
-    .cta .left{max-width:70%}
-    .cta h3{margin:0;font-size:18px}
-    .grid-images{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
-    @media (max-width:640px){ .grid-images{grid-template-columns:1fr} .cta{flex-direction:column; align-items:flex-start} .cta .left{max-width:100%} }
-    footer{margin-top:26px;padding:28px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
-    .footer-grid{display:flex;gap:22px;max-width:var(--max-width);margin:0 auto;flex-wrap:wrap}
-    .foot-col{min-width:160px}
-    .related a{display:block;padding:8px 0;color:var(--muted)}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);color:var(--muted);font-weight:600}
-    .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,0.02);color:var(--muted); font-size:13px}
-    .tag-list{display:flex;flex-wrap:wrap; gap:8px;margin-top:8px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
+    .nav a{padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;font-size:15px}
+    .nav a:hover{color:white;background:rgba(255,255,255,0.02)}
+    .cta-btn{background:linear-gradient(90deg,var(--accent),#0ea5e9);color:white;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 8px 30px rgba(24,119,242,0.18)}
+    .hero{padding:40px 0}
+    .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:20px;border-radius:12px}
+    h1{margin:0 0 12px;font-size:28px;letter-spacing:-0.4px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
+    .featured{width:100%;height:auto;border-radius:10px;display:block;box-shadow:0 12px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    main{max-width:var(--max-width);margin:20px auto;padding:0 24px}
+    .toc{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin:16px 0}
+    .toc ul{margin:0;padding-left:18px;color:var(--muted)}
+    section{margin-bottom:28px}
+    h2{font-size:20px;margin:0 0 10px}
+    h3{font-size:16px;margin:12px 0}
+    p{color:#d7e6f7}
+    .two-col{display:grid;grid-template-columns:1fr 320px;gap:22px}
     .small{font-size:13px;color:var(--muted)}
-    .success{color:#b9f3c6}
-    /* Accessibility focus */
-    a:focus, button:focus, input:focus{outline:3px solid rgba(24,119,242,0.18);outline-offset:2px}
+    .list{padding-left:18px}
+    .feature-img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .inline-cta{display:flex;gap:12px;align-items:center;margin:18px 0}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700}
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:10px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input[type="text"],input[type="email"]{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;color:inherit}
+    .newsletter{display:flex;gap:10px}
+    .newsletter input{flex:1}
+    .related{display:flex;gap:12px;flex-wrap:wrap}
+    .related a{background:var(--glass);padding:12px;border-radius:8px;color:var(--muted);font-weight:600;border:1px solid rgba(255,255,255,0.02)}
+    footer{margin-top:40px;border-top:1px solid rgba(255,255,255,0.03);padding:28px 0;color:var(--muted)}
+    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);margin-bottom:10px}
+    @media (max-width:1000px){
+      .hero-grid{grid-template-columns:1fr}
+      .two-col{grid-template-columns:1fr}
+      nav ul{display:none}
+      .nav .menu-toggle{display:block}
+    }
+    .menu-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:8px;color:var(--muted)}
+    /* small accessibility */
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
   </style>
 </head>
 <body>
   <header>
-    <div class="nav">
+    <div class="container nav" role="banner">
       <div class="brand">
-        <div class="logo">SM</div>
+        <div class="logo" aria-hidden="true">FM</div>
         <div>
-          <div style="font-weight:800">SM Marketing Hub</div>
-          <div class="small">Social media strategy & growth</div>
+          <div style="font-weight:800">Facebook Ads Mastery</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px">Retargeting & Growth</div>
         </div>
       </div>
-
-      <nav class="primary" aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/courses">Courses</a>
-        <a href="/articles" aria-current="page">Articles</a>
-        <a href="/resources">Resources</a>
-        <a href="/contact">Contact</a>
+      <nav role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/articles">Articles</a></li>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a class="cta-btn" href="/signup">Get Started</a></li>
+        </ul>
       </nav>
-
-      <div class="spacer"></div>
-      <a class="cta-btn" href="/start">Get Started</a>
+      <button class="menu-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
     </div>
   </header>
 
   <main>
-    <div class="hero card" role="banner">
-      <div>
-        <h1>SM — The Ultimate Guide to Social Media Marketing</h1>
-        <p class="lead">SM (social media) is the modern channel that combines organic content, paid social advertising, influencer outreach, and community building. This guide covers strategy, content calendars, performance metrics, and actionable how-to steps to grow engagement and conversions.</p>
+    <article class="container" itemscope itemtype="http://schema.org/Article">
+      <meta itemprop="mainEntityOfPage" content="https://www.example.com/articles/facebook-retargeting-guide" />
+      <meta itemprop="author" content="Facebook Ads Mastery" />
+      <meta itemprop="publisher" content="Facebook Ads Mastery" />
+      <meta itemprop="datePublished" content="2026-06-17" />
+      <header class="hero">
+        <div class="hero-grid">
+          <div class="card">
+            <h1 itemprop="headline">Facebook Retargeting Guide — How to Win Back Visitors & Boost Conversions</h1>
+            <div class="meta">Ultimate, up-to-date Facebook retargeting strategy for marketers, e-commerce stores, and agencies. Includes pixel setup, audiences, dynamic retargeting, and examples.</div>
 
-        <div class="featured" aria-hidden="false">
-          <img class="responsive" src="https://picsum.photos/1200/600?random=11" alt="Social Media Marketing strategy dashboard showing analytics and campaign performance" loading="lazy">
+            <img src="https://picsum.photos/1200/600?random=1" alt="Facebook retargeting featured example showing ad creative and audience segmentation" class="featured" loading="lazy" itemprop="image">
+
+            <p style="margin-top:14px" itemprop="description">This comprehensive guide covers everything from installing the Meta Pixel and building custom audiences to crafting conversion-focused retargeting ads and advanced dynamic product retargeting for Shopify stores. Learn the best Facebook retargeting tactics, how to set up funnels by intent, and long-tail strategies like how to set up Facebook retargeting for e-commerce and reduce cart abandonment with dynamic ads.</p>
+          </div>
+
+          <aside class="card" aria-labelledby="quick-links">
+            <div id="quick-links" style="font-weight:800;margin-bottom:10px">Quick Links</div>
+            <div class="small">Jump to:</div>
+            <div class="toc" aria-hidden="true">
+              <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#how-to">How-To Setup</a></li>
+                <li><a href="#audience-strategy">Audience Strategy</a></li>
+                <li><a href="#dynamic-ads">Dynamic Product Ads</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#common-mistakes">Common Mistakes</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </div>
+
+            <div style="margin-top:14px">
+              <div style="font-weight:800">Download</div>
+              <div class="small">Free PDF checklist</div>
+              <div style="margin-top:10px">
+                <a class="btn" href="#download-form">Download Free Guide</a>
+              </div>
+            </div>
+          </aside>
         </div>
-      </div>
+      </header>
 
-      <div class="toc">
+      <section id="introduction" itemprop="articleBody">
+        <h2>Introduction</h2>
+        <p>Retargeting on Facebook (Meta) is one of the most cost-effective ways to turn warm traffic into buyers. Whether you’re running retargeting ads on Facebook for a Shopify store, a SaaS trial, or a lead magnet funnel, this guide will walk you through the strategic framework, technical setup, and creative playbook to scale conversions. We'll cover pixel setup, custom and lookalike audiences, dynamic ads, creative sequencing, and budget allocation for retention and re-engagement campaigns.</p>
+
+        <form id="download-form" action="#" method="post" onsubmit="handleDownload(event)" class="card" style="margin-top:14px">
+          <h3 style="margin-top:0">Download the Free Facebook Retargeting Checklist</h3>
+          <label class="small">Name</label>
+          <input type="text" name="name" id="name" placeholder="Your name" required>
+          <label class="small">Email</label>
+          <input type="email" name="email" id="email" placeholder="you@example.com" required>
+          <div style="display:flex;gap:10px">
+            <button class="btn" type="submit">Download Free Guide</button>
+            <button class="secondary" type="button" onclick="document.getElementById('name').value='';document.getElementById('email').value='';">Clear</button>
+          </div>
+          <div class="small" style="margin-top:8px">We respect your privacy — unsubscribe anytime.</div>
+        </form>
+      </section>
+
+      <section class="toc" aria-label="Table of contents">
         <strong>Table of Contents</strong>
         <ul>
-          <li><a href="#what-is-sm">What is SM?</a></li>
-          <li><a href="#why-sm">Why SM Matters</a></li>
-          <li><a href="#sm-strategy">SM Strategy & Planning</a></li>
-          <li><a href="#how-to">How-to: Build an SM Campaign</a></li>
-          <li><a href="#examples">Examples & Case Studies</a></li>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#how-to">How to Set Up Facebook Retargeting (Step-by-Step)</a></li>
+          <li><a href="#audience-strategy">Audience Strategy & Segmentation</a></li>
+          <li><a href="#creative">Creative & Messaging for Retargeting Ads</a></li>
+          <li><a href="#dynamic-ads">Dynamic Product Retargeting</a></li>
+          <li><a href="#examples">Examples & Use Cases</a></li>
           <li><a href="#common-mistakes">Common Mistakes</a></li>
-          <li><a href="#tools-metrics">Tools & Key Metrics</a></li>
-          <li><a href="#newsletter">Newsletter & Resources</a></li>
+          <li><a href="#newsletter">Newsletter Signup</a></li>
           <li><a href="#faq">FAQ</a></li>
-          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#conclusion">Conclusion & CTA</a></li>
         </ul>
-      </div>
-    </div>
+      </section>
 
-    <!-- Introduction + Email Form -->
-    <div class="cols" style="margin-top:18px">
-      <article class="card" role="article">
-        <section id="what-is-sm" class="guide-card">
-          <h2>Introduction</h2>
-          <p>SM — short for social media — is a holistic marketing channel that includes platforms such as Facebook, Instagram, LinkedIn, X (Twitter), Pinterest, TikTok, and YouTube. Effective SM involves both organic social content and paid social ads to attract, nurture, and convert audiences. This article explains SM strategy, long-tail social media marketing tactics, audience targeting methods, and step-by-step execution for fast but sustainable growth.</p>
+      <section id="how-to">
+        <h2>How to Set Up Facebook Retargeting (Step-by-Step)</h2>
+        <p>This how-to section is a practical walkthrough for marketers and store owners on how to set up Facebook retargeting from scratch, including pixel installation, event tracking, and building custom audiences.</p>
 
-          <div class="email-form" aria-label="Download free SM guide">
-            <label class="small">Get the free SM Guide — actionable templates, a 90-day content calendar, and ad creative templates.</label>
-            <form id="leadForm" onsubmit="handleLead(event)" novalidate>
-              <div class="form-row">
-                <input type="text" id="name" name="name" placeholder="Name" required aria-label="Name">
-                <input type="email" id="email" name="email" placeholder="Email" required aria-label="Email">
-              </div>
-              <div style="display:flex;gap:8px">
-                <button type="submit" class="btn">Download Free Guide</button>
-                <button type="button" class="pill" onclick="location.href='#newsletter'">Join Newsletter</button>
-              </div>
-              <div id="leadMsg" class="small" aria-live="polite"></div>
-            </form>
-          </div>
-        </section>
+        <h3>Step 1 — Install the Meta Pixel</h3>
+        <p>Install the Meta Pixel on every page of your website. For Shopify stores use the native Facebook channel or insert the pixel ID in Online Store > Preferences. For custom sites, paste the pixel base code into the header. Verify with the Meta Pixel Helper browser extension.</p>
 
-        <section id="why-sm" style="margin-top:18px">
-          <h2>Why SM Matters for Modern Brands</h2>
-          <p>Social media is the most direct public channel to reach customers at scale. When implemented with a data-driven SM strategy and paid social campaigns, brands can reduce customer acquisition cost (CAC), increase lifetime value (LTV), and build a community that generates referrals. Key benefits include:</p>
-          <ul>
-            <li>Improved brand awareness and social proof</li>
-            <li>Direct customer feedback via social listening</li>
-            <li>Targeted advertising for conversions and lead generation</li>
-            <li>Scalable cost-per-acquisition when combining organic and paid tactics</li>
-          </ul>
+        <h3>Step 2 — Configure Standard and Custom Events</h3>
+        <p>Track key events such as PageView, ViewContent, AddToCart, InitiateCheckout, and Purchase. Use custom parameters (content_type, content_ids, value, currency) for dynamic product retargeting and better ad personalization.</p>
 
-          <h3>Top ranking keywords included</h3>
-          <p>We naturally integrate top-ranking keywords like "social media marketing", "SM strategy", "social media advertising ROI", "how to grow social media organically", and long-tail keywords such as "best social media content calendar for ecommerce" to improve discoverability.</p>
-        </section>
+        <h3>Step 3 — Build Custom Audiences</h3>
+        <p>Create audiences like:</p>
+        <ul class="list">
+          <li>All website visitors (last 30 days)</li>
+          <li>Product viewers by content_id (last 14 days)</li>
+          <li>Add-to-cart but no purchase (last 7 days)</li>
+          <li>Initiated checkout but no purchase (last 14 days)</li>
+        </ul>
 
-        <section id="sm-strategy">
-          <h2>SM Strategy & Planning</h2>
-          <p>Creating an SM strategy requires combining audience insights, content pillars, paid social planning, and a performance measurement framework. Below are the core building blocks.</p>
+        <h3>Step 4 — Create Targeted Campaigns</h3>
+        <p>Use different campaigns by funnel stage: prospecting, engage (viewers), cart abandoners, and lapsed customers. Allocate budgets with higher ROAS goals for retargeting, and use conversion objective with optimized events.</p>
 
-          <h3>Audience & Persona Development</h3>
-          <p>Identify primary and secondary audience segments. Map each persona to goals (awareness, consideration, conversion), channels, tone, and content format.</p>
+        <h3>Step 5 — Measurement, Attribution & Conversion Tracking</h3>
+        <p>Set up conversion tracking in Events Manager, use proper attribution windows (7-day click, 1-day view or 7-day click depending on your funnel), and test with A/B experiments to measure lift.</p>
 
-          <h3>Content Pillars & Editorial Calendar</h3>
-          <p>Define 3-5 content pillars (e.g., product education, community stories, behind-the-scenes, offers) and map assets to an editorial calendar. Use long-tail keywords like "social media content calendar template for B2B" when naming resources.</p>
+        <img src="https://picsum.photos/800/500?random=2" alt="Meta Pixel installation example and event tracking setup screenshot" class="feature-img" loading="lazy">
 
-          <h3>Paid vs Organic: Balanced Funnel</h3>
-          <p>Structure campaigns across the funnel: top-of-funnel (awareness), mid-funnel (retargeting/engagement), and bottom-of-funnel (conversions/lead capture). Combine lookalike audiences and interest targeting with creative testing.</p>
-        </section>
+        <h3>Advanced Tip — Use Custom Combinations</h3>
+        <p>Create combined audiences (e.g., viewed product AND visited pricing page) for high-intent retargeting sequences. Use exclusion lists (buyers in last 30 days) to avoid wasted spend.</p>
+      </section>
 
-        <!-- CTA mid article -->
-        <div class="cta" role="region" aria-label="Call to action">
-          <div class="left">
-            <h3>Want help scaling your social media ads?</h3>
-            <p class="small">Book a free 30-minute strategy call to analyze your current SM funnel and receive a custom checklist to lower CAC and increase ROAS.</p>
-          </div>
-          <div>
-            <a class="btn" href="/contact">Book Strategy Call</a>
+      <section id="audience-strategy">
+        <h2>Audience Strategy & Segmentation</h2>
+        <p>Audience segmentation is the backbone of any successful Facebook retargeting strategy. The goal is to match creative and messaging to the user's intent and position in the funnel.</p>
+
+        <h3>Core Segments</h3>
+        <ul class="list">
+          <li>Cold / Prospecting — lookalike audiences and interest-based</li>
+          <li>Viewers / Engagers — viewed product or content but didn’t add to cart</li>
+          <li>Cart Abandoners — added to cart but didn't purchase</li>
+          <li>Checkout Abandoners — high purchase intent; personalize with discount or urgency</li>
+          <li>Past Buyers — upsell/cross-sell and reactivation campaigns</li>
+        </ul>
+
+        <h3>Using Lookalikes for Retargeting Expansion</h3>
+        <p>Use custom audiences (top purchasers) to create lookalikes to find new high-intent prospects. This combines retargeting insights with scale.</p>
+
+        <h3>Segmentation by Time Window</h3>
+        <p>Short windows (1–7 days) are for high-intent visitors; longer windows (30–180 days) are for broad re-engagement. Match the offer accordingly.</p>
+
+        <img src="https://picsum.photos/800/450?random=3" alt="Audience segmentation diagram showing funnel stages and retargeting windows" class="feature-img" loading="lazy">
+      </section>
+
+      <section id="creative">
+        <h2>Creative & Messaging for Retargeting Ads</h2>
+        <p>Creative should reflect intent. Retargeting creatives get higher CTRs when they focus on product reminders, social proof, time-limited offers, or dynamic content that reflects the exact product the user viewed.</p>
+
+        <h3>Creative Types</h3>
+        <ul class="list">
+          <li>Static product images with price and CTA</li>
+          <li>Dynamic product ads (DPAs) that auto-populate content</li>
+          <li>Short video testimonials or demo clips</li>
+          <li>Carousel showcasing related products</li>
+        </ul>
+
+        <h3>Ad Copy Best Practices</h3>
+        <p>Use urgency for cart abandoners (“Only 2 left”), social proof for new visitors (“Over 10,000 buyers”), and benefit-focused messaging for product viewers.</p>
+
+        <div class="inline-cta">
+          <a class="btn" href="/articles/facebook-ads-testing-framework">Download Creative Templates</a>
+          <a class="secondary" href="/articles/facebook-ads-for-shopify">Shopify Retargeting Tips</a>
+        </div>
+      </section>
+
+      <section id="dynamic-ads">
+        <h2>Dynamic Product Retargeting (DPAs)</h2>
+        <p>Dynamic ads show the exact products people viewed, using your product catalog linked to Business Manager. This is essential for e-commerce retargeting and reducing cart abandonment.</p>
+
+        <h3>Catalog & Feed Setup</h3>
+        <p>Upload your product feed (CSV/Google Sheet) with accurate content_ids and sync regularly. Ensure product IDs match the event parameters sent by the pixel.</p>
+
+        <h3>Event Parameters & Mapping</h3>
+        <p>Map content_ids between your feed and pixel events (ViewContent, AddToCart, Purchase) for accurate personalization and measurement.</p>
+
+        <img src="https://picsum.photos/900/400?random=4" alt="Dynamic product ad example showing product carousel on Facebook retargeting" class="feature-img" loading="lazy">
+
+        <h3>Optimization Tips</h3>
+        <ul class="list">
+          <li>Use value-based optimization for high-AOV stores</li>
+          <li>Exclude recent purchasers from attempts to upsell until the appropriate window</li>
+          <li>Test creative variations and product order in carousels</li>
+        </ul>
+      </section>
+
+      <section id="examples">
+        <h2>Examples & Use Cases</h2>
+        <p>Below are practical examples demonstrating how Facebook retargeting works across industries and funnels. These examples include long-tail keywords like "how to set up Facebook retargeting for e-commerce" and "best Facebook retargeting tactics for Shopify stores".</p>
+
+        <h3>E-commerce — Shopify Abandoned Cart Flow</h3>
+        <p>Audience: People who added to cart in last 7 days but didn’t purchase.</p>
+        <p>Ad: Dynamic Carousel with product images, “Return to your cart — 10% off for 24 hours”</p>
+
+        <h3>SaaS — Trial Conversion Flow</h3>
+        <p>Audience: Users who signed up for a free trial but did not complete onboarding in the last 14 days.</p>
+        <p>Ad: Short tutorial video + testimonial + CTA to complete setup</p>
+
+        <h3>Publisher — Content Upsell Flow</h3>
+        <p>Audience: Visitors who read premium content but haven’t subscribed.</p>
+        <p>Ad: Offer a limited-time discount on subscription or gated content.</p>
+
+        <h3>Agency — Scaling Retargeting for Clients</h3>
+        <p>Agency tip: Build modular audiences and templated creative sets across accounts, and measure incrementality with holdout audiences for reliable attribution.</p>
+      </section>
+
+      <section id="common-mistakes">
+        <h2>Common Mistakes to Avoid</h2>
+        <p>Avoid these pitfalls when building your Facebook retargeting campaigns. They are derived from semantic SEO topics like remarketing best practices, conversion tracking errors, and audience overlap issues.</p>
+
+        <h3>1. Not Installing the Pixel Correctly</h3>
+        <p>Without a properly installed pixel and verified events, you can't build accurate custom audiences. Use the Meta Pixel Helper to validate page events.</p>
+
+        <h3>2. Overlapping Audiences & Audience Cannibalization</h3>
+        <p>Create separate audiences and use exclusions to prevent campaigns from competing against each other and raising CPMs.</p>
+
+        <h3>3. Wrong Attribution & Measurement</h3>
+        <p>Relying on last-click without understanding Meta's attribution can lead to misjudged ad performance. Use experiments and conversion lift tests for clarity.</p>
+
+        <h3>4. Generic Creative for High-Intent Users</h3>
+        <p>Showing the same prospecting creative to cart abandoners wastes opportunity. Match ads to intent — product-specific creatives for high-intent audiences.</p>
+
+        <h3>5. Too Broad Retargeting Windows</h3>
+        <p>Long windows for high-intent audiences can dilute performance. Shorten windows where purchase cycles are short (e.g., 7–14 days).</p>
+      </section>
+
+      <section id="newsletter" class="card">
+        <h2>Newsletter — Get Advanced Retargeting Tips</h2>
+        <p>Join our weekly newsletter for tactical playbooks, case studies, and a free retargeting checklist sent to your inbox.</p>
+        <form class="newsletter" action="#" method="post" onsubmit="handleSignup(event)">
+          <input type="email" placeholder="Enter your email" required>
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+
+      <section id="related" class="card">
+        <h2>Related Articles</h2>
+        <div class="related">
+          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+          <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+        </div>
+      </section>
+
+      <section id="faq">
+        <h2>FAQ — Frequently Asked Questions</h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">What is Facebook retargeting and how does it work?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Facebook retargeting (remarketing) uses pixel and event data to show ads to people who previously interacted with your website or app. By creating custom audiences from pixel events, you can deliver personalized ads to users with different intent levels.</p>
           </div>
         </div>
 
-        <section id="how-to">
-          <h2>How-to: Build an SM Campaign (Step-by-step)</h2>
-          <p>Use this step-by-step checklist to build a data-driven SM campaign that focuses on both organic growth and paid efficiency.</p>
-
-          <h3>Step 1 — Research</h3>
-          <ul>
-            <li>Audit existing social accounts and performance (engagement, reach, CTR).</li>
-            <li>Perform competitor analysis — identify top-performing content and ad creatives.</li>
-            <li>Collect long-tail keywords and hashtag clusters for discoverability and SEO.</li>
-          </ul>
-
-          <h3>Step 2 — Plan Creative & Messaging</h3>
-          <ul>
-            <li>Create 3 creative concepts per pillar: short video, carousel, static image with strong CTA.</li>
-            <li>Map creatives to funnel stages with tailored messaging and landing pages optimized for conversion clarity.</li>
-          </ul>
-
-          <h3>Step 3 — Setup Tracking & Audiences</h3>
-          <ul>
-            <li>Install pixel or conversion API; define events (ViewContent, AddToCart, Purchase).</li>
-            <li>Create custom audiences, retargeting segments, and lookalikes using 180-day high-value users.</li>
-          </ul>
-
-          <h3>Step 4 — Launch & Test</h3>
-          <ul>
-            <li>Start with a mix of broad and interest-based targeting. Use A/B testing on creative and copy.</li>
-            <li>Track cost per result and engagement rate. Pause low-performers after significant data (7-14 days).</li>
-          </ul>
-
-          <h3>Step 5 — Optimize & Scale</h3>
-          <ul>
-            <li>Scale winning creatives using incremental budget increases and geographic expansion.</li>
-            <li>Create rule-based scaling and continue iterative creative refresh every 10–21 days.</li>
-          </ul>
-        </section>
-
-        <section id="examples">
-          <h2>Examples & Case Studies</h2>
-          <p>Real-world examples show how a balanced SM strategy multiplies results.</p>
-
-          <div class="grid-images">
-            <div class="muted-block">
-              <img class="responsive" src="https://picsum.photos/800/450?random=2" alt="SM example of ecommerce Instagram carousel converting views into purchases" loading="lazy">
-              <h3>Example: Ecommerce Carousel Ads</h3>
-              <p>By combining dynamic product ads with a 7-day retargeting sequence, one ecommerce brand reduced CAC by 32% while increasing ROAS by 2.4x.</p>
-            </div>
-
-            <div class="muted-block">
-              <img class="responsive" src="https://picsum.photos/800/450?random=3" alt="B2B LinkedIn content strategy showing thought leadership posts and lead gen forms" loading="lazy">
-              <h3>Example: B2B LinkedIn Thought Leadership</h3>
-              <p>A B2B software company used weekly long-form posts and gated whitepapers to double inbound leads while improving lead quality with LinkedIn Lead Gen Forms.</p>
-            </div>
-          </div>
-
-          <h3>Micro-Influencer Collaboration</h3>
-          <p>Partner with micro-influencers in niche segments to amplify reach and drive high-intent traffic at lower CPMs compared to macro-influencers.</p>
-
-          <img class="responsive" src="https://picsum.photos/1000/500?random=4" alt="Influencer partnership example increasing brand awareness and driving conversions through authentic content" loading="lazy" style="border-radius:10px;margin-top:12px">
-        </section>
-
-        <section id="common-mistakes">
-          <h2>Common Mistakes in SM (and How to Fix Them)</h2>
-          <p>Avoid these pitfalls to improve your social media advertising ROI and organic growth.</p>
-
-          <h3>Mistake 1: No Clear Funnel Mapping</h3>
-          <p>Brands often run conversion ads to cold audiences without awareness content. Fix: map content to funnel stages and warm audiences gradually.</p>
-
-          <h3>Mistake 2: Ignoring Creative Fatigue</h3>
-          <p>Using the same ad creative for months reduces engagement and increases CPC. Fix: set a creative refresh schedule and maintain at least 6 variations per campaign.</p>
-
-          <h3>Mistake 3: Poor Tracking Setup</h3>
-          <p>Missing or misconfigured pixels lead to inaccurate performance data. Fix: validate events and implement server-side tracking for accuracy.</p>
-
-          <h3>Mistake 4: Over-Reliance on Vanity Metrics</h3>
-          <p>High impressions and likes don't always equal revenue. Fix: focus on conversion metrics like CPA, ROAS, LTV, and assisted conversions.</p>
-        </section>
-
-        <section id="tools-metrics">
-          <h2>Tools & Key Metrics for SM Performance</h2>
-          <p>Use a mix of free and paid tools to scale SM effectively while measuring performance.</p>
-
-          <h3>Recommended Tools</h3>
-          <ul>
-            <li>Platform analytics (Meta Ads Manager, TikTok Ads, LinkedIn Campaign Manager)</li>
-            <li>Social scheduling tools (Later, Buffer, Hootsuite)</li>
-            <li>Creative & video tools (Canva, Premiere Pro, CapCut)</li>
-            <li>Analytics & BI (Google Analytics 4, Looker Studio)</li>
-          </ul>
-
-          <h3>Key Metrics (Semantic & Technical)</h3>
-          <ul>
-            <li>Engagement Rate, Reach, Impressions</li>
-            <li>Click-Through Rate (CTR), Cost Per Click (CPC)</li>
-            <li>Conversion Rate, Cost Per Acquisition (CPA)</li>
-            <li>Return on Ad Spend (ROAS), Customer Lifetime Value (LTV)</li>
-            <li>Attribution windows and assisted conversions</li>
-          </ul>
-        </section>
-
-        <!-- Newsletter signup section (before FAQ) -->
-        <section id="newsletter" class="card" style="margin-top:18px">
-          <h2>Newsletter — Weekly SM Insights</h2>
-          <p>Subscribe for weekly long-tail social media marketing tactics, A/B testing frameworks, free templates, and case studies delivered to your inbox.</p>
-          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-            <input class="newsletter" id="newsletterEmail" type="email" placeholder="Enter email" style="padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);flex:1">
-            <button class="btn" onclick="handleNewsletter()">Subscribe</button>
-          </div>
-          <div id="newsletterMsg" class="small" aria-live="polite" style="margin-top:8px"></div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" style="margin-top:18px">
-          <h2>FAQ</h2>
-          <div class="muted-block">
-            <h3>What does SM mean in marketing?</h3>
-            <p>SM stands for social media, the collection of digital platforms used for content distribution, advertising, and community engagement.</p>
-
-            <h3>How long until I see results from SM?</h3>
-            <p>Organic growth typically takes 3-6 months with consistent content. Paid campaigns can deliver measurable results in days, but expect 2–6 weeks of testing to optimize ROAS.</p>
-
-            <h3>Which platform is best for my business?</h3>
-            <p>It depends on audience: B2B performs well on LinkedIn, visual ecommerce on Instagram and TikTok, and community-driven brands on Facebook and YouTube.</p>
-
-            <h3>How much should I budget for social media advertising?</h3>
-            <p>Start small with test budgets (e.g., $500–$2000/month per channel) and scale based on CPA and ROAS. Allocate 60% to testing and 40% to scaling initially.</p>
-          </div>
-        </section>
-
-        <section id="conclusion" style="margin-top:18px">
-          <h2>Conclusion</h2>
-          <p>SM is a strategic mix of content, community, and paid promotions. By following a funnel-based approach, using long-tail keywords and semantic SEO, conducting creative tests, and measuring the right KPIs, brands can achieve sustainable growth and higher lifetime value. Build a content calendar, track performance accurately, and iterate fast.</p>
-
-          <div style="margin-top:12px">
-            <a class="btn" href="/contact">Start Your SM Strategy Audit</a>
-          </div>
-        </section>
-
-        <!-- CTA after conclusion -->
-        <div style="margin-top:18px" class="card">
-          <h3>Ready to scale SM with expert support?</h3>
-          <p class="small">Our team specializes in creative testing, audience optimization, and scalable paid social frameworks tailored to your niche.</p>
-          <div style="margin-top:10px"><a class="btn" href="/contact">Request a Free Audit</a></div>
-        </div>
-
-      </article>
-
-      <!-- Sidebar -->
-      <aside style="position:relative; top:0">
-        <div class="card">
-          <h3>Quick SM Checklist</h3>
-          <ul>
-            <li>Define audience personas</li>
-            <li>Create content pillars & calendar</li>
-            <li>Implement pixel & events</li>
-            <li>Run creative tests</li>
-            <li>Measure CPA & ROAS</li>
-          </ul>
-        </div>
-
-        <div class="card" style="margin-top:14px">
-          <h3>Related Articles</h3>
-          <div class="related">
-            <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">How do I set up dynamic product retargeting for Shopify?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Connect your Shopify product catalog to your Meta Business Manager, ensure your pixel sends content_ids and value parameters, and create a dynamic ad template that pulls product images and metadata from the catalog.</p>
           </div>
         </div>
 
-        <div class="card" style="margin-top:14px">
-          <h3>Pro Tips</h3>
-          <div class="tag-list">
-            <span class="badge">A/B test creatives</span>
-            <span class="badge">Use short-form video</span>
-            <span class="badge">Leverage UGC</span>
-            <span class="badge">Set attribution windows</span>
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">What is the ideal retargeting window for cart abandoners?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">Typically 7–14 days for cart abandoners provides high-intent conversion opportunities. Shorter windows (1–7 days) are best for fast-moving consumer goods, while longer windows may work for high-consideration purchases.</p>
           </div>
         </div>
 
-      </aside>
-    </div>
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <h3 itemprop="name">How much budget should I allocate to retargeting?</h3>
+          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <p itemprop="text">A common rule is 20–40% of your total ad budget to retargeting, depending on funnel depth and audience size. Start with higher CPA targets for retargeting to measure higher ROI potential.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>Conclusion</h2>
+        <p>Facebook retargeting is an essential lever for maximizing ROI across paid channels. By combining precise pixel implementation, thoughtful audience segmentation, dynamic ads, and creative that matches intent, you can significantly reduce acquisition costs and increase conversions. Implement the steps above, avoid common mistakes, and iterate with testing frameworks to continuously improve results.</p>
+
+        <div style="margin-top:16px">
+          <a class="btn" href="/signup">Start Your Retargeting Campaign Today</a>
+          <a class="secondary" href="/articles/facebook-ads-testing-framework" style="margin-left:8px">Learn A/B Testing</a>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top:18px">
+        <h3>Ready to implement advanced Facebook retargeting?</h3>
+        <p>Get an audit and custom retargeting plan tailored to your store or client. We review pixel health, audience structure, and creative sequencing.</p>
+        <div style="margin-top:10px">
+          <a class="btn" href="/contact">Request a Free Audit</a>
+        </div>
+      </section>
+
+    </article>
   </main>
 
   <footer>
-    <div class="footer-grid">
-      <div class="foot-col">
-        <div style="display:flex;gap:10px;align-items:center">
-          <div class="logo" style="width:44px;height:44px">SM</div>
-          <div>
-            <div style="font-weight:700">SM Marketing Hub</div>
-            <div class="small">Premium social media strategy</div>
-          </div>
+    <div class="container footer-grid" role="contentinfo">
+      <div>
+        <div style="font-weight:800">Facebook Ads Mastery</div>
+        <div class="small">© 2026 Facebook Ads Mastery. All rights reserved.</div>
+      </div>
+      <div style="text-align:right">
+        <div class="small">Follow us</div>
+        <div style="margin-top:8px">
+          <a class="small" href="/privacy">Privacy</a> · <a class="small" href="/terms">Terms</a> · <a class="small" href="/contact">Contact</a>
         </div>
-        <p class="small" style="margin-top:10px">© <span id="year"></span> SM Marketing Hub. All rights reserved.</p>
-      </div>
-
-      <div class="foot-col">
-        <h4 class="small">Product</h4>
-        <a class="small" href="/courses">Courses</a><br>
-        <a class="small" href="/articles">Articles</a>
-      </div>
-
-      <div class="foot-col">
-        <h4 class="small">Resources</h4>
-        <a class="small" href="/resources">Resources</a><br>
-        <a class="small" href="/contact">Contact</a>
-      </div>
-
-      <div class="foot-col">
-        <h4 class="small">Follow</h4>
-        <a class="small" href="https://facebook.com" rel="noopener">Facebook</a><br>
-        <a class="small" href="https://instagram.com" rel="noopener">Instagram</a>
       </div>
     </div>
   </footer>
 
   <script>
-    // Small JS for forms & interactions (lightweight, no external requests).
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function handleLead(e){
+    function handleDownload(e){
       e.preventDefault();
       var name = document.getElementById('name').value.trim();
       var email = document.getElementById('email').value.trim();
-      var msg = document.getElementById('leadMsg');
-      if(!name || !email){
-        msg.textContent = 'Please provide a name and valid email.';
-        msg.style.color = '#ffb4b4';
-        return;
-      }
-      // Simulate success (replace with server integration)
-      msg.textContent = 'Thanks, ' + name + '! Check your inbox for the free guide.';
-      msg.style.color = '#b9f3c6';
-      document.getElementById('leadForm').reset();
+      if(!name || !email){ alert('Please enter name and email'); return; }
+      // Simulate download — replace with integration in production
+      alert('Thanks ' + name + '! Your free Facebook Retargeting Checklist will arrive at ' + email + '.');
+      document.getElementById('name').value='';document.getElementById('email').value='';
     }
-
-    function handleNewsletter(){
-      var email = document.getElementById('newsletterEmail').value.trim();
-      var el = document.getElementById('newsletterMsg');
-      if(!email || email.indexOf('@')===-1){
-        el.textContent = 'Please enter a valid email address.';
-        el.style.color = '#ffb4b4';
-        return;
-      }
-      el.textContent = 'Subscribed! Look for weekly SM insights in your inbox.';
-      el.style.color = '#b9f3c6';
-      document.getElementById('newsletterEmail').value = '';
+    function handleSignup(e){
+      e.preventDefault();
+      alert('Thanks for subscribing! Check your inbox for the latest retargeting playbooks.');
     }
   </script>
 
   <!-- Structured Data: Article Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://example.com/sm"
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://www.example.com/articles/facebook-retargeting-guide"
     },
-    "headline": "SM — The Ultimate Guide to Social Media Marketing",
-    "description": "SM (Social Media) guide: strategy, ads, organic growth, content calendar, and best practices to boost engagement and conversions.",
-    "image": "https://picsum.photos/1200/630?random=1",
-    "author": {
-      "@type": "Person",
-      "name": "SM Marketing Hub"
+    "headline":"Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers",
+    "description":"Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.",
+    "image":"https://picsum.photos/1200/600?random=1",
+    "author":{
+      "@type":"Organization",
+      "name":"Facebook Ads Mastery"
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SM Marketing Hub",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://picsum.photos/200/200?random=9"
+    "publisher":{
+      "@type":"Organization",
+      "name":"Facebook Ads Mastery",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://picsum.photos/120/120?random=5"
       }
     },
-    "datePublished": "2026-06-17",
-    "dateModified": "2026-06-17"
+    "datePublished":"2026-06-17",
+    "dateModified":"2026-06-17"
   }
   </script>
 
-  <!-- FAQ Schema -->
+  <!-- Structured Data: FAQ Schema -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
       {
-        "@type": "Question",
-        "name": "What does SM mean in marketing?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SM stands for social media, the collection of digital platforms used for content distribution, advertising, and community engagement."
+        "@type":"Question",
+        "name":"What is Facebook retargeting and how does it work?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Facebook retargeting (remarketing) uses pixel and event data to show ads to people who previously interacted with your website or app. By creating custom audiences from pixel events, you can deliver personalized ads to users with different intent levels."
         }
       },
       {
-        "@type": "Question",
-        "name": "How long until I see results from SM?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Organic growth typically takes 3-6 months; paid campaigns can show results in days but require 2–6 weeks of testing to optimize ROAS."
+        "@type":"Question",
+        "name":"How do I set up dynamic product retargeting for Shopify?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Connect your Shopify product catalog to your Meta Business Manager, ensure your pixel sends content_ids and value parameters, and create a dynamic ad template that pulls product images and metadata from the catalog."
         }
       },
       {
-        "@type": "Question",
-        "name": "Which platform is best for my business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Platform choice depends on audience: B2B performs well on LinkedIn, visual ecommerce on Instagram and TikTok, and community-driven brands on Facebook and YouTube."
+        "@type":"Question",
+        "name":"What is the ideal retargeting window for cart abandoners?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Typically 7–14 days for cart abandoners provides high-intent conversion opportunities. Shorter windows (1–7 days) are best for fast-moving consumer goods, while longer windows may work for high-consideration purchases."
         }
       },
       {
-        "@type": "Question",
-        "name": "How much should I budget for social media advertising?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Start with test budgets ($500–$2000/month per channel) and scale based on CPA and ROAS, allocating 60% to testing initially."
+        "@type":"Question",
+        "name":"How much budget should I allocate to retargeting?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A common rule is 20–40% of your total ad budget to retargeting, depending on funnel depth and audience size. Start with higher CPA targets for retargeting to measure higher ROI potential."
         }
       }
     ]
   }
   </script>
 
-  <!-- Breadcrumb Schema -->
+  <!-- Structured Data: Breadcrumb -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://example.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Articles",
-        "item": "https://example.com/articles"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "SM",
-        "item": "https://example.com/sm"
-      }
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+      {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles"},
+      {"@type":"ListItem","position":3,"name":"Facebook Retargeting Guide","item":"https://www.example.com/articles/facebook-retargeting-guide"}
     ]
   }
   </script>
+
 </body>
 </html>
