@@ -1,88 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Facebook Ads Testing Framework: Find Winning Creatives Fast (2025)</title>
-<meta name="description" content="A complete 3-phase Facebook ads testing framework for identifying winning creatives quickly and cost-efficiently. CBO testing, ABO structure, metrics, and how to scale winners."/>
-<link rel="canonical" href="https://challengehomeschool.com/articles/facebook-ads-testing-framework.html"/>
-<meta property="og:title" content="Facebook Ads Testing Framework: Find Winners Fast"/>
-<meta property="og:type" content="article"/>
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','YOUR_PIXEL_ID');fbq('track','PageView');</script>
-<style>:root{--bg:#0a0a0f;--surf:#13131a;--surf2:#1c1c28;--bdr:#2a2a3a;--acc:#4f6ef7;--acc2:#7c3aed;--txt:#e8e8f0;--mut:#8888aa;--dim:#555570;}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--txt);line-height:1.75;font-size:16px;}a{color:var(--acc);}nav{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr);padding:0 24px;}.ni{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}.nl{font-size:1.1rem;font-weight:700;color:var(--txt);text-decoration:none;}.nl span{color:var(--acc);}.nc{background:var(--acc);color:#fff;padding:8px 20px;border-radius:8px;font-size:.875rem;font-weight:600;text-decoration:none;}.wrap{max-width:820px;margin:0 auto;padding:60px 24px;}.label{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--acc);margin-bottom:12px;}h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:20px;}.meta{display:flex;gap:16px;flex-wrap:wrap;color:var(--mut);font-size:.85rem;padding-bottom:24px;border-bottom:1px solid var(--bdr);margin-bottom:32px;}h2{font-size:1.55rem;font-weight:800;letter-spacing:-.02em;margin:48px 0 16px;padding-top:40px;border-top:1px solid var(--bdr);color:var(--txt);}h2:first-of-type{border-top:none;padding-top:0;}h3{font-size:1.15rem;font-weight:700;margin:28px 0 10px;color:var(--txt);}p{color:var(--mut);margin-bottom:18px;line-height:1.8;}ul,ol{color:var(--mut);padding-left:22px;margin-bottom:18px;}li{margin-bottom:8px;line-height:1.7;}strong{color:var(--txt);}.callout{background:var(--surf2);border:1px solid var(--bdr);border-left:3px solid var(--acc);border-radius:12px;padding:20px 24px;margin:24px 0;}.callout p{margin:0;}img.ai{width:100%;max-height:380px;object-fit:cover;border-radius:12px;border:1px solid var(--bdr);margin:24px 0 8px;}.cap{font-size:.78rem;color:var(--dim);text-align:center;margin-bottom:20px;}.cta{background:linear-gradient(135deg,rgba(79,110,247,.12),rgba(124,58,237,.08));border:1px solid rgba(79,110,247,.25);border-radius:12px;padding:32px;text-align:center;margin:48px 0;}.cta h3{margin-bottom:10px;}.cta p{color:var(--mut);margin-bottom:18px;}.btn{display:inline-block;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff;font-weight:700;padding:14px 32px;border-radius:10px;text-decoration:none;}details{background:var(--surf2);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;margin-bottom:10px;}summary{padding:16px 20px;cursor:pointer;font-weight:600;color:var(--txt);list-style:none;display:flex;justify-content:space-between;align-items:center;}summary::after{content:'+';color:var(--acc);}details[open] summary::after{content:'−';}details>div{padding:0 20px 16px;}footer{background:var(--surf);border-top:1px solid var(--bdr);padding:32px 24px;text-align:center;}footer p{color:var(--mut);font-size:.85rem;}table{width:100%;border-collapse:collapse;margin:20px 0;}th{text-align:left;padding:12px 14px;background:var(--surf2);color:var(--mut);font-size:.82rem;text-transform:uppercase;border-bottom:1px solid var(--bdr);}td{padding:12px 14px;border-bottom:1px solid var(--bdr);color:var(--mut);font-size:.9rem;}tr:hover td{background:var(--surf2);}@media(max-width:600px){.wrap{padding:40px 16px;}}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS</title>
+  <meta name="description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <link rel="canonical" href="https://www.example.com/articles/facebook-ads-testing-framework">
+  <meta name="robots" content="index,follow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS">
+  <meta property="og:description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.example.com/articles/facebook-ads-testing-framework">
+  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS">
+  <meta name="twitter:description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
+  <meta name="theme-color" content="#0f1724">
+
+  <!-- Structured Data: Article, FAQ, Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.example.com/articles/facebook-ads-testing-framework"
+    },
+    "headline": "Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS",
+    "description": "A comprehensive guide to establishing a Facebook Ads testing framework that improves conversion rates, reduces CPL, and scales profitable campaigns with real examples and common mistakes to avoid.",
+    "image": "https://picsum.photos/1200/630?random=1",
+    "author": {
+      "@type": "Person",
+      "name": "Marketing Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ads Mastery",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://picsum.photos/200/60?random=2"
+      }
+    },
+    "datePublished": "2026-06-17"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Facebook Ads testing framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Facebook Ads testing framework is a repeatable process for designing, running, measuring, and iterating split tests (A/B tests) across creative, audience, placement, and funnel variables to find statistically significant winners and improve campaign ROI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should I run an A/B test on Facebook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run tests until you reach statistical significance or a minimum of 3–7 days depending on traffic volume; larger tests with more impressions can conclude sooner. Avoid changing variables mid-test."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I test audiences or creatives first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with creative tests to identify high-converting messaging and visuals, then layer audience testing (interest, demographic, lookalike) once you have strong creatives to scale."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://www.example.com/articles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Facebook Ads Testing Framework",
+        "item": "https://www.example.com/articles/facebook-ads-testing-framework"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1724;
+      --muted:#9aa6bd;
+      --accent:#1877f2;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxwidth:1100px;
+      --accent-2:#00d4ff;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#071023);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    header{
+      background:linear-gradient(90deg, rgba(24,119,242,0.06), rgba(0,212,255,0.02));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    .nav{
+      max-width:var(--maxwidth);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px;
+      gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:36px;border-radius:8px}
+    nav ul{display:flex;gap:14px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{color:var(--muted);padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+    .cta-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001; padding:10px 14px;border-radius:10px;font-weight:700}
+    main{max-width:var(--maxwidth);margin:28px auto;padding:24px}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+      align-items:start;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    h1{margin:0;font-size:28px;letter-spacing:-0.4px}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    .featured{width:100%;border-radius:10px;overflow:hidden;display:block}
+    .content{display:grid;grid-template-columns: 1fr 320px;gap:24px;margin-top:18px}
+    @media (max-width:980px){
+      .content{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+    .article{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .toc{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .toc a{display:block;color:var(--muted);padding:6px 0}
+    h2{color:#fff;margin-top:22px}
+    h3{color:#cfe6ff;margin-top:14px}
+    p{color:var(--muted);margin:12px 0}
+    .img-card{border-radius:10px;overflow:hidden;margin:12px 0;border:1px solid rgba(255,255,255,0.03)}
+    .lead-form{background:linear-gradient(90deg, rgba(24,119,242,0.06), transparent);padding:14px;border-radius:12px;margin-top:12px;border:1px solid rgba(255,255,255,0.02)}
+    .form-row{display:flex;gap:8px;margin-top:8px}
+    .form-row input[type="text"], .form-row input[type="email"]{
+      flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e8f4ff
+    }
+    .form-row button{background:var(--accent);border:none;color:#001;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .small-muted{font-size:13px;color:var(--muted)}
+    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .cta{
+      margin:18px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.12), rgba(0,212,255,0.04));display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .cta .cta-text{flex:1}
+    .cta .cta-actions{display:flex;gap:10px}
+    .related{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    footer{max-width:var(--maxwidth);margin:28px auto;padding:20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .socials{display:flex;gap:10px}
+    .badge{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    ul.check{list-style:inside;color:var(--muted);padding-left:8px}
+    .faq-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;margin-top:10px}
+  </style>
 </head>
 <body>
-<nav><div class="ni"><a href="/" class="nl">Facebook Ads <span>Mastery</span></a><a href="https://sooqster.gumroad.com/l/xirot" class="nc" onclick="fbq('track','Lead')">Get the Playbook →</a></div></nav>
-<div class="wrap">
-<div class="label">Testing Strategy · Creative Research</div>
-<h1>Facebook Ads Testing Framework: Find Winning Creatives Fast in 2025</h1>
-<div class="meta"><span>📅 January 2025</span><span>⏱ 12 min read</span><span>🎯 All levels</span></div>
+  <header>
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <img src="https://picsum.photos/80/60?random=2" alt="Ads Mastery logo" loading="lazy">
+        <div>
+          <div style="font-weight:800">Ads Mastery</div>
+          <div class="small-muted" style="margin-top:2px">Facebook Ads Resources</div>
+        </div>
+      </div>
+      <nav aria-label="Top menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles/facebook-ads-for-shopify">Shopify Ads</a></li>
+          <li><a href="/articles/how-to-scale-facebook-ads">Scaling</a></li>
+          <li><a href="/articles/facebook-retargeting-guide">Retargeting</a></li>
+          <li><a class="cta-btn" href="#signup">Get Guide</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-<p>The biggest difference between Facebook advertisers who consistently profit and those who constantly struggle is systematic creative testing. Without a disciplined framework, you're spending money to confirm guesses rather than to gather actionable data. This guide presents the 3-phase Facebook ads testing framework used across $10 million in ad spend — a system that identifies winning creatives in 3–5 days while minimizing wasted budget.</p>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h1 id="page-title">Facebook Ads Testing Framework</h1>
+        <div class="meta">A practical, repeatable system for A/B testing Facebook Ads creatives, audiences, and funnels to improve ROAS and reduce CPL.</div>
 
-<img src="https://images.pexels.com/photos/669619/pexels-photo-669619.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Digital marketer analyzing Facebook ads testing data and creative performance metrics in Ads Manager dashboard" title="Facebook Ads Testing Framework and Creative Analysis" class="ai" loading="eager" width="1200" height="380"/>
-<p class="cap">Systematic data analysis in Meta Ads Manager is the foundation of an effective Facebook ads testing framework. Source: Pexels</p>
+        <img class="featured" src="https://picsum.photos/1200/600?random=3" alt="Facebook Ads Testing Framework featured visual showing A/B testing and ROAS growth" loading="lazy">
+      </div>
 
-<h2>Why Most Facebook Ads Testing Fails</h2>
-<p>The majority of Facebook advertisers test ineffectively because they violate the fundamental principle of controlled experimentation: isolating variables. They launch five completely different campaigns simultaneously — different audiences, different budgets, different creative concepts, different offers — and then wonder why they can't identify what caused one campaign to outperform another.</p>
-<p>Effective creative testing requires deliberately limiting variables. You test one thing at a time, with equal budgets, equal time horizons, and clear success metrics defined before launch. Everything else is noise masquerading as insight.</p>
-<p>A secondary failure mode is testing too quickly. Advertisers pause ads after 24–48 hours based on early cost-per-purchase data that isn't statistically meaningful. Meta's algorithm needs 3–5 days minimum and 50 optimization events to exit the learning phase and deliver stable performance data. Pulling the plug too early costs you potential winners.</p>
+      <div style="display:flex;flex-direction:column;justify-content:flex-start;gap:12px">
+        <div class="badge">Updated: 2026</div>
+        <div class="small-muted">Read time: 12-16 minutes</div>
+        <div class="small-muted">Topics: Facebook Ads A/B testing, creative testing, audience testing, CBO, conversion tracking</div>
+      </div>
+    </section>
 
-<h2>The 3-Phase Testing Framework</h2>
-<h3>Phase 1: Concept Discovery (Days 1–5, $5–$15/day per ad set)</h3>
-<p>Phase 1 answers the fundamental question: which creative concept resonates with my audience? A concept is a distinct approach to communicating your value proposition — problem-solution, before/after transformation, testimonial, comparison, demonstration, or educational. You're not testing specific hooks or copy yet; you're testing concepts.</p>
-<p>Structure: One ABO (Ad Set Budget Optimization) campaign with 3–5 ad sets. Each ad set contains one creative variant representing a distinct concept. Equal budget per ad set. Broad targeting or your best lookalike audience. Run for exactly 5 days before evaluation.</p>
-<p>Phase 1 success metrics:</p>
-<ul>
-<li>Hook rate (3-second video views ÷ impressions) above 25%</li>
-<li>CTR (link) above 1.2%</li>
-<li>CPM below account average (indicates predicted engagement quality)</li>
-<li>Cost-per-purchase within 30% of target (if volume allows)</li>
-</ul>
-<p>Any creative meeting two or more of these benchmarks advances to Phase 2. The rest are paused.</p>
+    <div class="content">
+      <article class="article" id="article">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Running random Facebook Ads rarely leads to consistent scale. Top-performing advertisers use a Facebook Ads testing framework — a structured playbook that isolates variables, measures statistically significant winners, and scales them methodically. This article walks you through a complete, modern framework: creative testing (images, video, copy), audience splits (interest, lookalike, retargeting), funnel experimentation (landing pages, offers), and technical setup (pixel & CAPI, conversion events, ROAS tracking).</p>
 
-<h3>Phase 2: Creative Iteration (Days 6–12, $20–$50/day per ad set)</h3>
-<p>Phase 2 takes your Phase 1 winners and extracts maximum performance through systematic iteration. Now you're testing within a proven concept — trying different hooks, different opening visuals, different copy approaches, or different CTAs. This is where you find the specific execution that maximizes conversion.</p>
-<p>Structure: New ABO campaign with 3–5 ad sets, each containing a variation of your Phase 1 winner. Keep the core concept identical; vary only one element per ad set. Example: if your winner was a transformation testimonial video, test three different hooks: (1) pain-focused opening, (2) result-focused opening, (3) question-format opening.</p>
-<p>Run Phase 2 for 5–7 days. The winner advances to Phase 3 with full scaling budget. Secondary performers may run at lower budgets as backup creatives in your scaling campaign.</p>
+          <div class="lead-form" aria-labelledby="lead-title">
+            <div id="lead-title" style="font-weight:700">Get the Free Framework Guide</div>
+            <p class="small-muted">Download the step-by-step Facebook Ads Testing Framework PDF — templates, checklists, and test schedule.</p>
+            <form action="#" method="post" aria-label="Download free guide form">
+              <div class="form-row" style="flex-direction:column">
+                <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
+                <input type="email" name="email" placeholder="Email address" aria-label="Email" required>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:10px">
+                <button type="submit">Download Free Guide</button>
+                <button type="button" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:10px 12px;border-radius:8px">Preview PDF</button>
+              </div>
+              <div class="small-muted" style="margin-top:8px">We respect your privacy. Unsubscribe anytime.</div>
+            </form>
+          </div>
+        </section>
 
-<h3>Phase 3: Scale and Defend (Ongoing, $100–$500+/day)</h3>
-<p>Phase 3 is your scaling campaign — where proven creative-audience combinations run with the budget and conviction they've earned. This is a CBO (Campaign Budget Optimization) campaign where Meta distributes budget dynamically across your best performers.</p>
-<p>The key discipline in Phase 3 is maintaining your testing pipeline. While scaling winners, you must simultaneously be running new Phase 1 tests. Every creative fatigues eventually — typically showing signs of decay at 2.5+ frequency over a 7-day window. Without a pipeline of upcoming winners, a fatigued Phase 3 campaign becomes a scaling problem with no solution.</p>
+        <nav class="toc" aria-label="Table of contents">
+          <strong style="color:#fff">Table of Contents</strong>
+          <a href="#introduction">Introduction</a>
+          <a href="#why-framework">Why You Need a Testing Framework</a>
+          <a href="#components">Core Components of the Framework</a>
+          <a href="#how-to">How-to: Run an A/B Test</a>
+          <a href="#examples">Examples and Case Studies</a>
+          <a href="#mistakes">Common Mistakes to Avoid</a>
+          <a href="#newsletter">Newsletter Signup</a>
+          <a href="#faq">FAQ</a>
+          <a href="#conclusion">Conclusion & Next Steps</a>
+        </nav>
 
-<div class="cta"><h3>Get the Complete Testing Framework with Templates</h3><p>The $10M Playbook includes exact campaign structure templates, naming conventions, budget allocation formulas, and KPI decision trees for each phase.</p><a href="https://sooqster.gumroad.com/l/xirot" class="btn" onclick="fbq('track','Lead')">Download the Playbook →</a></div>
+        <h2 id="why-framework">Why You Need a Testing Framework</h2>
+        <p>Ad platforms change, audiences shift, and what worked last quarter may underperform today. A testing framework helps you:
+        </p>
+        <ul class="check">
+          <li>Reduce guesswork with hypothesis-driven experiments</li>
+          <li>Improve key metrics: CTR (click-through rate), CVR (conversion rate), CPL (cost per lead), and ROAS (return on ad spend)</li>
+          <li>Scale winners using campaign budget optimization (CBO) or manual scaling</li>
+          <li>Track ad relevance and conversion events with pixel and Conversions API (CAPI)</li>
+        </ul>
 
-<h2>Testing Metrics Reference Guide</h2>
-<table>
-<thead><tr><th>Metric</th><th>What It Measures</th><th>Target (Cold Traffic)</th><th>Action if Below</th></tr></thead>
-<tbody>
-<tr><td>Hook Rate</td><td>Creative opening engagement</td><td>&gt;25%</td><td>Rewrite hook, test new opening</td></tr>
-<tr><td>CTR (Link)</td><td>Ad-to-site traffic quality</td><td>&gt;1.5%</td><td>Test new headline/CTA</td></tr>
-<tr><td>CPM</td><td>Algorithm quality score</td><td>Below account avg</td><td>Review creative quality, audience</td></tr>
-<tr><td>Landing Page CVR</td><td>Page-to-purchase efficiency</td><td>&gt;2.5%</td><td>Optimize landing page</td></tr>
-<tr><td>Cost Per Purchase</td><td>Campaign profitability</td><td>≤ target CPP</td><td>Pause ad set, test new concept</td></tr>
-<tr><td>Frequency</td><td>Audience saturation signal</td><td>&lt;2.5 (7-day)</td><td>Expand audience or refresh creative</td></tr>
-</tbody>
-</table>
+        <h2 id="components">Core Components of the Framework</h2>
+        <p>Design your Facebook Ads testing framework around four core areas: creative, audience, funnel, and technical setup. Each component has repeatable sub-tests and measurement rules.</p>
 
-<h2>CBO vs. ABO in Testing</h2>
-<p>Use ABO (Ad Set Budget Optimization) for all testing phases. The reason is control: ABO guarantees equal budget distribution across ad sets, ensuring each creative receives comparable impression volume before you draw performance conclusions. CBO would immediately funnel budget toward the perceived early winner — often based on CPM variance rather than true creative quality — and starve other variants of the data needed for fair evaluation.</p>
-<p>Reserve CBO for Phase 3 scaling campaigns where you want Meta's algorithm to dynamically favor the best performers with budget flexibility.</p>
+        <h3>Creative Testing</h3>
+        <p>Creative testing is the fastest way to find scalable winners. Test thumbnails, headlines, primary text, and call-to-action variations. Use dynamic creative to speed up permutations, but keep manual A/B tests for precision.</p>
 
-<h2>How Many Creatives to Test</h2>
-<p>During Phase 1, test 3–5 creative concepts per cycle. Fewer than 3 limits your ability to identify clear winners; more than 5 dilutes budget per variant and extends the time required to gather meaningful data at low daily spend levels.</p>
-<p>During Phase 2, test 3–4 iterations of your Phase 1 winner. The goal is precision optimization, not broad exploration.</p>
-<p>Running a continuous testing pipeline means you should always have active Phase 1 tests running simultaneously with Phase 3 scaling campaigns. The pipeline creates the inventory of future winners that sustains long-term scaling.</p>
+        <h3>Audience Testing</h3>
+        <p>Systematically test interest-based audiences, lookalike audiences, and retargeting pools. Use audience exclusion to prevent overlap and employ split testing to measure pure audience performance.</p>
 
-<h2>FAQ: Facebook Ads Testing</h2>
-<details><summary>How long should I run a Facebook ad before testing results?</summary><div><p>Minimum 3 days for initial signal, 5–7 days for meaningful evaluation. Meta's algorithm typically exits the learning phase after generating 50 optimization events — for purchase-optimized campaigns, that requires sufficient budget to generate 50 purchases. If your daily budget can't generate that volume, extend your evaluation window to 10–14 days for more stable data.</p></div></details>
-<details><summary>Should I test audiences or creatives first?</summary><div><p>Test creatives first, always. Audience testing before creative validation means you're testing distribution channels for an unknown message — even winning audiences can't save a weak creative. Find your winning creative concept first, then systematically identify the best audiences to deliver it to.</p></div></details>
-<details><summary>When should I kill an underperforming Facebook ad?</summary><div><p>After 5 days of running or after spending 2–3x your target cost-per-purchase without achieving it — whichever comes first. Don't kill ads in the first 48 hours based on volatile early data. The exception: if CPM is dramatically above account average from day one and hook rate is below 15%, the creative is a clear reject and can be paused early.</p></div></details>
-<details><summary>How do I know when to scale a Facebook ad?</summary><div><p>Scale when: 7-day ROAS is at or above your target profitability threshold, cost-per-purchase is stable (not declining or erratic) for 5+ consecutive days, the campaign is out of the learning phase, and you have a new Phase 1 test ready to launch as backup. All four conditions together give you confidence that scaling budget will generate proportional return.</p></div></details>
+        <h3>Funnel & Offer Testing</h3>
+        <p>Test landing pages, checkout flow variations, and offer value (discounts, bundles, free trials). Measure micro-conversions (add-to-cart, initiate checkout) in addition to macro conversions (purchase, lead).</p>
 
-<div class="cta"><h3>Master Facebook Ads Testing</h3><p>Get the complete 3-phase testing framework, creative testing templates, and scaling decision framework inside the Facebook Ads Mastery: The $10M Playbook.</p><a href="https://sooqster.gumroad.com/l/xirot" class="btn">Get the $10M Playbook →</a></div>
+        <h3>Technical & Tracking</h3>
+        <p>Accurate conversion tracking is the backbone of any testing framework — install the Facebook Pixel, validate events, and use CAPI to sync server events. Missing or duplicated events will skew results and make winners unreliable.</p>
 
-<p>Related: <a href="/">Homepage</a> · <a href="/facebook-ads-mastery.html">Complete Facebook Ads Guide</a> · <a href="/articles/facebook-ads-creative-strategy.html">Creative Strategy</a> · <a href="/articles/how-to-scale-facebook-ads.html">Scaling Guide</a></p>
-</div>
-<footer><p>© 2025 Facebook Ads Mastery · <a href="/">challengehomeschool.com</a></p></footer>
+        <div class="img-card">
+          <img src="https://picsum.photos/1000/400?random=4" alt="Creative testing example showing split test variants and metrics for Facebook Ads" loading="lazy" style="width:100%;display:block">
+        </div>
+
+        <h2 id="how-to">How-to: Run an A/B Test on Facebook Ads</h2>
+        <p>This step-by-step guide helps you run a rigorous split test that yields actionable, statistically valid insights.</p>
+
+        <h3>Step 1 — Define a Clear Hypothesis</h3>
+        <p>Example: "Changing the primary CTA from 'Shop Now' to 'Get 20% Off' will reduce CPL by 15% among cold traffic." Write the hypothesis, the metric you'll measure (CPL, ROAS), and the minimum outcome that counts as success.</p>
+
+        <h3>Step 2 — Isolate a Single Variable</h3>
+        <p>Test one element at a time: creative, audience, landing page, or placement. If you change multiple elements, you won't know which change produced the result.</p>
+
+        <h3>Step 3 — Set Test Parameters</h3>
+        <p>Define the budget, minimum impressions, test duration, and statistical significance threshold. For most e-commerce tests, set a minimum of 50 conversions per variant or 7–14 days depending on traffic volume.</p>
+
+        <h3>Step 4 — Use the Right Test Type</h3>
+        <p>Facebook offers A/B Test (split testing) and Dynamic Creative. Use split tests to compare audiences or full variants; use dynamic creative for granular creative permutations with automated optimization.</p>
+
+        <h3>Step 5 — Monitor & Wait for Significance</h3>
+        <p>Track metrics daily but avoid early changes. Let the test reach the predetermined sample size. Use manual calculations or statistical calculators to check p-values and confidence intervals.</p>
+
+        <h3>Step 6 — Analyze & Iterate</h3>
+        <p>When a winner emerges, analyze why it won: was it higher CTR, better landing page CVR, or lower CPC? Apply insights to new tests and scale the winning variant with a controlled scaling plan.</p>
+
+        <div class="cta" role="region" aria-label="Mid article call to action">
+          <div class="cta-text">
+            <strong style="font-size:16px">Ready to standardize your tests?</strong>
+            <div class="small-muted">Get our testing templates and scaling checklist to run reproducible Facebook Ads experiments.</div>
+          </div>
+          <div class="cta-actions">
+            <a href="#signup" class="cta-btn">Get Templates</a>
+            <a href="/articles/how-to-scale-facebook-ads" class="small-muted" style="align-self:center">Learn scaling strategies →</a>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="https://picsum.photos/1000/500?random=5" alt="Audience split testing and lookalike audience strategy visual" loading="lazy" style="width:100%;display:block">
+        </div>
+
+        <h2 id="examples">Examples and Case Studies</h2>
+        <p>Below are real-world examples that illustrate the framework in action and the kinds of improvements you can expect.</p>
+
+        <h3>Example 1 — Creative Swap Improves CTR and ROAS</h3>
+        <p>Hypothesis: A lifestyle video will increase CTR among cold audiences versus a product image. Setup: 2 creatives, same audience, equal budget. Outcome: Video had 28% higher CTR and 22% better ROAS after 10 days. Learnings: Motion and storytelling increased ad relevance and improved conversion efficiency.</p>
+
+        <h3>Example 2 — Lookalike vs Interest Audience Test</h3>
+        <p>Hypothesis: A 1% lookalike built from buyers will outperform a 5-interest targeting bundle. Setup: Split test with dedicated budgets. Outcome: 1% lookalike produced 35% lower CPL, indicating high-quality lookalike targeting remains a reliable scaling lever.</p>
+
+        <div class="img-card">
+          <img src="https://picsum.photos/1200/500?random=6" alt="Case study screenshot showing A/B test results for Facebook Ads improving conversion rate" loading="lazy" style="width:100%;display:block">
+        </div>
+
+        <h2 id="mistakes">Common Mistakes to Avoid</h2>
+        <p>Even experienced advertisers make errors that invalidate tests. Avoid these common pitfalls.</p>
+
+        <h3>1. Changing Multiple Variables</h3>
+        <p>If you change headline and image at the same time, you can't know which change drove the result.</p>
+
+        <h3>2. Insufficient Sample Size</h3>
+        <p>Stopping a test early due to a few days of "winning" data often leads to false positives. Use accepted statistical methods to determine sample size.</p>
+
+        <h3>3. Overlapping Audiences</h3>
+        <p>Audience overlap can create internal competition between your ad sets and distort results. Use audience exclusions or Facebook's built-in split test features to avoid this.</p>
+
+        <h3>4. Poor Conversion Tracking</h3>
+        <p>If your Pixel or CAPI is misconfigured, conversion data will be inaccurate, and you may optimize based on flawed signals.</p>
+
+        <h2 id="newsletter">Newsletter Signup</h2>
+        <p class="small-muted">Subscribe to weekly testing playbooks and exclusive Facebook Ads templates.</p>
+        <form id="signup" action="#" method="post" class="lead-form" aria-label="Newsletter signup">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input type="email" name="newsletter_email" placeholder="Enter your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e8f4ff">
+            <button type="submit" style="padding:10px 14px;border-radius:8px;background:var(--accent);border:none;color:#001;font-weight:700">Subscribe</button>
+          </div>
+          <div class="small-muted" style="margin-top:8px">Get actionable tests, templates and case studies. Unsubscribe anytime.</div>
+        </form>
+
+        <h2 id="faq">FAQ</h2>
+        <div class="faq-item">
+          <strong>Q: How long should I run a Facebook split test?</strong>
+          <p class="small-muted">A: At least until you reach the pre-defined sample size or statistical significance. For low-traffic campaigns, this may mean 2 weeks or more.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Should I use automatic placements?</strong>
+          <p class="small-muted">A: Start with automatic placements to gather data, then test placement-level creatives if performance differences are large.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Can I use broad targeting?</strong>
+          <p class="small-muted">A: Yes, broad targeting works well when paired with strong creatives and CBO. Use creative and audience segmentation tests to optimize further.</p>
+        </div>
+
+        <h2 id="conclusion">Conclusion & Next Steps</h2>
+        <p>Implementing a disciplined Facebook Ads testing framework reduces risk and accelerates scale. Start with hypothesis-driven creative tests, validate with proper tracking (Pixel & CAPI), and then layer audience and funnel experiments. Use our templates to standardize reporting and scaling rules so your team can replicate winning campaigns.</p>
+
+        <div style="margin-top:14px" class="small-muted">Internal resources:</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <a href="/articles/facebook-ads-for-shopify" class="badge">Facebook Ads for Shopify</a>
+          <a href="/articles/facebook-ads-testing-framework" class="badge">Testing Framework (this)</a>
+          <a href="/articles/how-to-scale-facebook-ads" class="badge">How to Scale Facebook Ads</a>
+          <a href="/articles/facebook-retargeting-guide" class="badge">Facebook Retargeting Guide</a>
+        </div>
+
+        <div class="cta" style="margin-top:18px" role="region" aria-label="Final call to action">
+          <div class="cta-text">
+            <strong>Start testing like a growth team.</strong>
+            <div class="small-muted">Download our actionable checklist and test tracker to run reproducible Facebook Ads experiments.</div>
+          </div>
+          <div class="cta-actions">
+            <a href="#introduction" class="cta-btn">Download Checklist</a>
+          </div>
+        </div>
+
+      </article>
+
+      <aside style="position:relative">
+        <div class="card" aria-labelledby="sidebar-resources">
+          <h3 id="sidebar-resources" style="margin-top:0">Resources</h3>
+          <p class="small-muted">Quick links and related reads to deepen your Facebook Ads testing skills.</p>
+          <div class="related">
+            <a href="/articles/facebook-ads-for-shopify" class="small-muted">Facebook Ads for Shopify — Optimization Tips</a>
+            <a href="/articles/facebook-ads-testing-framework" class="small-muted">Complete Testing Framework (this)</a>
+            <a href="/articles/how-to-scale-facebook-ads" class="small-muted">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide" class="small-muted">Retargeting Guide</a>
+          </div>
+
+          <hr style="border:0;border-top:1px solid rgba(255,255,255,0.02);margin:12px 0">
+
+          <h4 style="margin:0 0 8px 0">Quick checklist</h4>
+          <ul class="check" style="margin:0">
+            <li>Define hypothesis & KPI</li>
+            <li>Test one variable at a time</li>
+            <li>Ensure pixel & CAPI are accurate</li>
+            <li>Set minimum sample size</li>
+            <li>Scale winners with controlled budget increases</li>
+          </ul>
+        </div>
+
+        <div class="card" style="margin-top:16px" aria-labelledby="sidebar-books">
+          <h3 id="sidebar-books" style="margin-top:0">Related reading</h3>
+          <p class="small-muted">Dive deeper into advanced topics.</p>
+          <ul style="padding-left:16px">
+            <li><a href="/articles/how-to-scale-facebook-ads">How to scale Facebook Ads</a></li>
+            <li><a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a></li>
+            <li><a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-weight:700">Ads Mastery</div>
+      <div class="small-muted">Trusted Facebook Ads strategies and testing frameworks</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="socials">
+        <a href="#" class="small-muted">Twitter</a>
+        <a href="#" class="small-muted">LinkedIn</a>
+        <a href="#" class="small-muted">YouTube</a>
+      </div>
+      <div class="small-muted">© 2026 Ads Mastery</div>
+    </div>
+  </footer>
+
 </body>
 </html>
