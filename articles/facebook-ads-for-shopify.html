@@ -3,516 +3,620 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers</title>
-  <meta name="description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
-  <link rel="canonical" href="https://www.example.com/articles/facebook-retargeting-guide">
+  <title>Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization</title>
+  <meta name="description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples, how-to steps, and common mistakes.">
+  <link rel="canonical" href="https://www.example.com/facebook-ads-metrics">
   <!-- Open Graph -->
-  <meta property="og:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers">
-  <meta property="og:description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
-  <meta property="og:url" content="https://www.example.com/articles/facebook-retargeting-guide">
+  <meta property="og:title" content="Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization">
+  <meta property="og:description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples and actionable steps.">
+  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+  <meta property="og:url" content="https://www.example.com/facebook-ads-metrics">
   <meta property="og:type" content="article">
-  <meta property="og:image" content="https://picsum.photos/1200/600?random=1">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers">
-  <meta name="twitter:description" content="Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.">
-  <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1">
-  <meta name="author" content="Facebook Ads Mastery (Replicated Style)">
-  <meta name="theme-color" content="#0b74ff">
+  <meta name="twitter:title" content="Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization">
+  <meta name="twitter:description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples and actionable steps.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
+  <meta name="author" content="Facebook Ads Mastery">
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#0f1724;
-      --muted:#9aa6b2;
+      --bg:#0f1720;
+      --card:#0b1116;
+      --muted:#98a0ab;
       --accent:#1877f2;
-      --accent-2:#00d1b2;
-      --glass: rgba(255,255,255,0.04);
+      --accent-2:#00c853;
+      --glass:rgba(255,255,255,0.03);
       --max-width:1100px;
+      --radius:12px;
+      --shadow: 0 6px 18px rgba(2,6,23,0.7);
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial;
-      background:linear-gradient(180deg,#071022 0%, #071726 50%, #041021 100%);
-      color:#e6eef6;
+      padding:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(24,119,242,0.06), transparent 10%),
+        radial-gradient(900px 400px at 90% 90%, rgba(0,200,83,0.03), transparent 10%),
+        var(--bg);
+      color:#e6eef8;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
       padding-bottom:80px;
     }
-    a{color:var(--accent);text-decoration:none}
-    header{position:sticky;top:0;background:linear-gradient(180deg, rgba(7,15,28,0.85), rgba(7,15,28,0.6));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03);z-index:1000}
-    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
+    header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      backdrop-filter:blur(6px);
+      background:linear-gradient(180deg, rgba(11,17,22,0.6), rgba(11,17,22,0.35));
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .container{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:20px;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
     .logo{
-      width:42px;height:42px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#0ea5e9);display:flex;align-items:center;justify-content:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(8,60,120,0.2)
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#0058d6);
+      display:inline-flex;align-items:center;justify-content:center;
+      box-shadow:var(--shadow);
+      font-weight:700;
+      font-size:18px;color:white;
     }
-    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center}
-    .nav a{padding:8px 12px;border-radius:8px;color:var(--muted);font-weight:600;font-size:15px}
-    .nav a:hover{color:white;background:rgba(255,255,255,0.02)}
-    .cta-btn{background:linear-gradient(90deg,var(--accent),#0ea5e9);color:white;padding:10px 14px;border-radius:10px;font-weight:700;box-shadow:0 8px 30px rgba(24,119,242,0.18)}
-    .hero{padding:40px 0}
-    .hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:20px;border-radius:12px}
-    h1{margin:0 0 12px;font-size:28px;letter-spacing:-0.4px}
-    .meta{color:var(--muted);font-size:14px;margin-bottom:16px}
-    .featured{width:100%;height:auto;border-radius:10px;display:block;box-shadow:0 12px 40px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
-    main{max-width:var(--max-width);margin:20px auto;padding:0 24px}
-    .toc{background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);margin:16px 0}
-    .toc ul{margin:0;padding-left:18px;color:var(--muted)}
-    section{margin-bottom:28px}
-    h2{font-size:20px;margin:0 0 10px}
-    h3{font-size:16px;margin:12px 0}
-    p{color:#d7e6f7}
-    .two-col{display:grid;grid-template-columns:1fr 320px;gap:22px}
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+    nav a.primary{background:linear-gradient(90deg,var(--accent),#0058d6);padding:8px 14px;border-radius:10px;color:white}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      padding:28px 0;
+    }
+    main{
+      max-width:var(--max-width);
+      margin:20px auto;
+      padding:22px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    h1{font-size:28px;margin:8px 0;color:#fff}
+    .lede{color:var(--muted);font-size:16px;margin-bottom:12px}
+    .toc{display:flex;flex-direction:column;gap:8px;padding:12px;background:var(--glass);border-radius:10px}
+    .toc a{color:var(--accent);text-decoration:none;font-weight:600}
+    .featured{
+      width:100%;
+      border-radius:10px;
+      overflow:hidden;
+      margin:12px 0;
+      border:1px solid rgba(255,255,255,0.04);
+    }
+    img{display:block;max-width:100%;height:auto}
+    /* layout */
+    .content-grid{
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:22px;
+      margin-top:18px;
+    }
+    article{min-width:0}
+    aside{
+      position:sticky;
+      top:88px;
+      align-self:start;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .metric-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+    }
+    .metric{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
+    }
+    .subhead{color:var(--muted);font-weight:700;margin-top:18px}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#0f66ff);color:white;text-decoration:none;font-weight:700;
+      transition:transform .12s ease;
+    }
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    .btn:hover{transform:translateY(-3px)}
+    form .field{display:flex;flex-direction:column;margin-bottom:10px}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"],input[type="email"]{
+      padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;
+    }
+    .newsletter{
+      display:flex;gap:8px;align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:12px;border-radius:10px;
+    }
+    .cta{
+      background:linear-gradient(90deg,var(--accent),#00c853);
+      padding:18px;border-radius:12px;color:#021016;margin-top:18px;
+      display:flex;flex-direction:column;gap:12px;
+    }
     .small{font-size:13px;color:var(--muted)}
-    .list{padding-left:18px}
-    .feature-img{width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
-    .inline-cta{display:flex;gap:12px;align-items:center;margin:18px 0}
-    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;font-weight:700}
-    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:10px 12px;border-radius:10px}
-    form{display:flex;flex-direction:column;gap:10px}
-    input[type="text"],input[type="email"]{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:8px;color:inherit}
-    .newsletter{display:flex;gap:10px}
-    .newsletter input{flex:1}
-    .related{display:flex;gap:12px;flex-wrap:wrap}
-    .related a{background:var(--glass);padding:12px;border-radius:8px;color:var(--muted);font-weight:600;border:1px solid rgba(255,255,255,0.02)}
-    footer{margin-top:40px;border-top:1px solid rgba(255,255,255,0.03);padding:28px 0;color:var(--muted)}
-    .footer-grid{display:flex;justify-content:space-between;align-items:center;gap:12px}
-    .faq-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));padding:14px;border-radius:8px;border:1px solid rgba(255,255,255,0.02);margin-bottom:10px}
-    @media (max-width:1000px){
-      .hero-grid{grid-template-columns:1fr}
-      .two-col{grid-template-columns:1fr}
-      nav ul{display:none}
-      .nav .menu-toggle{display:block}
+    footer{
+      margin-top:40px;padding:28px 20px;background:transparent;border-top:1px solid rgba(255,255,255,0.03);
     }
-    .menu-toggle{display:none;background:transparent;border:1px solid rgba(255,255,255,0.03);padding:8px;border-radius:8px;color:var(--muted)}
-    /* small accessibility */
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .footer-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start}
+    .links{display:flex;flex-direction:column;gap:8px}
+    .related a{color:var(--accent);text-decoration:none}
+    /* responsive */
+    @media (max-width:980px){
+      .content-grid{grid-template-columns:1fr}
+      aside{position:static}
+      .nav ul{display:none}
+      .nav .mobile-menu{display:inline-flex}
+    }
+    @media (max-width:520px){
+      h1{font-size:22px}
+    }
   </style>
 </head>
 <body>
   <header>
-    <div class="container nav" role="banner">
-      <div class="brand">
-        <div class="logo" aria-hidden="true">FM</div>
+    <div class="container nav">
+      <a class="brand" href="/">
+        <div class="logo">FAM</div>
         <div>
           <div style="font-weight:800">Facebook Ads Mastery</div>
-          <div style="font-size:12px;color:var(--muted);margin-top:2px">Retargeting & Growth</div>
+          <div style="font-size:12px;color:var(--muted)">Advanced advertising training</div>
         </div>
-      </div>
-      <nav role="navigation" aria-label="Primary">
+      </a>
+      <nav aria-label="Main navigation">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a href="/" aria-current="page">Home</a></li>
           <li><a href="/courses">Courses</a></li>
-          <li><a href="/articles">Articles</a></li>
-          <li><a href="/pricing">Pricing</a></li>
-          <li><a class="cta-btn" href="/signup">Get Started</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/articles" class="primary">Articles</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
-      <button class="menu-toggle" aria-label="Toggle Menu" onclick="document.querySelector('nav ul').classList.toggle('open')">☰</button>
     </div>
   </header>
 
-  <main>
-    <article class="container" itemscope itemtype="http://schema.org/Article">
-      <meta itemprop="mainEntityOfPage" content="https://www.example.com/articles/facebook-retargeting-guide" />
-      <meta itemprop="author" content="Facebook Ads Mastery" />
-      <meta itemprop="publisher" content="Facebook Ads Mastery" />
-      <meta itemprop="datePublished" content="2026-06-17" />
-      <header class="hero">
-        <div class="hero-grid">
-          <div class="card">
-            <h1 itemprop="headline">Facebook Retargeting Guide — How to Win Back Visitors & Boost Conversions</h1>
-            <div class="meta">Ultimate, up-to-date Facebook retargeting strategy for marketers, e-commerce stores, and agencies. Includes pixel setup, audiences, dynamic retargeting, and examples.</div>
-
-            <img src="https://picsum.photos/1200/600?random=1" alt="Facebook retargeting featured example showing ad creative and audience segmentation" class="featured" loading="lazy" itemprop="image">
-
-            <p style="margin-top:14px" itemprop="description">This comprehensive guide covers everything from installing the Meta Pixel and building custom audiences to crafting conversion-focused retargeting ads and advanced dynamic product retargeting for Shopify stores. Learn the best Facebook retargeting tactics, how to set up funnels by intent, and long-tail strategies like how to set up Facebook retargeting for e-commerce and reduce cart abandonment with dynamic ads.</p>
-          </div>
-
-          <aside class="card" aria-labelledby="quick-links">
-            <div id="quick-links" style="font-weight:800;margin-bottom:10px">Quick Links</div>
-            <div class="small">Jump to:</div>
-            <div class="toc" aria-hidden="true">
-              <ul>
-                <li><a href="#introduction">Introduction</a></li>
-                <li><a href="#how-to">How-To Setup</a></li>
-                <li><a href="#audience-strategy">Audience Strategy</a></li>
-                <li><a href="#dynamic-ads">Dynamic Product Ads</a></li>
-                <li><a href="#examples">Examples</a></li>
-                <li><a href="#common-mistakes">Common Mistakes</a></li>
-                <li><a href="#faq">FAQ</a></li>
-              </ul>
-            </div>
-
-            <div style="margin-top:14px">
-              <div style="font-weight:800">Download</div>
-              <div class="small">Free PDF checklist</div>
-              <div style="margin-top:10px">
-                <a class="btn" href="#download-form">Download Free Guide</a>
-              </div>
-            </div>
-          </aside>
+  <main class="container">
+    <div class="hero card">
+      <div>
+        <h1>Facebook Ads Metrics: How to Measure, Analyze & Improve Campaign Performance</h1>
+        <p class="lede">A practical, SEO-optimized reference to the most important Facebook Ads KPIs — CTR, CPC, CPM, CPA, ROAS, conversion rate — and how to use them to improve ad performance, scale campaigns, and drive revenue.</p>
+        <div class="featured">
+          <img src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Metrics Overview Dashboard with CTR CPC ROAS" loading="lazy">
         </div>
-      </header>
+      </div>
+      <div class="toc card" aria-label="Table of contents">
+        <strong style="color:#fff">Table of Contents</strong>
+        <a href="#introduction">Introduction</a>
+        <a href="#key-metrics">Key Facebook Ads Metrics (CTR, CPC, CPM, CPA, ROAS)</a>
+        <a href="#how-to-track">How to Track Facebook Ads Metrics</a>
+        <a href="#examples">Examples & Case Studies</a>
+        <a href="#common-mistakes">Common Mistakes to Avoid</a>
+        <a href="#how-to-improve">How to Improve Facebook Ad Performance</a>
+        <a href="#newsletter">Newsletter & Free Guide</a>
+        <a href="#faq">FAQ</a>
+        <a href="#conclusion">Conclusion</a>
+      </div>
+    </div>
 
-      <section id="introduction" itemprop="articleBody">
-        <h2>Introduction</h2>
-        <p>Retargeting on Facebook (Meta) is one of the most cost-effective ways to turn warm traffic into buyers. Whether you’re running retargeting ads on Facebook for a Shopify store, a SaaS trial, or a lead magnet funnel, this guide will walk you through the strategic framework, technical setup, and creative playbook to scale conversions. We'll cover pixel setup, custom and lookalike audiences, dynamic ads, creative sequencing, and budget allocation for retention and re-engagement campaigns.</p>
-
-        <form id="download-form" action="#" method="post" onsubmit="handleDownload(event)" class="card" style="margin-top:14px">
-          <h3 style="margin-top:0">Download the Free Facebook Retargeting Checklist</h3>
-          <label class="small">Name</label>
-          <input type="text" name="name" id="name" placeholder="Your name" required>
-          <label class="small">Email</label>
-          <input type="email" name="email" id="email" placeholder="you@example.com" required>
-          <div style="display:flex;gap:10px">
+    <!-- Email collection form after introduction -->
+    <section id="introduction" class="card" style="margin-top:18px">
+      <h2>Introduction</h2>
+      <p class="small">Understanding your Facebook Ads metrics is essential for profitable advertising. Whether you're running campaigns for e-commerce, lead generation, or brand awareness, metrics like CTR, CPC, CPM, CPA, and ROAS are the language that tells you whether your strategy is working. This guide covers each key metric, long-tail strategies for tracking and reporting, and step-by-step instructions to improve campaign performance.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:14px">
+        <div style="flex:1;min-width:280px">
+          <img src="https://picsum.photos/800/420?random=2" alt="Facebook Ads reporting dashboard and metrics display" loading="lazy" style="border-radius:10px">
+        </div>
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">Sign up to download our free "Facebook Ads Metrics Checklist"—a printable reference that helps you monitor the KPIs that matter. The guide includes recommended reporting templates and the most important segments to check every week.</p>
+          <form id="download-form" class="card" style="margin-top:10px" aria-label="Download free guide">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
             <button class="btn" type="submit">Download Free Guide</button>
-            <button class="secondary" type="button" onclick="document.getElementById('name').value='';document.getElementById('email').value='';">Clear</button>
+            <p class="small" style="margin-top:8px">You'll also receive occasional tips on improving Facebook advertising performance. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <article>
+        <section id="key-metrics" class="card" style="margin-top:18px">
+          <h2>Key Facebook Ads Metrics You Must Track</h2>
+          <p>Below are the primary metrics used to evaluate campaign performance and optimize for conversions and return on ad spend (ROAS). These are the KPIs every marketer should check daily, weekly, and monthly.</p>
+
+          <div class="metric-grid" style="margin-top:12px">
+            <div class="metric">
+              <h3>CTR (Click-Through Rate)</h3>
+              <p class="small">CTR measures how many people click your ad after seeing it. A higher CTR generally indicates more relevant creative or targeting. Industry benchmarks vary by objective and placement.</p>
+              <p class="subhead">SEO & semantic terms: relevance score, ad creative, engagement rate</p>
+            </div>
+            <div class="metric">
+              <h3>CPC (Cost Per Click)</h3>
+              <p class="small">CPC tells you the average cost for each click. Lower CPCs are better but must be considered alongside conversion rate — a cheap click isn't useful if it never converts.</p>
+            </div>
+            <div class="metric">
+              <h3>CPM (Cost Per Mille / 1,000 Impressions)</h3>
+              <p class="small">CPM helps you understand how expensive it is to reach your audience. CPM is critical for awareness and reach campaigns where impressions are the main objective.</p>
+            </div>
+            <div class="metric">
+              <h3>CPA (Cost Per Action / Conversion)</h3>
+              <p class="small">CPA measures how much you're paying for a lead, sale, or other conversion. This is central for performance marketing and should align with your customer lifetime value (LTV).</p>
+            </div>
+            <div class="metric" style="grid-column:1/3">
+              <h3>ROAS (Return on Ad Spend)</h3>
+              <p class="small">ROAS is revenue divided by ad spend. A ROAS above 3x is often a good target for e-commerce, but ideal ROAS depends on margins, CAC, and business goals.</p>
+              <p class="subhead">Related terms: LTV, ROI, revenue per acquisition</p>
+            </div>
           </div>
-          <div class="small" style="margin-top:8px">We respect your privacy — unsubscribe anytime.</div>
-        </form>
-      </section>
+          <p style="margin-top:12px" class="small">Other essential metrics: conversion rate, frequency, reach, impressions, purchase value, attribution window, pixel events, and Cost Per Install for app campaigns.</p>
+        </section>
 
-      <section class="toc" aria-label="Table of contents">
-        <strong>Table of Contents</strong>
-        <ul>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#how-to">How to Set Up Facebook Retargeting (Step-by-Step)</a></li>
-          <li><a href="#audience-strategy">Audience Strategy & Segmentation</a></li>
-          <li><a href="#creative">Creative & Messaging for Retargeting Ads</a></li>
-          <li><a href="#dynamic-ads">Dynamic Product Retargeting</a></li>
-          <li><a href="#examples">Examples & Use Cases</a></li>
-          <li><a href="#common-mistakes">Common Mistakes</a></li>
-          <li><a href="#newsletter">Newsletter Signup</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#conclusion">Conclusion & CTA</a></li>
-        </ul>
-      </section>
+        <section id="how-to-track" class="card" style="margin-top:18px">
+          <h2>How to Track Facebook Ads Metrics: Step-by-Step</h2>
+          <p>Use this practical checklist for accurate tracking and reporting. Follow these steps to set a reliable tracking infrastructure and align your reporting with business outcomes.</p>
 
-      <section id="how-to">
-        <h2>How to Set Up Facebook Retargeting (Step-by-Step)</h2>
-        <p>This how-to section is a practical walkthrough for marketers and store owners on how to set up Facebook retargeting from scratch, including pixel installation, event tracking, and building custom audiences.</p>
+          <h3>1. Install and verify the Facebook Pixel</h3>
+          <p class="small">The pixel is the foundation for conversion tracking and event measurement. Install it on your website and verify key events like ViewContent, AddToCart, and Purchase. Use the Meta Pixel Helper extension to validate signals.</p>
 
-        <h3>Step 1 — Install the Meta Pixel</h3>
-        <p>Install the Meta Pixel on every page of your website. For Shopify stores use the native Facebook channel or insert the pixel ID in Online Store > Preferences. For custom sites, paste the pixel base code into the header. Verify with the Meta Pixel Helper browser extension.</p>
+          <h3>2. Configure events and custom conversions</h3>
+          <p class="small">Set up standard events and custom conversions in Events Manager. Map events to your purchase funnel to calculate accurate CPA and ROAS. Use server-side events (CAPI) to improve attribution and match rates.</p>
 
-        <h3>Step 2 — Configure Standard and Custom Events</h3>
-        <p>Track key events such as PageView, ViewContent, AddToCart, InitiateCheckout, and Purchase. Use custom parameters (content_type, content_ids, value, currency) for dynamic product retargeting and better ad personalization.</p>
+          <h3>3. Define attribution windows and compare</h3>
+          <p class="small">Select appropriate attribution windows (1-day click, 7-day click, 1-day view, etc.). Compare results across windows to understand delayed conversions and multi-touch journeys.</p>
 
-        <h3>Step 3 — Build Custom Audiences</h3>
-        <p>Create audiences like:</p>
-        <ul class="list">
-          <li>All website visitors (last 30 days)</li>
-          <li>Product viewers by content_id (last 14 days)</li>
-          <li>Add-to-cart but no purchase (last 7 days)</li>
-          <li>Initiated checkout but no purchase (last 14 days)</li>
-        </ul>
+          <h3>4. Build dashboards and automate reports</h3>
+          <p class="small">Use Facebook Ads Manager, Looker Studio, or a BI tool to create dashboards that surface CTR, CPC, CPA, ROAS, and conversion rate segmented by audience, placement, creative, and device.</p>
 
-        <h3>Step 4 — Create Targeted Campaigns</h3>
-        <p>Use different campaigns by funnel stage: prospecting, engage (viewers), cart abandoners, and lapsed customers. Allocate budgets with higher ROAS goals for retargeting, and use conversion objective with optimized events.</p>
+          <h3>5. Use UTM parameters and analytics platforms</h3>
+          <p class="small">Tag all ad URLs with UTM parameters to trace campaign sources and mediums in Google Analytics. Reconcile discrepancies between platforms with a cross-channel attribution model when necessary.</p>
 
-        <h3>Step 5 — Measurement, Attribution & Conversion Tracking</h3>
-        <p>Set up conversion tracking in Events Manager, use proper attribution windows (7-day click, 1-day view or 7-day click depending on your funnel), and test with A/B experiments to measure lift.</p>
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/1000/500?random=3" alt="Step by step Facebook Ads Pixel installation and event setup" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
 
-        <img src="https://picsum.photos/800/500?random=2" alt="Meta Pixel installation example and event tracking setup screenshot" class="feature-img" loading="lazy">
+        <section id="examples" class="card" style="margin-top:18px">
+          <h2>Examples & Case Studies: Metrics in Real Campaigns</h2>
+          <p>Practical examples show how top metrics inform decisions. Here are three short case studies demonstrating analysis and optimization.</p>
 
-        <h3>Advanced Tip — Use Custom Combinations</h3>
-        <p>Create combined audiences (e.g., viewed product AND visited pricing page) for high-intent retargeting sequences. Use exclusion lists (buyers in last 30 days) to avoid wasted spend.</p>
-      </section>
+          <h3>Example 1 — E-commerce: Increasing ROAS</h3>
+          <p class="small">A clothing store saw a 0.8% conversion rate and ROAS of 1.6. By improving ad creative, refining audiences, and implementing dynamic product ads, conversion rate rose to 1.9% and ROAS improved to 3.4x. Key metrics tracked: CPC, conversion rate, and purchase value.</p>
 
-      <section id="audience-strategy">
-        <h2>Audience Strategy & Segmentation</h2>
-        <p>Audience segmentation is the backbone of any successful Facebook retargeting strategy. The goal is to match creative and messaging to the user's intent and position in the funnel.</p>
+          <h3>Example 2 — Lead Gen: Lowering CPA</h3>
+          <p class="small">A B2B advertiser had a CPA of $72 for demo requests. After launching lookalike audiences and optimizing lead form fields, CTR increased and CPA dropped to $28. Tracking: lead quality, CPL, and contact rate after submission.</p>
 
-        <h3>Core Segments</h3>
-        <ul class="list">
-          <li>Cold / Prospecting — lookalike audiences and interest-based</li>
-          <li>Viewers / Engagers — viewed product or content but didn’t add to cart</li>
-          <li>Cart Abandoners — added to cart but didn't purchase</li>
-          <li>Checkout Abandoners — high purchase intent; personalize with discount or urgency</li>
-          <li>Past Buyers — upsell/cross-sell and reactivation campaigns</li>
-        </ul>
+          <h3>Example 3 — App Install: Optimizing CPI</h3>
+          <p class="small">An app campaign used App Events for installs and in-app purchases. By switching to optimized app install objective and adjusting bids by ROAS, CPI decreased while attributable revenue per install increased.</p>
 
-        <h3>Using Lookalikes for Retargeting Expansion</h3>
-        <p>Use custom audiences (top purchasers) to create lookalikes to find new high-intent prospects. This combines retargeting insights with scale.</p>
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/900/480?random=4" alt="Case study showing Facebook Ads metric improvement over time" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
 
-        <h3>Segmentation by Time Window</h3>
-        <p>Short windows (1–7 days) are for high-intent visitors; longer windows (30–180 days) are for broad re-engagement. Match the offer accordingly.</p>
+        <!-- CTA in middle of article -->
+        <section class="cta" aria-label="Mid article CTA" style="margin-top:18px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <strong style="font-size:18px">Want faster results from your Facebook ads?</strong>
+            <div class="small">Get our advanced optimization checklist and 1:1 review template. Convert more clicks into customers with a data-driven auditing process.</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="/courses/facebook-ads-mastery">Enroll in our Course</a>
+            <a class="btn secondary" href="/contact">Request a Free Audit</a>
+          </div>
+        </section>
 
-        <img src="https://picsum.photos/800/450?random=3" alt="Audience segmentation diagram showing funnel stages and retargeting windows" class="feature-img" loading="lazy">
-      </section>
+        <section id="common-mistakes" class="card" style="margin-top:18px">
+          <h2>Common Mistakes When Interpreting Facebook Ads Metrics</h2>
+          <p>Many advertisers misread metrics and make costly decisions. Here are frequent errors and how to avoid them.</p>
 
-      <section id="creative">
-        <h2>Creative & Messaging for Retargeting Ads</h2>
-        <p>Creative should reflect intent. Retargeting creatives get higher CTRs when they focus on product reminders, social proof, time-limited offers, or dynamic content that reflects the exact product the user viewed.</p>
+          <h3>Mistake 1 — Chasing Low CPCs Without Tracking Conversions</h3>
+          <p class="small">A low CPC is tempting, but if conversion rate is low, CPA will be high. Always evaluate CPC in context of conversion rate and purchase value.</p>
 
-        <h3>Creative Types</h3>
-        <ul class="list">
-          <li>Static product images with price and CTA</li>
-          <li>Dynamic product ads (DPAs) that auto-populate content</li>
-          <li>Short video testimonials or demo clips</li>
-          <li>Carousel showcasing related products</li>
-        </ul>
+          <h3>Mistake 2 — Ignoring Attribution Windows and Cross-Device Behavior</h3>
+          <p class="small">Short attribution windows can underreport conversions, especially for high-consideration purchases. Use multiple windows and server-side tracking to capture delayed conversions.</p>
 
-        <h3>Ad Copy Best Practices</h3>
-        <p>Use urgency for cart abandoners (“Only 2 left”), social proof for new visitors (“Over 10,000 buyers”), and benefit-focused messaging for product viewers.</p>
+          <h3>Mistake 3 — Over-optimizing Too Quickly</h3>
+          <p class="small">Don't pause campaigns after small swings. Allow enough conversions for statistical significance before making major changes. Use A/B testing frameworks.</p>
 
-        <div class="inline-cta">
-          <a class="btn" href="/articles/facebook-ads-testing-framework">Download Creative Templates</a>
-          <a class="secondary" href="/articles/facebook-ads-for-shopify">Shopify Retargeting Tips</a>
+          <h3>Mistake 4 — Not Segmenting Results</h3>
+          <p class="small">Aggregated metrics hide opportunities and problems. Segment by placement, creative, age, gender, and device to identify the best-performing pockets.</p>
+
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/1000/500?random=5" alt="Common mistakes in Facebook Ads metric analysis checklist" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
+
+        <section id="how-to-improve" class="card" style="margin-top:18px">
+          <h2>How to Improve Facebook Ad Performance: Actionable Steps</h2>
+          <p>Use these proven tactics to improve your Facebook Ads KPIs and scale campaigns profitably.</p>
+
+          <h3>Optimize Creative and Messaging</h3>
+          <p class="small">Test multiple creatives, headlines, and primary text. Use clear CTAs and align landing pages to ad messaging to improve conversion rate.</p>
+
+          <h3>Refine Targeting and Audiences</h3>
+          <p class="small">Leverage lookalike audiences, exclusion lists and layered interests. Use retention and retention-based segments to increase LTV and lower CPA.</p>
+
+          <h3>Bid & Budget Strategy</h3>
+          <p class="small">Choose the right bidding strategy (lowest cost, bid cap, target cost) based on your goals. Use campaign budget optimization (CBO) to allocate spend to top performers.</p>
+
+          <h3>Implement Continuous A/B Testing</h3>
+          <p class="small">Test one variable at a time. Use Facebook’s Experiments tool or your own testing framework to ensure valid comparisons.</p>
+
+          <h3>Use Server-Side Tracking (CAPI) and Data Enrichment</h3>
+          <p class="small">CAPI improves match quality, reduces attribution gaps and increases reported conversions. Combine with UTM tracking for cross-platform insights.</p>
+        </section>
+
+        <section id="newsletter" class="card" style="margin-top:18px">
+          <h2>Newsletter Signup — Get Weekly Metrics Tips</h2>
+          <div class="newsletter">
+            <div style="flex:1">
+              <strong>Subscribe to our weekly newsletter</strong>
+              <p class="small">Actionable tips on tracking, reporting dashboards, and Facebook Ads testing frameworks delivered to your inbox.</p>
+            </div>
+            <form style="display:flex;gap:8px;align-items:center" aria-label="Newsletter signup">
+              <input type="email" placeholder="Email address" aria-label="Newsletter email" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+              <button class="btn" type="submit">Sign Up</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="conclusion" class="card" style="margin-top:18px">
+          <h2>Conclusion</h2>
+          <p>Mastering Facebook Ads metrics is not about obsessing over every number — it's about tracking the right KPIs, building a reliable measurement system, and iteratively optimizing campaigns based on data. Focus on ROAS, CPA, conversion rate, and the top-of-funnel metrics that feed those outcomes. Use the steps in this guide to establish robust reporting, avoid common mistakes, and scale campaigns profitably.</p>
+          <p class="small">If you want a fast path to improvement, download the free Facebook Ads Metrics Checklist or request a campaign audit to get targeted recommendations.</p>
+        </section>
+
+        <!-- CTA after conclusion -->
+        <section class="card" style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <div>
+              <strong>Ready to optimize your Facebook Ads?</strong>
+              <p class="small">Book a free 20-minute strategy call and we’ll review your account metrics and quick wins.</p>
+            </div>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="/contact">Book a Strategy Call</a>
+              <a class="btn secondary" href="/articles/facebook-ads-testing-framework">View Testing Framework</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related articles -->
+        <section class="card" style="margin-top:18px">
+          <h2>Related Articles</h2>
+          <div class="related links">
+            <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+          </div>
+        </section>
+
+        <!-- CTA after conclusion (again) -->
+        <section class="card" style="margin-top:18px">
+          <h3>Get the Free Guide</h3>
+          <p class="small">Download the Facebook Ads Metrics Checklist and start auditing your campaigns with a proven framework.</p>
+          <form aria-label="Free guide download repeat">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <input type="text" placeholder="Name" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;min-width:180px">
+              <input type="email" placeholder="Email" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;min-width:220px">
+              <button class="btn" type="submit">Download Now</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="faq" class="card" style="margin-top:18px">
+          <h2>FAQ</h2>
+          <div>
+            <h3>What are the most important Facebook Ads metrics?</h3>
+            <p class="small">Prioritize ROAS, CPA, conversion rate, CTR, CPC and CPM. Choose additional metrics depending on your objective (installs, leads, purchases).</p>
+
+            <h3>How often should I check Facebook Ads metrics?</h3>
+            <p class="small">Check daily for pacing and any sudden issues; do a deeper performance review weekly and a comprehensive audit monthly.</p>
+
+            <h3>Why do metrics differ between Facebook and Google Analytics?</h3>
+            <p class="small">Differences come from attribution windows, tracking methods, and session definitions. Use UTMs and server-side events to reconcile data.</p>
+
+            <h3>What's a good ROAS for e-commerce?</h3>
+            <p class="small">A 3x ROAS is commonly referenced as a healthy benchmark for many e-commerce businesses, but ideal ROAS depends on margins and CAC.</p>
+          </div>
+        </section>
+
+      </article>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin:0">Quick Metrics Reference</h3>
+          <p class="small" style="margin-top:8px">Snapshot of core KPIs and what they indicate.</p>
+          <ul style="padding-left:16px;color:var(--muted)">
+            <li><strong>CTR:</strong> Creative relevance</li>
+            <li><strong>CPC:</strong> Click efficiency</li>
+            <li><strong>CPM:</strong> Cost to reach</li>
+            <li><strong>CPA:</strong> Cost per conversion</li>
+            <li><strong>ROAS:</strong> Revenue efficiency</li>
+          </ul>
         </div>
-      </section>
 
-      <section id="dynamic-ads">
-        <h2>Dynamic Product Retargeting (DPAs)</h2>
-        <p>Dynamic ads show the exact products people viewed, using your product catalog linked to Business Manager. This is essential for e-commerce retargeting and reducing cart abandonment.</p>
-
-        <h3>Catalog & Feed Setup</h3>
-        <p>Upload your product feed (CSV/Google Sheet) with accurate content_ids and sync regularly. Ensure product IDs match the event parameters sent by the pixel.</p>
-
-        <h3>Event Parameters & Mapping</h3>
-        <p>Map content_ids between your feed and pixel events (ViewContent, AddToCart, Purchase) for accurate personalization and measurement.</p>
-
-        <img src="https://picsum.photos/900/400?random=4" alt="Dynamic product ad example showing product carousel on Facebook retargeting" class="feature-img" loading="lazy">
-
-        <h3>Optimization Tips</h3>
-        <ul class="list">
-          <li>Use value-based optimization for high-AOV stores</li>
-          <li>Exclude recent purchasers from attempts to upsell until the appropriate window</li>
-          <li>Test creative variations and product order in carousels</li>
-        </ul>
-      </section>
-
-      <section id="examples">
-        <h2>Examples & Use Cases</h2>
-        <p>Below are practical examples demonstrating how Facebook retargeting works across industries and funnels. These examples include long-tail keywords like "how to set up Facebook retargeting for e-commerce" and "best Facebook retargeting tactics for Shopify stores".</p>
-
-        <h3>E-commerce — Shopify Abandoned Cart Flow</h3>
-        <p>Audience: People who added to cart in last 7 days but didn’t purchase.</p>
-        <p>Ad: Dynamic Carousel with product images, “Return to your cart — 10% off for 24 hours”</p>
-
-        <h3>SaaS — Trial Conversion Flow</h3>
-        <p>Audience: Users who signed up for a free trial but did not complete onboarding in the last 14 days.</p>
-        <p>Ad: Short tutorial video + testimonial + CTA to complete setup</p>
-
-        <h3>Publisher — Content Upsell Flow</h3>
-        <p>Audience: Visitors who read premium content but haven’t subscribed.</p>
-        <p>Ad: Offer a limited-time discount on subscription or gated content.</p>
-
-        <h3>Agency — Scaling Retargeting for Clients</h3>
-        <p>Agency tip: Build modular audiences and templated creative sets across accounts, and measure incrementality with holdout audiences for reliable attribution.</p>
-      </section>
-
-      <section id="common-mistakes">
-        <h2>Common Mistakes to Avoid</h2>
-        <p>Avoid these pitfalls when building your Facebook retargeting campaigns. They are derived from semantic SEO topics like remarketing best practices, conversion tracking errors, and audience overlap issues.</p>
-
-        <h3>1. Not Installing the Pixel Correctly</h3>
-        <p>Without a properly installed pixel and verified events, you can't build accurate custom audiences. Use the Meta Pixel Helper to validate page events.</p>
-
-        <h3>2. Overlapping Audiences & Audience Cannibalization</h3>
-        <p>Create separate audiences and use exclusions to prevent campaigns from competing against each other and raising CPMs.</p>
-
-        <h3>3. Wrong Attribution & Measurement</h3>
-        <p>Relying on last-click without understanding Meta's attribution can lead to misjudged ad performance. Use experiments and conversion lift tests for clarity.</p>
-
-        <h3>4. Generic Creative for High-Intent Users</h3>
-        <p>Showing the same prospecting creative to cart abandoners wastes opportunity. Match ads to intent — product-specific creatives for high-intent audiences.</p>
-
-        <h3>5. Too Broad Retargeting Windows</h3>
-        <p>Long windows for high-intent audiences can dilute performance. Shorten windows where purchase cycles are short (e.g., 7–14 days).</p>
-      </section>
-
-      <section id="newsletter" class="card">
-        <h2>Newsletter — Get Advanced Retargeting Tips</h2>
-        <p>Join our weekly newsletter for tactical playbooks, case studies, and a free retargeting checklist sent to your inbox.</p>
-        <form class="newsletter" action="#" method="post" onsubmit="handleSignup(event)">
-          <input type="email" placeholder="Enter your email" required>
-          <button class="btn" type="submit">Subscribe</button>
-        </form>
-      </section>
-
-      <section id="related" class="card">
-        <h2>Related Articles</h2>
-        <div class="related">
-          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-          <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+        <div class="card">
+          <h3 style="margin:0">Tools & Integrations</h3>
+          <p class="small" style="margin-top:8px">Pixel, Conversions API (CAPI), Looker Studio, Google Analytics, Shopify, Zapier, and BI tools.</p>
         </div>
-      </section>
 
-      <section id="faq">
-        <h2>FAQ — Frequently Asked Questions</h2>
-
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">What is Facebook retargeting and how does it work?</h3>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Facebook retargeting (remarketing) uses pixel and event data to show ads to people who previously interacted with your website or app. By creating custom audiences from pixel events, you can deliver personalized ads to users with different intent levels.</p>
+        <div class="card">
+          <h3 style="margin:0">Recommended Read</h3>
+          <p class="small" style="margin-top:8px">Check these articles:</p>
+          <div class="links">
+            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
           </div>
         </div>
-
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">How do I set up dynamic product retargeting for Shopify?</h3>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Connect your Shopify product catalog to your Meta Business Manager, ensure your pixel sends content_ids and value parameters, and create a dynamic ad template that pulls product images and metadata from the catalog.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">What is the ideal retargeting window for cart abandoners?</h3>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">Typically 7–14 days for cart abandoners provides high-intent conversion opportunities. Shorter windows (1–7 days) are best for fast-moving consumer goods, while longer windows may work for high-consideration purchases.</p>
-          </div>
-        </div>
-
-        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <h3 itemprop="name">How much budget should I allocate to retargeting?</h3>
-          <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <p itemprop="text">A common rule is 20–40% of your total ad budget to retargeting, depending on funnel depth and audience size. Start with higher CPA targets for retargeting to measure higher ROI potential.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="conclusion">
-        <h2>Conclusion</h2>
-        <p>Facebook retargeting is an essential lever for maximizing ROI across paid channels. By combining precise pixel implementation, thoughtful audience segmentation, dynamic ads, and creative that matches intent, you can significantly reduce acquisition costs and increase conversions. Implement the steps above, avoid common mistakes, and iterate with testing frameworks to continuously improve results.</p>
-
-        <div style="margin-top:16px">
-          <a class="btn" href="/signup">Start Your Retargeting Campaign Today</a>
-          <a class="secondary" href="/articles/facebook-ads-testing-framework" style="margin-left:8px">Learn A/B Testing</a>
-        </div>
-      </section>
-
-      <section class="card" style="margin-top:18px">
-        <h3>Ready to implement advanced Facebook retargeting?</h3>
-        <p>Get an audit and custom retargeting plan tailored to your store or client. We review pixel health, audience structure, and creative sequencing.</p>
-        <div style="margin-top:10px">
-          <a class="btn" href="/contact">Request a Free Audit</a>
-        </div>
-      </section>
-
-    </article>
+      </aside>
+    </div>
   </main>
 
   <footer>
-    <div class="container footer-grid" role="contentinfo">
+    <div class="container footer-grid">
       <div>
-        <div style="font-weight:800">Facebook Ads Mastery</div>
-        <div class="small">© 2026 Facebook Ads Mastery. All rights reserved.</div>
+        <a class="brand" href="/" style="margin-bottom:12px">
+          <div class="logo" style="width:36px;height:36px;border-radius:8px">FAM</div>
+          <div style="display:inline-block;margin-left:10px">
+            <div style="font-weight:800">Facebook Ads Mastery</div>
+            <div style="font-size:13px;color:var(--muted)">Data-driven ad optimization</div>
+          </div>
+        </a>
       </div>
-      <div style="text-align:right">
-        <div class="small">Follow us</div>
-        <div style="margin-top:8px">
-          <a class="small" href="/privacy">Privacy</a> · <a class="small" href="/terms">Terms</a> · <a class="small" href="/contact">Contact</a>
-        </div>
+      <div class="links">
+        <strong>Resources</strong>
+        <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+        <a href="/articles/facebook-ads-testing-framework">Testing Framework</a>
+        <a href="/articles/how-to-scale-facebook-ads">How to Scale</a>
+        <a href="/articles/facebook-retargeting-guide">Retargeting Guide</a>
+      </div>
+      <div class="links">
+        <strong>Company</strong>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <div style="min-width:220px">
+        <strong>Subscribe</strong>
+        <form style="margin-top:8px;display:flex;gap:8px">
+          <input type="email" placeholder="Email address" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="small" style="margin-top:8px">© 2026 Facebook Ads Mastery. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
+  <!-- Structured Data: Article, FAQ, Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.example.com/facebook-ads-metrics"
+    },
+    "headline": "Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization",
+    "description": "Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples, how-to steps, and common mistakes.",
+    "image": "https://picsum.photos/1200/630?random=1",
+    "author": {
+      "@type": "Organization",
+      "name": "Facebook Ads Mastery"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Facebook Ads Mastery",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://picsum.photos/200/60?random=6"
+      }
+    },
+    "datePublished": "2026-06-17",
+    "dateModified": "2026-06-17"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are the most important Facebook Ads metrics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Prioritize ROAS, CPA, conversion rate, CTR, CPC and CPM. Choose additional metrics depending on your objective such as installs for app campaigns or leads for lead gen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should I check Facebook Ads metrics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check daily for pacing and any sudden issues; do a deeper performance review weekly and a comprehensive audit monthly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do metrics differ between Facebook and Google Analytics?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Differences come from attribution windows, tracking methods, and session definitions. Use UTMs and server-side events to reconcile data."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://www.example.com/articles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Facebook Ads Metrics",
+        "item": "https://www.example.com/facebook-ads-metrics"
+      }
+    ]
+  }
+  </script>
+
   <script>
-    function handleDownload(e){
+    // Basic form handlers to simulate quick UX improvements
+    document.getElementById('download-form')?.addEventListener('submit', function(e){
       e.preventDefault();
-      var name = document.getElementById('name').value.trim();
-      var email = document.getElementById('email').value.trim();
-      if(!name || !email){ alert('Please enter name and email'); return; }
-      // Simulate download — replace with integration in production
-      alert('Thanks ' + name + '! Your free Facebook Retargeting Checklist will arrive at ' + email + '.');
-      document.getElementById('name').value='';document.getElementById('email').value='';
-    }
-    function handleSignup(e){
-      e.preventDefault();
-      alert('Thanks for subscribing! Check your inbox for the latest retargeting playbooks.');
-    }
+      alert('Thanks! Check your email for the Facebook Ads Metrics Checklist.');
+      // In production you'd send data to your email service here
+    });
   </script>
-
-  <!-- Structured Data: Article Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Article",
-    "mainEntityOfPage":{
-      "@type":"WebPage",
-      "@id":"https://www.example.com/articles/facebook-retargeting-guide"
-    },
-    "headline":"Facebook Retargeting Guide — Advanced Strategies & How-To for Marketers",
-    "description":"Complete Facebook Retargeting Guide: step-by-step setup, audience segmentation, pixel configuration, dynamic ads, examples for e-commerce, Shopify tips, and common mistakes to avoid.",
-    "image":"https://picsum.photos/1200/600?random=1",
-    "author":{
-      "@type":"Organization",
-      "name":"Facebook Ads Mastery"
-    },
-    "publisher":{
-      "@type":"Organization",
-      "name":"Facebook Ads Mastery",
-      "logo":{
-        "@type":"ImageObject",
-        "url":"https://picsum.photos/120/120?random=5"
-      }
-    },
-    "datePublished":"2026-06-17",
-    "dateModified":"2026-06-17"
-  }
-  </script>
-
-  <!-- Structured Data: FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {
-        "@type":"Question",
-        "name":"What is Facebook retargeting and how does it work?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Facebook retargeting (remarketing) uses pixel and event data to show ads to people who previously interacted with your website or app. By creating custom audiences from pixel events, you can deliver personalized ads to users with different intent levels."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How do I set up dynamic product retargeting for Shopify?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Connect your Shopify product catalog to your Meta Business Manager, ensure your pixel sends content_ids and value parameters, and create a dynamic ad template that pulls product images and metadata from the catalog."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What is the ideal retargeting window for cart abandoners?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Typically 7–14 days for cart abandoners provides high-intent conversion opportunities. Shorter windows (1–7 days) are best for fast-moving consumer goods, while longer windows may work for high-consideration purchases."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How much budget should I allocate to retargeting?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"A common rule is 20–40% of your total ad budget to retargeting, depending on funnel depth and audience size. Start with higher CPA targets for retargeting to measure higher ROI potential."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- Structured Data: Breadcrumb -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"BreadcrumbList",
-    "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
-      {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles"},
-      {"@type":"ListItem","position":3,"name":"Facebook Retargeting Guide","item":"https://www.example.com/articles/facebook-retargeting-guide"}
-    ]
-  }
-  </script>
-
 </body>
 </html>
