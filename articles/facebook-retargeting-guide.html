@@ -1,615 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies</title>
-<meta name="description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers. Learn how to find high intent prospects and scale profitable ads." />
-<link rel="canonical" href="https://www.example.com/articles/facebook-ads-audience-research" />
-<meta name="robots" content="index,follow" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS</title>
+  <meta name="description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <link rel="canonical" href="https://www.example.com/articles/facebook-ads-testing-framework">
+  <meta name="robots" content="index,follow">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS">
+  <meta property="og:description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.example.com/articles/facebook-ads-testing-framework">
+  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS">
+  <meta name="twitter:description" content="Master a proven Facebook Ads testing framework to increase ROAS, reduce CPL, and scale profitably. Learn ad creative testing, audience split testing, CBO strategies, conversion tracking and practical examples.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
+  <meta name="theme-color" content="#0f1724">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies" />
-<meta property="og:description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.example.com/articles/facebook-ads-audience-research" />
-<meta property="og:image" content="https://picsum.photos/1200/600?random=1" />
-<meta property="og:site_name" content="Ads Mastery" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies" />
-<meta name="twitter:description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers." />
-<meta name="twitter:image" content="https://picsum.photos/1200/600?random=1" />
-
-<style>
-  :root{
-    --bg:#0f1720;
-    --panel:#0b1220;
-    --muted:#9aa6b2;
-    --accent:#1877f2;
-    --accent-2:#23c6a8;
-    --glass: rgba(255,255,255,0.03);
-    --card:#0d141a;
-    --radius:12px;
-    --max-width:1100px;
+  <!-- Structured Data: Article, FAQ, Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.example.com/articles/facebook-ads-testing-framework"
+    },
+    "headline": "Facebook Ads Testing Framework — Systematic A/B Testing for Better ROAS",
+    "description": "A comprehensive guide to establishing a Facebook Ads testing framework that improves conversion rates, reduces CPL, and scales profitable campaigns with real examples and common mistakes to avoid.",
+    "image": "https://picsum.photos/1200/630?random=1",
+    "author": {
+      "@type": "Person",
+      "name": "Marketing Team"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Ads Mastery",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://picsum.photos/200/60?random=2"
+      }
+    },
+    "datePublished": "2026-06-17"
   }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background:linear-gradient(180deg,#071022 0%, #0f1720 100%);
-    color:#e6eef6;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.6;
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a Facebook Ads testing framework?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Facebook Ads testing framework is a repeatable process for designing, running, measuring, and iterating split tests (A/B tests) across creative, audience, placement, and funnel variables to find statistically significant winners and improve campaign ROI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long should I run an A/B test on Facebook?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Run tests until you reach statistical significance or a minimum of 3–7 days depending on traffic volume; larger tests with more impressions can conclude sooner. Avoid changing variables mid-test."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I test audiences or creatives first?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Start with creative tests to identify high-converting messaging and visuals, then layer audience testing (interest, demographic, lookalike) once you have strong creatives to scale."
+        }
+      }
+    ]
   }
+  </script>
 
-  header{
-    background: linear-gradient(90deg, rgba(24,119,242,0.06), rgba(35,198,168,0.03));
-    padding:18px 24px;
-    position:sticky;
-    top:0;
-    z-index:100;
-    backdrop-filter: blur(6px);
-    border-bottom:1px solid rgba(255,255,255,0.03);
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://www.example.com/articles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Facebook Ads Testing Framework",
+        "item": "https://www.example.com/articles/facebook-ads-testing-framework"
+      }
+    ]
   }
+  </script>
 
-  .nav{
-    max-width:var(--max-width);
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    gap:18px;
-  }
-  .logo{
-    font-weight:700;
-    color:var(--accent);
-    font-size:18px;
-    letter-spacing:0.2px;
-  }
-  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
-  nav a{
-    color:var(--muted);
-    text-decoration:none;
-    padding:8px 10px;
-    border-radius:8px;
-    font-size:14px;
-  }
-  nav a:hover{background:rgba(255,255,255,0.02); color:#fff}
-
-  .container{max-width:var(--max-width); margin:28px auto; padding:0 20px;}
-
-  .hero{
-    display:grid;
-    grid-template-columns: 1fr 360px;
-    gap:24px;
-    align-items:start;
-  }
-  @media (max-width:980px){
-    .hero{grid-template-columns:1fr; padding-bottom:12px}
-  }
-
-  .card{
-    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.03);
-    padding:22px;
-    border-radius:var(--radius);
-    box-shadow: 0 6px 22px rgba(2,6,23,0.6);
-  }
-
-  h1{font-size:28px;margin:0 0 12px 0;color:#fff}
-  .sub{
-    color:var(--muted);
-    margin-bottom:14px;
-    font-size:15px;
-  }
-
-  /* Featured image */
-  .featured{
-    width:100%;
-    border-radius:10px;
-    overflow:hidden;
-    margin:14px 0 8px 0;
-    border:1px solid rgba(255,255,255,0.03);
-  }
-  .featured img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
-
-  .toc{
-    margin:18px 0;
-    background:var(--glass);
-    padding:12px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.02);
-  }
-  .toc a{display:block;color:var(--accent);text-decoration:none;padding:6px 0;font-size:14px}
-  .toc a:hover{text-decoration:underline}
-
-  main{margin-top:18px}
-  article .section{margin-bottom:20px}
-  h2{font-size:20px;margin:18px 0 10px 0;color:#fff}
-  h3{font-size:16px;margin:12px 0;color:var(--accent-2)}
-  p{color:var(--muted);margin:10px 0}
-  ul{color:var(--muted);margin:8px 0 12px 20px}
-  li{margin:6px 0}
-
-  .two-col{
-    display:grid;
-    grid-template-columns:1fr 320px;
-    gap:18px;
-  }
-  @media (max-width:980px){
-    .two-col{grid-template-columns:1fr}
-  }
-
-  .sidebar .card{padding:16px}
-  .cta{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    justify-content:space-between;
-    padding:18px;
-    border-radius:12px;
-    background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(35,198,168,0.06));
-    border:1px solid rgba(255,255,255,0.03);
-  }
-  .btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    padding:10px 14px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-  }
-  .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
-  .form-row{display:flex;gap:8px}
-  @media (max-width:600px){.form-row{flex-direction:column}}
-  input[type="text"], input[type="email"]{
-    width:100%;
-    padding:10px 12px;
-    border-radius:8px;
-    border:1px solid rgba(255,255,255,0.04);
-    background:transparent;
-    color:#fff;
-  }
-  label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
-
-  footer{
-    margin-top:28px;
-    padding:26px 20px;
-    border-top:1px solid rgba(255,255,255,0.03);
-    color:var(--muted);
-  }
-  .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .links{display:flex;gap:12px}
-  .small{font-size:13px;color:var(--muted)}
-
-  .related{display:flex;flex-direction:column;gap:8px}
-  .related a{color:var(--accent);text-decoration:none}
-
-  /* images in content */
-  .content-img{width:100%;border-radius:10px;overflow:hidden;margin:12px 0;border:1px solid rgba(255,255,255,0.03)}
-  .content-img img{display:block;width:100%;height:auto}
-
-  /* badge */
-  .badge{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px;color:var(--muted);font-size:13px}
-
-  /* FAQ toggles */
-  .faq-item{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:8px}
-  .faq-question{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-  .faq-answer{display:none;margin-top:8px;color:var(--muted);font-size:14px}
-
-  small.note{color:var(--muted);display:block;margin-top:6px}
-
-  /* quick utility */
-  .muted{color:var(--muted)}
-</style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies",
-  "description":"Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers.",
-  "author": {
-    "@type":"Person",
-    "name":"Ads Mastery Team"
-  },
-  "publisher":{
-    "@type":"Organization",
-    "name":"Ads Mastery",
-    "logo": {
-      "@type":"ImageObject",
-      "url":"https://picsum.photos/120/60"
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1724;
+      --muted:#9aa6bd;
+      --accent:#1877f2;
+      --glass: rgba(255,255,255,0.03);
+      --radius:12px;
+      --maxwidth:1100px;
+      --accent-2:#00d4ff;
     }
-  },
-  "mainEntityOfPage":{
-    "@type":"WebPage",
-    "@id":"https://www.example.com/articles/facebook-ads-audience-research"
-  },
-  "datePublished":"2026-06-17",
-  "image":"https://picsum.photos/1200/600?random=1"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is Facebook Ads audience research?","acceptedAnswer":{"@type":"Answer","text":"Facebook Ads audience research is the process of identifying, testing, and prioritizing target groups for your ad campaigns using demographics, interests, behaviors, custom audiences, and lookalike audiences to reach high-intent prospects."}},
-    {"@type":"Question","name":"How do I create a lookalike audience?","acceptedAnswer":{"@type":"Answer","text":"Create a high-quality source audience such as purchasers or high-value customers, upload or select it in Ads Manager, choose the country, and set the similarity/size (1% to 10%) before creating and testing variations."}},
-    {"@type":"Question","name":"How often should I refresh targeting and audiences?","acceptedAnswer":{"@type":"Answer","text":"Refresh and test audiences every 2-6 weeks depending on campaign performance, seasonality, and data volume. Continuously test new interests and custom audience segments to avoid creative fatigue and audience saturation."}}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
-    {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles"},
-    {"@type":"ListItem","position":3,"name":"Facebook Ads Audience Research","item":"https://www.example.com/articles/facebook-ads-audience-research"}
-  ]
-}
-</script>
-
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg),#071023);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+    }
+    a{color:var(--accent);text-decoration:none}
+    header{
+      background:linear-gradient(90deg, rgba(24,119,242,0.06), rgba(0,212,255,0.02));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.03);
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+    .nav{
+      max-width:var(--maxwidth);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:16px;
+      gap:16px;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img{height:36px;border-radius:8px}
+    nav ul{display:flex;gap:14px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{color:var(--muted);padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+    .cta-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#001; padding:10px 14px;border-radius:10px;font-weight:700}
+    main{max-width:var(--maxwidth);margin:28px auto;padding:24px}
+    .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:20px;
+      align-items:start;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+    }
+    h1{margin:0;font-size:28px;letter-spacing:-0.4px}
+    .meta{color:var(--muted);font-size:14px;margin-top:6px}
+    .featured{width:100%;border-radius:10px;overflow:hidden;display:block}
+    .content{display:grid;grid-template-columns: 1fr 320px;gap:24px;margin-top:18px}
+    @media (max-width:980px){
+      .content{grid-template-columns:1fr}
+      nav ul{display:none}
+    }
+    .article{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+      padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .toc{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02);color:var(--muted)}
+    .toc a{display:block;color:var(--muted);padding:6px 0}
+    h2{color:#fff;margin-top:22px}
+    h3{color:#cfe6ff;margin-top:14px}
+    p{color:var(--muted);margin:12px 0}
+    .img-card{border-radius:10px;overflow:hidden;margin:12px 0;border:1px solid rgba(255,255,255,0.03)}
+    .lead-form{background:linear-gradient(90deg, rgba(24,119,242,0.06), transparent);padding:14px;border-radius:12px;margin-top:12px;border:1px solid rgba(255,255,255,0.02)}
+    .form-row{display:flex;gap:8px;margin-top:8px}
+    .form-row input[type="text"], .form-row input[type="email"]{
+      flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e8f4ff
+    }
+    .form-row button{background:var(--accent);border:none;color:#001;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
+    .small-muted{font-size:13px;color:var(--muted)}
+    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .cta{
+      margin:18px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.12), rgba(0,212,255,0.04));display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .cta .cta-text{flex:1}
+    .cta .cta-actions{display:flex;gap:10px}
+    .related{display:flex;flex-direction:column;gap:10px;margin-top:12px}
+    footer{max-width:var(--maxwidth);margin:28px auto;padding:20px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .socials{display:flex;gap:10px}
+    .badge{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02)}
+    ul.check{list-style:inside;color:var(--muted);padding-left:8px}
+    .faq-item{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:12px;border-radius:10px;margin-top:10px}
+  </style>
 </head>
 <body>
-<header aria-label="Main Header">
-  <div class="nav">
-    <div class="logo">Ads Mastery</div>
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/articles">Articles</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-      <a href="/login" class="btn alt" style="padding:8px 12px">Log in</a>
-      <a href="/signup" class="btn">Get started</a>
+  <header>
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <img src="https://picsum.photos/80/60?random=2" alt="Ads Mastery logo" loading="lazy">
+        <div>
+          <div style="font-weight:800">Ads Mastery</div>
+          <div class="small-muted" style="margin-top:2px">Facebook Ads Resources</div>
+        </div>
+      </div>
+      <nav aria-label="Top menu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/articles/facebook-ads-for-shopify">Shopify Ads</a></li>
+          <li><a href="/articles/how-to-scale-facebook-ads">Scaling</a></li>
+          <li><a href="/articles/facebook-retargeting-guide">Retargeting</a></li>
+          <li><a class="cta-btn" href="#signup">Get Guide</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="container">
-  <div class="hero">
-    <div>
-      <div class="card">
-        <span class="badge">Guide • Updated 2026</span>
-        <h1>Facebook Ads Audience Research: Targeting, Segmentation & Lookalike Strategies</h1>
-        <p class="sub">Master audience targeting for Facebook and Instagram ads with step-by-step research, customer segmentation, and lookalike creation to increase ROAS and scale e-commerce campaigns.</p>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h1 id="page-title">Facebook Ads Testing Framework</h1>
+        <div class="meta">A practical, repeatable system for A/B testing Facebook Ads creatives, audiences, and funnels to improve ROAS and reduce CPL.</div>
 
-        <div class="featured" aria-hidden="false">
-          <img src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Audience Research Featured Image" loading="lazy">
-        </div>
+        <img class="featured" src="https://picsum.photos/1200/600?random=3" alt="Facebook Ads Testing Framework featured visual showing A/B testing and ROAS growth" loading="lazy">
+      </div>
 
-        <div class="toc" aria-labelledby="toc-heading">
-          <strong id="toc-heading">Table of Contents</strong>
-          <a href="#introduction">Introduction</a>
-          <a href="#why-audience-research">Why Audience Research Matters</a>
-          <a href="#how-to-research">How-to: Step-by-Step Audience Research</a>
-          <a href="#examples">Examples & Case Studies</a>
-          <a href="#common-mistakes">Common Mistakes</a>
-          <a href="#newsletter">Newsletter & Resources</a>
-          <a href="#faq">FAQ</a>
-          <a href="#conclusion">Conclusion</a>
-        </div>
+      <div style="display:flex;flex-direction:column;justify-content:flex-start;gap:12px">
+        <div class="badge">Updated: 2026</div>
+        <div class="small-muted">Read time: 12-16 minutes</div>
+        <div class="small-muted">Topics: Facebook Ads A/B testing, creative testing, audience testing, CBO, conversion tracking</div>
+      </div>
+    </section>
 
-        <section id="introduction" class="section" aria-labelledby="intro-title">
-          <h2 id="intro-title">Introduction</h2>
-          <p>Facebook Ads audience research is the foundation of profitable ad campaigns. Whether you're running paid social for a Shopify store, SaaS product, or local service, deep audience research helps you find high-intent users, reduce CPC, and increase conversion rates. This guide covers practical strategies, audience segmentation frameworks, lookalike creation tactics, and real-world examples to improve your targeting today.</p>
+    <div class="content">
+      <article class="article" id="article">
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>Running random Facebook Ads rarely leads to consistent scale. Top-performing advertisers use a Facebook Ads testing framework — a structured playbook that isolates variables, measures statistically significant winners, and scales them methodically. This article walks you through a complete, modern framework: creative testing (images, video, copy), audience splits (interest, lookalike, retargeting), funnel experimentation (landing pages, offers), and technical setup (pixel & CAPI, conversion events, ROAS tracking).</p>
 
-          <p>Keywords covered: Facebook Ads Audience Research, audience targeting, lookalike audiences, Facebook Ads for Shopify, customer segmentation for Facebook ads, best practices for Facebook ad audience segmentation, how to research Facebook ad audiences for e-commerce.</p>
-
-          <!-- Email collection form -->
-          <form class="form-row" style="margin-top:14px;gap:12px;align-items:flex-end" aria-label="Download Free Guide Form" method="post" action="#">
-            <div style="flex:1">
-              <label for="name">Name</label>
-              <input id="name" type="text" name="name" placeholder="Your name" required>
-            </div>
-            <div style="width:320px;max-width:40%">
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="name@company.com" required>
-            </div>
-            <div style="min-width:180px">
-              <button type="submit" class="btn" style="width:100%;height:44px">Download Free Guide</button>
-            </div>
-          </form>
-          <small class="note">Receive the free PDF guide: "Advanced Facebook Audience Playbook" and weekly insights on scaling ads.</small>
+          <div class="lead-form" aria-labelledby="lead-title">
+            <div id="lead-title" style="font-weight:700">Get the Free Framework Guide</div>
+            <p class="small-muted">Download the step-by-step Facebook Ads Testing Framework PDF — templates, checklists, and test schedule.</p>
+            <form action="#" method="post" aria-label="Download free guide form">
+              <div class="form-row" style="flex-direction:column">
+                <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
+                <input type="email" name="email" placeholder="Email address" aria-label="Email" required>
+              </div>
+              <div style="display:flex;gap:8px;margin-top:10px">
+                <button type="submit">Download Free Guide</button>
+                <button type="button" style="background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:10px 12px;border-radius:8px">Preview PDF</button>
+              </div>
+              <div class="small-muted" style="margin-top:8px">We respect your privacy. Unsubscribe anytime.</div>
+            </form>
+          </div>
         </section>
 
-      </div>
+        <nav class="toc" aria-label="Table of contents">
+          <strong style="color:#fff">Table of Contents</strong>
+          <a href="#introduction">Introduction</a>
+          <a href="#why-framework">Why You Need a Testing Framework</a>
+          <a href="#components">Core Components of the Framework</a>
+          <a href="#how-to">How-to: Run an A/B Test</a>
+          <a href="#examples">Examples and Case Studies</a>
+          <a href="#mistakes">Common Mistakes to Avoid</a>
+          <a href="#newsletter">Newsletter Signup</a>
+          <a href="#faq">FAQ</a>
+          <a href="#conclusion">Conclusion & Next Steps</a>
+        </nav>
 
-      <main>
-        <article class="card" style="margin-top:18px; padding:20px">
-          <div class="two-col">
-            <div>
-              <section id="why-audience-research" class="section">
-                <h2>Why Audience Research Matters</h2>
-                <p>Audience research reduces trial-and-error by aligning creative, messaging, and offers with real customer signals. Instead of relying on guesses, use data-driven segments—purchase history, site behavior, and interest clusters—to deliver relevant ads. Proper audience research leads to:</p>
-                <ul>
-                  <li>Lower CPM and CPC through higher relevance scores</li>
-                  <li>Higher conversion rates from targeted offers</li>
-                  <li>More efficient scaling using lookalikes and retention audiences</li>
-                </ul>
+        <h2 id="why-framework">Why You Need a Testing Framework</h2>
+        <p>Ad platforms change, audiences shift, and what worked last quarter may underperform today. A testing framework helps you:
+        </p>
+        <ul class="check">
+          <li>Reduce guesswork with hypothesis-driven experiments</li>
+          <li>Improve key metrics: CTR (click-through rate), CVR (conversion rate), CPL (cost per lead), and ROAS (return on ad spend)</li>
+          <li>Scale winners using campaign budget optimization (CBO) or manual scaling</li>
+          <li>Track ad relevance and conversion events with pixel and Conversions API (CAPI)</li>
+        </ul>
 
-                <h3>Key Concepts & Semantic Terms</h3>
-                <p>Understand semantic SEO terms that relate to Facebook audience research, like "custom audiences", "engagement audiences", "reach vs. precision targeting", "audience overlap", "audience density", and "behavioral segmentation". These concepts improve the way you design tests and analyze performance across placements and the Meta ecosystem.</p>
+        <h2 id="components">Core Components of the Framework</h2>
+        <p>Design your Facebook Ads testing framework around four core areas: creative, audience, funnel, and technical setup. Each component has repeatable sub-tests and measurement rules.</p>
 
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/540?random=2" alt="Audience segmentation for Facebook Ads with demographics and interests" loading="lazy">
-                </div>
-              </section>
+        <h3>Creative Testing</h3>
+        <p>Creative testing is the fastest way to find scalable winners. Test thumbnails, headlines, primary text, and call-to-action variations. Use dynamic creative to speed up permutations, but keep manual A/B tests for precision.</p>
 
-              <section id="how-to-research" class="section">
-                <h2>How-to: Step-by-Step Audience Research</h2>
+        <h3>Audience Testing</h3>
+        <p>Systematically test interest-based audiences, lookalike audiences, and retargeting pools. Use audience exclusion to prevent overlap and employ split testing to measure pure audience performance.</p>
 
-                <h3>1. Start with First-Party Data</h3>
-                <p>Create custom audiences from:</p>
-                <ul>
-                  <li>Purchase data and customer lists (best for lookalike sources)</li>
-                  <li>Pixel events (Add to Cart, View Content, Purchase)</li>
-                  <li>App events and SDK data</li>
-                </ul>
+        <h3>Funnel & Offer Testing</h3>
+        <p>Test landing pages, checkout flow variations, and offer value (discounts, bundles, free trials). Measure micro-conversions (add-to-cart, initiate checkout) in addition to macro conversions (purchase, lead).</p>
 
-                <h3>2. Build Hypothesis Segments</h3>
-                <p>Map hypotheses like: "Audiences who purchased in the last 180 days are the highest LTV" or "Interest: fitness + apparel for activewear buyers." Use long-tail keywords when naming segments: "high-value repeat purchaser 90-180 days – Facebook audience".</p>
+        <h3>Technical & Tracking</h3>
+        <p>Accurate conversion tracking is the backbone of any testing framework — install the Facebook Pixel, validate events, and use CAPI to sync server events. Missing or duplicated events will skew results and make winners unreliable.</p>
 
-                <h3>3. Use Interest & Behavior Targeting</h3>
-                <p>Layer interests with demographics to increase precision. Example: Women, 25-40, interests: sustainable fashion + yoga. Test narrow vs broad to discover what drives CPA.</p>
+        <div class="img-card">
+          <img src="https://picsum.photos/1000/400?random=4" alt="Creative testing example showing split test variants and metrics for Facebook Ads" loading="lazy" style="width:100%;display:block">
+        </div>
 
-                <h3>4. Create Lookalike Audiences</h3>
-                <p>Use high-value customers as a source. Start at 1% lookalikes in target countries and expand to 2-3% for scale. For long-tail growth: "how to create lookalike audiences from high-value Shopify customers".</p>
+        <h2 id="how-to">How-to: Run an A/B Test on Facebook Ads</h2>
+        <p>This step-by-step guide helps you run a rigorous split test that yields actionable, statistically valid insights.</p>
 
-                <h3>5. Test & Iterate with A/B Tests</h3>
-                <p>Run structured A/B tests on audience segments using the Facebook Ads Testing Framework. Track CPA, ROAS, and frequency. Use audience overlap reports to avoid competing audiences.</p>
+        <h3>Step 1 — Define a Clear Hypothesis</h3>
+        <p>Example: "Changing the primary CTA from 'Shop Now' to 'Get 20% Off' will reduce CPL by 15% among cold traffic." Write the hypothesis, the metric you'll measure (CPL, ROAS), and the minimum outcome that counts as success.</p>
 
-                <div style="margin-top:12px" class="cta">
-                  <div>
-                    <strong>Ready to optimize your targeting?</strong>
-                    <div class="muted">Free 30-minute audit when you submit your top 3 audiences.</div>
-                  </div>
-                  <div style="display:flex;gap:10px">
-                    <a href="#newsletter" class="btn">Claim Audit</a>
-                    <a href="/contact" class="btn alt">Contact Us</a>
-                  </div>
-                </div>
+        <h3>Step 2 — Isolate a Single Variable</h3>
+        <p>Test one element at a time: creative, audience, landing page, or placement. If you change multiple elements, you won't know which change produced the result.</p>
 
-              </section>
+        <h3>Step 3 — Set Test Parameters</h3>
+        <p>Define the budget, minimum impressions, test duration, and statistical significance threshold. For most e-commerce tests, set a minimum of 50 conversions per variant or 7–14 days depending on traffic volume.</p>
 
-              <section id="examples" class="section">
-                <h2>Examples: Real Audience Research Use Cases</h2>
+        <h3>Step 4 — Use the Right Test Type</h3>
+        <p>Facebook offers A/B Test (split testing) and Dynamic Creative. Use split tests to compare audiences or full variants; use dynamic creative for granular creative permutations with automated optimization.</p>
 
-                <h3>Example 1 — Shopify Fitness Brand</h3>
-                <p>Problem: High CAC for cold traffic. Solution: Create 3 custom audiences — existing purchasers (90d), add-to-cart 30d, newsletter engagers 180d. Use a 1% lookalike of purchasers and test creative focused on benefits. Result: CPA down 28% and ROAS improved by 2.1x.</p>
+        <h3>Step 5 — Monitor & Wait for Significance</h3>
+        <p>Track metrics daily but avoid early changes. Let the test reach the predetermined sample size. Use manual calculations or statistical calculators to check p-values and confidence intervals.</p>
 
-                <h3>Example 2 — B2B SaaS Lead Gen</h3>
-                <p>Problem: Low-quality leads. Solution: Use LinkedIn-style targeting via job titles and employer size, combine with website remarketing (trial users) and engagement on high-intent pages. Create a 1% lookalike of trial converters. Result: Lead quality improved with 35% higher demo-to-trial rate.</p>
+        <h3>Step 6 — Analyze & Iterate</h3>
+        <p>When a winner emerges, analyze why it won: was it higher CTR, better landing page CVR, or lower CPC? Apply insights to new tests and scale the winning variant with a controlled scaling plan.</p>
 
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/540?random=3" alt="Facebook Ads Audience Research example for Shopify fitness brand" loading="lazy">
-                </div>
+        <div class="cta" role="region" aria-label="Mid article call to action">
+          <div class="cta-text">
+            <strong style="font-size:16px">Ready to standardize your tests?</strong>
+            <div class="small-muted">Get our testing templates and scaling checklist to run reproducible Facebook Ads experiments.</div>
+          </div>
+          <div class="cta-actions">
+            <a href="#signup" class="cta-btn">Get Templates</a>
+            <a href="/articles/how-to-scale-facebook-ads" class="small-muted" style="align-self:center">Learn scaling strategies →</a>
+          </div>
+        </div>
 
-                <h3>Advanced Example — Layered Interest Clusters</h3>
-                <p>Use clustering to combine micro-interests that show common purchase intent. For example, combine "cold brew coffee", "specialty coffee", "espresso machine" for coffee e-commerce targeting. The semantic term here is 'interest adjacency' — grouping similar micro-interests to reduce noise.</p>
+        <div class="img-card">
+          <img src="https://picsum.photos/1000/500?random=5" alt="Audience split testing and lookalike audience strategy visual" loading="lazy" style="width:100%;display:block">
+        </div>
 
-              </section>
+        <h2 id="examples">Examples and Case Studies</h2>
+        <p>Below are real-world examples that illustrate the framework in action and the kinds of improvements you can expect.</p>
 
-              <section id="common-mistakes" class="section">
-                <h2>Common Mistakes in Facebook Ads Audience Research</h2>
-                <h3>1. Overly Broad Targeting</h3>
-                <p>Targeting everyone wastes budget. Replace "women 18-45" with behavior and intent signals to reach likely buyers.</p>
+        <h3>Example 1 — Creative Swap Improves CTR and ROAS</h3>
+        <p>Hypothesis: A lifestyle video will increase CTR among cold audiences versus a product image. Setup: 2 creatives, same audience, equal budget. Outcome: Video had 28% higher CTR and 22% better ROAS after 10 days. Learnings: Motion and storytelling increased ad relevance and improved conversion efficiency.</p>
 
-                <h3>2. Ignoring First-Party Data</h3>
-                <p>First-party data (customer lists, pixel events) are the highest value for precise lookalikes and retargeting. Not using them limits scale potential.</p>
+        <h3>Example 2 — Lookalike vs Interest Audience Test</h3>
+        <p>Hypothesis: A 1% lookalike built from buyers will outperform a 5-interest targeting bundle. Setup: Split test with dedicated budgets. Outcome: 1% lookalike produced 35% lower CPL, indicating high-quality lookalike targeting remains a reliable scaling lever.</p>
 
-                <h3>3. Poor Naming Conventions</h3>
-                <p>Not using consistent, SEO-friendly naming for audiences makes analysis and scaling harder. Use long-tail descriptive names like: "US - 1% lookalike - purchasers LTV top 10% - May2026".</p>
+        <div class="img-card">
+          <img src="https://picsum.photos/1200/500?random=6" alt="Case study screenshot showing A/B test results for Facebook Ads improving conversion rate" loading="lazy" style="width:100%;display:block">
+        </div>
 
-                <h3>4. Not Testing Statistically</h3>
-                <p>Running short tests with insufficient data leads to false conclusions. Use sample sizes large enough to reach statistical significance before scaling.</p>
+        <h2 id="mistakes">Common Mistakes to Avoid</h2>
+        <p>Even experienced advertisers make errors that invalidate tests. Avoid these common pitfalls.</p>
 
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/400?random=4" alt="Common mistakes in Facebook Ads audience research and targeting" loading="lazy">
-                </div>
+        <h3>1. Changing Multiple Variables</h3>
+        <p>If you change headline and image at the same time, you can't know which change drove the result.</p>
 
-              </section>
+        <h3>2. Insufficient Sample Size</h3>
+        <p>Stopping a test early due to a few days of "winning" data often leads to false positives. Use accepted statistical methods to determine sample size.</p>
 
-            </div>
+        <h3>3. Overlapping Audiences</h3>
+        <p>Audience overlap can create internal competition between your ad sets and distort results. Use audience exclusions or Facebook's built-in split test features to avoid this.</p>
 
-            <aside class="sidebar">
-              <div class="card">
-                <h3>Quick Checklist</h3>
-                <ul>
-                  <li>Export customer list & segment by LTV</li>
-                  <li>Create event-based custom audiences (180d)</li>
-                  <li>Build 1% & 3% lookalikes</li>
-                  <li>Test interest clusters vs broad targeting</li>
-                  <li>Monitor audience overlap & frequency</li>
-                </ul>
+        <h3>4. Poor Conversion Tracking</h3>
+        <p>If your Pixel or CAPI is misconfigured, conversion data will be inaccurate, and you may optimize based on flawed signals.</p>
 
-                <div style="margin-top:14px">
-                  <strong>Related Articles</strong>
-                  <div class="related" style="margin-top:8px">
-                    <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-                    <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-                    <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-                    <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
-                  </div>
-                </div>
-              </div>
+        <h2 id="newsletter">Newsletter Signup</h2>
+        <p class="small-muted">Subscribe to weekly testing playbooks and exclusive Facebook Ads templates.</p>
+        <form id="signup" action="#" method="post" class="lead-form" aria-label="Newsletter signup">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input type="email" name="newsletter_email" placeholder="Enter your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e8f4ff">
+            <button type="submit" style="padding:10px 14px;border-radius:8px;background:var(--accent);border:none;color:#001;font-weight:700">Subscribe</button>
+          </div>
+          <div class="small-muted" style="margin-top:8px">Get actionable tests, templates and case studies. Unsubscribe anytime.</div>
+        </form>
 
-              <div class="card" style="margin-top:12px">
-                <h3>Audience Tools</h3>
-                <p class="muted">Use these to refine your targeting: Ads Manager Audience Insights, Facebook Analytics, Google Analytics segments, and your Shopify customer reports.</p>
-                <a href="/articles/facebook-ads-testing-framework" class="btn" style="margin-top:10px;display:inline-block">Testing Framework</a>
-              </div>
-            </aside>
+        <h2 id="faq">FAQ</h2>
+        <div class="faq-item">
+          <strong>Q: How long should I run a Facebook split test?</strong>
+          <p class="small-muted">A: At least until you reach the pre-defined sample size or statistical significance. For low-traffic campaigns, this may mean 2 weeks or more.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Should I use automatic placements?</strong>
+          <p class="small-muted">A: Start with automatic placements to gather data, then test placement-level creatives if performance differences are large.</p>
+        </div>
+        <div class="faq-item">
+          <strong>Q: Can I use broad targeting?</strong>
+          <p class="small-muted">A: Yes, broad targeting works well when paired with strong creatives and CBO. Use creative and audience segmentation tests to optimize further.</p>
+        </div>
+
+        <h2 id="conclusion">Conclusion & Next Steps</h2>
+        <p>Implementing a disciplined Facebook Ads testing framework reduces risk and accelerates scale. Start with hypothesis-driven creative tests, validate with proper tracking (Pixel & CAPI), and then layer audience and funnel experiments. Use our templates to standardize reporting and scaling rules so your team can replicate winning campaigns.</p>
+
+        <div style="margin-top:14px" class="small-muted">Internal resources:</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">
+          <a href="/articles/facebook-ads-for-shopify" class="badge">Facebook Ads for Shopify</a>
+          <a href="/articles/facebook-ads-testing-framework" class="badge">Testing Framework (this)</a>
+          <a href="/articles/how-to-scale-facebook-ads" class="badge">How to Scale Facebook Ads</a>
+          <a href="/articles/facebook-retargeting-guide" class="badge">Facebook Retargeting Guide</a>
+        </div>
+
+        <div class="cta" style="margin-top:18px" role="region" aria-label="Final call to action">
+          <div class="cta-text">
+            <strong>Start testing like a growth team.</strong>
+            <div class="small-muted">Download our actionable checklist and test tracker to run reproducible Facebook Ads experiments.</div>
+          </div>
+          <div class="cta-actions">
+            <a href="#introduction" class="cta-btn">Download Checklist</a>
+          </div>
+        </div>
+
+      </article>
+
+      <aside style="position:relative">
+        <div class="card" aria-labelledby="sidebar-resources">
+          <h3 id="sidebar-resources" style="margin-top:0">Resources</h3>
+          <p class="small-muted">Quick links and related reads to deepen your Facebook Ads testing skills.</p>
+          <div class="related">
+            <a href="/articles/facebook-ads-for-shopify" class="small-muted">Facebook Ads for Shopify — Optimization Tips</a>
+            <a href="/articles/facebook-ads-testing-framework" class="small-muted">Complete Testing Framework (this)</a>
+            <a href="/articles/how-to-scale-facebook-ads" class="small-muted">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide" class="small-muted">Retargeting Guide</a>
           </div>
 
-          <section id="newsletter" class="section" style="margin-top:18px">
-            <h2>Newsletter Signup</h2>
-            <p>Get weekly case studies, audience playbooks, and the latest strategies for Facebook Ads audience research delivered to your inbox.</p>
-            <form method="post" action="#" style="display:flex;gap:8px;flex-wrap:wrap">
-              <input type="email" name="newsletter_email" placeholder="Enter your email" required style="flex:1;min-width:220px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#fff">
-              <button type="submit" class="btn">Subscribe</button>
-            </form>
-            <small class="note">No spam. Unsubscribe anytime.</small>
-          </section>
+          <hr style="border:0;border-top:1px solid rgba(255,255,255,0.02);margin:12px 0">
 
-          <section id="faq" class="section">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>What is the best source for lookalikes?</span>
-                <span class="muted">+</span>
-              </div>
-              <div class="faq-answer">High-value customers (top 5-10% by LTV) or purchase converters provide the best lookalike sources. Larger, high-quality pixel events also work well if you lack customer lists.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>How do I reduce audience overlap?</span>
-                <span class="muted">+</span>
-              </div>
-              <div class="faq-answer">Segment audiences by distinct behaviors, exclude overlapping audiences (e.g., exclude purchasers from cold targeting), and use Ads Manager's Audience Overlap tool to diagnose issues.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>How large should an audience be?</span>
-                <span class="muted">+</span>
-              </div>
-              <div class="faq-answer">For cold traffic, audiences between 500k-5M can perform well depending on your market. For lookalikes, a 1% lookalike is narrow and higher intent; expand to 3-5% to scale.</div>
-            </div>
-
-          </section>
-
-        </article>
-      </main>
-    </div>
-
-    <aside style="width:360px">
-      <div class="card">
-        <h3>Pro Tip</h3>
-        <p class="muted">Use negative audiences to preserve budget: exclude past purchasers for prospecting ads, exclude top-of-funnel engagers for retargeting campaigns, and always exclude competitors when testing branded keywords or interest bundles.</p>
-
-        <div style="margin-top:14px">
-          <strong>Download: Audience Research Checklist</strong>
-          <p class="muted">One-page checklist to audit your audiences before scaling.</p>
-          <a href="#" class="btn" style="margin-top:8px;display:inline-block">Download PDF</a>
+          <h4 style="margin:0 0 8px 0">Quick checklist</h4>
+          <ul class="check" style="margin:0">
+            <li>Define hypothesis & KPI</li>
+            <li>Test one variable at a time</li>
+            <li>Ensure pixel & CAPI are accurate</li>
+            <li>Set minimum sample size</li>
+            <li>Scale winners with controlled budget increases</li>
+          </ul>
         </div>
-      </div>
 
-      <div class="card" style="margin-top:12px">
-        <h3>Upcoming Workshop</h3>
-        <p class="muted">Live workshop: "Advanced Lookalikes & Audience Clustering" — limited seats.</p>
-        <a href="/workshops" class="btn alt" style="margin-top:8px;display:inline-block">View Dates</a>
-      </div>
-    </aside>
-  </div> <!-- end hero -->
-</div> <!-- end container -->
-
-<div class="container">
-  <section id="conclusion" class="card" style="margin-top:18px">
-    <h2>Conclusion</h2>
-    <p>Effective Facebook Ads audience research blends first-party data, methodical testing, and disciplined naming and measurement. Use custom audiences and lookalikes to scale high-performing segments, and continuously iterate using statistical tests. Apply the strategies in this guide—audience segmentation, interest clustering, and lookalike tactics—to improve precision, reduce wasted ad spend, and increase ROAS.</p>
-
-    <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-      <a href="/contact" class="btn">Request a Free Audit</a>
-      <a href="/articles/facebook-ads-testing-framework" class="btn alt">Read Testing Framework</a>
+        <div class="card" style="margin-top:16px" aria-labelledby="sidebar-books">
+          <h3 id="sidebar-books" style="margin-top:0">Related reading</h3>
+          <p class="small-muted">Dive deeper into advanced topics.</p>
+          <ul style="padding-left:16px">
+            <li><a href="/articles/how-to-scale-facebook-ads">How to scale Facebook Ads</a></li>
+            <li><a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a></li>
+            <li><a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a></li>
+          </ul>
+        </div>
+      </aside>
     </div>
-  </section>
+  </main>
 
-  <!-- CTA after conclusion -->
-  <section style="margin-top:16px" class="card">
-    <div class="cta">
-      <div>
-        <strong>Want a custom audience plan for your Shopify store?</strong>
-        <div class="muted">Tell us your top customer segments and we'll send a tailored targeting blueprint.</div>
+  <footer>
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="font-weight:700">Ads Mastery</div>
+      <div class="small-muted">Trusted Facebook Ads strategies and testing frameworks</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="socials">
+        <a href="#" class="small-muted">Twitter</a>
+        <a href="#" class="small-muted">LinkedIn</a>
+        <a href="#" class="small-muted">YouTube</a>
       </div>
-      <div>
-        <a href="/contact" class="btn">Get Your Blueprint</a>
-      </div>
+      <div class="small-muted">© 2026 Ads Mastery</div>
     </div>
-  </section>
-
-  <section class="card" style="margin-top:16px">
-    <h2>Related Articles</h2>
-    <ul>
-      <li><a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a></li>
-      <li><a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a></li>
-      <li><a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a></li>
-      <li><a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a></li>
-    </ul>
-  </section>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div style="font-weight:700;color:var(--accent)">Ads Mastery</div>
-      <div class="small">Premium training, playbooks, and agency-level strategies for Facebook Ads.</div>
-    </div>
-
-    <div class="links">
-      <a href="/privacy" class="muted">Privacy</a>
-      <a href="/terms" class="muted">Terms</a>
-      <a href="/contact" class="muted">Contact</a>
-    </div>
-  </div>
-  <div style="max-width:var(--max-width);margin:12px auto 0 auto;color:var(--muted);font-size:13px">
-    © 2026 Ads Mastery. All rights reserved.
-  </div>
-</footer>
-
-<script>
-  // FAQ toggle
-  function toggleFaq(el){
-    var ans = el.nextElementSibling;
-    var expanded = el.getAttribute('aria-expanded') === 'true';
-    el.setAttribute('aria-expanded', !expanded);
-    if(ans){
-      if(ans.style.display === 'block'){
-        ans.style.display = 'none';
-        el.querySelector('.muted').textContent = '+';
-      } else {
-        ans.style.display = 'block';
-        el.querySelector('.muted').textContent = '−';
-      }
-    }
-  }
-
-  // Basic smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click', function(e){
-      var target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-
-  // Lightweight form handling (no tracking)
-  document.querySelectorAll('form').forEach(function(f){
-    f.addEventListener('submit', function(e){
-      // Prevent default to avoid navigation in demo
-      e.preventDefault();
-      var btn = f.querySelector('button[type="submit"]');
-      if(btn){ btn.textContent = 'Thank you!'; btn.disabled = true; }
-      setTimeout(function(){ if(btn){ btn.textContent = 'Subscribe'; btn.disabled=false }}, 3000);
-    });
-  });
-</script>
+  </footer>
 
 </body>
 </html>
