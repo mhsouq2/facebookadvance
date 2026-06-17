@@ -3,480 +3,425 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Meta Ads Guide: Complete Strategy for High-Performing Meta (Facebook & Instagram) Campaigns</title>
-  <meta name="description" content="The ultimate Meta Ads Guide: step-by-step strategies for Facebook Ads and Instagram Ads. Learn targeting, creative, bidding, optimization, ROAS improvement and scaling tactics.">
-  <link rel="canonical" href="https://example.com/meta-ads-guide">
+  <title>How to Scale Facebook Ads: Proven Strategies to Grow ROAS & Lower CPA</title>
+  <meta name="description" content="Learn how to scale Facebook Ads step-by-step. Discover Facebook Ads scaling strategies, CBO tactics, creative testing, audience expansion, and examples to scale Facebook advertising without killing ROAS.">
+  <link rel="canonical" href="https://www.example.com/articles/how-to-scale-facebook-ads">
   <!-- Open Graph -->
-  <meta property="og:title" content="Meta Ads Guide: Complete Strategy for High-Performing Meta (Facebook & Instagram) Campaigns">
-  <meta property="og:description" content="The ultimate Meta Ads Guide: strategies for Facebook Ads and Instagram Ads including targeting, creative, testing, and measurement to increase ROAS.">
+  <meta property="og:title" content="How to Scale Facebook Ads: Proven Strategies to Grow ROAS & Lower CPA">
+  <meta property="og:description" content="Learn how to scale Facebook Ads step-by-step. Discover Facebook Ads scaling strategies, CBO tactics, creative testing, audience expansion, and examples to scale Facebook advertising without killing ROAS.">
+  <meta property="og:url" content="https://www.example.com/articles/how-to-scale-facebook-ads">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://example.com/meta-ads-guide">
-  <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
-  <!-- Twitter Card -->
+  <meta property="og:image" content="https://picsum.photos/1200/600?random=1">
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Meta Ads Guide: Complete Strategy for High-Performing Meta (Facebook & Instagram) Campaigns">
-  <meta name="twitter:description" content="The ultimate Meta Ads Guide: strategies for Facebook Ads and Instagram Ads including targeting, creative, testing, and measurement to increase ROAS.">
-  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
-  <meta name="theme-color" content="#0b74ff">
+  <meta name="twitter:title" content="How to Scale Facebook Ads: Proven Strategies to Grow ROAS & Lower CPA">
+  <meta name="twitter:description" content="Learn how to scale Facebook Ads step-by-step. Discover Facebook Ads scaling strategies, CBO tactics, creative testing, audience expansion, and examples to scale Facebook advertising without killing ROAS.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1">
+  <meta name="author" content="Growth Marketing Team">
   <style>
     :root{
-      --bg:#0b1221;
-      --card:#0f1724;
-      --muted:#9aa9c7;
+      --bg:#0f1720;
+      --card:#111827;
+      --muted:#9aa4b2;
       --accent:#1877f2;
       --accent-2:#00c6ff;
       --glass: rgba(255,255,255,0.03);
       --radius:12px;
       --max-width:1100px;
-      --container-padding:20px;
-      color-scheme: dark;
+      --text:#e6eef8;
+      --green:#22c55e;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
+    html,body{height:100%;}
     body{
       margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg,#071026 0%, #07132a 100%);
-      color:#e6eef8;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,#071024 0%,#07172a 60%);
+      color:var(--text);
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      padding:0;
+      line-height:1.55;
+      padding-bottom:80px;
     }
     header{
-      backdrop-filter: blur(6px);
-      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       position:sticky;
       top:0;
-      z-index:60;
+      z-index:50;
+      backdrop-filter: blur(6px);
+      background:linear-gradient(180deg, rgba(3,8,16,0.6), rgba(3,8,16,0.4));
       border-bottom:1px solid rgba(255,255,255,0.03);
     }
-    .nav{
+    .container{
       max-width:var(--max-width);
       margin:0 auto;
+      padding:18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      padding:14px var(--container-padding);
+      gap:16px;
     }
     .brand{
       display:flex;
       align-items:center;
       gap:12px;
       text-decoration:none;
-      color:inherit;
+      color:var(--text);
     }
-    .brand .logo{
-      width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0057d9);
-      display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:18px;
-      box-shadow:0 6px 18px rgba(11,116,242,0.14), inset 0 -6px 18px rgba(255,255,255,0.03);
+    .logo {
+      width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:white;font-size:18px;
+      box-shadow:0 6px 18px rgba(24,119,242,0.12), inset 0 -6px 18px rgba(0,198,255,0.08);
     }
-    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px;align-items:center;}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;font-size:14px;}
+    nav a:hover{color:var(--text);background:rgba(255,255,255,0.02);}
+    .cta-btn{
+      background:linear-gradient(90deg,var(--accent),#0a66ff);
+      color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px;box-shadow:0 8px 30px rgba(24,119,242,0.12);
+    }
+    main{max-width:var(--max-width);margin:28px auto;padding:20px;}
     .hero{
-      max-width:var(--max-width);
-      margin:24px auto;
-      padding:28px var(--container-padding);
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      border-radius:var(--radius);
+      padding:28px;
+      display:grid;
+      grid-template-columns:1fr 320px;
+      gap:20px;
+      align-items:start;
+      border:1px solid rgba(255,255,255,0.03);
     }
-    .hero .left{
-      flex:1;
-      min-width:260px;
-    }
-    h1{
-      font-size:32px;margin:0 0 12px 0;color:#fff;line-height:1.08;
-      letter-spacing:-0.2px;
-    }
-    .lead{color:var(--muted);margin-bottom:18px;font-size:16px}
-    .featured{
-      width:100%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);
-      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
-    }
-    .meta-stats{display:flex;gap:12px;margin-top:12px;color:var(--muted);font-size:13px}
-    .content{
-      max-width:var(--max-width);
-      margin:0 auto 64px;
-      padding:18px var(--container-padding);
-    }
-    .toc{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.03); padding:16px;border-radius:12px;color:var(--muted);margin-bottom:18px}
-    .toc a{display:block;color:var(--muted);text-decoration:none;padding:6px 0}
-    main article{display:grid;grid-template-columns:1fr 320px;gap:28px}
-    .article-body{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .sidebar{position:sticky;top:90px;height:max-content}
-    h2{color:#fff;margin-top:18px}
-    h3{color:#cfe3ff;margin-top:12px}
-    p{color:var(--muted)}
-    img{max-width:100%;display:block;border-radius:10px}
-    figure{margin:14px 0}
-    .card{background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      background:linear-gradient(90deg,var(--accent),#0a66d1);
-      color:white;padding:10px 14px;border-radius:10px;border:none;font-weight:700;text-decoration:none;
-      box-shadow:0 8px 26px rgba(24,119,242,0.16);
-    }
-    .muted{color:var(--muted)}
-    form .field{display:flex;flex-direction:column;margin-bottom:10px}
-    input[type="text"], input[type="email"]{
-      background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef8;font-size:14px;
-    }
-    .newsletter{display:flex;gap:8px;align-items:center}
-    .newsletter input{flex:1}
-    .cta{
-      background:linear-gradient(90deg,#072b4a, #072036);border-radius:14px;padding:20px;border:1px solid rgba(255,255,255,0.04);
-      display:flex;justify-content:space-between;align-items:center;margin:22px 0;
-    }
-    .cta .left{max-width:70%}
-    .related{display:flex;flex-direction:column;gap:8px}
-    .related a{color:var(--accent);text-decoration:none;font-weight:600}
-    footer{margin-top:40px;padding:24px;background:transparent;border-top:1px solid rgba(255,255,255,0.03)}
-    .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:0 var(--container-padding)}
-    .small{font-size:13px;color:var(--muted)}
+    .hero h1{margin:0 0 8px 0;font-size:28px;}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:10px;}
+    .featured-image{width:100%;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);}
+    .featured-image img{width:100%;height:auto;display:block;}
+    .sidebar-card{background:var(--glass);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    .toc{background:transparent;padding:12px;border-radius:10px;padding-left:6px;color:var(--muted);}
+    .toc a{color:var(--muted);text-decoration:none;font-size:14px;display:block;padding:6px 8px;border-radius:8px;}
+    .toc a:hover{color:var(--text);background:rgba(255,255,255,0.02);}
+    article{margin-top:20px;display:grid;grid-template-columns:1fr 320px;gap:20px;}
+    .content{background:var(--card);padding:28px;border-radius:14px;border:1px solid rgba(255,255,255,0.03);}
+    .content h2{color:white;margin-top:18px;}
+    .content h3{color:var(--accent);margin-top:14px;}
+    p{color:var(--muted);margin:10px 0;}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+    img.article-img{width:100%;border-radius:10px;border:1px solid rgba(255,255,255,0.03);display:block;}
+    .form-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;}
+    input[type="text"],input[type="email"]{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);outline:none;}
+    .btn-primary{background:var(--accent);border:none;color:white;padding:12px 16px;border-radius:10px;font-weight:700;cursor:pointer;margin-top:10px;}
+    .small-muted{font-size:13px;color:var(--muted);}
+    .card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px;}
+    .box{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);}
+    .cta-mid{margin:22px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.12), rgba(0,198,255,0.06));display:flex;gap:18px;align-items:center;justify-content:space-between;}
+    .cta-mid h3{margin:0;font-size:18px;}
+    .newsletter{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);display:flex;gap:12px;align-items:center;}
+    aside .related{background:var(--glass);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);}
+    footer{max-width:var(--max-width);margin:40px auto 60px;padding:18px;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted);}
+    .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center;}
+    a.internal-link{color:var(--accent);text-decoration:none;font-weight:700;}
+    .faq q{display:block;margin:10px 0;}
     @media (max-width:980px){
-      main article{grid-template-columns:1fr}
-      .sidebar{position:static}
-      .hero{flex-direction:column}
-      h1{font-size:26px}
+      .hero{grid-template-columns:1fr; padding:18px;}
+      article{grid-template-columns:1fr; padding:0;}
+      .container{padding:12px;}
+      nav ul{display:none;}
+    }
+    @media (max-width:600px){
+      .two-col{grid-template-columns:1fr;}
+      .card-grid{grid-template-columns:1fr;}
+      .logo{width:38px;height:38px;font-size:16px;}
     }
   </style>
-
-  <!-- Structured Data: Article, FAQ, Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "mainEntityOfPage":{"@type":"WebPage","@id":"https://example.com/meta-ads-guide"},
-    "headline":"Meta Ads Guide: Complete Strategy for High-Performing Meta (Facebook & Instagram) Campaigns",
-    "image":["https://picsum.photos/1200/630?random=1"],
+    "headline":"How to Scale Facebook Ads: Proven Strategies to Grow ROAS & Lower CPA",
+    "description":"Learn how to scale Facebook Ads step-by-step. Discover Facebook Ads scaling strategies, CBO tactics, creative testing, audience expansion, and examples to scale Facebook advertising without killing ROAS.",
+    "image":[
+      "https://picsum.photos/1200/600?random=1",
+      "https://picsum.photos/1200/600?random=2",
+      "https://picsum.photos/1200/600?random=3",
+      "https://picsum.photos/1200/600?random=4"
+    ],
+    "author":{"@type":"Person","name":"Growth Marketing Team"},
+    "publisher":{"@type":"Organization","name":"Example Marketing","logo":{"@type":"ImageObject","url":"https://picsum.photos/200/60?random=5"}},
     "datePublished":"2026-06-17",
     "dateModified":"2026-06-17",
-    "author":{"@type":"Person","name":"Marketing Expert"},
-    "publisher":{"@type":"Organization","name":"Example Marketing","logo":{"@type":"ImageObject","url":"https://picsum.photos/200/200?random=2"}},
-    "description":"The ultimate Meta Ads Guide: strategies for Facebook Ads and Instagram Ads including targeting, creative, testing, and measurement to increase ROAS."
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.example.com/articles/how-to-scale-facebook-ads"}
   }
   </script>
-
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"What are Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Meta Ads are paid advertising placements across Meta’s platforms, including Facebook, Instagram, Messenger and the Audience Network, used to reach target audiences and drive conversions, traffic or brand awareness."}},
-      {"@type":"Question","name":"How do I create a high-ROAS Meta campaign?","acceptedAnswer":{"@type":"Answer","text":"To create a high-ROAS campaign, define a clear objective, use precise targeting (custom and lookalike audiences), craft compelling creatives, A/B test ad elements, optimize bidding and track conversions with the Meta pixel and server-side events."}},
-      {"@type":"Question","name":"How much should I budget for Meta Ads?","acceptedAnswer":{"@type":"Answer","text":"Budgeting depends on goals, audience size, and industry. Start small to test (e.g., $5-$50/day per ad set), measure cost-per-result, and scale budgets on winners while monitoring ROAS and CPM."}}
+      {
+        "@type":"Question",
+        "name":"What is the best way to scale Facebook Ads without losing ROAS?",
+        "acceptedAnswer":{"@type":"Answer","text":"Use incremental scaling combined with creative and audience testing: raise budgets slowly (10-30%), roll out similar audiences and duplicate top-performing ad sets, apply CBO with campaign-level testing, and use predictive audiences like high-value lookalikes while monitoring CPA and LTV closely."}
+      },
+      {
+        "@type":"Question",
+        "name":"Should I use CBO or manual ad set budgets to scale Facebook Ads?",
+        "acceptedAnswer":{"@type":"Answer","text":"Start with manual budgets to validate winning ad sets, then migrate to Campaign Budget Optimization (CBO) for efficient scaling. Use CBO when you have multiple validated ad sets and stable performance."}
+      },
+      {
+        "@type":"Question",
+        "name":"How many creatives should I test when scaling Facebook Ads?",
+        "acceptedAnswer":{"@type":"Answer","text":"Test at least 4-8 creatives in initial phases including variations of video, carousel, and image ads. Maintain a pipeline of fresh creatives to prevent creative fatigue as you scale."}
+      }
     ]
   }
   </script>
-
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"BreadcrumbList",
     "itemListElement":[
-      {"@type":"ListItem","position":1,"name":"Home","item":"https://example.com/"},
-      {"@type":"ListItem","position":2,"name":"Articles","item":"https://example.com/articles"},
-      {"@type":"ListItem","position":3,"name":"Meta Ads Guide","item":"https://example.com/meta-ads-guide"}
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+      {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles"},
+      {"@type":"ListItem","position":3,"name":"How to Scale Facebook Ads","item":"https://www.example.com/articles/how-to-scale-facebook-ads"}
     ]
   }
   </script>
-
 </head>
 <body>
   <header>
-    <div class="nav">
-      <a class="brand" href="/">
-        <div class="logo">MA</div>
+    <div class="container" role="navigation" aria-label="Main navigation">
+      <a class="brand" href="/" aria-label="Home">
+        <div class="logo">FA</div>
         <div>
-          <div style="font-weight:800">Meta Ads Mastery</div>
-          <div style="font-size:12px;color:var(--muted)">Ads, Creative & Growth</div>
+          <div style="font-weight:800;">Facebook Ads Mastery</div>
+          <div style="font-size:12px;color:var(--muted);margin-top:2px;">Scale performance marketing</div>
         </div>
       </a>
-      <nav>
+      <nav aria-label="Primary">
         <ul>
-          <li><a href="/courses">Courses</a></li>
-          <li><a href="/articles">Articles</a></li>
-          <li><a href="/tools">Tools</a></li>
-          <li><a href="/pricing">Pricing</a></li>
-          <li><a class="btn" href="#download">Get Guide</a></li>
+          <li><a href="/articles/facebook-ads-for-shopify">Shopify Ads</a></li>
+          <li><a href="/articles/facebook-ads-testing-framework">Testing</a></li>
+          <li><a href="/articles/facebook-retargeting-guide">Retargeting</a></li>
+          <li><a href="/articles/how-to-scale-facebook-ads" class="internal-link">Scaling</a></li>
         </ul>
       </nav>
+      <a class="cta-btn" href="#newsletter">Get Growth Guide</a>
     </div>
   </header>
 
-  <section class="hero" aria-labelledby="page-title">
-    <div class="left">
-      <h1 id="page-title">Meta Ads Guide: Master Facebook & Instagram Advertising</h1>
-      <p class="lead">A comprehensive Meta Ads Guide to craft performance-driven Facebook Ads and Instagram Ads. Learn targeting strategies, creative best practices, bidding, optimization, and scaling to improve ROAS and lower CPC & CPM.</p>
+  <main>
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">How to Scale Facebook Ads: A Step-by-Step Guide to Sustainable Growth</h1>
+        <div class="meta">Updated June 17, 2026 • Actionable strategies for e-commerce, SaaS, and performance marketers</div>
 
-      <div class="meta-stats">
-        <div class="muted">Read time: ~12 min</div>
-        <div class="muted">Updated: Jun 17, 2026</div>
-        <div class="muted">Category: Ads & Growth</div>
-      </div>
-    </div>
-    <div style="flex:0 0 420px">
-      <div class="featured">
-        <img src="https://picsum.photos/1200/600?random=1" alt="Meta Ads Guide featured image showing Facebook and Instagram ad analytics dashboard" loading="lazy">
-      </div>
-    </div>
-  </section>
+        <div class="featured-image" role="img" aria-label="Facebook Ads Creative Strategy Example">
+          <img src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Creative Strategy Example - scaling campaign visual" loading="lazy">
+        </div>
 
-  <main class="content" role="main">
-    <div class="toc" aria-label="Table of contents">
-      <strong style="color:#fff">Table of Contents</strong>
-      <a href="#introduction">Introduction: What are Meta Ads?</a>
-      <a href="#why-meta">Why Meta Ads Matter</a>
-      <a href="#targeting">Targeting Strategies (Custom, Lookalike, Behavioral)</a>
-      <a href="#creative">Creative & Copy: Best Practices</a>
-      <a href="#budgeting">Budgeting, Bidding & Auction</a>
-      <a href="#measurement">Measurement & Optimization</a>
-      <a href="#how-to">How-to: Create a High-Performing Meta Ad</a>
-      <a href="#examples">Examples: Campaign Structures & Creatives</a>
-      <a href="#mistakes">Common Mistakes to Avoid</a>
-      <a href="#newsletter">Newsletter & Resources</a>
-      <a href="#faq">FAQ</a>
-      <a href="#conclusion">Conclusion & Next Steps</a>
-    </div>
+        <p style="margin-top:16px;color:var(--muted);">Scaling Facebook Ads is not just about increasing budget. It’s a strategic process that balances audience expansion, creative testing, bidding, and funnel optimization to grow ROAS and lower customer acquisition cost (CAC). This guide covers proven Facebook Ads scaling strategies, CBO best practices, lookalike targeting, creative pipelines, and detailed examples to scale Facebook advertising without sacrificing profitability.</p>
+
+        <!-- Email collection form after introduction -->
+        <div class="form-card" style="margin-top:18px;">
+          <form action="#" method="post" aria-label="Download Free Guide">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+            <label for="email" style="margin-top:10px;">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+            <button class="btn-primary" type="submit">Download Free Guide</button>
+            <div class="small-muted" style="margin-top:8px;">By downloading you agree to receive our weekly growth tips. Unsubscribe anytime.</div>
+          </form>
+        </div>
+
+      </div>
+
+      <aside class="sidebar-card" aria-label="Table of contents">
+        <div style="font-weight:800;margin-bottom:8px;">Table of Contents</div>
+        <nav class="toc" aria-label="Table of contents">
+          <a href="#why-scale">Why Scale Facebook Ads</a>
+          <a href="#strategy">Core Scaling Strategies</a>
+          <a href="#how-to">How-To: Step-by-Step</a>
+          <a href="#examples">Examples & Case Studies</a>
+          <a href="#mistakes">Common Mistakes</a>
+          <a href="#newsletter">Newsletter & Resources</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </aside>
+    </section>
 
     <article>
-      <div class="article-body" aria-labelledby="introduction">
+      <section class="content" aria-labelledby="why-scale">
+        <h2 id="why-scale">Why Scale Facebook Ads: Business Impact & KPI Focus</h2>
+        <p>Scaling Facebook advertising is a multiplier for revenue and customer lifetime value when executed correctly. High-growth teams focus on metrics beyond vanity clicks: conversion rate, return on ad spend (ROAS), cost per acquisition (CPA), and lifetime value (LTV). Effective scaling means expanding reach and budget while maintaining — or improving — these KPIs.</p>
 
-        <h2 id="introduction">Introduction: What are Meta Ads?</h2>
-        <p>Meta Ads are paid advertising placements across Meta's family of apps — primarily Facebook and Instagram — which include feed ads, Stories, Reels, Messenger ads, and placements across the Audience Network. Advertisers leverage Meta Ads to reach specific audiences, increase website traffic, generate leads, drive sales, and build brand awareness. In this guide you'll find step-by-step tactics, semantic SEO terms, and examples that cover everything from creative strategies to measurement and scaling.</p>
+        <h3>Scale vs. Spend: The Right Mindset</h3>
+        <p>“Spend” is not the same as “scale.” True scale is sustainable: it preserves profitability while increasing customer volume. Adopt a metric-driven framework and incremental approach to avoid "killing ROAS" when you scale Facebook Ads.</p>
 
-        <!-- Email Collection Form after Introduction -->
-        <section id="download" class="card" style="margin-top:14px">
-          <h3 style="margin:0 0 8px 0">Download: Free Meta Ads Checklist</h3>
-          <p class="muted" style="margin:0 0 12px 0">Get a printable checklist and campaign setup template to implement the strategies in this guide.</p>
-          <form action="#" method="post" onsubmit="event.preventDefault();alert('Thanks! The guide will be emailed if this were connected.');" aria-label="Download free guide form">
-            <div class="field">
-              <label class="muted" for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" required>
-            </div>
-            <div class="field">
-              <label class="muted" for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            </div>
-            <button class="btn" type="submit" aria-label="Download Free Guide">Download Free Guide</button>
-          </form>
-        </section>
+        <h3>Semantic SEO Signals & Keywords</h3>
+        <p>Common search terms for this topic include: how to scale Facebook ads, Facebook ad scaling strategies, scale Facebook advertising, step-by-step guide to scale Facebook ads for e-commerce, and how to scale Facebook ads without killing ROAS. This article uses those terms naturally to help marketers find robust, actionable advice.</p>
 
-        <h2 id="why-meta">Why Meta Ads Matter for Growth</h2>
-        <p>Meta's advertising ecosystem provides robust targeting, creative formats, measurable outcomes and a large audience across demographics and interests. Top ranking keywords such as "Facebook Ads", "Instagram Ads", "Meta Ads targeting strategies" and long-tail keywords like "how to create Meta ads for small businesses" are widely searched because Meta offers advanced tools like the Meta pixel, conversion API, and lookalike audiences that help advertisers track conversions and scale performance marketing campaigns.</p>
+        <h2 id="strategy">Core Scaling Strategies for Facebook Ads</h2>
 
-        <h3>Key benefits</h3>
-        <ul>
-          <li>Scale across both discovery (Instagram Reels, Stories) and intent-driven placements (Feed, Search).</li>
-          <li>Precise audience targeting using first-party data, custom audiences and lookalikes.</li>
-          <li>Robust measurement: ROAS, CPC, CPM, conversion tracking via pixel & server-side events.</li>
-        </ul>
+        <h3>Audience Expansion & Lookalikes</h3>
+        <p>Use lookalike audiences based on high-value customers or pixel events (purchases, add-to-cart). Try layered lookalikes (purchase 180-day, purchase 60-day) and adjust similarity vs. reach to find the sweet spot that preserves conversion rate while improving scale.</p>
 
-        <h2 id="targeting">Targeting Strategies: Audiences & Segmentation</h2>
-        <p>Targeting is the backbone of any successful Meta Ads campaign. Use a layered approach combining demographic filters, interests, behaviors, custom audiences, and lookalike audiences to maximize relevance and reduce wasted ad spend.</p>
+        <h3>Creative Rotation & Fresh Assets</h3>
+        <p>Creative fatigue is one of the fastest causes of rising CPA. Maintain a creative pipeline: test videos, UGC, carousel, and high-performing hero images. When scaling, duplicate winning ad sets and swap in fresh creatives to avoid performance decay.</p>
 
-        <h3>Custom Audiences</h3>
-        <p>Create custom audiences from website visitors, email lists, app users or engagement on Meta properties. Use event-level segmentation (AddToCart, Purchase) to prioritize high-intent users.</p>
+        <div class="card-grid" style="margin-top:12px;">
+          <div class="box">
+            <strong>Pro Tip</strong>
+            <div class="small-muted">Use attribution windows and conversion modeling to ensure your scale decisions are based on accurate conversion data. Consider FB's aggregated event measurement impacts and model accordingly.</div>
+          </div>
+          <div class="box">
+            <strong>Technical Tip</strong>
+            <div class="small-muted">Leverage Campaign Budget Optimization (CBO) once ad sets are validated. Pair CBO with bid controls and conversion optimization for stable scale.</div>
+          </div>
+        </div>
 
-        <h3>Lookalike Audiences</h3>
-        <p>Leverage lookalikes from your best customers to scale. Fine-tune lookalikes by geographic region, percent similarity (1% for tighter matches) and seed audiences to improve conversion rates.</p>
+        <h2 id="how-to">How-to: Step-by-Step Guide to Scale Facebook Ads</h2>
+        <p>This practical section covers step-by-step actions you can apply today to scale Facebook Ads for any vertical — e-commerce, SaaS, or lead gen.</p>
 
-        <figure>
-          <img src="https://picsum.photos/900/420?random=2" alt="Targeting strategies diagram showing custom audiences and lookalike audiences on Meta platforms" loading="lazy">
-          <figcaption class="muted">Example: Combining custom audiences with lookalikes to expand reach while preserving relevance.</figcaption>
-        </figure>
+        <h3>Step 1: Audit Performance & Identify Winners</h3>
+        <ol>
+          <li>Find top-performing campaigns and ad sets with profitable ROAS or acceptable CPA ceilings.</li>
+          <li>Validate performance over a stable period (7–14 days) and exclude statistical flukes.</li>
+        </ol>
 
-        <h3>Behavioral & Interest Targeting</h3>
-        <p>Use interest targeting for awareness campaigns but prefer data-driven audiences for performance ads. Combine demographic splits with device and time-of-day targeting to optimize CPC and conversion windows.</p>
+        <h3>Step 2: Create a Controlled Scaling Plan</h3>
+        <ol>
+          <li>Incremental budget increases: 10–30% per 48–72 hours, monitor CPA and CPM.</li>
+          <li>Duplicate winning ad sets to parallelize learning and avoid fickle algorithmic shifts.</li>
+        </ol>
 
-        <h2 id="creative">Creative & Copy: Best Practices for Meta Ads</h2>
-        <p>Creative is often the biggest lever for improving CTR and ROAS. Test multiple creative types — static images, carousel, short-form video, and Reels — and optimize by engagement metrics and conversion lift.</p>
+        <h3>Step 3: Audience Expansion & Layering</h3>
+        <ol>
+          <li>Introduce lookalikes and interest-expansion groups while preserving top-performing custom audiences for retargeting.</li>
+          <li>Use layering (country > city > demographic) to balance reach and relevance.</li>
+        </ol>
 
-        <h3>Ad Creative Tips</h3>
-        <ul>
-          <li>Hook users in the first 1-3 seconds for video ads.</li>
-          <li>Use clear value propositions and strong CTAs (e.g., "Shop Now", "Get the Guide").</li>
-          <li>Optimize vertical crops for Stories and Reels.</li>
-        </ul>
+        <h3>Step 4: Optimize Creative & Funnel</h3>
+        <ol>
+          <li>Rotate in fresh creatives, test new hooks and CTAs, and monitor frequency and engagement rate.</li>
+          <li>Optimize landing pages and checkout flow to increase conversion rates and support scaled traffic.</li>
+        </ol>
 
-        <h3>Copy & Messaging</h3>
-        <p>Match the ad copy with the landing page messaging to reduce friction. Implement consistent offers, use urgency for promotions, and include social proof where possible.</p>
+        <h3>Step 5: Bid Strategy & Budget Allocation</h3>
+        <ol>
+          <li>Start with bid cap or target ROAS when scaling aggressively; use lowest cost when volume priority.</li>
+          <li>Transition validated ad sets into CBO and let Facebook allocate to highest-performing variations.</li>
+        </ol>
 
-        <figure>
-          <img src="https://picsum.photos/900/500?random=3" alt="Creative examples for Meta Ads including video, carousel, and image ads" loading="lazy">
-          <figcaption class="muted">Creative examples: test formats, messaging, and CTAs to identify top performers.</figcaption>
-        </figure>
+        <h2 id="examples">Examples: Real-World Facebook Ads Scaling Case Studies</h2>
 
-        <h2 id="budgeting">Budgeting, Bidding & Auction Mechanics</h2>
-        <p>Understand Meta's auction: your bid, estimated action rates and ad quality determine cost. Use campaign budget optimization (CBO) and set sensible lifetime or daily budgets based on target CPA and expected CPM.</p>
+        <h3>Case Study: D2C Apparel Brand</h3>
+        <p>Initial setup: $2,500/week, dynamic product ads, 2.8x ROAS. Scaling plan: duplicate 3 top ad sets, introduce 3 lookalike tiers (1%, 2–3%, 5%), add UGC video creatives, ramp budgets +20% every 3 days. Result: 3x spend, 3.1x ROAS within 6 weeks. Key success factor: creative pipeline and funnel optimization reduced CPAs even as spend increased.</p>
 
-        <h3>Bidding Strategies</h3>
-        <p>Start with lowest-cost or lowest-cost-with-cap for prospecting. Use manual bid caps for tight control during scaling or performance plateaus. Monitor CPM, CPC and cost-per-result to make informed adjustments.</p>
+        <img class="article-img" src="https://picsum.photos/1200/600?random=2" alt="E-commerce Facebook Ads Scaling Example with Lookalike Audiences" loading="lazy">
 
-        <h3>Budget Allocation</h3>
-        <p>Split budgets across funnel stages: awareness (10-20%), consideration (30-40%), conversion (40-60%). Increase budget on winning ad sets gradually (20-30% increments) to keep delivery stable.</p>
+        <h3>Case Study: SaaS Lead Gen</h3>
+        <p>Initial setup: $1,200/month, conversion-focused lead ads, $65 CPA. Scaling plan: A/B test lead form vs. landing page, migrate winning ad sets into CBO, expand to similar audiences and in-market segments, increase bids during peak times. Result: CPA dropped to $48 while tripling lead volume over 10 weeks. Key tactic: optimizing ad-to-landing page congruence and time-based bidding.</p>
 
-        <div class="cta" role="region" aria-label="Mid article call to action">
-          <div class="left">
-            <strong style="font-size:18px">Ready to boost ROAS with a tested Meta Ads framework?</strong>
-            <p class="muted" style="margin:6px 0 0 0">Sign up for the weekly playbook to get creative templates, bidding rules and scaling checklists.</p>
+        <img class="article-img" src="https://picsum.photos/1200/600?random=3" alt="SaaS Facebook Ads Scaling Example lowering CPA" loading="lazy">
+
+        <div class="cta-mid" role="region" aria-label="Scale Facebook Ads CTA">
+          <div>
+            <h3>Ready to scale without sacrificing profitability?</h3>
+            <p class="small-muted">Get our 12-step scaling checklist and creative swipe file to accelerate your campaigns.</p>
           </div>
           <div>
-            <a class="btn" href="#newsletter">Sign Up</a>
+            <a class="cta-btn" href="#newsletter">Get the Checklist</a>
           </div>
         </div>
 
-        <h2 id="measurement">Measurement & Optimization: Tracking What Matters</h2>
-        <p>Accurate measurement is essential for optimization. Use the Meta pixel with the Conversions API for resilient tracking. Define primary and secondary metrics: purchases (ROAS), cost-per-purchase (CPA), click-through rate (CTR), and incremental lift.</p>
+        <h2 id="mistakes">Common Mistakes When Scaling Facebook Ads</h2>
 
-        <h3>Key Performance Indicators (KPIs)</h3>
-        <ul>
-          <li>ROAS (Return on Ad Spend)</li>
-          <li>CPA / Cost per Lead</li>
-          <li>CTR & Engagement Rates</li>
-          <li>Quality Scores and Relevance Diagnostics</li>
-        </ul>
+        <h3>1. Scaling Too Quickly</h3>
+        <p>Rapid budget jumps can confuse the learning phase and spike CPAs. Use measured increments and monitor key signals — CPA, conversion rate, and CTR.</p>
 
-        <h3>Optimization Process</h3>
-        <p>Implement an iterative testing process: hypothesis → test → analyze → scale. Track results with UTM parameters and link ad sets to analytics dashboards to measure full-funnel performance.</p>
+        <h3>2. Ignoring Creative Fatigue</h3>
+        <p>High frequency with the same creative reduces engagement and increases CPM. Refresh creatives regularly and test different formats (short-form video, carousel, static image).</p>
 
-        <h2 id="how-to">How-to: Create a High-Performing Meta Ad (Step-by-Step)</h2>
-        <p>This how-to section walks through campaign setup using semantic terms and long-tail keywords like "how to create Meta ads for ecommerce" and "Meta Ads step-by-step campaign setup".</p>
+        <h3>3. Over-Reliance on a Single Audience</h3>
+        <p>Diversify audiences: combine pixel-based retargeting, email lists, and lookalikes. If one audience dries up, others should carry the scale.</p>
 
-        <h3>Step 1: Define Business Objective</h3>
-        <p>Select an objective aligned to a measurable outcome: Conversions, Traffic, Lead Generation, or Video Views. For ecommerce, choose Conversions and set the conversion event to Purchase.</p>
+        <h3>4. Not Monitoring Pixel & Attribution</h3>
+        <p>Attribution changes can hide true performance. Keep an eye on Facebook Pixel health, event deduplication, and conversions API to maintain clean data for scaling decisions.</p>
 
-        <h3>Step 2: Audience & Campaign Structure</h3>
-        <p>Create separate campaigns for prospecting and retargeting. Within each campaign use 3-5 ad sets to test different audiences: seed customers, lookalikes, and interest clusters.</p>
-
-        <h3>Step 3: Install Tracking</h3>
-        <p>Install the Meta pixel, configure standard events, and enable Conversions API to improve event matching and reduce data loss from browser restrictions.</p>
-
-        <h3>Step 4: Creative & Copy</h3>
-        <p>Develop 3-6 creatives per ad set. Rotate video, carousel, and static ads. Use dynamic creative for automatic asset combination testing when appropriate.</p>
-
-        <h3>Step 5: Launch & Monitor</h3>
-        <p>Launch with modest budgets, monitor key metrics after 24-72 hours, and avoid early changes that interrupt learning. Use statistical significance as a guide.</p>
-
-        <h2 id="examples">Examples: Campaign Structures & Creative Use Cases</h2>
-        <p>Below are practical examples to help you replicate successful structures depending on objectives and industry.</p>
-
-        <h3>Ecommerce Example</h3>
-        <p>Campaign: Conversions (Purchase)</p>
-        <ul>
-          <li>Ad Set A: Prospecting - 1% Lookalike of purchasers, interest filter: fashion</li>
-          <li>Ad Set B: Retargeting - 7-day add-to-cart, dynamic product ads with catalog</li>
-          <li>Creative: Product video, 30s demo, carousel of top sellers</li>
-        </ul>
-
-        <h3>SaaS / Lead Gen Example</h3>
-        <p>Campaign: Lead Generation or Traffic → Landing Page</p>
-        <ul>
-          <li>Ad Set: Interest and job title targeting with custom audiences of webinar attendees</li>
-          <li>Creative: Explainer video + testimonial carousel</li>
-          <li>Measurement: Cost per Lead, MQL-to-SQL conversion</li>
-        </ul>
-
-        <figure>
-          <img src="https://picsum.photos/900/480?random=4" alt="Example Meta Ads campaign structure visualization for ecommerce and SaaS" loading="lazy">
-          <figcaption class="muted">Example campaign structures for ecommerce and SaaS with recommended ad formats.</figcaption>
-        </figure>
-
-        <h2 id="mistakes">Common Mistakes to Avoid with Meta Ads</h2>
-        <p>Performance marketing requires discipline. Avoid these frequent errors that inflate CPC, reduce ROAS and make scaling harder.</p>
-
-        <h3>Poor Audience Segmentation</h3>
-        <p>Using overly broad or overlapping audiences creates competition and higher CPM. Separate audiences by funnel stage and avoid overlap by excluding lower-funnel segments from prospecting sets.</p>
-
-        <h3>Changing Variables Too Early</h3>
-        <p>Significant changes within the learning phase (first 50-100 conversions per ad set) reset optimization. Wait for initial performance signals before making large edits.</p>
-
-        <h3>Ignoring Creative Fatigue</h3>
-        <p>High frequency often leads to ad fatigue and declining CTR. Refresh creatives regularly and rotate messages to maintain performance.</p>
-
-        <h2 id="newsletter">Newsletter: Weekly Meta Ads Playbook</h2>
-        <div class="card" id="newsletter">
-          <p class="muted">Subscribe to receive weekly frameworks, creative templates, case studies and exclusive scaling checklists delivered to your inbox.</p>
-          <form onsubmit="event.preventDefault();alert('Thanks for subscribing to the newsletter (demo).');" class="newsletter" aria-label="Newsletter signup">
-            <input type="email" placeholder="you@company.com" required>
-            <button class="btn" type="submit">Subscribe</button>
+        <h2 id="newsletter">Newsletter & Resources</h2>
+        <div class="newsletter" id="newsletter">
+          <div style="flex:1;">
+            <strong>Join 25,000+ marketers</strong>
+            <div class="small-muted" style="margin-top:6px;">Weekly insights on Facebook Ads scaling, creative frameworks, and conversion optimization.</div>
+          </div>
+          <form action="#" method="post" style="display:flex;gap:8px;align-items:center;">
+            <input type="email" name="newsletter_email" placeholder="you@company.com" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text);" required>
+            <button class="btn-primary" type="submit">Subscribe</button>
           </form>
         </div>
 
-        <h2 id="faq">FAQ — Meta Ads Questions Answered</h2>
-        <div class="card">
-          <h3>How long does it take to see results from Meta Ads?</h3>
-          <p class="muted">Initial performance signals are available within 24-72 hours, but reliable results and stable optimization typically require at least 2-4 weeks depending on conversion volume.</p>
+        <h2 id="faq">FAQ — Scaling Facebook Ads (Common Questions)</h2>
 
-          <h3>Can small businesses afford Meta Ads?</h3>
-          <p class="muted">Yes. Start with low daily budgets and focus on high-intent audiences and retention. Use narrow tests to find winning creatives before scaling spend.</p>
+        <div class="faq">
+          <h3>How fast should I increase budgets when scaling?</h3>
+          <p class="small-muted">Increase budgets 10–30% every 2–3 days and observe CPA stability. If CPA spikes, revert and test a smaller increment.</p>
 
-          <h3>What is the Meta pixel and why is it important?</h3>
-          <p class="muted">The Meta pixel is a piece of code that tracks website actions and conversions. It enables event-based optimization, audience creation, and accurate ROAS measurement.</p>
+          <h3>When should I use CBO for scaling?</h3>
+          <p class="small-muted">Use CBO once you have several validated ad sets with stable performance. CBO can improve efficiency across multiple ad sets by allocating spend dynamically.</p>
+
+          <h3>What creatives outperform when scaling?</h3>
+          <p class="small-muted">Short-form video, UGC, and carousel ads often scale well. Prioritize creatives that drive high engagement and clear calls-to-action aligned to your funnel stage.</p>
         </div>
 
-        <h2 id="conclusion">Conclusion: Next Steps to Master Meta Ads</h2>
-        <p>Implement a structured approach: define objectives, build segmented audiences, test creatives, measure with the Meta pixel & Conversions API, and scale cautiously. Use data-driven decision making to improve ROAS, reduce CPA and optimize CPM. With the strategies in this Meta Ads Guide — from targeting to creative and measurement — you’ll be equipped to launch high-performing campaigns that scale sustainably.</p>
+        <h2 id="conclusion">Conclusion</h2>
+        <p>Scaling Facebook Ads is an art and a science. It requires disciplined testing, creative velocity, audience diversification, and careful budget management. Use this guide as a playbook: audit, validate, incrementally scale, and always prioritize ROAS and unit economics. With a repeatable process, you can grow ad spend sustainably and unlock predictable customer acquisition at scale.</p>
 
         <!-- CTA after conclusion -->
-        <div class="card" style="margin-top:14px;display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <strong>Get the Complete Meta Ads Playbook</strong>
-            <p class="muted" style="margin:6px 0 0 0">Download templates, bidding rules, and a 30-day testing calendar.</p>
-          </div>
-          <div>
-            <a class="btn" href="#download">Download Now</a>
-          </div>
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center;">
+          <a class="cta-btn" href="#newsletter">Download the Scaling Checklist</a>
+          <a class="internal-link" href="/articles/facebook-ads-testing-framework" style="margin-left:8px;">Read our Testing Framework →</a>
         </div>
 
-        <h2>Related Articles</h2>
-        <div class="related card">
-          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify — Optimize Store ROAS</a>
-          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework — Systematic A/B Tests</a>
-          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads — From $100 to $10k/day</a>
-          <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide — Recover Lost Conversions</a>
-        </div>
+      </section>
 
-      </div>
-
-      <aside class="sidebar">
-        <div class="card" style="margin-bottom:14px">
-          <strong>Quick Checklist</strong>
-          <ul style="margin-top:8px;color:var(--muted)">
-            <li>Install Meta pixel & CAPI</li>
-            <li>Segment audiences by funnel</li>
-            <li>Test 3 creatives per ad set</li>
-            <li>Monitor ROAS and CPA daily</li>
-            <li>Scale winners gradually</li>
+      <aside aria-label="Related articles" style="align-self:start;">
+        <div class="related">
+          <h3 style="margin:0 0 8px 0;">Related Articles</h3>
+          <ul style="list-style:none;padding:0;margin:0;">
+            <li style="margin:8px 0;"><a href="/articles/facebook-ads-for-shopify" class="internal-link">Facebook Ads for Shopify — Boost e-commerce ROAS</a></li>
+            <li style="margin:8px 0;"><a href="/articles/facebook-ads-testing-framework" class="internal-link">Facebook Ads Testing Framework — Optimize Creatives</a></li>
+            <li style="margin:8px 0;"><a href="/articles/how-to-scale-facebook-ads" class="internal-link">How to Scale Facebook Ads — (This Page)</a></li>
+            <li style="margin:8px 0;"><a href="/articles/facebook-retargeting-guide" class="internal-link">Facebook Retargeting Guide — Lower CPA</a></li>
           </ul>
-        </div>
 
-        <div class="card">
-          <strong>Resources</strong>
-          <p class="muted" style="margin:8px 0 0 0">Free templates, ad copy swipe files, and creative specs for Meta Ads.</p>
-          <a class="btn" href="#download" style="margin-top:12px;display:inline-block">Get Templates</a>
+          <div style="margin-top:12px;">
+            <h4 style="margin:0 0 6px 0;">Quick Resources</h4>
+            <a href="#" class="small-muted" style="text-decoration:none;color:var(--muted);">Creative Brief Template</a><br>
+            <a href="#" class="small-muted" style="text-decoration:none;color:var(--muted);">Conversion Rate Optimization Checklist</a>
+          </div>
+
+          <img src="https://picsum.photos/800/600?random=4" alt="Scaling Facebook Ads Internal Resource Visual" loading="lazy" style="margin-top:12px;width:100%;border-radius:8px;">
         </div>
       </aside>
     </article>
 
-    <footer>
-      <div class="footer-inner">
-        <div>
-          <div style="font-weight:800">Meta Ads Mastery</div>
-          <div class="small">Helping marketers scale paid media with evidence-based tactics.</div>
-        </div>
-        <div class="small">© 2026 Example Marketing · <a href="/privacy" style="color:var(--muted);text-decoration:none">Privacy</a> · <a href="/terms" style="color:var(--muted);text-decoration:none">Terms</a></div>
-      </div>
-    </footer>
   </main>
 
-  <!-- Minimal inline script for accessibility of form placeholders (no heavy JS) -->
-  <script>
-    // No external tracking. Simple progressive enhancement for email alerts on demo forms.
-    (function(){ /* placeholder for lightweight analytics if enabled later */ })();
-  </script>
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div style="font-weight:800;color:var(--text);">Facebook Ads Mastery</div>
+        <div style="font-size:13px;color:var(--muted);margin-top:6px;">Premium guides, templates, and strategies for scaling Facebook advertising.</div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;">
+        <a href="/articles/facebook-ads-for-shopify" class="small-muted">Shopify Ads</a>
+        <a href="/articles/facebook-ads-testing-framework" class="small-muted">Testing</a>
+        <a href="/articles/facebook-retargeting-guide" class="small-muted">Retargeting</a>
+        <a href="/articles/how-to-scale-facebook-ads" class="small-muted">Scaling</a>
+      </div>
+      <div style="text-align:right;">
+        <div class="small-muted">© 2026 Example Marketing</div>
+        <div style="margin-top:6px;"><a href="#" class="small-muted">Privacy</a> · <a href="#" class="small-muted">Terms</a></div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
