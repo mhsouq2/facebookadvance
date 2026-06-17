@@ -3,474 +3,538 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Facebook Ads Metrics: The Complete Guide to Measure & Optimize Ad Performance</title>
-  <meta name="description" content="Master Facebook Ads metrics: CTR, CPA, ROAS, conversion rate, impressions, reach, frequency and more. Learn how to analyze Facebook ad performance and optimize campaigns with actionable examples and common mistakes to avoid.">
-  <link rel="canonical" href="https://example.com/articles/facebook-ads-metrics">
-  <meta name="robots" content="index,follow">
-
+  <title>Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization</title>
+  <meta name="description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples, how-to steps, and common mistakes.">
+  <link rel="canonical" href="https://www.example.com/facebook-ads-metrics">
   <!-- Open Graph -->
-  <meta property="og:site_name" content="Facebook Ads Mastery">
-  <meta property="og:title" content="Facebook Ads Metrics: The Complete Guide to Measure & Optimize Ad Performance">
-  <meta property="og:description" content="Master Facebook Ads metrics: CTR, CPA, ROAS, conversion rate, impressions, reach, frequency and more. Learn how to analyze Facebook ad performance and optimize campaigns with actionable examples and common mistakes to avoid.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://example.com/articles/facebook-ads-metrics">
+  <meta property="og:title" content="Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization">
+  <meta property="og:description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples and actionable steps.">
   <meta property="og:image" content="https://picsum.photos/1200/630?random=1">
-
+  <meta property="og:url" content="https://www.example.com/facebook-ads-metrics">
+  <meta property="og:type" content="article">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Facebook Ads Metrics: The Complete Guide to Measure & Optimize Ad Performance">
-  <meta name="twitter:description" content="Master Facebook Ads metrics: CTR, CPA, ROAS, conversion rate, impressions, reach, frequency and more. Learn how to analyze Facebook ad performance and optimize campaigns with actionable examples and common mistakes to avoid.">
-  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=2">
-
+  <meta name="twitter:title" content="Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization">
+  <meta name="twitter:description" content="Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples and actionable steps.">
+  <meta name="twitter:image" content="https://picsum.photos/1200/630?random=1">
+  <meta name="author" content="Facebook Ads Mastery">
   <style>
     :root{
       --bg:#0f1720;
-      --card:#12171d;
-      --muted:#9aa6b2;
+      --card:#0b1116;
+      --muted:#98a0ab;
       --accent:#1877f2;
-      --accent-2:#00bfa5;
-      --glass: rgba(255,255,255,0.03);
-      --maxw:1100px;
+      --accent-2:#00c853;
+      --glass:rgba(255,255,255,0.03);
+      --max-width:1100px;
       --radius:12px;
-      --text:#e6eef8;
-      --white:#ffffff;
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
+      --shadow: 0 6px 18px rgba(2,6,23,0.7);
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg, #07101a 0%, #0a1620 100%);
-      color:var(--text);
+      padding:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(24,119,242,0.06), transparent 10%),
+        radial-gradient(900px 400px at 90% 90%, rgba(0,200,83,0.03), transparent 10%),
+        var(--bg);
+      color:#e6eef8;
       -webkit-font-smoothing:antialiased;
       -moz-osx-font-smoothing:grayscale;
       line-height:1.6;
       padding-bottom:80px;
     }
-
-    header.site-header{
-      position:sticky; top:0; z-index:40;
-      backdrop-filter: blur(6px);
-      background:linear-gradient(180deg, rgba(5,10,15,0.6), rgba(5,10,15,0.45));
-      border-bottom:1px solid rgba(255,255,255,0.02);
+    header{
+      position:sticky;
+      top:0;
+      z-index:60;
+      backdrop-filter:blur(6px);
+      background:linear-gradient(180deg, rgba(11,17,22,0.6), rgba(11,17,22,0.35));
+      border-bottom:1px solid rgba(255,255,255,0.03);
     }
-
-    .nav{
-      max-width:var(--maxw);
+    .container{
+      max-width:var(--max-width);
       margin:0 auto;
-      display:flex; align-items:center; justify-content:space-between;
-      padding:18px 20px;
+      padding:20px;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
     .brand{
-      display:flex; align-items:center; gap:12px; color:var(--white); text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
     }
-    .brand .logo{
-      width:42px; height:42px; border-radius:8px;
-      background:linear-gradient(135deg,var(--accent),#2b8af6);
-      display:flex; align-items:center; justify-content:center; font-weight:700;
-      box-shadow: var(--shadow);
+    .logo{
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#0058d6);
+      display:inline-flex;align-items:center;justify-content:center;
+      box-shadow:var(--shadow);
+      font-weight:700;
+      font-size:18px;color:white;
     }
-    nav.main-nav{display:flex; gap:18px; align-items:center;}
-    nav.main-nav a{color:var(--muted); text-decoration:none; font-weight:600; font-size:15px;}
-    nav.main-nav a:hover{color:var(--white)}
-
-    .container{
-      max-width:var(--maxw);
-      margin:28px auto;
-      padding:28px 20px;
-    }
-
+    nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px}
+    nav a.primary{background:linear-gradient(90deg,var(--accent),#0058d6);padding:8px 14px;border-radius:10px;color:white}
     .hero{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      padding:28px 0;
+    }
+    main{
+      max-width:var(--max-width);
+      margin:20px auto;
+      padding:22px;
+    }
+    .card{
       background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
       border-radius:var(--radius);
-      padding:28px;
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:18px;
+      padding:20px;
+      box-shadow:var(--shadow);
     }
-
-    .meta{
-      display:flex; gap:10px; align-items:center; color:var(--muted); font-size:13px;
-    }
-
-    h1{
-      margin:0; font-size:28px; color:var(--white);
-      letter-spacing:-0.2px;
-    }
-
+    h1{font-size:28px;margin:8px 0;color:#fff}
+    .lede{color:var(--muted);font-size:16px;margin-bottom:12px}
+    .toc{display:flex;flex-direction:column;gap:8px;padding:12px;background:var(--glass);border-radius:10px}
+    .toc a{color:var(--accent);text-decoration:none;font-weight:600}
     .featured{
-      width:100%; display:block; border-radius:10px; overflow:hidden; margin-top:12px; border:1px solid rgba(255,255,255,0.03);
+      width:100%;
+      border-radius:10px;
+      overflow:hidden;
+      margin:12px 0;
+      border:1px solid rgba(255,255,255,0.04);
     }
-
-    .content{
+    img{display:block;max-width:100%;height:auto}
+    /* layout */
+    .content-grid{
       display:grid;
-      grid-template-columns: 1fr 340px;
-      gap:24px;
+      grid-template-columns:1fr 320px;
+      gap:22px;
       margin-top:18px;
     }
-
-    .article{
-      background:transparent;
+    article{min-width:0}
+    aside{
+      position:sticky;
+      top:88px;
+      align-self:start;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
     }
-
-    .toc{
-      background:var(--card);
-      padding:14px;
-      border-radius:10px;
-      color:var(--muted);
-      font-size:14px;
-      border:1px solid rgba(255,255,255,0.02);
+    .metric-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
     }
-    .toc a{color:var(--muted); text-decoration:none; display:block; padding:6px 0;}
-    .toc a:hover{color:var(--white)}
-
-    h2{
-      color:var(--white); margin-top:28px; margin-bottom:12px; font-size:20px;
+    .metric{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+      padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.03);
     }
-    h3{color:var(--white); margin-top:14px; margin-bottom:8px; font-size:16px;}
-    p{color:var(--muted); margin:0 0 12px 0; font-size:15px}
-
-    .card{
-      background:var(--card); padding:16px; border-radius:10px; border:1px solid rgba(255,255,255,0.02);
+    .subhead{color:var(--muted);font-weight:700;margin-top:18px}
+    .btn{
+      display:inline-block;padding:12px 18px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#0f66ff);color:white;text-decoration:none;font-weight:700;
+      transition:transform .12s ease;
     }
-
-    .kpi-grid{display:grid; grid-template-columns: repeat(3,1fr); gap:12px; margin-top:12px;}
-    .kpi{background:var(--glass); padding:12px; border-radius:8px; text-align:center;}
-    .kpi h4{margin:0; color:var(--white); font-size:16px}
-    .kpi p{margin:6px 0 0 0; color:var(--muted); font-size:13px}
-
-    .img-block{margin-top:12px; border-radius:10px; overflow:hidden; border:1px solid rgba(255,255,255,0.03)}
-    img{display:block; width:100%; height:auto}
-
-    form.inline-form{display:flex; gap:8px; margin-top:14px;}
-    input[type="text"], input[type="email"]{
-      background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04);
-      color:var(--text); padding:12px 14px; border-radius:8px; outline:none; font-size:14px; width:100%;
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent)}
+    .btn:hover{transform:translateY(-3px)}
+    form .field{display:flex;flex-direction:column;margin-bottom:10px}
+    label{font-size:13px;color:var(--muted);margin-bottom:6px}
+    input[type="text"],input[type="email"]{
+      padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;
     }
-    button.btn{
-      background:linear-gradient(90deg,var(--accent),#3aa0ff); color:var(--white); border:0; padding:12px 16px; border-radius:8px; cursor:pointer; font-weight:700;
-    }
-    button.secondary{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--white)}
-
     .newsletter{
-      background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(0,191,165,0.03)); padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,0.02);
-      display:flex; gap:12px; align-items:center; justify-content:space-between; margin-top:16px;
-      flex-wrap:wrap;
+      display:flex;gap:8px;align-items:center;
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+      padding:12px;border-radius:10px;
     }
-
     .cta{
-      margin:18px 0; padding:18px; border-radius:12px; background:linear-gradient(90deg, rgba(24,119,242,0.12), rgba(0,191,165,0.06)); display:flex; align-items:center; justify-content:space-between;
+      background:linear-gradient(90deg,var(--accent),#00c853);
+      padding:18px;border-radius:12px;color:#021016;margin-top:18px;
+      display:flex;flex-direction:column;gap:12px;
     }
-    .cta p{margin:0; color:var(--white); font-weight:700}
-    .cta .cta-actions{display:flex; gap:8px}
-
-    .related{display:flex; flex-direction:column; gap:10px;}
-    .related a{color:var(--muted); text-decoration:none; padding:8px; border-radius:8px;}
-    .related a:hover{color:var(--white); background:rgba(255,255,255,0.02)}
-
-    footer.site-footer{
-      margin-top:40px; padding:28px 20px; border-top:1px solid rgba(255,255,255,0.02); color:var(--muted);
+    .small{font-size:13px;color:var(--muted)}
+    footer{
+      margin-top:40px;padding:28px 20px;background:transparent;border-top:1px solid rgba(255,255,255,0.03);
     }
-    .footer-grid{max-width:var(--maxw); margin:0 auto; display:flex; gap:18px; justify-content:space-between; align-items:flex-start; flex-wrap:wrap}
-    .footer-links a{display:block; color:var(--muted); text-decoration:none; margin:8px 0; font-size:14px}
-    .small{font-size:13px; color:var(--muted)}
-
-    /* Responsive */
+    .footer-grid{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:flex-start}
+    .links{display:flex;flex-direction:column;gap:8px}
+    .related a{color:var(--accent);text-decoration:none}
+    /* responsive */
     @media (max-width:980px){
-      .content{grid-template-columns:1fr; }
-      .kpi-grid{grid-template-columns:repeat(2,1fr)}
-      .nav{padding:12px}
+      .content-grid{grid-template-columns:1fr}
+      aside{position:static}
+      .nav ul{display:none}
+      .nav .mobile-menu{display:inline-flex}
     }
-    @media (max-width:560px){
+    @media (max-width:520px){
       h1{font-size:22px}
-      .kpi-grid{grid-template-columns:1fr}
-      nav.main-nav{display:none}
-      .hero{padding:18px}
-      .brand .logo{width:36px;height:36px}
     }
   </style>
 </head>
 <body>
-  <header class="site-header" role="banner">
-    <div class="nav">
-      <a class="brand" href="/" aria-label="Facebook Ads Mastery Home">
-        <div class="logo">FA</div>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">
+        <div class="logo">FAM</div>
         <div>
           <div style="font-weight:800">Facebook Ads Mastery</div>
-          <div style="font-size:12px;color:var(--muted)">Performance marketing guides</div>
+          <div style="font-size:12px;color:var(--muted)">Advanced advertising training</div>
         </div>
       </a>
-      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
-        <a href="/courses">Courses</a>
-        <a href="/articles">Articles</a>
-        <a href="/case-studies">Case Studies</a>
-        <a href="/pricing">Pricing</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/articles" class="primary">Articles</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </nav>
-      <div style="display:flex; gap:8px; align-items:center">
-        <a href="/signup" class="secondary btn" style="padding:10px 12px; text-decoration:none">Get Started</a>
-      </div>
     </div>
   </header>
 
-  <main class="container" role="main">
-    <article class="hero" itemscope itemtype="http://schema.org/Article">
-      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:12px; flex-wrap:wrap">
-        <div style="flex:1; min-width:260px">
-          <div class="meta">Updated: <time datetime="2026-06-17">June 17, 2026</time> • 12 min read • <span style="color:var(--accent); font-weight:700; margin-left:8px">Advanced</span></div>
-          <h1 itemprop="headline">Facebook Ads Metrics: How to Measure, Analyze & Optimize Ad Performance</h1>
-
-          <div class="featured img-block" aria-hidden="false">
-            <img src="https://picsum.photos/1200/600?random=3" alt="Facebook Ads metrics dashboard showing CTR, ROAS and CPA" loading="lazy">
-          </div>
-        </div>
-
-        <div style="width:260px; min-width:200px;">
-          <div class="card" style="text-align:center">
-            <div style="font-size:13px; color:var(--muted)">Free resource</div>
-            <div style="font-size:18px; color:var(--white); font-weight:700; margin-top:6px">Facebook Ads Metrics Checklist</div>
-            <p style="margin-top:8px">Download the checklist to track the most important metrics and set benchmarks for your campaigns.</p>
-            <a href="#email-form" class="btn" style="display:inline-block; margin-top:10px; text-decoration:none">Download Free Guide</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="content" style="margin-top:18px">
-        <div class="article" itemprop="articleBody">
-          <p><strong>Understanding the right Facebook Ads metrics is essential to scale profitable campaigns.</strong> Whether you run traffic campaigns, conversion-based funnels, or catalog ads, knowing which KPIs to monitor—CTR, CPA, ROAS, conversion rate, impressions, reach, and frequency—lets you optimize ad creative, targeting, and bidding with confidence.</p>
-
-          <!-- Email collection form after introduction -->
-          <section id="email-form" class="card" aria-labelledby="download-heading" style="margin-top:16px">
-            <h2 id="download-heading">Get the Complete Facebook Ads Metrics Guide (Free)</h2>
-            <p>Enter your name and email to receive a downloadable PDF with benchmarks, a metrics checklist, and optimization playbooks for Facebook ad campaign performance.</p>
-            <form class="inline-form" id="lead-form" action="#" method="post" onsubmit="event.preventDefault();document.getElementById('lead-success').style.display='block';">
-              <input type="text" name="name" placeholder="Your name" aria-label="Your name" required>
-              <input type="email" name="email" placeholder="Email address" aria-label="Email address" required>
-              <button class="btn" type="submit">Download Free Guide</button>
-            </form>
-            <div id="lead-success" style="display:none; margin-top:10px; color:var(--accent); font-weight:700">Thanks! Check your inbox for the guide.</div>
-          </section>
-
-          <!-- Table of Contents -->
-          <nav class="toc card" aria-label="Table of contents" style="margin-top:18px">
-            <strong style="color:var(--white)">Table of Contents</strong>
-            <a href="#why-metrics">Why Facebook Ads Metrics Matter</a>
-            <a href="#key-metrics">Key Facebook Ads Metrics to Track (CTR, CPA, ROAS)</a>
-            <a href="#how-to-analyze">How to Analyze Facebook Ads Metrics</a>
-            <a href="#examples">Examples & Case Studies</a>
-            <a href="#common-mistakes">Common Mistakes When Tracking Metrics</a>
-            <a href="#newsletter">Newsletter & Tools</a>
-            <a href="#faqs">FAQ</a>
-            <a href="#conclusion">Conclusion & Next Steps</a>
-          </nav>
-
-          <!-- Article Sections -->
-          <h2 id="why-metrics">Why Facebook Ads Metrics Matter</h2>
-          <p>Measuring Facebook ad performance is more than checking cost per click. The platform provides a wide set of reporting metrics—impressions, reach, frequency, clicks, CTR, CPC, CPM, conversion rate, CPA, and ROAS—that together paint a clear picture of how users interact with your ads and whether your spend drives profitable outcomes.</p>
-          <h3>Business outcomes vs. platform metrics</h3>
-          <p>Top-of-funnel metrics (impressions, reach, frequency) tell you about awareness and audience saturation. Mid-funnel metrics (CTR, engagement) indicate creative effectiveness. Bottom-of-funnel metrics (conversion rate, CPA, ROAS) reveal profitability. Focus on connecting platform metrics to your business KPIs—revenue, customer acquisition cost, lifetime value.</p>
-
-          <h2 id="key-metrics">Key Facebook Ads Metrics to Track (CTR, CPA, ROAS)</h2>
-          <p>Not all metrics are equal. Prioritize: impressions, reach, frequency, click-through rate (CTR), cost per click (CPC), conversion rate, cost per action (CPA), return on ad spend (ROAS), and ad relevance diagnostics (quality, engagement, conversion rankings).</p>
-
-          <div class="kpi-grid" aria-hidden="false">
-            <div class="kpi card">
-              <h4>CTR (Click-Through Rate)</h4>
-              <p>Measures engagement per impression. Use it to test creatives and copy.</p>
-            </div>
-            <div class="kpi card">
-              <h4>CPA (Cost Per Acquisition)</h4>
-              <p>Shows how much each conversion costs. Critical for CAC calculations.</p>
-            </div>
-            <div class="kpi card">
-              <h4>ROAS (Return on Ad Spend)</h4>
-              <p>Revenue divided by ad spend. Primary profitability metric for ecommerce.</p>
-            </div>
-          </div>
-
-          <h3>Impressions, Reach & Frequency</h3>
-          <p>Impressions = times an ad is shown. Reach = unique people. Frequency = impressions / reach. High frequency with declining CTR signals creative fatigue—time to refresh ads or expand targeting.</p>
-
-          <div class="img-block" style="margin-top:16px">
-            <img src="https://picsum.photos/1000/500?random=4" alt="Facebook Ads reach vs impressions dashboard showing frequency" loading="lazy">
-          </div>
-
-          <h2 id="how-to-analyze">How to Analyze Facebook Ads Metrics (Step-by-step)</h2>
-          <p>Follow a disciplined analysis workflow to transform raw metrics into decisions that improve performance.</p>
-
-          <h3>Step 1 — Define goals and KPI hierarchy</h3>
-          <p>Start with business objectives: revenue growth, lead volume, app installs. Map those goals to KPIs: ROAS for ecommerce, CPA for lead-gen, CPI for apps. Establish acceptable benchmarks and target ranges.</p>
-
-          <h3>Step 2 — Segment data</h3>
-          <p>Break down metrics by audience, placement (Feed, Stories, Reels), creative, device, and time of day. Segmentation reveals winners and losers that aggregate numbers hide.</p>
-
-          <h3>Step 3 — Identify leading indicators</h3>
-          <p>Leading indicators like CTR, add-to-cart rate, or landing page engagement help you predict conversion trends. If CTR dips, conversions will likely decline next—act early by testing new creative.</p>
-
-          <h3>Step 4 — Apply statistical significance and test design</h3>
-          <p>Use A/B testing and ensure tests run long enough to reach statistical confidence. Monitor conversion rate and CPA, not just clicks.</p>
-
-          <div class="img-block" style="margin-top:12px">
-            <img src="https://picsum.photos/1000/420?random=5" alt="Facebook Ads metrics comparison chart for CTR and CPA across creatives" loading="lazy">
-          </div>
-
-          <h2 id="examples">Examples: Real-World Facebook Ads Metrics & Optimization</h2>
-          <p>Here are practical examples and playbooks to optimize metrics across campaign types.</p>
-
-          <h3>Example 1 — Ecommerce: Improve ROAS</h3>
-          <p>Problem: ROAS at 1.8 but target is 3.0. Analysis: High add-to-cart, low checkout conversion; CPA higher on mobile. Actions: optimize checkout flow, add dynamic retargeting, increase bids on top-performing catalog sets, test mobile-specific creative, and use value-based lookalikes. Expected outcome: raise ROAS via higher conversion rate and better audience bidding.</p>
-
-          <h3>Example 2 — Lead Gen: Lower CPA</h3>
-          <p>Problem: CPA trending up. Analysis: CTR declined; ad relevance diagnostics show lower engagement. Actions: refresh creatives, tighten targeting to intent-based audiences, add pre-filled lead forms, and test conversion lift by optimizing landing page load time. Expected outcome: improved CTR and lower CPA.</p>
-
-          <div class="img-block" style="margin-top:12px">
-            <img src="https://picsum.photos/1000/430?random=6" alt="Facebook Ads ad creative comparison showing improved CTR after creative refresh" loading="lazy">
-          </div>
-
-          <h2 id="common-mistakes">Common Mistakes When Tracking Facebook Ads Metrics</h2>
-          <p>Many advertisers misinterpret or misuse metrics, which leads to wrong decisions.</p>
-
-          <h3>Mistake 1 — Focusing only on CTR</h3>
-          <p>CTR alone doesn't equal profitability. High CTR on the wrong audience can increase CPA. Always correlate CTR with conversion rate and ROAS.</p>
-
-          <h3>Mistake 2 — Ignoring attribution windows</h3>
-          <p>Facebook's attribution settings (1-day click, 7-day click, etc.) change reported conversions. Use consistent windows and cross-reference with analytics tools to avoid double-counting.</p>
-
-          <h3>Mistake 3 — Not testing creatives often enough</h3>
-          <p>Creative fatigue increases CPM and lowers CTR. Schedule regular variant tests and rotate assets to sustain engagement.</p>
-
-          <h2 id="mid-cta">Ready to optimize your Facebook ad performance?</h2>
-          <div class="cta card" role="region" aria-label="Optimization call to action">
-            <p>Get a personalized audit of your Facebook Ads account: actionable metric insights and an optimization roadmap.</p>
-            <div class="cta-actions">
-              <a href="/audit" class="btn" style="text-decoration:none">Request Audit</a>
-              <a href="/contact" class="secondary btn" style="text-decoration:none">Contact Us</a>
-            </div>
-          </div>
-
-          <h2 id="newsletter">Newsletter & Tools</h2>
-          <p>Subscribe for weekly breakdowns of top-performing metrics, benchmarks, and new testing frameworks to increase conversion rates and ROAS.</p>
-
-          <section class="newsletter" aria-labelledby="newsletter-heading">
-            <div>
-              <h3 id="newsletter-heading" style="margin:0; color:var(--white)">Join our weekly newsletter</h3>
-              <div class="small">Insights, templates, and playbooks for Facebook ad performance marketers.</div>
-            </div>
-            <form class="inline-form" onsubmit="event.preventDefault();document.getElementById('newsletter-success').style.display='block'">
-              <input type="email" name="news-email" placeholder="Email address" aria-label="Email address" required>
-              <button class="btn" type="submit">Subscribe</button>
-            </form>
-            <div id="newsletter-success" style="display:none; color:var(--accent); font-weight:700; margin-top:8px">You're subscribed — check your inbox!</div>
-          </section>
-
-          <h2 id="faqs">Frequently Asked Questions</h2>
-          <div class="card" style="margin-top:12px">
-            <h3>Which Facebook Ads metric is most important?</h3>
-            <p>It depends on your objective. For ecommerce, ROAS and CPA are critical. For awareness, impressions and reach matter. Always tie platform metrics to business objectives.</p>
-
-            <h3>How often should I check metrics?</h3>
-            <p>Daily checks for pacing and anomalies; weekly for optimization and budgeting; monthly for strategic trends and scale decisions.</p>
-
-            <h3>What is a good CTR on Facebook?</h3>
-            <p>Benchmarks vary by industry and placement. A CTR between 0.5%–1.5% can be acceptable for many industries; higher is better—aim to improve CTR for better CPC and conversion opportunities.</p>
-          </div>
-
-          <h2 id="conclusion">Conclusion & Next Steps</h2>
-          <p>Facebook Ads metrics provide a roadmap to improve creative, audience, and bidding strategies. Track a balanced set of KPIs—impressions, reach, frequency, CTR, CPC, conversion rate, CPA, and ROAS—then segment, test, and iterate. Avoid common mistakes like overvaluing CTR or ignoring attribution. Use the checklist and guide you downloaded to set benchmarks and scale winning campaigns.</p>
-
-          <div class="cta card" style="margin-top:12px">
-            <p>Want hands-on help optimizing your metrics and scaling campaigns profitably?</p>
-            <div style="display:flex; gap:10px; margin-top:8px">
-              <a href="/articles/facebook-ads-testing-framework" class="btn" style="text-decoration:none">Get the Testing Framework</a>
-              <a href="/how-to-scale-facebook-ads" class="secondary btn" style="text-decoration:none">Learn to Scale</a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Sidebar -->
-        <aside style="min-width:240px">
-          <div class="card">
-            <strong style="color:var(--white)">Quick Metrics Checklist</strong>
-            <ul style="padding-left:18px; margin-top:8px; color:var(--muted)">
-              <li>Define primary KPI (ROAS/CPA)</li>
-              <li>Track CTR, CPC, CPM</li>
-              <li>Monitor conversion rate & funnel drop-off</li>
-              <li>Watch frequency & creative fatigue</li>
-              <li>Set attribution window & be consistent</li>
-            </ul>
-          </div>
-
-          <div class="card" style="margin-top:12px">
-            <strong style="color:var(--white)">Related Articles</strong>
-            <div class="related" style="margin-top:8px">
-              <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify — Optimizing for ROAS</a>
-              <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework — A/B Tests That Work</a>
-              <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads Without Sacrificing ROAS</a>
-              <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide — Recover Lost Conversions</a>
-            </div>
-          </div>
-
-          <div class="card" style="margin-top:12px">
-            <strong style="color:var(--white)">Tools & Resources</strong>
-            <p class="small" style="margin-top:8px">Pixel Helper, Facebook Analytics, GA4, custom reporting templates, and benchmarking spreadsheets to help you measure faster.</p>
-          </div>
-
-        </aside>
-      </div>
-    </article>
-  </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div class="footer-grid">
+  <main class="container">
+    <div class="hero card">
       <div>
-        <div style="display:flex; gap:12px; align-items:center">
-          <div class="logo" style="width:46px;height:46px;border-radius:10px;font-weight:800;background:linear-gradient(135deg,var(--accent),#2b8af6);display:flex;align-items:center;justify-content:center">FA</div>
-          <div>
-            <div style="color:var(--white); font-weight:700">Facebook Ads Mastery</div>
-            <div class="small">Premium guides for performance marketers</div>
-          </div>
+        <h1>Facebook Ads Metrics: How to Measure, Analyze & Improve Campaign Performance</h1>
+        <p class="lede">A practical, SEO-optimized reference to the most important Facebook Ads KPIs — CTR, CPC, CPM, CPA, ROAS, conversion rate — and how to use them to improve ad performance, scale campaigns, and drive revenue.</p>
+        <div class="featured">
+          <img src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Metrics Overview Dashboard with CTR CPC ROAS" loading="lazy">
         </div>
       </div>
-      <div class="footer-links">
-        <a href="/articles">All Articles</a>
-        <a href="/courses">Courses</a>
-        <a href="/case-studies">Case Studies</a>
-        <a href="/contact">Contact</a>
-      </div>
-      <div style="min-width:220px;">
-        <div class="small">Subscribe for updates</div>
-        <form class="inline-form" onsubmit="event.preventDefault();alert('Subscribed!')">
-          <input type="email" placeholder="Enter your email" aria-label="Footer email" required>
-          <button class="btn" type="submit">Subscribe</button>
-        </form>
+      <div class="toc card" aria-label="Table of contents">
+        <strong style="color:#fff">Table of Contents</strong>
+        <a href="#introduction">Introduction</a>
+        <a href="#key-metrics">Key Facebook Ads Metrics (CTR, CPC, CPM, CPA, ROAS)</a>
+        <a href="#how-to-track">How to Track Facebook Ads Metrics</a>
+        <a href="#examples">Examples & Case Studies</a>
+        <a href="#common-mistakes">Common Mistakes to Avoid</a>
+        <a href="#how-to-improve">How to Improve Facebook Ad Performance</a>
+        <a href="#newsletter">Newsletter & Free Guide</a>
+        <a href="#faq">FAQ</a>
+        <a href="#conclusion">Conclusion</a>
       </div>
     </div>
-    <div style="max-width:var(--maxw); margin:18px auto 0; color:var(--muted); font-size:13px">
-      <div>© 2026 Facebook Ads Mastery. All rights reserved.</div>
+
+    <!-- Email collection form after introduction -->
+    <section id="introduction" class="card" style="margin-top:18px">
+      <h2>Introduction</h2>
+      <p class="small">Understanding your Facebook Ads metrics is essential for profitable advertising. Whether you're running campaigns for e-commerce, lead generation, or brand awareness, metrics like CTR, CPC, CPM, CPA, and ROAS are the language that tells you whether your strategy is working. This guide covers each key metric, long-tail strategies for tracking and reporting, and step-by-step instructions to improve campaign performance.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:14px">
+        <div style="flex:1;min-width:280px">
+          <img src="https://picsum.photos/800/420?random=2" alt="Facebook Ads reporting dashboard and metrics display" loading="lazy" style="border-radius:10px">
+        </div>
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">Sign up to download our free "Facebook Ads Metrics Checklist"—a printable reference that helps you monitor the KPIs that matter. The guide includes recommended reporting templates and the most important segments to check every week.</p>
+          <form id="download-form" class="card" style="margin-top:10px" aria-label="Download free guide">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+            <button class="btn" type="submit">Download Free Guide</button>
+            <p class="small" style="margin-top:8px">You'll also receive occasional tips on improving Facebook advertising performance. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <div class="content-grid">
+      <article>
+        <section id="key-metrics" class="card" style="margin-top:18px">
+          <h2>Key Facebook Ads Metrics You Must Track</h2>
+          <p>Below are the primary metrics used to evaluate campaign performance and optimize for conversions and return on ad spend (ROAS). These are the KPIs every marketer should check daily, weekly, and monthly.</p>
+
+          <div class="metric-grid" style="margin-top:12px">
+            <div class="metric">
+              <h3>CTR (Click-Through Rate)</h3>
+              <p class="small">CTR measures how many people click your ad after seeing it. A higher CTR generally indicates more relevant creative or targeting. Industry benchmarks vary by objective and placement.</p>
+              <p class="subhead">SEO & semantic terms: relevance score, ad creative, engagement rate</p>
+            </div>
+            <div class="metric">
+              <h3>CPC (Cost Per Click)</h3>
+              <p class="small">CPC tells you the average cost for each click. Lower CPCs are better but must be considered alongside conversion rate — a cheap click isn't useful if it never converts.</p>
+            </div>
+            <div class="metric">
+              <h3>CPM (Cost Per Mille / 1,000 Impressions)</h3>
+              <p class="small">CPM helps you understand how expensive it is to reach your audience. CPM is critical for awareness and reach campaigns where impressions are the main objective.</p>
+            </div>
+            <div class="metric">
+              <h3>CPA (Cost Per Action / Conversion)</h3>
+              <p class="small">CPA measures how much you're paying for a lead, sale, or other conversion. This is central for performance marketing and should align with your customer lifetime value (LTV).</p>
+            </div>
+            <div class="metric" style="grid-column:1/3">
+              <h3>ROAS (Return on Ad Spend)</h3>
+              <p class="small">ROAS is revenue divided by ad spend. A ROAS above 3x is often a good target for e-commerce, but ideal ROAS depends on margins, CAC, and business goals.</p>
+              <p class="subhead">Related terms: LTV, ROI, revenue per acquisition</p>
+            </div>
+          </div>
+          <p style="margin-top:12px" class="small">Other essential metrics: conversion rate, frequency, reach, impressions, purchase value, attribution window, pixel events, and Cost Per Install for app campaigns.</p>
+        </section>
+
+        <section id="how-to-track" class="card" style="margin-top:18px">
+          <h2>How to Track Facebook Ads Metrics: Step-by-Step</h2>
+          <p>Use this practical checklist for accurate tracking and reporting. Follow these steps to set a reliable tracking infrastructure and align your reporting with business outcomes.</p>
+
+          <h3>1. Install and verify the Facebook Pixel</h3>
+          <p class="small">The pixel is the foundation for conversion tracking and event measurement. Install it on your website and verify key events like ViewContent, AddToCart, and Purchase. Use the Meta Pixel Helper extension to validate signals.</p>
+
+          <h3>2. Configure events and custom conversions</h3>
+          <p class="small">Set up standard events and custom conversions in Events Manager. Map events to your purchase funnel to calculate accurate CPA and ROAS. Use server-side events (CAPI) to improve attribution and match rates.</p>
+
+          <h3>3. Define attribution windows and compare</h3>
+          <p class="small">Select appropriate attribution windows (1-day click, 7-day click, 1-day view, etc.). Compare results across windows to understand delayed conversions and multi-touch journeys.</p>
+
+          <h3>4. Build dashboards and automate reports</h3>
+          <p class="small">Use Facebook Ads Manager, Looker Studio, or a BI tool to create dashboards that surface CTR, CPC, CPA, ROAS, and conversion rate segmented by audience, placement, creative, and device.</p>
+
+          <h3>5. Use UTM parameters and analytics platforms</h3>
+          <p class="small">Tag all ad URLs with UTM parameters to trace campaign sources and mediums in Google Analytics. Reconcile discrepancies between platforms with a cross-channel attribution model when necessary.</p>
+
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/1000/500?random=3" alt="Step by step Facebook Ads Pixel installation and event setup" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
+
+        <section id="examples" class="card" style="margin-top:18px">
+          <h2>Examples & Case Studies: Metrics in Real Campaigns</h2>
+          <p>Practical examples show how top metrics inform decisions. Here are three short case studies demonstrating analysis and optimization.</p>
+
+          <h3>Example 1 — E-commerce: Increasing ROAS</h3>
+          <p class="small">A clothing store saw a 0.8% conversion rate and ROAS of 1.6. By improving ad creative, refining audiences, and implementing dynamic product ads, conversion rate rose to 1.9% and ROAS improved to 3.4x. Key metrics tracked: CPC, conversion rate, and purchase value.</p>
+
+          <h3>Example 2 — Lead Gen: Lowering CPA</h3>
+          <p class="small">A B2B advertiser had a CPA of $72 for demo requests. After launching lookalike audiences and optimizing lead form fields, CTR increased and CPA dropped to $28. Tracking: lead quality, CPL, and contact rate after submission.</p>
+
+          <h3>Example 3 — App Install: Optimizing CPI</h3>
+          <p class="small">An app campaign used App Events for installs and in-app purchases. By switching to optimized app install objective and adjusting bids by ROAS, CPI decreased while attributable revenue per install increased.</p>
+
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/900/480?random=4" alt="Case study showing Facebook Ads metric improvement over time" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
+
+        <!-- CTA in middle of article -->
+        <section class="cta" aria-label="Mid article CTA" style="margin-top:18px">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <strong style="font-size:18px">Want faster results from your Facebook ads?</strong>
+            <div class="small">Get our advanced optimization checklist and 1:1 review template. Convert more clicks into customers with a data-driven auditing process.</div>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn" href="/courses/facebook-ads-mastery">Enroll in our Course</a>
+            <a class="btn secondary" href="/contact">Request a Free Audit</a>
+          </div>
+        </section>
+
+        <section id="common-mistakes" class="card" style="margin-top:18px">
+          <h2>Common Mistakes When Interpreting Facebook Ads Metrics</h2>
+          <p>Many advertisers misread metrics and make costly decisions. Here are frequent errors and how to avoid them.</p>
+
+          <h3>Mistake 1 — Chasing Low CPCs Without Tracking Conversions</h3>
+          <p class="small">A low CPC is tempting, but if conversion rate is low, CPA will be high. Always evaluate CPC in context of conversion rate and purchase value.</p>
+
+          <h3>Mistake 2 — Ignoring Attribution Windows and Cross-Device Behavior</h3>
+          <p class="small">Short attribution windows can underreport conversions, especially for high-consideration purchases. Use multiple windows and server-side tracking to capture delayed conversions.</p>
+
+          <h3>Mistake 3 — Over-optimizing Too Quickly</h3>
+          <p class="small">Don't pause campaigns after small swings. Allow enough conversions for statistical significance before making major changes. Use A/B testing frameworks.</p>
+
+          <h3>Mistake 4 — Not Segmenting Results</h3>
+          <p class="small">Aggregated metrics hide opportunities and problems. Segment by placement, creative, age, gender, and device to identify the best-performing pockets.</p>
+
+          <div style="margin-top:12px">
+            <img src="https://picsum.photos/1000/500?random=5" alt="Common mistakes in Facebook Ads metric analysis checklist" loading="lazy" style="border-radius:10px">
+          </div>
+        </section>
+
+        <section id="how-to-improve" class="card" style="margin-top:18px">
+          <h2>How to Improve Facebook Ad Performance: Actionable Steps</h2>
+          <p>Use these proven tactics to improve your Facebook Ads KPIs and scale campaigns profitably.</p>
+
+          <h3>Optimize Creative and Messaging</h3>
+          <p class="small">Test multiple creatives, headlines, and primary text. Use clear CTAs and align landing pages to ad messaging to improve conversion rate.</p>
+
+          <h3>Refine Targeting and Audiences</h3>
+          <p class="small">Leverage lookalike audiences, exclusion lists and layered interests. Use retention and retention-based segments to increase LTV and lower CPA.</p>
+
+          <h3>Bid & Budget Strategy</h3>
+          <p class="small">Choose the right bidding strategy (lowest cost, bid cap, target cost) based on your goals. Use campaign budget optimization (CBO) to allocate spend to top performers.</p>
+
+          <h3>Implement Continuous A/B Testing</h3>
+          <p class="small">Test one variable at a time. Use Facebook’s Experiments tool or your own testing framework to ensure valid comparisons.</p>
+
+          <h3>Use Server-Side Tracking (CAPI) and Data Enrichment</h3>
+          <p class="small">CAPI improves match quality, reduces attribution gaps and increases reported conversions. Combine with UTM tracking for cross-platform insights.</p>
+        </section>
+
+        <section id="newsletter" class="card" style="margin-top:18px">
+          <h2>Newsletter Signup — Get Weekly Metrics Tips</h2>
+          <div class="newsletter">
+            <div style="flex:1">
+              <strong>Subscribe to our weekly newsletter</strong>
+              <p class="small">Actionable tips on tracking, reporting dashboards, and Facebook Ads testing frameworks delivered to your inbox.</p>
+            </div>
+            <form style="display:flex;gap:8px;align-items:center" aria-label="Newsletter signup">
+              <input type="email" placeholder="Email address" aria-label="Newsletter email" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+              <button class="btn" type="submit">Sign Up</button>
+            </form>
+          </div>
+        </section>
+
+        <section id="conclusion" class="card" style="margin-top:18px">
+          <h2>Conclusion</h2>
+          <p>Mastering Facebook Ads metrics is not about obsessing over every number — it's about tracking the right KPIs, building a reliable measurement system, and iteratively optimizing campaigns based on data. Focus on ROAS, CPA, conversion rate, and the top-of-funnel metrics that feed those outcomes. Use the steps in this guide to establish robust reporting, avoid common mistakes, and scale campaigns profitably.</p>
+          <p class="small">If you want a fast path to improvement, download the free Facebook Ads Metrics Checklist or request a campaign audit to get targeted recommendations.</p>
+        </section>
+
+        <!-- CTA after conclusion -->
+        <section class="card" style="margin-top:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+            <div>
+              <strong>Ready to optimize your Facebook Ads?</strong>
+              <p class="small">Book a free 20-minute strategy call and we’ll review your account metrics and quick wins.</p>
+            </div>
+            <div style="display:flex;gap:8px">
+              <a class="btn" href="/contact">Book a Strategy Call</a>
+              <a class="btn secondary" href="/articles/facebook-ads-testing-framework">View Testing Framework</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Related articles -->
+        <section class="card" style="margin-top:18px">
+          <h2>Related Articles</h2>
+          <div class="related links">
+            <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+          </div>
+        </section>
+
+        <!-- CTA after conclusion (again) -->
+        <section class="card" style="margin-top:18px">
+          <h3>Get the Free Guide</h3>
+          <p class="small">Download the Facebook Ads Metrics Checklist and start auditing your campaigns with a proven framework.</p>
+          <form aria-label="Free guide download repeat">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <input type="text" placeholder="Name" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;min-width:180px">
+              <input type="email" placeholder="Email" style="padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit;min-width:220px">
+              <button class="btn" type="submit">Download Now</button>
+            </div>
+          </form>
+        </section>
+
+        <section id="faq" class="card" style="margin-top:18px">
+          <h2>FAQ</h2>
+          <div>
+            <h3>What are the most important Facebook Ads metrics?</h3>
+            <p class="small">Prioritize ROAS, CPA, conversion rate, CTR, CPC and CPM. Choose additional metrics depending on your objective (installs, leads, purchases).</p>
+
+            <h3>How often should I check Facebook Ads metrics?</h3>
+            <p class="small">Check daily for pacing and any sudden issues; do a deeper performance review weekly and a comprehensive audit monthly.</p>
+
+            <h3>Why do metrics differ between Facebook and Google Analytics?</h3>
+            <p class="small">Differences come from attribution windows, tracking methods, and session definitions. Use UTMs and server-side events to reconcile data.</p>
+
+            <h3>What's a good ROAS for e-commerce?</h3>
+            <p class="small">A 3x ROAS is commonly referenced as a healthy benchmark for many e-commerce businesses, but ideal ROAS depends on margins and CAC.</p>
+          </div>
+        </section>
+
+      </article>
+
+      <aside>
+        <div class="card">
+          <h3 style="margin:0">Quick Metrics Reference</h3>
+          <p class="small" style="margin-top:8px">Snapshot of core KPIs and what they indicate.</p>
+          <ul style="padding-left:16px;color:var(--muted)">
+            <li><strong>CTR:</strong> Creative relevance</li>
+            <li><strong>CPC:</strong> Click efficiency</li>
+            <li><strong>CPM:</strong> Cost to reach</li>
+            <li><strong>CPA:</strong> Cost per conversion</li>
+            <li><strong>ROAS:</strong> Revenue efficiency</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0">Tools & Integrations</h3>
+          <p class="small" style="margin-top:8px">Pixel, Conversions API (CAPI), Looker Studio, Google Analytics, Shopify, Zapier, and BI tools.</p>
+        </div>
+
+        <div class="card">
+          <h3 style="margin:0">Recommended Read</h3>
+          <p class="small" style="margin-top:8px">Check these articles:</p>
+          <div class="links">
+            <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+            <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+            <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="/" style="margin-bottom:12px">
+          <div class="logo" style="width:36px;height:36px;border-radius:8px">FAM</div>
+          <div style="display:inline-block;margin-left:10px">
+            <div style="font-weight:800">Facebook Ads Mastery</div>
+            <div style="font-size:13px;color:var(--muted)">Data-driven ad optimization</div>
+          </div>
+        </a>
+      </div>
+      <div class="links">
+        <strong>Resources</strong>
+        <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+        <a href="/articles/facebook-ads-testing-framework">Testing Framework</a>
+        <a href="/articles/how-to-scale-facebook-ads">How to Scale</a>
+        <a href="/articles/facebook-retargeting-guide">Retargeting Guide</a>
+      </div>
+      <div class="links">
+        <strong>Company</strong>
+        <a href="/about">About</a>
+        <a href="/courses">Courses</a>
+        <a href="/contact">Contact</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+      <div style="min-width:220px">
+        <strong>Subscribe</strong>
+        <form style="margin-top:8px;display:flex;gap:8px">
+          <input type="email" placeholder="Email address" style="flex:1;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:inherit">
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+        <p class="small" style="margin-top:8px">© 2026 Facebook Ads Mastery. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <!-- Structured Data: Article Schema -->
+  <!-- Structured Data: Article, FAQ, Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://example.com/articles/facebook-ads-metrics"
+      "@id": "https://www.example.com/facebook-ads-metrics"
     },
-    "headline": "Facebook Ads Metrics: How to Measure, Analyze & Optimize Ad Performance",
-    "description": "Master Facebook Ads metrics: CTR, CPA, ROAS, conversion rate, impressions, reach, frequency and more. Learn how to analyze Facebook ad performance and optimize campaigns with actionable examples and common mistakes to avoid.",
-    "image": [
-      "https://picsum.photos/1200/600?random=3",
-      "https://picsum.photos/1000/500?random=4"
-    ],
+    "headline": "Facebook Ads Metrics: Complete Guide to Tracking, Reporting & Optimization",
+    "description": "Master Facebook Ads metrics with this complete guide. Learn how to track CTR, CPC, CPM, CPA, ROAS, conversion rate and improve campaign performance with examples, how-to steps, and common mistakes.",
+    "image": "https://picsum.photos/1200/630?random=1",
     "author": {
-      "@type": "Person",
+      "@type": "Organization",
       "name": "Facebook Ads Mastery"
     },
     "publisher": {
@@ -478,15 +542,14 @@
       "name": "Facebook Ads Mastery",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://example.com/logo.png"
+        "url": "https://picsum.photos/200/60?random=6"
       }
     },
-    "datePublished": "2024-06-17",
+    "datePublished": "2026-06-17",
     "dateModified": "2026-06-17"
   }
   </script>
 
-  <!-- Structured Data: FAQ Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -494,33 +557,32 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Which Facebook Ads metric is most important?",
+        "name": "What are the most important Facebook Ads metrics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "It depends on your objective. For ecommerce, ROAS and CPA are critical. For awareness, impressions and reach matter. Always tie platform metrics to business objectives."
+          "text": "Prioritize ROAS, CPA, conversion rate, CTR, CPC and CPM. Choose additional metrics depending on your objective such as installs for app campaigns or leads for lead gen."
         }
       },
       {
         "@type": "Question",
-        "name": "How often should I check metrics?",
+        "name": "How often should I check Facebook Ads metrics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Daily checks for pacing and anomalies; weekly for optimization and budgeting; monthly for strategic trends and scale decisions."
+          "text": "Check daily for pacing and any sudden issues; do a deeper performance review weekly and a comprehensive audit monthly."
         }
       },
       {
         "@type": "Question",
-        "name": "What is a good CTR on Facebook?",
+        "name": "Why do metrics differ between Facebook and Google Analytics?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Benchmarks vary by industry and placement. A CTR between 0.5% and 1.5% can be acceptable for many industries; higher is better—aim to improve CTR for better CPC and conversion opportunities."
+          "text": "Differences come from attribution windows, tracking methods, and session definitions. Use UTMs and server-side events to reconcile data."
         }
       }
     ]
   }
   </script>
 
-  <!-- Structured Data: Breadcrumb -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -529,32 +591,32 @@
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Articles",
-        "item": "https://example.com/articles"
+        "name": "Home",
+        "item": "https://www.example.com/"
       },
       {
         "@type": "ListItem",
         "position": 2,
+        "name": "Articles",
+        "item": "https://www.example.com/articles"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
         "name": "Facebook Ads Metrics",
-        "item": "https://example.com/articles/facebook-ads-metrics"
+        "item": "https://www.example.com/facebook-ads-metrics"
       }
     ]
   }
   </script>
 
   <script>
-    // Minimal interactivity for form feedback and accessibility
-    (function(){
-      // Lightweight no-op to keep page fast; all heavy lifting is on server-side in real use.
-      // This script handles smooth anchor offset for sticky header
-      function offsetAnchor() {
-        if(location.hash.length > 0) {
-          window.scrollTo(window.scrollX, window.scrollY - 70);
-        }
-      }
-      window.addEventListener("hashchange", offsetAnchor);
-      window.setTimeout(offsetAnchor, 1);
-    })();
+    // Basic form handlers to simulate quick UX improvements
+    document.getElementById('download-form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks! Check your email for the Facebook Ads Metrics Checklist.');
+      // In production you'd send data to your email service here
+    });
   </script>
 </body>
 </html>
