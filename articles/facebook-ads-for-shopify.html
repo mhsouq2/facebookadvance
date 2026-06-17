@@ -1,615 +1,465 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies</title>
-<meta name="description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers. Learn how to find high intent prospects and scale profitable ads." />
-<link rel="canonical" href="https://www.example.com/articles/facebook-ads-audience-research" />
-<meta name="robots" content="index,follow" />
-
-<!-- Open Graph -->
-<meta property="og:title" content="Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies" />
-<meta property="og:description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.example.com/articles/facebook-ads-audience-research" />
-<meta property="og:image" content="https://picsum.photos/1200/600?random=1" />
-<meta property="og:site_name" content="Ads Mastery" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies" />
-<meta name="twitter:description" content="Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers." />
-<meta name="twitter:image" content="https://picsum.photos/1200/600?random=1" />
-
-<style>
-  :root{
-    --bg:#0f1720;
-    --panel:#0b1220;
-    --muted:#9aa6b2;
-    --accent:#1877f2;
-    --accent-2:#23c6a8;
-    --glass: rgba(255,255,255,0.03);
-    --card:#0d141a;
-    --radius:12px;
-    --max-width:1100px;
-  }
-  *{box-sizing:border-box}
-  html,body{height:100%}
-  body{
-    margin:0;
-    font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    background:linear-gradient(180deg,#071022 0%, #0f1720 100%);
-    color:#e6eef6;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    line-height:1.6;
-  }
-
-  header{
-    background: linear-gradient(90deg, rgba(24,119,242,0.06), rgba(35,198,168,0.03));
-    padding:18px 24px;
-    position:sticky;
-    top:0;
-    z-index:100;
-    backdrop-filter: blur(6px);
-    border-bottom:1px solid rgba(255,255,255,0.03);
-  }
-
-  .nav{
-    max-width:var(--max-width);
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    gap:18px;
-  }
-  .logo{
-    font-weight:700;
-    color:var(--accent);
-    font-size:18px;
-    letter-spacing:0.2px;
-  }
-  nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
-  nav a{
-    color:var(--muted);
-    text-decoration:none;
-    padding:8px 10px;
-    border-radius:8px;
-    font-size:14px;
-  }
-  nav a:hover{background:rgba(255,255,255,0.02); color:#fff}
-
-  .container{max-width:var(--max-width); margin:28px auto; padding:0 20px;}
-
-  .hero{
-    display:grid;
-    grid-template-columns: 1fr 360px;
-    gap:24px;
-    align-items:start;
-  }
-  @media (max-width:980px){
-    .hero{grid-template-columns:1fr; padding-bottom:12px}
-  }
-
-  .card{
-    background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border:1px solid rgba(255,255,255,0.03);
-    padding:22px;
-    border-radius:var(--radius);
-    box-shadow: 0 6px 22px rgba(2,6,23,0.6);
-  }
-
-  h1{font-size:28px;margin:0 0 12px 0;color:#fff}
-  .sub{
-    color:var(--muted);
-    margin-bottom:14px;
-    font-size:15px;
-  }
-
-  /* Featured image */
-  .featured{
-    width:100%;
-    border-radius:10px;
-    overflow:hidden;
-    margin:14px 0 8px 0;
-    border:1px solid rgba(255,255,255,0.03);
-  }
-  .featured img{display:block;width:100%;height:auto;max-height:420px;object-fit:cover}
-
-  .toc{
-    margin:18px 0;
-    background:var(--glass);
-    padding:12px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.02);
-  }
-  .toc a{display:block;color:var(--accent);text-decoration:none;padding:6px 0;font-size:14px}
-  .toc a:hover{text-decoration:underline}
-
-  main{margin-top:18px}
-  article .section{margin-bottom:20px}
-  h2{font-size:20px;margin:18px 0 10px 0;color:#fff}
-  h3{font-size:16px;margin:12px 0;color:var(--accent-2)}
-  p{color:var(--muted);margin:10px 0}
-  ul{color:var(--muted);margin:8px 0 12px 20px}
-  li{margin:6px 0}
-
-  .two-col{
-    display:grid;
-    grid-template-columns:1fr 320px;
-    gap:18px;
-  }
-  @media (max-width:980px){
-    .two-col{grid-template-columns:1fr}
-  }
-
-  .sidebar .card{padding:16px}
-  .cta{
-    display:flex;
-    gap:12px;
-    align-items:center;
-    justify-content:space-between;
-    padding:18px;
-    border-radius:12px;
-    background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(35,198,168,0.06));
-    border:1px solid rgba(255,255,255,0.03);
-  }
-  .btn{
-    display:inline-block;
-    background:var(--accent);
-    color:#fff;
-    padding:10px 14px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:600;
-  }
-  .btn.alt{background:transparent;border:1px solid rgba(255,255,255,0.06); color:var(--muted)}
-  .form-row{display:flex;gap:8px}
-  @media (max-width:600px){.form-row{flex-direction:column}}
-  input[type="text"], input[type="email"]{
-    width:100%;
-    padding:10px 12px;
-    border-radius:8px;
-    border:1px solid rgba(255,255,255,0.04);
-    background:transparent;
-    color:#fff;
-  }
-  label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
-
-  footer{
-    margin-top:28px;
-    padding:26px 20px;
-    border-top:1px solid rgba(255,255,255,0.03);
-    color:var(--muted);
-  }
-  .footer-inner{max-width:var(--max-width);margin:0 auto;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
-  .links{display:flex;gap:12px}
-  .small{font-size:13px;color:var(--muted)}
-
-  .related{display:flex;flex-direction:column;gap:8px}
-  .related a{color:var(--accent);text-decoration:none}
-
-  /* images in content */
-  .content-img{width:100%;border-radius:10px;overflow:hidden;margin:12px 0;border:1px solid rgba(255,255,255,0.03)}
-  .content-img img{display:block;width:100%;height:auto}
-
-  /* badge */
-  .badge{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px;color:var(--muted);font-size:13px}
-
-  /* FAQ toggles */
-  .faq-item{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:8px}
-  .faq-question{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-  .faq-answer{display:none;margin-top:8px;color:var(--muted);font-size:14px}
-
-  small.note{color:var(--muted);display:block;margin-top:6px}
-
-  /* quick utility */
-  .muted{color:var(--muted)}
-</style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Article",
-  "headline":"Facebook Ads Audience Research — Targeting, Segmentation & Lookalike Strategies",
-  "description":"Complete guide to Facebook Ads Audience Research: step-by-step audience targeting, segmentation, lookalike audience creation, and best practices for e-commerce and Shopify advertisers.",
-  "author": {
-    "@type":"Person",
-    "name":"Ads Mastery Team"
-  },
-  "publisher":{
-    "@type":"Organization",
-    "name":"Ads Mastery",
-    "logo": {
-      "@type":"ImageObject",
-      "url":"https://picsum.photos/120/60"
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Facebook Ads for Shopify — Complete Guide to Scale Your Store</title>
+  <meta name="description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <link rel="canonical" href="https://www.example.com/articles/facebook-ads-for-shopify" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Facebook Ads for Shopify — Complete Guide to Scale Your Store" />
+  <meta property="og:description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.example.com/articles/facebook-ads-for-shopify" />
+  <meta property="og:image" content="https://picsum.photos/1200/600?random=1" />
+  <meta property="og:image:alt" content="Facebook Ads for Shopify Strategy Visual" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Facebook Ads for Shopify — Complete Guide to Scale Your Store" />
+  <meta name="twitter:description" content="Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores. Free checklist and guide inside." />
+  <meta name="twitter:image" content="https://picsum.photos/1200/600?random=1" />
+  <meta name="theme-color" content="#0b1221" />
+  <style>
+    :root{
+      --bg:#071025;
+      --panel:#0f1724;
+      --muted:#98a0b3;
+      --accent:#1877f2;
+      --accent-2:#00d4ff;
+      --glass:rgba(255,255,255,0.03);
+      --card:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      --radius:12px;
+      --maxwidth:1100px;
+      color-scheme: dark;
     }
-  },
-  "mainEntityOfPage":{
-    "@type":"WebPage",
-    "@id":"https://www.example.com/articles/facebook-ads-audience-research"
-  },
-  "datePublished":"2026-06-17",
-  "image":"https://picsum.photos/1200/600?random=1"
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {"@type":"Question","name":"What is Facebook Ads audience research?","acceptedAnswer":{"@type":"Answer","text":"Facebook Ads audience research is the process of identifying, testing, and prioritizing target groups for your ad campaigns using demographics, interests, behaviors, custom audiences, and lookalike audiences to reach high-intent prospects."}},
-    {"@type":"Question","name":"How do I create a lookalike audience?","acceptedAnswer":{"@type":"Answer","text":"Create a high-quality source audience such as purchasers or high-value customers, upload or select it in Ads Manager, choose the country, and set the similarity/size (1% to 10%) before creating and testing variations."}},
-    {"@type":"Question","name":"How often should I refresh targeting and audiences?","acceptedAnswer":{"@type":"Answer","text":"Refresh and test audiences every 2-6 weeks depending on campaign performance, seasonality, and data volume. Continuously test new interests and custom audience segments to avoid creative fatigue and audience saturation."}}
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"BreadcrumbList",
-  "itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
-    {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles"},
-    {"@type":"ListItem","position":3,"name":"Facebook Ads Audience Research","item":"https://www.example.com/articles/facebook-ads-audience-research"}
-  ]
-}
-</script>
-
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#061223 0%, #071025 35%, #04101a 100%);
+      color:#e7eefb;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding-bottom:80px;
+    }
+    header{
+      position:sticky;top:0;z-index:40;
+      backdrop-filter: blur(8px);
+      background: linear-gradient(180deg, rgba(6,18,35,0.65), rgba(6,18,35,0.45));
+      border-bottom:1px solid rgba(255,255,255,0.04);
+    }
+    .nav{
+      max-width:var(--maxwidth);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      padding:12px 20px;
+    }
+    .brand{
+      display:flex;align-items:center;gap:12px;
+    }
+    .logo{
+      width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0aa3ff);
+      display:flex;align-items:center;justify-content:center;font-weight:700;color:white;
+      box-shadow:0 6px 20px rgba(24,119,242,0.12);
+    }
+    .navlinks{margin-left:28px;display:flex;gap:14px;align-items:center}
+    .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px 10px;border-radius:8px}
+    .navlinks a:hover{color:#fff;background:rgba(255,255,255,0.02)}
+    .cta-top{margin-left:auto;display:flex;gap:10px}
+    .btn{
+      background:var(--accent);color:white;border:none;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;
+      box-shadow:0 8px 30px rgba(24,119,242,0.14);
+    }
+    .btn.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600}
+    main{max-width:var(--maxwidth);margin:28px auto;padding:18px}
+    .hero{
+      display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start;
+      background:var(--card);padding:28px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03);
+      box-shadow:0 10px 30px rgba(2,6,23,0.6);
+    }
+    .hero h1{margin:0;font-size:28px;line-height:1.05}
+    .meta{color:var(--muted);font-size:14px;margin-top:8px}
+    .featured{margin-top:18px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
+    .card{
+      background:var(--panel);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .toc{background:transparent;padding:12px;border-radius:10px;border:1px dashed rgba(255,255,255,0.02);color:var(--muted)}
+    .content{margin-top:18px;display:block;gap:18px}
+    h2{color:#fff;margin:22px 0 12px;font-size:20px}
+    h3{color: #dbe9ff;margin:12px 0;font-size:16px}
+    p{color:var(--muted);margin:12px 0}
+    ul{color:var(--muted);margin:8px 0 16px 18px}
+    .lead-form{display:flex;flex-direction:column;gap:10px}
+    .lead-form input{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:var(--muted)}
+    .lead-form .download{display:flex;gap:8px}
+    .download .btn{flex:1}
+    .newsletter{display:flex;gap:12px;align-items:center;padding:14px;border-radius:12px;background:linear-gradient(90deg,rgba(24,119,242,0.06),rgba(0,212,255,0.02));border:1px solid rgba(255,255,255,0.02)}
+    .cta-block{margin:18px 0;padding:18px;border-radius:12px;background:linear-gradient(90deg, rgba(24,119,242,0.08), rgba(0,212,255,0.03));display:flex;justify-content:space-between;align-items:center}
+    .cta-block .cta-left{max-width:70%}
+    .related{display:flex;flex-direction:column;gap:8px;padding:12px}
+    .related a{color:var(--accent);text-decoration:none;font-weight:600}
+    .examples-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .example-card{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    footer{max-width:var(--maxwidth);margin:20px auto;padding:18px;color:var(--muted)}
+    .foot-grid{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .small{font-size:13px;color:var(--muted)}
+    .faq{padding:12px;border-radius:10px;background:rgba(0,0,0,0.15);border:1px solid rgba(255,255,255,0.02)}
+    .pill{display:inline-block;padding:6px 10px;background:rgba(255,255,255,0.02);border-radius:999px;color:var(--muted);font-weight:700;font-size:13px}
+    img.responsive{width:100%;height:auto;display:block;border-radius:10px;object-fit:cover}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; padding:18px}
+      .examples-grid{grid-template-columns:1fr}
+      .navlinks{display:none}
+      .cta-top{margin-left:auto}
+    }
+    @media (max-width:480px){
+      .nav{padding:10px}
+      h1{font-size:20px}
+      .hero h1{font-size:20px}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Article",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"https://www.example.com/articles/facebook-ads-for-shopify"
+    },
+    "headline":"Facebook Ads for Shopify — Complete Guide to Scale Your Store",
+    "description":"Comprehensive guide: Facebook Ads for Shopify. Learn targeting, creative, pixel setup, retargeting, and scaling strategies for Shopify stores.",
+    "image":["https://picsum.photos/1200/600?random=1"],
+    "author":{"@type":"Person","name":"Marketing Expert"},
+    "publisher":{"@type":"Organization","name":"Marketing Studio","logo":{"@type":"ImageObject","url":"https://picsum.photos/200/60?random=2"}},
+    "datePublished":"2026-06-01",
+    "dateModified":"2026-06-01"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do I set up Facebook Ads for my Shopify store?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Install the Facebook channel in Shopify, connect your Business Manager, add your Facebook Pixel or Conversions API, map events, and create ad campaigns in Ads Manager with catalog and dynamic product ads."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What is the best budget to start Facebook Ads on Shopify?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Start with a testing budget of $10–$50 per day for a few ad sets to collect data. Scale winning creatives and audiences gradually while monitoring ROAS and conversion rate."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Should I use catalog ads or single-image ads for Shopify products?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Use catalog dynamic ads for product retargeting and single-image or video ads for prospecting. A mixed approach often yields the best conversion funnel for Shopify stores."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://www.example.com/"},
+      {"@type":"ListItem","position":2,"name":"Articles","item":"https://www.example.com/articles/"},
+      {"@type":"ListItem","position":3,"name":"Facebook Ads for Shopify","item":"https://www.example.com/articles/facebook-ads-for-shopify"}
+    ]
+  }
+  </script>
 </head>
 <body>
-<header aria-label="Main Header">
-  <div class="nav">
-    <div class="logo">Ads Mastery</div>
-    <nav aria-label="Primary Navigation">
-      <ul>
-        <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="/courses">Courses</a></li>
-        <li><a href="/articles">Articles</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div style="margin-left:auto;display:flex;gap:8px;align-items:center">
-      <a href="/login" class="btn alt" style="padding:8px 12px">Log in</a>
-      <a href="/signup" class="btn">Get started</a>
-    </div>
-  </div>
-</header>
-
-<div class="container">
-  <div class="hero">
-    <div>
-      <div class="card">
-        <span class="badge">Guide • Updated 2026</span>
-        <h1>Facebook Ads Audience Research: Targeting, Segmentation & Lookalike Strategies</h1>
-        <p class="sub">Master audience targeting for Facebook and Instagram ads with step-by-step research, customer segmentation, and lookalike creation to increase ROAS and scale e-commerce campaigns.</p>
-
-        <div class="featured" aria-hidden="false">
-          <img src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Audience Research Featured Image" loading="lazy">
+  <header>
+    <div class="nav" role="navigation" aria-label="Main navigation">
+      <div class="brand">
+        <div class="logo">FM</div>
+        <div>
+          <div style="font-weight:800">Facebook Ads Mastery</div>
+          <div style="font-size:12px;color:var(--muted)">Shopify Growth & Ads</div>
         </div>
-
-        <div class="toc" aria-labelledby="toc-heading">
-          <strong id="toc-heading">Table of Contents</strong>
-          <a href="#introduction">Introduction</a>
-          <a href="#why-audience-research">Why Audience Research Matters</a>
-          <a href="#how-to-research">How-to: Step-by-Step Audience Research</a>
-          <a href="#examples">Examples & Case Studies</a>
-          <a href="#common-mistakes">Common Mistakes</a>
-          <a href="#newsletter">Newsletter & Resources</a>
-          <a href="#faq">FAQ</a>
-          <a href="#conclusion">Conclusion</a>
-        </div>
-
-        <section id="introduction" class="section" aria-labelledby="intro-title">
-          <h2 id="intro-title">Introduction</h2>
-          <p>Facebook Ads audience research is the foundation of profitable ad campaigns. Whether you're running paid social for a Shopify store, SaaS product, or local service, deep audience research helps you find high-intent users, reduce CPC, and increase conversion rates. This guide covers practical strategies, audience segmentation frameworks, lookalike creation tactics, and real-world examples to improve your targeting today.</p>
-
-          <p>Keywords covered: Facebook Ads Audience Research, audience targeting, lookalike audiences, Facebook Ads for Shopify, customer segmentation for Facebook ads, best practices for Facebook ad audience segmentation, how to research Facebook ad audiences for e-commerce.</p>
-
-          <!-- Email collection form -->
-          <form class="form-row" style="margin-top:14px;gap:12px;align-items:flex-end" aria-label="Download Free Guide Form" method="post" action="#">
-            <div style="flex:1">
-              <label for="name">Name</label>
-              <input id="name" type="text" name="name" placeholder="Your name" required>
-            </div>
-            <div style="width:320px;max-width:40%">
-              <label for="email">Email</label>
-              <input id="email" type="email" name="email" placeholder="name@company.com" required>
-            </div>
-            <div style="min-width:180px">
-              <button type="submit" class="btn" style="width:100%;height:44px">Download Free Guide</button>
-            </div>
-          </form>
-          <small class="note">Receive the free PDF guide: "Advanced Facebook Audience Playbook" and weekly insights on scaling ads.</small>
-        </section>
-
       </div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/articles/facebook-ads-for-shopify">Guide</a>
+        <a href="/articles/facebook-ads-testing-framework">Testing</a>
+        <a href="/articles/how-to-scale-facebook-ads">Scale</a>
+        <a href="/articles/facebook-retargeting-guide">Retargeting</a>
+      </nav>
+      <div class="cta-top">
+        <button class="btn secondary" onclick="location.href='/contact'">Contact</button>
+        <button class="btn" onclick="location.href='#newsletter'">Get Guide</button>
+      </div>
+    </div>
+  </header>
 
-      <main>
-        <article class="card" style="margin-top:18px; padding:20px">
-          <div class="two-col">
-            <div>
-              <section id="why-audience-research" class="section">
-                <h2>Why Audience Research Matters</h2>
-                <p>Audience research reduces trial-and-error by aligning creative, messaging, and offers with real customer signals. Instead of relying on guesses, use data-driven segments—purchase history, site behavior, and interest clusters—to deliver relevant ads. Proper audience research leads to:</p>
-                <ul>
-                  <li>Lower CPM and CPC through higher relevance scores</li>
-                  <li>Higher conversion rates from targeted offers</li>
-                  <li>More efficient scaling using lookalikes and retention audiences</li>
-                </ul>
+  <main>
+    <article itemscope itemtype="https://schema.org/Article">
+      <header class="hero" role="banner">
+        <div>
+          <span class="pill">Ultimate Shopify Playbook</span>
+          <h1 itemprop="headline">Facebook Ads for Shopify — How to Build, Test, and Scale Winning Campaigns</h1>
+          <div class="meta">A practical, step-by-step guide for ecommerce founders and Shopify marketers — targeting, creative, pixel setup, catalog ads, and scaling strategies.</div>
 
-                <h3>Key Concepts & Semantic Terms</h3>
-                <p>Understand semantic SEO terms that relate to Facebook audience research, like "custom audiences", "engagement audiences", "reach vs. precision targeting", "audience overlap", "audience density", and "behavioral segmentation". These concepts improve the way you design tests and analyze performance across placements and the Meta ecosystem.</p>
-
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/540?random=2" alt="Audience segmentation for Facebook Ads with demographics and interests" loading="lazy">
-                </div>
-              </section>
-
-              <section id="how-to-research" class="section">
-                <h2>How-to: Step-by-Step Audience Research</h2>
-
-                <h3>1. Start with First-Party Data</h3>
-                <p>Create custom audiences from:</p>
-                <ul>
-                  <li>Purchase data and customer lists (best for lookalike sources)</li>
-                  <li>Pixel events (Add to Cart, View Content, Purchase)</li>
-                  <li>App events and SDK data</li>
-                </ul>
-
-                <h3>2. Build Hypothesis Segments</h3>
-                <p>Map hypotheses like: "Audiences who purchased in the last 180 days are the highest LTV" or "Interest: fitness + apparel for activewear buyers." Use long-tail keywords when naming segments: "high-value repeat purchaser 90-180 days – Facebook audience".</p>
-
-                <h3>3. Use Interest & Behavior Targeting</h3>
-                <p>Layer interests with demographics to increase precision. Example: Women, 25-40, interests: sustainable fashion + yoga. Test narrow vs broad to discover what drives CPA.</p>
-
-                <h3>4. Create Lookalike Audiences</h3>
-                <p>Use high-value customers as a source. Start at 1% lookalikes in target countries and expand to 2-3% for scale. For long-tail growth: "how to create lookalike audiences from high-value Shopify customers".</p>
-
-                <h3>5. Test & Iterate with A/B Tests</h3>
-                <p>Run structured A/B tests on audience segments using the Facebook Ads Testing Framework. Track CPA, ROAS, and frequency. Use audience overlap reports to avoid competing audiences.</p>
-
-                <div style="margin-top:12px" class="cta">
-                  <div>
-                    <strong>Ready to optimize your targeting?</strong>
-                    <div class="muted">Free 30-minute audit when you submit your top 3 audiences.</div>
-                  </div>
-                  <div style="display:flex;gap:10px">
-                    <a href="#newsletter" class="btn">Claim Audit</a>
-                    <a href="/contact" class="btn alt">Contact Us</a>
-                  </div>
-                </div>
-
-              </section>
-
-              <section id="examples" class="section">
-                <h2>Examples: Real Audience Research Use Cases</h2>
-
-                <h3>Example 1 — Shopify Fitness Brand</h3>
-                <p>Problem: High CAC for cold traffic. Solution: Create 3 custom audiences — existing purchasers (90d), add-to-cart 30d, newsletter engagers 180d. Use a 1% lookalike of purchasers and test creative focused on benefits. Result: CPA down 28% and ROAS improved by 2.1x.</p>
-
-                <h3>Example 2 — B2B SaaS Lead Gen</h3>
-                <p>Problem: Low-quality leads. Solution: Use LinkedIn-style targeting via job titles and employer size, combine with website remarketing (trial users) and engagement on high-intent pages. Create a 1% lookalike of trial converters. Result: Lead quality improved with 35% higher demo-to-trial rate.</p>
-
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/540?random=3" alt="Facebook Ads Audience Research example for Shopify fitness brand" loading="lazy">
-                </div>
-
-                <h3>Advanced Example — Layered Interest Clusters</h3>
-                <p>Use clustering to combine micro-interests that show common purchase intent. For example, combine "cold brew coffee", "specialty coffee", "espresso machine" for coffee e-commerce targeting. The semantic term here is 'interest adjacency' — grouping similar micro-interests to reduce noise.</p>
-
-              </section>
-
-              <section id="common-mistakes" class="section">
-                <h2>Common Mistakes in Facebook Ads Audience Research</h2>
-                <h3>1. Overly Broad Targeting</h3>
-                <p>Targeting everyone wastes budget. Replace "women 18-45" with behavior and intent signals to reach likely buyers.</p>
-
-                <h3>2. Ignoring First-Party Data</h3>
-                <p>First-party data (customer lists, pixel events) are the highest value for precise lookalikes and retargeting. Not using them limits scale potential.</p>
-
-                <h3>3. Poor Naming Conventions</h3>
-                <p>Not using consistent, SEO-friendly naming for audiences makes analysis and scaling harder. Use long-tail descriptive names like: "US - 1% lookalike - purchasers LTV top 10% - May2026".</p>
-
-                <h3>4. Not Testing Statistically</h3>
-                <p>Running short tests with insufficient data leads to false conclusions. Use sample sizes large enough to reach statistical significance before scaling.</p>
-
-                <div class="content-img">
-                  <img src="https://picsum.photos/1000/400?random=4" alt="Common mistakes in Facebook Ads audience research and targeting" loading="lazy">
-                </div>
-
-              </section>
-
-            </div>
-
-            <aside class="sidebar">
-              <div class="card">
-                <h3>Quick Checklist</h3>
-                <ul>
-                  <li>Export customer list & segment by LTV</li>
-                  <li>Create event-based custom audiences (180d)</li>
-                  <li>Build 1% & 3% lookalikes</li>
-                  <li>Test interest clusters vs broad targeting</li>
-                  <li>Monitor audience overlap & frequency</li>
-                </ul>
-
-                <div style="margin-top:14px">
-                  <strong>Related Articles</strong>
-                  <div class="related" style="margin-top:8px">
-                    <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
-                    <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
-                    <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
-                    <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card" style="margin-top:12px">
-                <h3>Audience Tools</h3>
-                <p class="muted">Use these to refine your targeting: Ads Manager Audience Insights, Facebook Analytics, Google Analytics segments, and your Shopify customer reports.</p>
-                <a href="/articles/facebook-ads-testing-framework" class="btn" style="margin-top:10px;display:inline-block">Testing Framework</a>
-              </div>
-            </aside>
+          <div class="featured" style="margin-top:14px">
+            <img class="responsive" src="https://picsum.photos/1200/600?random=1" alt="Facebook Ads Creative Strategy Example for Shopify product pages" loading="lazy">
           </div>
 
-          <section id="newsletter" class="section" style="margin-top:18px">
-            <h2>Newsletter Signup</h2>
-            <p>Get weekly case studies, audience playbooks, and the latest strategies for Facebook Ads audience research delivered to your inbox.</p>
-            <form method="post" action="#" style="display:flex;gap:8px;flex-wrap:wrap">
-              <input type="email" name="newsletter_email" placeholder="Enter your email" required style="flex:1;min-width:220px;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:#fff">
-              <button type="submit" class="btn">Subscribe</button>
-            </form>
-            <small class="note">No spam. Unsubscribe anytime.</small>
-          </section>
+          <div class="content">
+            <p itemprop="description">This in-depth article covers Facebook Ads for Shopify stores with proven tactics to increase conversions, lower cost-per-acquisition (CPA), and scale campaigns profitably. You'll find best practices, long-tail keyword strategies, semantic SEO terms, and examples from real Shopify ad funnels.</p>
 
-          <section id="faq" class="section">
-            <h2>Frequently Asked Questions (FAQ)</h2>
-
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>What is the best source for lookalikes?</span>
-                <span class="muted">+</span>
+            <!-- Lead generation form after introduction -->
+            <section aria-label="Download Free Guide" style="margin-top:14px">
+              <div class="card lead-form" style="gap:12px">
+                <label style="font-weight:700;color:#fff">Download the Free Shopify Facebook Ads Checklist</label>
+                <form action="#" method="post" onsubmit="alert('Thank you! Your free guide will be emailed to you.'); return false;">
+                  <input type="text" name="name" placeholder="Your name" aria-label="Name" required>
+                  <input type="email" name="email" placeholder="Your email" aria-label="Email" required>
+                  <div class="download">
+                    <button class="btn" type="submit">Download Free Guide</button>
+                    <button class="btn secondary" type="button" onclick="location.href='#newsletter'">Subscribe</button>
+                  </div>
+                </form>
+                <div style="font-size:13px;color:var(--muted)">By downloading you agree to receive occasional marketing emails. Unsubscribe anytime.</div>
               </div>
-              <div class="faq-answer">High-value customers (top 5-10% by LTV) or purchase converters provide the best lookalike sources. Larger, high-quality pixel events also work well if you lack customer lists.</div>
-            </div>
+            </section>
 
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>How do I reduce audience overlap?</span>
-                <span class="muted">+</span>
-              </div>
-              <div class="faq-answer">Segment audiences by distinct behaviors, exclude overlapping audiences (e.g., exclude purchasers from cold targeting), and use Ads Manager's Audience Overlap tool to diagnose issues.</div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-                <span>How large should an audience be?</span>
-                <span class="muted">+</span>
-              </div>
-              <div class="faq-answer">For cold traffic, audiences between 500k-5M can perform well depending on your market. For lookalikes, a 1% lookalike is narrow and higher intent; expand to 3-5% to scale.</div>
-            </div>
-
-          </section>
-
-        </article>
-      </main>
-    </div>
-
-    <aside style="width:360px">
-      <div class="card">
-        <h3>Pro Tip</h3>
-        <p class="muted">Use negative audiences to preserve budget: exclude past purchasers for prospecting ads, exclude top-of-funnel engagers for retargeting campaigns, and always exclude competitors when testing branded keywords or interest bundles.</p>
-
-        <div style="margin-top:14px">
-          <strong>Download: Audience Research Checklist</strong>
-          <p class="muted">One-page checklist to audit your audiences before scaling.</p>
-          <a href="#" class="btn" style="margin-top:8px;display:inline-block">Download PDF</a>
+            <!-- Table of Contents -->
+            <aside class="toc" aria-label="Table of contents" style="margin-top:14px">
+              <strong>Table of Contents</strong>
+              <ul style="margin-top:8px">
+                <li><a href="#why-facebook-ads">Why Facebook Ads for Shopify</a></li>
+                <li><a href="#setup">Pixel & Setup: Connect Shopify to Facebook</a></li>
+                <li><a href="#strategy">Strategy: Audiences, Creatives, Funnels</a></li>
+                <li><a href="#how-to">How-to: Step-by-step campaign build</a></li>
+                <li><a href="#examples">Examples & Case Studies</a></li>
+                <li><a href="#mistakes">Common Mistakes to Avoid</a></li>
+                <li><a href="#newsletter">Newsletter & Resources</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#conclusion">Conclusion & Next Steps</a></li>
+              </ul>
+            </aside>
+          </div>
         </div>
-      </div>
 
-      <div class="card" style="margin-top:12px">
-        <h3>Upcoming Workshop</h3>
-        <p class="muted">Live workshop: "Advanced Lookalikes & Audience Clustering" — limited seats.</p>
-        <a href="/workshops" class="btn alt" style="margin-top:8px;display:inline-block">View Dates</a>
-      </div>
-    </aside>
-  </div> <!-- end hero -->
-</div> <!-- end container -->
+        <aside class="card" aria-label="Quick actions">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="font-size:13px;color:var(--muted)">Quick Actions</div>
+            <button class="btn" onclick="location.href='#how-to'">Start Campaign Builder</button>
+            <button class="btn secondary" onclick="location.href='/articles/facebook-ads-testing-framework'">Testing Framework</button>
+            <div style="margin-top:6px" class="related">
+              <div style="font-size:13px;color:var(--muted)">Related Articles</div>
+              <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a>
+              <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+              <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+              <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+            </div>
+          </div>
+        </aside>
+      </header>
 
-<div class="container">
-  <section id="conclusion" class="card" style="margin-top:18px">
-    <h2>Conclusion</h2>
-    <p>Effective Facebook Ads audience research blends first-party data, methodical testing, and disciplined naming and measurement. Use custom audiences and lookalikes to scale high-performing segments, and continuously iterate using statistical tests. Apply the strategies in this guide—audience segmentation, interest clustering, and lookalike tactics—to improve precision, reduce wasted ad spend, and increase ROAS.</p>
+      <section id="why-facebook-ads">
+        <h2>Why Facebook Ads for Shopify Matter in 2026</h2>
+        <p>Facebook Ads remain one of the highest ROI channels for Shopify stores when used with a data-driven approach. With dynamic product ads, catalog integration, and advancements like Conversions API, Facebook provides robust tools for ecommerce marketers. Whether you're optimizing for traffic, purchases, or lifetime value, mastering Facebook Ads for Shopify is a growth multiplier.</p>
 
-    <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-      <a href="/contact" class="btn">Request a Free Audit</a>
-      <a href="/articles/facebook-ads-testing-framework" class="btn alt">Read Testing Framework</a>
-    </div>
-  </section>
+        <h3>The ecosystem: Ads Manager, Business Manager, and Shopify</h3>
+        <p>Shopify's native Facebook channel simplifies the connection between your store and Facebook Business Manager. This integration allows catalog syncing, pixel installation, and server-side events to improve tracking accuracy — especially after privacy updates and iOS changes.</p>
 
-  <!-- CTA after conclusion -->
-  <section style="margin-top:16px" class="card">
-    <div class="cta">
+        <h3>Top benefits for Shopify merchants</h3>
+        <ul>
+          <li>Dynamic retargeting using product catalogs</li>
+          <li>Lookalike audience scaling with high-value customers</li>
+          <li>Efficient creative testing and optimization</li>
+          <li>Advanced conversion tracking with Facebook Pixel and CAPI</li>
+        </ul>
+      </section>
+
+      <section id="setup">
+        <h2>Pixel & Setup: How to Connect Shopify to Facebook (Step-by-Step)</h2>
+        <p>Accurate data collection is the foundation of profitable Facebook Ads for Shopify. Follow these setup steps to ensure reliable conversion events and improved optimization.</p>
+
+        <h3>1. Install the Facebook channel in Shopify</h3>
+        <p>Open Shopify admin, add the Facebook channel, and follow the prompts to connect your Facebook account and Business Manager. This enables catalog syncing and pixel installation without custom code.</p>
+
+        <h3>2. Add Facebook Pixel and Conversions API</h3>
+        <p>Install the Facebook Pixel via the Shopify Facebook channel. Then enable the Conversions API (CAPI) to send server-side events for more reliable purchase and add-to-cart tracking — vital for optimizing campaigns after tracking changes.</p>
+
+        <h3>3. Map events and test with Event Manager</h3>
+        <p>Use Facebook Event Manager to verify purchase, add_to_cart, view_content, and initiate_checkout events. Test with the Pixel Helper and the Test Events tool.</p>
+
+        <img class="responsive" src="https://picsum.photos/1000/600?random=2" alt="Shopify Facebook Pixel Setup Tutorial screenshot" loading="lazy">
+      </section>
+
+      <section id="strategy">
+        <h2>Strategy: Audiences, Creatives, and Funnels for Shopify</h2>
+        <p>Successful Facebook Ads for Shopify are built on strong audience segmentation, compelling creatives, and a layered funnel. Below are the core components.</p>
+
+        <h3>Audience strategy — prospecting and retargeting</h3>
+        <p>Start with prospecting using interest-based and lookalike audiences. Use 1% or 2% lookalikes of purchasers for cold traffic. For retargeting, build custom audiences by website visitors, product viewers, add-to-cart abandoners, and past purchasers.</p>
+
+        <h3>Creative strategy — video, UGC, and catalog ads</h3>
+        <p>Rotate short-form video creative, user-generated content (UGC), and single-image ads. Use dynamic product ads and catalog-driven creatives for retargeting to show the exact product a visitor viewed.</p>
+
+        <h3>Funnel blueprint for Shopify stores</h3>
+        <ul>
+          <li>Top of funnel (TOF): Engagement and view ads with broad audiences.</li>
+          <li>Middle of funnel (MOF): Traffic and add-to-cart focused ads with offers and social proof.</li>
+          <li>Bottom of funnel (BOF): Dynamic retargeting, discount codes, and abandonment recovery.</li>
+        </ul>
+
+        <img class="responsive" src="https://picsum.photos/1000/500?random=3" alt="Facebook Ads funnel for Shopify stores visual diagram" loading="lazy">
+      </section>
+
+      <section id="how-to">
+        <h2>How-to: Step-by-Step Campaign Build for Shopify</h2>
+        <p>This section walks through a practical build: from campaign objective to creative testing and scaling. These are the exact steps we use when launching Facebook Ads for Shopify brands.</p>
+
+        <h3>Step 1 — Choose the right campaign objective</h3>
+        <p>For most Shopify stores, start with conversions (purchase) as the campaign objective. If you lack data, begin with traffic or add-to-cart events to gather signals.</p>
+
+        <h3>Step 2 — Structure ad sets for clarity</h3>
+        <p>Create separate ad sets for each audience: 1% lookalikes, interest-based prospecting, and layered retargeting segments. Use uniform naming conventions to track performance.</p>
+
+        <h3>Step 3 — Ad creative and A/B testing</h3>
+        <p>Test multiple creatives per ad set (video, carousel, single image). Keep copy concise and include clear CTAs like "Shop Now" or "Get 20% Off". Run A/B tests for headline, CTA, and creative type.</p>
+
+        <h3>Step 4 — Optimize and scale</h3>
+        <p>After 5–14 days of data, pause underperforming assets and expand budgets on winners. Use horizontal scaling by replicating winning ad sets across different audiences and vertical scaling with gradual budget increases (20–30% every 48–72 hours).</p>
+
+        <h3>Step 5 — Use catalog sales and dynamic creative</h3>
+        <p>Activate Catalog Sales campaigns to dynamically show the right product to the right user. Combine dynamic creative with product feeds for personalized retargeting experiences.</p>
+
+        <div class="cta-block" aria-label="Mid-article CTA">
+          <div class="cta-left">
+            <div style="font-weight:800">Need a Campaign Audit?</div>
+            <div style="color:var(--muted);margin-top:6px">Get a free 15-minute audit of your Shopify store's Facebook Ads setup and a prioritized optimization checklist.</div>
+          </div>
+          <div style="text-align:right">
+            <button class="btn" onclick="location.href='/contact'">Request Free Audit</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="examples">
+        <h2>Examples: Real Facebook Ads for Shopify Stores</h2>
+        <p>Below are example scenarios showing how different Shopify stores apply Facebook Ads strategies for unique goals like high-volume low-ticket offers, high AOV products, and subscription models.</p>
+
+        <div class="examples-grid">
+          <div class="example-card">
+            <h3>Example 1 — Low-ticket consumer goods</h3>
+            <p>Goal: Drive high purchase volume at low CPA. Strategy: Use TOF video ads with product demonstration, MOF collection ads, BOF dynamic retargeting with a small discount. Results: CPA reduced by 28% after optimizing creatives.</p>
+            <img class="responsive" src="https://picsum.photos/600/400?random=4" alt="Low-ticket Shopify product Facebook ad example demonstrating the product" loading="lazy">
+          </div>
+          <div class="example-card">
+            <h3>Example 2 — High AOV niche product</h3>
+            <p>Goal: Increase ROAS and reduce cost-per-lead. Strategy: Lead ads for TOF, email nurture, then retarget with product-focused carousel. Use lookalikes of purchasers for scale. Results: 3x ROAS within 60 days.</p>
+            <img class="responsive" src="https://picsum.photos/600/400?random=5" alt="High AOV Shopify product carousel Facebook ad example" loading="lazy">
+          </div>
+          <div class="example-card" style="grid-column:1/-1">
+            <h3>Example 3 — Subscription box (recurring revenue)</h3>
+            <p>Goal: Maximize lifetime value. Strategy: Use TOF educational video ads to drive trial offers, MOF testimonial creatives, BOF retention ads and subscription upsell sequences. Use value-based lookalikes built from lifetime customer value.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mistakes">
+        <h2>Common Mistakes to Avoid with Facebook Ads for Shopify</h2>
+        <p>Many Shopify merchants make avoidable errors when running Facebook Ads. Addressing these common mistakes will improve campaign performance quickly.</p>
+
+        <h3>Ignoring proper pixel and CAPI setup</h3>
+        <p>Without server-side events via Conversions API and a correctly installed pixel, your conversion reporting can be inaccurate. This leads to poor optimization decisions and wasted ad spend.</p>
+
+        <h3>Over-segmenting audiences too early</h3>
+        <p>Creating too many small ad sets fragments data. Start broader to collect signals, then narrow audiences once you have stable performance metrics.</p>
+
+        <h3>Not testing creative variations</h3>
+        <p>Ads fatigue quickly. Failing to rotate creative and test new hooks results in increasing CPA and dropping ROAS. Make creative iteration a weekly habit.</p>
+
+        <h3>Scaling too quickly</h3>
+        <p>Rapid budget increases often destabilize delivery and raise costs. Use measured scaling strategies and monitor frequency, CAC, and ROAS.</p>
+      </section>
+
+      <section id="newsletter" style="margin-top:18px">
+        <div class="newsletter">
+          <div style="flex:1">
+            <strong>Join our Shopify Ads Newsletter</strong>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">Weekly case studies, creative templates, and scaling tactics delivered to your inbox.</div>
+          </div>
+          <form action="#" onsubmit="alert('Subscribed! Check your inbox for the welcome email.'); return false;" style="display:flex;gap:8px;align-items:center">
+            <input type="email" name="newsletter-email" placeholder="Your email address" required style="padding:10px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)">
+            <button class="btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </section>
+
+      <section id="faq" style="margin-top:18px">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+          <h3>How much should I spend on Facebook Ads for my Shopify store?</h3>
+          <p>Start with a modest testing budget: $10–$50/day per ad set depending on your margins. Monitor performance and scale winners gradually while preserving ROAS.</p>
+
+          <h3>Do I need a Facebook Shop or catalog to advertise?</h3>
+          <p>While not strictly required, using a catalog is essential for dynamic retargeting and product campaigns. A Facebook Shop makes product discovery and checkout smoother.</p>
+
+          <h3>What KPIs should Shopify merchants track?</h3>
+          <p>Track CPA, ROAS, conversion rate, average order value (AOV), lifetime value (LTV), and purchase frequency. Monitor add-to-cart and initiate_checkout events for early funnel performance signals.</p>
+        </div>
+      </section>
+
+      <section id="related-resources" style="margin-top:18px">
+        <h2>Related Articles & Resources</h2>
+        <div class="related">
+          <a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify (This Guide)</a>
+          <a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a>
+          <a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a>
+          <a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a>
+        </div>
+      </section>
+
+      <section id="conclusion" style="margin-top:18px">
+        <h2>Conclusion — Your Next Steps with Facebook Ads for Shopify</h2>
+        <p>Facebook Ads for Shopify offers a powerful, measurable channel when you combine accurate tracking, a layered funnel, and constant creative testing. Begin with pixel and CAPI setup, implement a clear audience strategy, and iterate creatives using A/B testing. Use catalog sales for dynamic retargeting and scale methodically. With the right approach, Facebook can drive efficient acquisition and predictable growth for your Shopify store.</p>
+
+        <div style="margin-top:12px; display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn" onclick="location.href='/contact'">Get a Free Store Audit</button>
+          <button class="btn secondary" onclick="location.href='#how-to'">Start Campaign Builder</button>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    <div class="foot-grid">
       <div>
-        <strong>Want a custom audience plan for your Shopify store?</strong>
-        <div class="muted">Tell us your top customer segments and we'll send a tailored targeting blueprint.</div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div class="logo" style="width:44px;height:44px;border-radius:8px">FM</div>
+          <div>
+            <div style="font-weight:800">Facebook Ads Mastery</div>
+            <div class="small">Shopify growth resources & premium guides</div>
+          </div>
+        </div>
+        <div style="margin-top:12px;color:var(--muted);font-size:13px">© 2026 Marketing Studio. All rights reserved.</div>
       </div>
-      <div>
-        <a href="/contact" class="btn">Get Your Blueprint</a>
+
+      <div style="text-align:right">
+        <div style="margin-bottom:8px"><a href="/privacy" style="color:var(--muted);text-decoration:none">Privacy</a> · <a href="/terms" style="color:var(--muted);text-decoration:none">Terms</a></div>
+        <div class="small">Built for ecommerce, optimized for performance.</div>
       </div>
     </div>
-  </section>
-
-  <section class="card" style="margin-top:16px">
-    <h2>Related Articles</h2>
-    <ul>
-      <li><a href="/articles/facebook-ads-for-shopify">Facebook Ads for Shopify</a></li>
-      <li><a href="/articles/facebook-ads-testing-framework">Facebook Ads Testing Framework</a></li>
-      <li><a href="/articles/how-to-scale-facebook-ads">How to Scale Facebook Ads</a></li>
-      <li><a href="/articles/facebook-retargeting-guide">Facebook Retargeting Guide</a></li>
-    </ul>
-  </section>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div>
-      <div style="font-weight:700;color:var(--accent)">Ads Mastery</div>
-      <div class="small">Premium training, playbooks, and agency-level strategies for Facebook Ads.</div>
-    </div>
-
-    <div class="links">
-      <a href="/privacy" class="muted">Privacy</a>
-      <a href="/terms" class="muted">Terms</a>
-      <a href="/contact" class="muted">Contact</a>
-    </div>
-  </div>
-  <div style="max-width:var(--max-width);margin:12px auto 0 auto;color:var(--muted);font-size:13px">
-    © 2026 Ads Mastery. All rights reserved.
-  </div>
-</footer>
-
-<script>
-  // FAQ toggle
-  function toggleFaq(el){
-    var ans = el.nextElementSibling;
-    var expanded = el.getAttribute('aria-expanded') === 'true';
-    el.setAttribute('aria-expanded', !expanded);
-    if(ans){
-      if(ans.style.display === 'block'){
-        ans.style.display = 'none';
-        el.querySelector('.muted').textContent = '+';
-      } else {
-        ans.style.display = 'block';
-        el.querySelector('.muted').textContent = '−';
-      }
-    }
-  }
-
-  // Basic smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(function(link){
-    link.addEventListener('click', function(e){
-      var target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-      }
-    });
-  });
-
-  // Lightweight form handling (no tracking)
-  document.querySelectorAll('form').forEach(function(f){
-    f.addEventListener('submit', function(e){
-      // Prevent default to avoid navigation in demo
-      e.preventDefault();
-      var btn = f.querySelector('button[type="submit"]');
-      if(btn){ btn.textContent = 'Thank you!'; btn.disabled = true; }
-      setTimeout(function(){ if(btn){ btn.textContent = 'Subscribe'; btn.disabled=false }}, 3000);
-    });
-  });
-</script>
-
+  </footer>
 </body>
 </html>
