@@ -1,0 +1,27 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a parent and child reading a book together to represent starting homeschooling">
+  <rect width="400" height="250" fill="#FFF8E8"/>
+  <circle cx="40" cy="200" r="44" fill="#43A047" opacity="0.12"/>
+  <circle cx="360" cy="50" r="36" fill="#1976D2" opacity="0.12"/>
+  <rect x="60" y="190" width="280" height="20" rx="10" fill="#2E7D32" opacity="0.18"/>
+  <g>
+    <circle cx="150" cy="110" r="30" fill="#E7B98B"/>
+    <path d="M122 102 Q150 70 178 102 Q160 86 150 88 Q140 86 122 102Z" fill="#3B2A1E"/>
+    <path d="M118 200 Q118 140 150 136 Q182 140 182 200 Z" fill="#1976D2"/>
+    <circle cx="142" cy="112" r="3" fill="#3A2A20"/>
+    <circle cx="158" cy="112" r="3" fill="#3A2A20"/>
+    <path d="M142 124 Q150 129 158 124" stroke="#3A2A20" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="240" cy="140" r="24" fill="#F6D7B0"/>
+    <path d="M220 134 Q240 110 260 134 Q248 122 240 124 Q232 122 220 134Z" fill="#7A4B2E"/>
+    <path d="M220 200 Q220 158 240 156 Q260 158 260 200 Z" fill="#FFB300"/>
+    <circle cx="233" cy="140" r="2.6" fill="#3A2A20"/>
+    <circle cx="247" cy="140" r="2.6" fill="#3A2A20"/>
+    <path d="M233 150 Q240 154 247 150" stroke="#3A2A20" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M168 178 L200 168 L232 178 L232 198 L200 190 L168 198 Z" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+  <line x1="200" y1="168" x2="200" y2="190" stroke="#2E7D32" stroke-width="3"/>
+  <line x1="176" y1="180" x2="194" y2="176" stroke="#A9C8AB" stroke-width="2.4" stroke-linecap="round"/>
+  <line x1="206" y1="176" x2="224" y2="180" stroke="#A9C8AB" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M320 110 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5z" fill="#FFB300" opacity="0.8"/>
+</svg>
