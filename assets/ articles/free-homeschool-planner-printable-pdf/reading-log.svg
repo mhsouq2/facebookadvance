@@ -1,0 +1,26 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Printable reading log showing a list of book titles with star ratings and date columns">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="60" y="60" width="680" height="380" rx="16" fill="#F7F9FA" stroke="#E1E8E3" stroke-width="2"/>
+  <rect x="60" y="60" width="680" height="56" rx="16" fill="#1976D2"/>
+  <rect x="60" y="96" width="680" height="20" fill="#1976D2"/>
+  <text x="90" y="98" font-family="Poppins, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">Reading Log</text>
+  <g font-family="Inter, sans-serif" font-size="13" fill="#5B6B62" font-weight="700">
+    <text x="90" y="150">DATE</text>
+    <text x="190" y="150">BOOK TITLE</text>
+    <text x="520" y="150">MINUTES</text>
+    <text x="640" y="150">RATING</text>
+  </g>
+  <line x1="60" y1="162" x2="740" y2="162" stroke="#D8E3D9" stroke-width="2"/>
+  <g font-family="Inter, sans-serif" font-size="14" fill="#1D2A22">
+    <text x="90" y="196">Jun 2</text><rect x="190" y="184" width="260" height="12" rx="6" fill="#E2EAE2"/><text x="520" y="196">20</text>
+    <text x="645" y="198" fill="#FFB300">★★★★☆</text>
+    <text x="90" y="236">Jun 3</text><rect x="190" y="224" width="220" height="12" rx="6" fill="#E2EAE2"/><text x="520" y="236">15</text>
+    <text x="645" y="238" fill="#FFB300">★★★☆☆</text>
+    <text x="90" y="276">Jun 4</text><rect x="190" y="264" width="280" height="12" rx="6" fill="#E2EAE2"/><text x="520" y="276">25</text>
+    <text x="645" y="278" fill="#FFB300">★★★★★</text>
+    <text x="90" y="316">Jun 5</text><rect x="190" y="304" width="200" height="12" rx="6" fill="#E2EAE2"/><text x="520" y="316">18</text>
+    <text x="645" y="318" fill="#FFB300">★★★★☆</text>
+    <text x="90" y="356">Jun 6</text><rect x="190" y="344" width="240" height="12" rx="6" fill="#E2EAE2"/><text x="520" y="356">22</text>
+    <text x="645" y="358" fill="#FFB300">★★★★★</text>
+  </g>
+</svg>
