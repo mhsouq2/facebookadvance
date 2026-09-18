@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Parent and two children sitting together at a table reviewing their printed homeschool planner">
+  <rect width="800" height="500" fill="#FFF8E8"/>
+  <circle cx="700" cy="80" r="50" fill="#43A047" opacity="0.12"/>
+  <circle cx="60" cy="420" r="60" fill="#1976D2" opacity="0.1"/>
+  <rect x="150" y="360" width="500" height="20" rx="8" fill="#D9CBB1"/>
+  <rect x="170" y="380" width="16" height="60" fill="#C9B996"/>
+  <rect x="614" y="380" width="16" height="60" fill="#C9B996"/>
+  <path d="M330 320 L400 308 L470 320 L470 360 L400 350 L330 360 Z" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+  <line x1="400" y1="308" x2="400" y2="350" stroke="#2E7D32" stroke-width="3"/>
+  <g>
+    <circle cx="220" cy="190" r="32" fill="#E7B98B"/>
+    <path d="M190 182 Q220 152 250 182 Q232 168 220 170 Q208 168 190 182Z" fill="#3B2A1E"/>
+    <path d="M186 360 Q186 230 220 226 Q254 230 254 360 Z" fill="#43A047"/>
+    <circle cx="210" cy="192" r="3" fill="#3A2A20"/>
+    <circle cx="230" cy="192" r="3" fill="#3A2A20"/>
+    <path d="M210 204 Q220 209 230 204" stroke="#3A2A20" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="350" cy="220" r="26" fill="#F6D7B0"/>
+    <path d="M328 212 Q350 188 372 212 Q360 200 350 202 Q340 200 328 212Z" fill="#7A4B2E"/>
+    <path d="M328 360 Q328 246 350 244 Q372 246 372 360 Z" fill="#1976D2"/>
+    <circle cx="342" cy="220" r="2.6" fill="#3A2A20"/>
+    <circle cx="358" cy="220" r="2.6" fill="#3A2A20"/>
+    <path d="M342 230 Q350 234 358 230" stroke="#3A2A20" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <circle cx="500" cy="222" r="26" fill="#E7B98B"/>
+    <path d="M478 214 Q500 188 522 214 Q510 200 500 202 Q490 200 478 214Z" fill="#1A1A1A"/>
+    <path d="M478 360 Q478 248 500 246 Q522 248 522 360 Z" fill="#FFB300"/>
+    <circle cx="492" cy="222" r="2.6" fill="#3A2A20"/>
+    <circle cx="508" cy="222" r="2.6" fill="#3A2A20"/>
+    <path d="M492 232 Q500 236 508 232" stroke="#3A2A20" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(560,140)">
+    <rect x="0" y="0" width="76" height="56" rx="14" fill="#FFFFFF" stroke="#43A047" stroke-width="3"/>
+    <path d="M14 56 l0 18 18 -18z" fill="#FFFFFF" stroke="#43A047" stroke-width="3"/>
+    <path d="M20 28 l10 10 22 -22" stroke="#43A047" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

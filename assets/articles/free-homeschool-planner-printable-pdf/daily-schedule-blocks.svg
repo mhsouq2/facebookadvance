@@ -1,0 +1,21 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily homeschool schedule shown as color-coded time blocks from morning to afternoon">
+  <rect width="800" height="500" fill="#F7F9FA"/>
+  <circle cx="700" cy="80" r="50" fill="#FFB300" opacity="0.15"/>
+  <g font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1D2A22">
+    <rect x="100" y="80" width="600" height="56" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="100" y="80" width="14" height="56" rx="7" fill="#FFB300"/>
+    <text x="130" y="113">8:00 — Morning Basket &amp; Read Aloud</text>
+    <rect x="100" y="150" width="600" height="56" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="100" y="150" width="14" height="56" rx="7" fill="#43A047"/>
+    <text x="130" y="183">8:45 — Math Lesson</text>
+    <rect x="100" y="220" width="600" height="56" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="100" y="220" width="14" height="56" rx="7" fill="#1976D2"/>
+    <text x="130" y="253">9:45 — Reading &amp; Phonics</text>
+    <rect x="100" y="290" width="600" height="56" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="100" y="290" width="14" height="56" rx="7" fill="#2E7D32"/>
+    <text x="130" y="323">10:45 — Outdoor Break</text>
+    <rect x="100" y="360" width="600" height="56" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="100" y="360" width="14" height="56" rx="7" fill="#FFB300"/>
+    <text x="130" y="393">11:15 — Science / History</text>
+  </g>
+</svg>

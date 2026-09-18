@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a clock layered over a weekly calendar grid representing a daily homeschool schedule">
+  <rect width="400" height="250" fill="#F7F9FA"/>
+  <circle cx="50" cy="40" r="36" fill="#43A047" opacity="0.15"/>
+  <circle cx="370" cy="210" r="44" fill="#1976D2" opacity="0.1"/>
+
+  <!-- calendar card behind -->
+  <g transform="translate(70,55)">
+    <rect x="0" y="0" width="180" height="150" rx="14" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="2"/>
+    <rect x="0" y="0" width="180" height="30" rx="14" fill="#1976D2"/>
+    <rect x="0" y="22" width="180" height="8" fill="#1976D2"/>
+    <line x1="36" y1="30" x2="36" y2="150" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="72" y1="30" x2="72" y2="150" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="108" y1="30" x2="108" y2="150" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="144" y1="30" x2="144" y2="150" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="0" y1="70" x2="180" y2="70" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="0" y1="110" x2="180" y2="110" stroke="#EEF1EF" stroke-width="2"/>
+    <circle cx="54" cy="50" r="9" fill="#FFB300"/>
+    <circle cx="126" cy="90" r="9" fill="#43A047"/>
+    <circle cx="90" cy="130" r="9" fill="#2E7D32" opacity="0.8"/>
+  </g>
+
+  <!-- clock in front -->
+  <g transform="translate(220,90)">
+    <circle cx="60" cy="60" r="70" fill="#FFFFFF" stroke="#2E7D32" stroke-width="6"/>
+    <circle cx="60" cy="60" r="4" fill="#2E7D32"/>
+    <line x1="60" y1="60" x2="60" y2="20" stroke="#2E7D32" stroke-width="5" stroke-linecap="round"/>
+    <line x1="60" y1="60" x2="92" y2="78" stroke="#FFB300" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="60" cy="14" r="3.5" fill="#43A047"/>
+    <circle cx="106" cy="60" r="3.5" fill="#43A047"/>
+    <circle cx="60" cy="106" r="3.5" fill="#43A047"/>
+    <circle cx="14" cy="60" r="3.5" fill="#43A047"/>
+  </g>
+</svg>

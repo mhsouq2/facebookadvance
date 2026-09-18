@@ -1,0 +1,50 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Open free printable homeschool planner showing a weekly grid, checklist, and pencil on a desk">
+  <rect width="1200" height="600" fill="#EAF6EA"/>
+  <circle cx="1080" cy="100" r="90" fill="#FFB300" opacity="0.15"/>
+  <circle cx="90" cy="500" r="110" fill="#1976D2" opacity="0.08"/>
+  <rect x="0" y="470" width="1200" height="130" fill="#D9CBB1" opacity="0.4"/>
+  <rect x="220" y="120" width="760" height="380" rx="20" fill="#1B5E20"/>
+  <path d="M250 150 L590 138 L590 470 L250 482 Z" fill="#FFFFFF"/>
+  <path d="M610 138 L950 150 L950 482 L610 470 Z" fill="#F7F9FA"/>
+  <rect x="590" y="138" width="20" height="332" fill="#D8E3D9"/>
+  <rect x="280" y="180" width="220" height="22" rx="10" fill="#2E7D32"/>
+  <rect x="280" y="214" width="150" height="12" rx="6" fill="#C7D8C9"/>
+  <g>
+    <rect x="280" y="252" width="26" height="26" rx="7" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+    <path d="M286 265 l6 6 12 -14" stroke="#2E7D32" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="320" y="259" width="160" height="12" rx="6" fill="#D8E3D9"/>
+    <rect x="280" y="298" width="26" height="26" rx="7" fill="#FFFFFF" stroke="#2E7D32" stroke-width="3"/>
+    <path d="M286 311 l6 6 12 -14" stroke="#2E7D32" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="320" y="305" width="180" height="12" rx="6" fill="#D8E3D9"/>
+    <rect x="280" y="344" width="26" height="26" rx="7" fill="#FFFFFF" stroke="#FFB300" stroke-width="3"/>
+    <rect x="320" y="351" width="120" height="12" rx="6" fill="#E9EFEA"/>
+    <rect x="280" y="390" width="26" height="26" rx="7" fill="#FFFFFF" stroke="#43A047" stroke-width="3"/>
+    <rect x="320" y="397" width="150" height="12" rx="6" fill="#E9EFEA"/>
+  </g>
+  <rect x="640" y="180" width="270" height="26" rx="10" fill="#FFB300"/>
+  <g>
+    <rect x="640" y="222" width="270" height="232" rx="12" fill="#FFFFFF" stroke="#E1E8E3" stroke-width="3"/>
+    <line x1="678" y1="222" x2="678" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="716" y1="222" x2="716" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="754" y1="222" x2="754" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="792" y1="222" x2="792" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="830" y1="222" x2="830" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="868" y1="222" x2="868" y2="454" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="640" y1="270" x2="910" y2="270" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="640" y1="318" x2="910" y2="318" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="640" y1="366" x2="910" y2="366" stroke="#EEF1EF" stroke-width="2"/>
+    <line x1="640" y1="414" x2="910" y2="414" stroke="#EEF1EF" stroke-width="2"/>
+    <circle cx="697" cy="294" r="13" fill="#43A047"/>
+    <circle cx="773" cy="342" r="13" fill="#1976D2" opacity="0.85"/>
+    <circle cx="849" cy="390" r="13" fill="#2E7D32" opacity="0.7"/>
+  </g>
+  <rect x="540" y="380" width="18" height="120" rx="6" fill="#FFB300" transform="rotate(-26 549 440)"/>
+  <path d="M535 494 l18 10 -24 12 z" fill="#2E7D32" transform="rotate(-26 549 440)"/>
+  <rect x="540" y="380" width="18" height="18" rx="4" fill="#1B5E20" transform="rotate(-26 549 440)"/>
+  <path d="M560 120 L560 200 L578 184 L596 200 L596 120 Z" fill="#43A047"/>
+  <g transform="translate(960,360)">
+    <rect x="0" y="20" width="60" height="50" rx="10" fill="#FFFFFF" stroke="#2E7D32" stroke-width="4"/>
+    <path d="M60 30 q24 0 24 22 q0 22 -24 22" fill="none" stroke="#2E7D32" stroke-width="4"/>
+    <path d="M8 18 q4 -14 14 -10 M26 18 q4 -14 14 -10" stroke="#C7D8C9" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
